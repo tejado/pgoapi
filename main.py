@@ -226,17 +226,17 @@ def main():
     if response is not None:
         print('[+] Login successful')
 
-        payload = response.payload[0].payload
-        profile = pokemon_pb2.ResponseEnvelop.Profile()
+        payload = response.payload[0]
+        profile = pokemon_pb2.ResponseEnvelop.ProfilePayload()
         profile.ParseFromString(payload)
-        print('[+] Username: {}'.format(profile.username))
+        print('[+] Username: {}'.format(profile.profile.username))
 
-        creation_time = datetime.fromtimestamp(int(profile.creation_time)/1000)
+        creation_time = datetime.fromtimestamp(int(profile.profile.creation_time)/1000)
         print('[+] You are playing Pokemon Go since: {}'.format(
             creation_time.strftime('%Y-%m-%d %H:%M:%S'),
         ))
 
-        for curr in profile.currency:
+        for curr in profile.profile.currency:
             print('[+] {}: {}'.format(curr.type, curr.amount))
     else:
         print('[-] Ooops...')
@@ -260,8 +260,20 @@ def main():
     m.lat = COORDS_LATITUDE
     m.long = COORDS_LONGITUDE
     m1.message = m.SerializeToString()
-    get_profile(access_token, api_endpoint, response.unknown7,
-      m1, pokemon_pb2.RequestEnvelop.Requests(), m4, pokemon_pb2.RequestEnvelop.Requests(), m5)
+    response = get_profile(
+        access_token,
+        api_endpoint,
+        response.unknown7,
+        m1,
+        pokemon_pb2.RequestEnvelop.Requests(),
+        m4,
+        pokemon_pb2.RequestEnvelop.Requests(),
+        m5)
+    payload = response.payload[0]
+    heartbeat = pokemon_pb2.ResponseEnvelop.HeartbeatPayload()
+    heartbeat.ParseFromString(payload)
+
+    print(heartbeat)
 
 
 if __name__ == '__main__':
