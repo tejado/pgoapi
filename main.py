@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import requests
 import re
 import struct
@@ -5,6 +7,7 @@ import json
 import argparse
 import pokemon_pb2
 
+from collections import OrderedDict
 from datetime import datetime
 from geopy.geocoders import GoogleV3
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
@@ -111,6 +114,103 @@ def get_profile(api_endpoint, access_token):
     return api_req(api_endpoint, access_token, req.requests)
 
 
+
+def login_google(email,passw):
+	reqses = requests.session()
+	reqses.headers.update({'User-Agent':'Niantic App'})
+
+	reqses.headers.update({'User-Agent':'Mozilla/5.0 (iPad; CPU OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12H143'})
+	first='https://accounts.google.com/o/oauth2/auth?client_id=848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=openid%20email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email'
+	second='https://accounts.google.com/AccountLoginInfo'
+	third='https://accounts.google.com/signin/challenge/sl/password'
+	last='https://accounts.google.com/o/oauth2/token'
+	r=reqses.get(first)
+	
+	GALX= re.search('<input type="hidden" name="GALX" value=".*">',r.content)
+	gxf= re.search('<input type="hidden" name="gxf" value=".*:.*">',r.content)
+	cont = re.search('<input type="hidden" name="continue" value=".*">',r.content)
+	
+	GALX=re.sub('.*value="','',GALX.group(0))
+	GALX=re.sub('".*','',GALX)
+	
+	gxf=re.sub('.*value="','',gxf.group(0))
+	gxf=re.sub('".*','',gxf)
+	
+	cont=re.sub('.*value="','',cont.group(0))
+	cont=re.sub('".*','',cont)
+	
+	data1={'Page':'PasswordSeparationSignIn',
+			'GALX':GALX,
+			'gxf':gxf,
+			'continue':cont,
+			'ltmpl':'embedded',
+			'scc':'1',
+			'sarp':'1',
+			'oauth':'1',
+			'ProfileInformation':'',
+			'_utf8':'?',
+			'bgresponse':'js_disabled',
+			'Email':email,
+			'signIn':'Next'}
+	r1=reqses.post(second,data=data1)
+	
+	profile= re.search('<input id="profile-information" name="ProfileInformation" type="hidden" value=".*">',r1.content)
+	gxf= re.search('<input type="hidden" name="gxf" value=".*:.*">',r1.content)
+
+	gxf=re.sub('.*value="','',gxf.group(0))
+	gxf=re.sub('".*','',gxf)
+	
+	profile=re.sub('.*value="','',profile.group(0))
+	profile=re.sub('".*','',profile)
+
+	data2={'Page':'PasswordSeparationSignIn',
+			'GALX':GALX,
+			'gxf':gxf,
+			'continue':cont,
+			'ltmpl':'embedded',
+			'scc':'1',
+			'sarp':'1',
+			'oauth':'1',
+			'ProfileInformation':profile,
+			'_utf8':'?',
+			'bgresponse':'js_disabled',
+			'Email':email,
+			'Passwd':passw,
+			'signIn':'Sign in',
+			'PersistentCookie':'yes'}
+	r2=reqses.post(third,data=data2)
+	fourth= r2.history[1].headers['Location'].replace('amp%3B','')
+	r3=reqses.get(fourth)
+	
+	client_id=re.search('client_id=.*&from_login',fourth)
+	client_id= re.sub('.*_id=','',client_id.group(0))
+	client_id= re.sub('&from.*','',client_id)
+	
+	state_wrapper= re.search('<input id="state_wrapper" type="hidden" name="state_wrapper" value=".*">',r3.content)
+	state_wrapper=re.sub('.*state_wrapper" value="','',state_wrapper.group(0))
+	state_wrapper=re.sub('"><input type="hidden" .*','',state_wrapper)
+
+	connect_approve=re.search('<form id="connect-approve" action=".*" method="POST" style="display: inline;">',r3.content)
+	connect_approve=re.sub('.*action="','',connect_approve.group(0))
+	connect_approve=re.sub('" me.*','',connect_approve)
+
+	data3 = OrderedDict([('bgresponse', 'js_disabled'), ('_utf8', '☃'), ('state_wrapper', state_wrapper), ('submit_access', 'true')])
+	r4=reqses.post(connect_approve.replace('amp;',''),data=data3)
+
+	code= re.search('<input id="code" type="text" readonly="readonly" value=".*" style=".*" onclick=".*;" />',r4.content)
+	code=re.sub('.*value="','',code.group(0))
+	code=re.sub('" style.*','',code)
+
+	data4={'client_id':client_id,
+		'client_secret':'NCjF1TLi2CcY6t5mt0ZveuL7',
+		'code':code,
+		'grant_type':'authorization_code',
+		'redirect_uri':'urn:ietf:wg:oauth:2.0:oob',
+		'scope':'openid email https://www.googleapis.com/auth/userinfo.email'}
+	r5 = reqses.post(last,data=data4)
+	return json.loads(r5.content)['id_token']
+	
+	
 def login_ptc(username, password):
     print('[!] login for: {}'.format(username))
     head = {'User-Agent': 'niantic'}
@@ -152,6 +252,7 @@ def main():
     parser.add_argument("-u", "--username", help="PTC Username", required=True)
     parser.add_argument("-p", "--password", help="PTC Password", required=True)
     parser.add_argument("-l", "--location", help="Location", required=True)
+    parser.add_argument("-g", "--google", help="Google Auth", action='store_true')
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-s", "--client_secret", help="PTC Client Secret")
     parser.set_defaults(DEBUG=True)
@@ -168,11 +269,18 @@ def main():
 
     set_location(args.location)
 
-    access_token = login_ptc(args.username, args.password)
-    if access_token is None:
-        print('[-] Wrong username/password')
-        return
-    print('[+] RPC Session Token: {} ...'.format(access_token[:25]))
+    # Google Authentication
+    if args.google:
+        print('[+] Authentication with google...')
+        access_token = login_google(args.username, args.password)
+        print('[+] RPC Session Token: {} ...'.format(access_token[:25]))
+    else:
+        access_token = login_ptc(args.username, args.password)
+        if access_token is None:
+            print('[-] Wrong username/password')
+            return
+        print('[+] RPC Session Token: {} ...'.format(access_token[:25]))
+    
 
     api_endpoint = get_api_endpoint(access_token)
     if api_endpoint is None:
