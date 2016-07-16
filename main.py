@@ -195,6 +195,7 @@ def login_ptc(username, password):
 
 
 def main():
+    pokemons = json.load(open('pokemon.json'))
     parser = argparse.ArgumentParser()
     parser.add_argument("-u", "--username", help="PTC Username", required=True)
     parser.add_argument("-p", "--password", help="PTC Password", required=True)
@@ -273,7 +274,23 @@ def main():
     heartbeat = pokemon_pb2.ResponseEnvelop.HeartbeatPayload()
     heartbeat.ParseFromString(payload)
 
-    print(heartbeat)
+    visible = []
+    origin = LatLng.from_degrees(FLOAT_LAT, FLOAT_LONG)
+
+    for cell in heartbeat.cells:
+        if cell.NearbyPokemon:
+            other = LatLng.from_point(Cell(CellId(cell.S2CellId)).get_center())
+            print("Within 100m (1 step) of %s (%sm away from the origin):" % (other, origin.get_distance(other).radians * 6366468.241830914))
+            for poke in cell.NearbyPokemon:
+                print('    %s at %sm away' % (pokemons[poke.PokedexNumber - 1]['Name'], poke.DistanceMeters))
+        for wild in cell.WildPokemon:
+            visible.append(wild)
+
+    for poke in visible:
+        print("%s is visible at (%s, %s) for %s seconds" % (pokemons[poke.pokemon.PokemonId - 1]['Name'], poke.Latitude, poke.Longitude, poke.TimeTillHiddenMs / 1000))
+
+
+
 
 
 if __name__ == '__main__':
