@@ -193,6 +193,39 @@ def login_ptc(username, password):
     access_token = re.sub('.*access_token=', '', access_token)
     return access_token
 
+def heartbeat(api_endpoint, access_token, response):
+    m4 = pokemon_pb2.RequestEnvelop.Requests()
+    m = pokemon_pb2.RequestEnvelop.MessageSingleInt()
+    m.f1 = int(time.time() * 1000)
+    m4.message = m.SerializeToString()
+    m5 = pokemon_pb2.RequestEnvelop.Requests()
+    m = pokemon_pb2.RequestEnvelop.MessageSingleString()
+    m.bytes = "05daf51635c82611d1aac95c0b051d3ec088a930"
+    m5.message = m.SerializeToString()
+
+    walk = sorted(getNeighbors())
+
+    m1 = pokemon_pb2.RequestEnvelop.Requests()
+    m1.type = 106
+    m = pokemon_pb2.RequestEnvelop.MessageQuad()
+    m.f1 = ''.join(map(encode, walk))
+    m.f2 = "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+    m.lat = COORDS_LATITUDE
+    m.long = COORDS_LONGITUDE
+    m1.message = m.SerializeToString()
+    response = get_profile(
+        access_token,
+        api_endpoint,
+        response.unknown7,
+        m1,
+        pokemon_pb2.RequestEnvelop.Requests(),
+        m4,
+        pokemon_pb2.RequestEnvelop.Requests(),
+        m5)
+    payload = response.payload[0]
+    heartbeat = pokemon_pb2.ResponseEnvelop.HeartbeatPayload()
+    heartbeat.ParseFromString(payload)
+    return heartbeat
 
 def main():
     pokemons = json.load(open('pokemon.json'))
@@ -242,56 +275,53 @@ def main():
     else:
         print('[-] Ooops...')
 
-    m4 = pokemon_pb2.RequestEnvelop.Requests()
-    m = pokemon_pb2.RequestEnvelop.MessageSingleInt()
-    m.f1 = int(time.time() * 1000)
-    m4.message = m.SerializeToString()
-    m5 = pokemon_pb2.RequestEnvelop.Requests()
-    m = pokemon_pb2.RequestEnvelop.MessageSingleString()
-    m.bytes = "05daf51635c82611d1aac95c0b051d3ec088a930"
-    m5.message = m.SerializeToString()
+    original_lat = FLOAT_LAT
+    original_long = FLOAT_LONG
+    parent = CellId.from_lat_lng(LatLng.from_degrees(FLOAT_LAT, FLOAT_LONG)).parent(15)
 
-    walk = sorted(getNeighbors())
-
-    m1 = pokemon_pb2.RequestEnvelop.Requests()
-    m1.type = 106
-    m = pokemon_pb2.RequestEnvelop.MessageQuad()
-    m.f1 = ''.join(map(encode, walk))
-    m.f2 = "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
-    m.lat = COORDS_LATITUDE
-    m.long = COORDS_LONGITUDE
-    m1.message = m.SerializeToString()
-    response = get_profile(
-        access_token,
-        api_endpoint,
-        response.unknown7,
-        m1,
-        pokemon_pb2.RequestEnvelop.Requests(),
-        m4,
-        pokemon_pb2.RequestEnvelop.Requests(),
-        m5)
-    payload = response.payload[0]
-    heartbeat = pokemon_pb2.ResponseEnvelop.HeartbeatPayload()
-    heartbeat.ParseFromString(payload)
+    h = heartbeat(api_endpoint, access_token, response)
+    hs = [h]
+    seen = set([])
+    for child in parent.children():
+        latlng = LatLng.from_point(Cell(child).get_center())
+        set_location_coords(latlng.lat().degrees, latlng.lng().degrees, 0)
+        hs.append(heartbeat(api_endpoint, access_token, response))
+    set_location_coords(original_lat, original_long, 0)
 
     visible = []
     origin = LatLng.from_degrees(FLOAT_LAT, FLOAT_LONG)
 
-    for cell in heartbeat.cells:
+    for hh in hs:
+        for cell in hh.cells:
+            for wild in cell.WildPokemon:
+                hash = wild.SpawnPointId + ':' + str(wild.pokemon.PokemonId)
+                if (hash not in seen):
+                    visible.append(wild)
+                    seen.add(hash)
+
+    print('')
+    for cell in h.cells:
         if cell.NearbyPokemon:
             other = LatLng.from_point(Cell(CellId(cell.S2CellId)).get_center())
-            print("Within 100m (1 step) of %s (%sm away from the origin):" % (other, origin.get_distance(other).radians * 6366468.241830914))
+            diff = other - origin
+            # print(diff)
+            difflat = diff.lat().degrees
+            difflng = diff.lng().degrees
+            direction = (('N' if difflat >= 0 else 'S') if abs(difflat) > 1e-4 else '')  + (('E' if difflng >= 0 else 'W') if abs(difflng) > 1e-4 else '')
+            print("Within one step of %s (%sm %s from you):" % (other, int(origin.get_distance(other).radians * 6366468.241830914), direction))
             for poke in cell.NearbyPokemon:
-                print('    %s at %sm away' % (pokemons[poke.PokedexNumber - 1]['Name'], poke.DistanceMeters))
-        for wild in cell.WildPokemon:
-            visible.append(wild)
+                print('    (%s) %s' % (poke.PokedexNumber, pokemons[poke.PokedexNumber - 1]['Name']))
 
+    print('')
     for poke in visible:
-        print("%s is visible at (%s, %s) for %s seconds" % (pokemons[poke.pokemon.PokemonId - 1]['Name'], poke.Latitude, poke.Longitude, poke.TimeTillHiddenMs / 1000))
+        other = LatLng.from_degrees(poke.Latitude, poke.Longitude)
+        diff = other - origin
+        # print(diff)
+        difflat = diff.lat().degrees
+        difflng = diff.lng().degrees
+        direction = (('N' if difflat >= 0 else 'S') if abs(difflat) > 1e-4 else '')  + (('E' if difflng >= 0 else 'W') if abs(difflng) > 1e-4 else '')
 
-
-
-
+        print("(%s) %s is visible at (%s, %s) for %s seconds (%sm %s from you)" % (poke.pokemon.PokemonId, pokemons[poke.pokemon.PokemonId - 1]['Name'], poke.Latitude, poke.Longitude, poke.TimeTillHiddenMs / 1000, int(origin.get_distance(other).radians * 6366468.241830914), direction))
 
 if __name__ == '__main__':
     main()
