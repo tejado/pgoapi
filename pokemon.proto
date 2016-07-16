@@ -94,7 +94,7 @@ message ResponseEnvelop {
 
   message Payload {
     required int32 unknown1 = 1;
-    // optional Profile profile = 2;
+    optional bytes payload = 2;
   }
 
   message Profile {
