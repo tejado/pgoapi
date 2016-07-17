@@ -3,6 +3,7 @@ import requests
 import re
 import json
 import argparse
+import os
 import pokemon_pb2
 import settings
 from api import api_req, get_api_endpoint
@@ -24,15 +25,31 @@ def get_profile(service, api_endpoint, access_token):
 def main():
     settings.init()
     parser = argparse.ArgumentParser()
+
+    # If config file exists, load variables from json
+    load   = {}
+    if os.path.isfile(CONFIG):
+        with open(CONFIG) as data:
+            load.update(json.load(data))
+
+    # Read passed in Arguments
+    required = lambda x: not x in load
     parser.add_argument("-a", "--auth_service", help="Auth Service",
-        required=True)
-    parser.add_argument("-u", "--username", help="Username", required=True)
-    parser.add_argument("-p", "--password", help="Password", required=True)
-    parser.add_argument("-l", "--location", help="Location", required=True)
+        required=required("auth_service"))
+    parser.add_argument("-u", "--username", help="Username", required=required("username"))
+    parser.add_argument("-p", "--password", help="Password", required=required("password"))
+    parser.add_argument("-l", "--location", help="Location", required=required("location"))
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-s", "--client_secret", help="PTC Client Secret")
     parser.set_defaults(DEBUG=True)
     args = parser.parse_args()
+
+    # Passed in arguments shoud trump
+    for key in args.__dict__:
+        if key in load and args.__dict__[key] == None:
+            args.__dict__[key] = load[key]
+    # Or
+    # args.__dict__.update({key:load[key] for key in load if args.__dict__[key] == None and key in load})
 
     if args.auth_service not in ['ptc', 'google']:
       print('[!] Invalid Auth service specified')
