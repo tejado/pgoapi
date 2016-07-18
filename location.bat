@@ -27,6 +27,5 @@ python main.py -u USERNAME -p PASSWORD -l "16.61, 13.25"
 
 :op4
 python main.py -u USERNAME -p PASSWORD -l "Las Vegas, Nevada, USA"
-
 :exit
 @exit
