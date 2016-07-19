@@ -154,12 +154,24 @@ class RpcApi:
     def _parse_main_request(self, response_raw, subrequests):
         self.log.debug('Parsing main RPC response...')
 
-        # HTTP check should me made here?!
+        if response_raw.status_code != 200:
+            self.log.warning('Unexpected HTTP server response - needs 200 got %s', response_raw.status_code)
+            self.log.debug('HTTP output: \n%s', response_raw.content)
+            return False
+
+        if response_raw.content is None:
+            self.log.warning('Empty server response!')
+            return False
 
         response_proto = RpcEnvelope.Response()
-        response_proto.ParseFromString(response_raw.content)
+        try:
+            response_proto.ParseFromString(response_raw.content)
+        except google.protobuf.message.DecodeError as e:
+            self.log.warning('Could not parse response: %s', str(e))
+            return False
 
         self.log.debug('Protobuf structure of rpc response:\n\r%s', response_proto)
+        self.log.debug('Decode raw over protoc (protoc has to be in your PATH):\n\r%s', self.decode_raw(response_raw.content))
 
         response_proto_dict = protobuf_to_dict(response_proto)
         response_proto_dict = self._parse_sub_responses(response_proto, subrequests, response_proto_dict)
@@ -173,8 +185,6 @@ class RpcApi:
         list_len = len(subrequests_list) -1
         i = 0
         for subresponse in response_proto.responses:
-            #self.log.debug( self.decode_raw(subresponse) )
-
             if i > list_len:
                 self.log.info("Error - something strange happend...")
 
