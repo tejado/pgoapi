@@ -11,8 +11,8 @@ message Profile {
   required int64 creation_time = 1;
   optional string username = 2;
   optional RpcEnum.TeamColor team = 5;
-  optional bytes tutorial = 7; 
-  optional AvatarDetails avatar = 8; 
+  optional bytes tutorial = 7;
+  optional AvatarDetails avatar = 8;
   optional int32 poke_storage = 9;
   optional int32 item_storage = 10;
   optional DailyBonus daily_bonus = 11;

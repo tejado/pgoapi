@@ -141,12 +141,13 @@ def main():
     api.get_player()
 
     # get inventory call
-    #api.get_inventory()
+    # api.get_inventory()
+    # api.catch_pokemon()
 
     # get map objects call
-    timestamp = "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
-    cellid = get_cellid(position[0], position[1])
-    api.get_map_objects(latitude=f2i(position[0]), longitude=f2i(position[1]), since_timestamp_ms=timestamp, cell_id=cellid)
+    # timestamp = "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+    # cellid = get_cellid(position[0], position[1])
+    # api.get_map_objects(latitude=f2i(position[0]), longitude=f2i(position[1]), since_timestamp_ms=timestamp, cell_id=cellid)
 
     # get download settings call
     #api.download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e")
