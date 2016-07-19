@@ -47,9 +47,9 @@ def get_pos_by_name(location_name):
 
     log.info('Your given location: %s', loc.address.encode('utf-8'))
     log.info('lat/long/alt: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
-    
+
     return (loc.latitude, loc.longitude, loc.altitude)
-    
+
 def get_cellid(lat, long):
     origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
     walk = [origin.id()]
@@ -68,7 +68,7 @@ def encode(cellid):
     output = []
     encoder._VarintEncoder()(output.append, cellid)
     return ''.join(output)
-    
+
 def init_config():
     parser = argparse.ArgumentParser()
     config_file = "config.json"
@@ -99,9 +99,9 @@ def init_config():
     if config.auth_service not in ['ptc', 'google']:
       log.error("Invalid Auth service specified! ('ptc' or 'google')")
       return None
-    
+
     return config
-    
+
 
 def main():
     # log settings
@@ -117,44 +117,44 @@ def main():
     config = init_config()
     if not config:
         return
-        
+
     if config.debug:
         logging.getLogger("requests").setLevel(logging.DEBUG)
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
-    
+
     position = get_pos_by_name(config.location)
     if config.test:
         return
-    
-    # instantiate pgoapi 
+
+    # instantiate pgoapi
     api = PGoApi()
-    
+
     # provide player position on the earth
     api.set_position(*position)
-    
+
     if not api.login(config.auth_service, config.username, config.password):
         return
 
     # chain subrequests (methods) into one RPC call
     # get player profile call
     api.get_player()
-    
+
     # get inventory call
     #api.get_inventory()
-    
+
     # get map objects call
     timestamp = "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
     cellid = get_cellid(position[0], position[1])
     api.get_map_objects(latitude=f2i(position[0]), longitude=f2i(position[1]), since_timestamp_ms=timestamp, cell_id=cellid)
-    
+
     # get download settings call
     #api.download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e")
-    
+
     # execute the RPC call
     response_dict = api.call()
     print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2)))
-    
+
     # alternative:
     # api.get_player().get_inventory().get_map_objects().download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e").call()
 
