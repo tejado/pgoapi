@@ -2,7 +2,6 @@ FROM python:3-onbuild
 
 COPY ./pgoapi /pgoapi
 COPY ./pokecli.py /pokecli.py
-#COPY ./config.json /config.json
 
 RUN pip install requests
 RUN pip install protobuf
