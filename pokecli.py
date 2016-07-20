@@ -26,18 +26,26 @@ Author: tjado <https://github.com/tejado>
 
 import os
 import re
+import sys
 import json
+import time
 import struct
+import pprint
 import logging
 import requests
 import argparse
 
-from pgoapi import PGoApi
-from pgoapi.utilities import f2i, h2f
 
 from google.protobuf.internal import encoder
 from geopy.geocoders import GoogleV3
-from s2sphere import CellId, LatLng
+from s2sphere import Cell, CellId, LatLng
+
+# add directory of this file to PATH, so that the package will be found
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
+# import Pokemon Go API lib
+from pgoapi import pgoapi
+from pgoapi import utilities as util
 
 log = logging.getLogger(__name__)
 
@@ -49,21 +57,23 @@ def get_pos_by_name(location_name):
     log.info('lat/long/alt: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
     
     return (loc.latitude, loc.longitude, loc.altitude)
-    
-def get_cellid(lat, long):
+
+def get_cell_ids(lat, long, radius = 10):
     origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
     walk = [origin.id()]
+    right = origin.next()
+    left = origin.prev()
 
-    # 10 before and 10 after
-    next = origin.next()
-    prev = origin.prev()
-    for i in range(10):
-        walk.append(prev.id())
-        walk.append(next.id())
-        next = next.next()
-        prev = prev.prev()
-    return ''.join(map(encode, sorted(walk)))
+    # Search around provided radius
+    for i in range(radius):
+        walk.append(right.id())
+        walk.append(left.id())
+        right = right.next()
+        left = left.prev()
 
+    # Return everything
+    return sorted(walk)
+    
 def encode(cellid):
     output = []
     encoder._VarintEncoder()(output.append, cellid)
@@ -128,7 +138,7 @@ def main():
         return
     
     # instantiate pgoapi 
-    api = PGoApi()
+    api = pgoapi.PGoApi()
     
     # provide player position on the earth
     api.set_position(*position)
@@ -147,11 +157,14 @@ def main():
     #api.get_inventory()
     
     # get map objects call
+    # repeated fields (e.g. cell_id and since_timestamp_ms in get_map_objects) can be provided over a list
     # ----------------------
-    #timestamp = "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
-    #cellid = get_cellid(position[0], position[1])
-    #api.get_map_objects(latitude=f2i(position[0]), longitude=f2i(position[1]), since_timestamp_ms=timestamp, cell_id=cellid)
     
+    cell_ids = get_cell_ids(position[0], position[1])
+    timestamps = [0,] * len(cellid)
+    api.get_map_objects(latitude = util.f2i(position[0]), longitude = util.f2i(position[1]), 
+            since_timestamp_ms = timestamps, cell_id = cell_ids)
+
     # spin a fort 
     # ----------------------
     #fortid = '<your fortid>'
@@ -169,7 +182,7 @@ def main():
     
     # execute the RPC call
     response_dict = api.call()
-    print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2)))
+    print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
     
     # alternative:
     # api.get_player().get_inventory().get_map_objects().download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e").call()

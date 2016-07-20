@@ -23,18 +23,20 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 Author: tjado <https://github.com/tejado>
 """
 
+from __future__ import absolute_import
+
 import logging
 import re
 import requests
 
-from utilities import f2i, h2f
+from .utilities import f2i, h2f
+from pgoapi.rpc_api import RpcApi
+from pgoapi.auth_ptc import AuthPtc
+from pgoapi.auth_google import AuthGoogle
+from pgoapi.exceptions import AuthException, NotLoggedInException, ServerBusyOrOfflineException
 
-from rpc_api import RpcApi
-from auth_ptc import AuthPtc
-from auth_google import AuthGoogle
-from exceptions import AuthException, NotLoggedInException, ServerBusyOrOfflineException
-
-import protos.RpcEnum_pb2 as RpcEnum
+from . import protos
+from POGOProtos.Networking.Requests_pb2 import RequestType
 
 logger = logging.getLogger(__name__)
 
@@ -84,9 +86,7 @@ class PGoApi:
         self._req_method_list = []
         
         return response
-    
-    #def get_player(self):
-    
+
     def list_curr_methods(self):
         for i in self._req_method_list:
             print("{} ({})".format(RpcEnum.RequestMethod.Name(i),i))
@@ -112,16 +112,16 @@ class PGoApi:
         
             name = func.upper()
             if kwargs:
-                self._req_method_list.append( { RpcEnum.RequestMethod.Value(name): kwargs } )
+                self._req_method_list.append( { RequestType.Value(name): kwargs } )
                 self.log.info("Adding '%s' to RPC request including arguments", name)
                 self.log.debug("Arguments of '%s': \n\r%s", name, kwargs)
             else:
-                self._req_method_list.append( RpcEnum.RequestMethod.Value(name) )
+                self._req_method_list.append( RequestType.Value(name) )
                 self.log.info("Adding '%s' to RPC request", name)
    
             return self
    
-        if func.upper() in RpcEnum.RequestMethod.keys():
+        if func.upper() in RequestType.keys():
             return function
         else:
             raise AttributeError
@@ -129,7 +129,7 @@ class PGoApi:
         
     def login(self, provider, username, password):
     
-        if not isinstance(username, basestring) or not isinstance(password, basestring):
+        if not isinstance(username, str) or not isinstance(password, str):
             raise AuthException("Username/password not correctly specified")
         
         if provider == 'ptc':
@@ -152,7 +152,7 @@ class PGoApi:
         self.get_hatched_eggs()
         self.get_inventory()
         self.check_awarded_badges()
-        self.download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e")
+        self.download_settings(hash="05daf51635c82611d1aac95c0b051d3ec088a930")
         
         response = self.call()
         

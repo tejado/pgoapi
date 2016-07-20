@@ -25,7 +25,7 @@ Author: tjado <https://github.com/tejado>
 
 import logging
 
-from auth import Auth
+from .auth import Auth
 from gpsoauth import perform_master_login, perform_oauth
 
 class AuthGoogle(Auth):

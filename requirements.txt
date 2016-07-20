@@ -1,5 +1,5 @@
 geopy==1.11.0
-protobuf==2.6.1
+protobuf>=3.0.0a3
 requests==2.10.0
 s2sphere==0.2.4
 gpsoauth==0.3.0

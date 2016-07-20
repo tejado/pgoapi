@@ -7,11 +7,13 @@ It allows automatic parsing of requests/responses by finding the correct protobu
  * No bot/farming code included !
 
 ## Supports
+ * Python 3
  * Google/PTC auth
  * Address parsing for GPS coordinates
  * Allows chaining of RPC calls
  * Good logging/debugging possibilities
  * Easy extension of further calls! No source code change required!
+ * Uses [POGOProtos](https://github.com/AeonLucid/POGOProtos) 
  * Following RPC calls:
    * GET_PLAYER
    * GET_INVENTORY
@@ -118,7 +120,6 @@ If a request needs parameters, they can be added as arguments and pgoapi will tr
  * requests
  * protobuf
  * gpsoauth
- * protobuf-to-dict
  * geopy (only for pokecli demo)
  * s2sphere (only for pokecli demo)
  

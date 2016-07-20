@@ -28,7 +28,7 @@ import json
 import logging
 import requests
 
-from auth import Auth
+from .auth import Auth
 
 class AuthPtc(Auth):
 
@@ -51,7 +51,7 @@ class AuthPtc(Auth):
         head = {'User-Agent': 'niantic'}
         r = self._session.get(self.PTC_LOGIN_URL, headers=head)
         
-        jdata = json.loads(r.content)
+        jdata = json.loads(r.content.decode('utf-8'))
         data = {
             'lt': jdata['lt'],
             'execution': jdata['execution'],
@@ -64,7 +64,7 @@ class AuthPtc(Auth):
         ticket = None
         try:
             ticket = re.sub('.*ticket=', '', r1.history[0].headers['Location'])
-        except Exception,e:
+        except Exception as e:
             try:
                 self.log.error('Could not retrieve token: %s', r1.json()['errors'][0])
             except Exception as e:
@@ -80,7 +80,7 @@ class AuthPtc(Auth):
         }
         
         r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1)
-        access_token = re.sub('&expires.*', '', r2.content)
+        access_token = re.sub('&expires.*', '', r2.content.decode('utf-8'))
         access_token = re.sub('.*access_token=', '', access_token)
 
         if '-sso.pokemon.com' in access_token:
