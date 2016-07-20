@@ -140,7 +140,7 @@ class RpcApi:
 
                 for (key, value) in entry_content.items():
                     if isinstance(value, list):
-                        self.log.debug("Found list: %s - trying as repeated")
+                        self.log.debug("Found list: %s - trying as repeated", key)
                         for i in value:
                             try:
                                 self.log.debug("%s -> %s", key, i)

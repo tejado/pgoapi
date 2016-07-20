@@ -23,12 +23,14 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 Author: tjado <https://github.com/tejado>
 """
 
+from __future__ import absolute_import
+
 import re
 import json
 import logging
 import requests
 
-from .auth import Auth
+from pgoapi.auth import Auth
 
 class AuthPtc(Auth):
 

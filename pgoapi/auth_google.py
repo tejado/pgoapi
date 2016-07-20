@@ -23,9 +23,11 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 Author: tjado <https://github.com/tejado>
 """
 
+from __future__ import absolute_import
+
 import logging
 
-from .auth import Auth
+from pgoapi.auth import Auth
 from gpsoauth import perform_master_login, perform_oauth
 
 class AuthGoogle(Auth):

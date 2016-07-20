@@ -154,16 +154,14 @@ def main():
     
     # get inventory call
     # ----------------------
-    #api.get_inventory()
+    api.get_inventory()
     
     # get map objects call
     # repeated fields (e.g. cell_id and since_timestamp_ms in get_map_objects) can be provided over a list
     # ----------------------
-    
-    cell_ids = get_cell_ids(position[0], position[1])
-    timestamps = [0,] * len(cellid)
-    api.get_map_objects(latitude = util.f2i(position[0]), longitude = util.f2i(position[1]), 
-            since_timestamp_ms = timestamps, cell_id = cell_ids)
+    #cell_ids = get_cell_ids(position[0], position[1])
+    #timestamps = [0,] * len(cell_ids)
+    #api.get_map_objects(latitude = util.f2i(position[0]), longitude = util.f2i(position[1]), since_timestamp_ms = timestamps, cell_id = cell_ids)
 
     # spin a fort 
     # ----------------------
@@ -178,7 +176,7 @@ def main():
     
     # get download settings call
     # ----------------------
-    #api.download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e")
+    api.download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e")
     
     # execute the RPC call
     response_dict = api.call()
