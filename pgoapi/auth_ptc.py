@@ -38,19 +38,19 @@ class AuthPtc(Auth):
 
     def __init__(self):
         Auth.__init__(self)
-        
+
         self._auth_provider = 'ptc'
-        
+
         self._session = requests.session()
         self._session.verify = True
 
     def login(self, username, password):
 
         self.log.info('Login for: %s', username)
-        
+
         head = {'User-Agent': 'niantic'}
         r = self._session.get(self.PTC_LOGIN_URL, headers=head)
-        
+
         jdata = json.loads(r.content)
         data = {
             'lt': jdata['lt'],
@@ -78,7 +78,7 @@ class AuthPtc(Auth):
             'grant_type': 'refresh_token',
             'code': ticket,
         }
-        
+
         r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1)
         access_token = re.sub('&expires.*', '', r2.content)
         access_token = re.sub('.*access_token=', '', access_token)
@@ -90,8 +90,7 @@ class AuthPtc(Auth):
         else:
             self.log.info('Seems not to be a PTC Session Token... login failed :(')
             return False
-        
+
         self._login = True
-        
+
         return True
-        
