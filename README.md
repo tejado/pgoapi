@@ -118,6 +118,7 @@ If a request needs parameters, they can be added as arguments and pgoapi will tr
  * requests
  * protobuf
  * gpsoauth
+ * protobuf-to-dict
  * geopy (only for pokecli demo)
  * s2sphere (only for pokecli demo)
  
