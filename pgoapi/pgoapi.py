@@ -89,7 +89,7 @@ class PGoApi:
 
     def list_curr_methods(self):
         for i in self._req_method_list:
-            print("{} ({})".format(RpcEnum.RequestMethod.Name(i),i))
+            print("{} ({})".format(RequestType.Name(i),i))
     
     def set_logger(self, logger):
         self._ = logger or logging.getLogger(__name__)
