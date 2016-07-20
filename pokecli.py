@@ -109,6 +109,7 @@ def init_config():
             config.__dict__[key] = load[key]
 
     if config.__dict__["password"] is None:
+        log.info("Secure Password Input (if there is no password prompt, use --password <pw>):")
         config.__dict__["password"] = getpass.getpass()
 
     if config.auth_service not in ['ptc', 'google']:
