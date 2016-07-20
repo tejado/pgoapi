@@ -42,6 +42,18 @@ It allows automatic parsing of requests/responses by finding the correct protobu
       -t, --test                                    Only parse the specified location
 
 
+### pokecli with Docker (optional)
+
+Build and run container:
+
+    docker build -t pokecli .
+    docker run pokecli
+
+Optionally create an alias:
+
+    alias pokecli='docker run pokecli'
+
+
 ### pokecli demo
 
     $ python2 pokecli.py -a ptc -u tejado -p 1234 --location "New York, Washington Square"
