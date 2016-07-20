@@ -35,17 +35,18 @@ import logging
 import requests
 import argparse
 
-
-from google.protobuf.internal import encoder
-from geopy.geocoders import GoogleV3
-from s2sphere import Cell, CellId, LatLng
-
 # add directory of this file to PATH, so that the package will be found
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 # import Pokemon Go API lib
 from pgoapi import pgoapi
 from pgoapi import utilities as util
+
+# other stuff
+from google.protobuf.internal import encoder
+from geopy.geocoders import GoogleV3
+from s2sphere import Cell, CellId, LatLng
+
 
 log = logging.getLogger(__name__)
 

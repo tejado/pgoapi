@@ -177,7 +177,7 @@ class RpcApi:
         
         if response_raw.status_code != 200:
             self.log.warning('Unexpected HTTP server response - needs 200 got %s', response_raw.status_code)
-            self.log.debug('HTTP output: \n%s', response_raw.content)
+            self.log.debug('HTTP output: \n%s', response_raw.content.decode('utf-8'))
             return False
         
         if response_raw.content is None:

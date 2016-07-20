@@ -31,3 +31,6 @@ class NotLoggedInException(Exception):
 
 class ServerBusyOrOfflineException(Exception):
     pass
+    
+class PleaseInstallProtobufVersion3(Exception):
+    pass
