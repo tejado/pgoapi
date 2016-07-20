@@ -176,14 +176,14 @@ def main():
     
     # get download settings call
     # ----------------------
-    api.download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e")
+    #api.download_settings(hash="05daf51635c82611d1aac95c0b051d3ec088a930")
     
     # execute the RPC call
     response_dict = api.call()
     print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
     
     # alternative:
-    # api.get_player().get_inventory().get_map_objects().download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e").call()
+    # api.get_player().get_inventory().get_map_objects().download_settings(hash="05daf51635c82611d1aac95c0b051d3ec088a930").call()
 
 if __name__ == '__main__':
     main()
