@@ -13,7 +13,7 @@ It allows automatic parsing of requests/responses by finding the correct protobu
  * Allows chaining of RPC calls
  * Good logging/debugging possibilities
  * Easy extension of further calls! No source code change required!
- * Uses [POGOProtos](https://github.com/AeonLucid/POGOProtos) (argument naming changed)
+ * Uses [POGOProtos](https://github.com/AeonLucid/POGOProtos)
  * Following RPC calls:
    * GET_PLAYER
    * GET_INVENTORY
