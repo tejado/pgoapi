@@ -10,7 +10,7 @@ It allows automatic parsing of requests/responses by finding the correct protobu
 
 Our slack channel can be found here: [pgoapi.slack.com](https://pgoapi.slack.com)
 
-Please send all join requests to mike.resoli@gmail.com.
+Join up [here](https://pgoapislack.herokuapp.com/)!
 
 
 ## Supports
