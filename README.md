@@ -45,19 +45,6 @@ It allows automatic parsing of requests/responses by finding the correct protobu
       -d, --debug                                   Debug Mode
       -t, --test                                    Only parse the specified location
 
-
-### pokecli with Docker (optional)
-
-Build and run container:
-
-    docker build -t pokecli .
-    docker run pokecli
-
-Optionally create an alias:
-
-    alias pokecli='docker run pokecli'
-
-
 ### pokecli demo
 
     $ python2 pokecli.py -a ptc -u tejado -p 1234 --location "New York, Washington Square"
@@ -109,6 +96,17 @@ Optionally create an alias:
           },
     ...
 
+
+### pokecli with Docker (optional)
+Build and run container:
+
+    docker build -t pokecli .
+    docker run pokecli
+
+Optionally create an alias:
+
+    alias pokecli='docker run pokecli'
+
 ## pgoapi extension
 All (known) RPC calls against the original Pokemon Go servers are listed in the RequestMethod Enum in the pgoapi/protos/RpcEnum.proto file. These can be executed over the name, e.g. the call for get_player is:
 
@@ -132,7 +130,6 @@ If a request needs parameters, they can be added as arguments and pgoapi will tr
     api.download_settings(hash="4a2e9bc330dae60e7b74fc85b98868ab4700802e")
     api.call()
 
-    
 ## Requirements
  * Python 2 or 3
  * requests
