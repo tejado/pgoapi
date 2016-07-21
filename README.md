@@ -6,6 +6,10 @@ It allows automatic parsing of requests/responses by finding the correct protobu
  * I don't play pokemon go !
  * No bot/farming code included !
 
+## Slack channel
+Our slack channel can be found here: [pgoapi.slack.com](pgoapi.slack.com)
+
+
 ## Supports
  * Python 2 and 3
  * Google/PTC auth
