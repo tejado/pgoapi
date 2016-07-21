@@ -54,21 +54,6 @@ def get_pos_by_name(location_name):
 
     return (loc.latitude, loc.longitude, loc.altitude)
 
-def get_cellid(lat, long):
-    origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
-    walk = [origin.id()]
-
-    # 10 before and 10 after
-    next = origin.next()
-    prev = origin.prev()
-    for i in range(10):
-        walk.append(prev.id())
-        walk.append(next.id())
-        next = next.next()
-        prev = prev.prev()
-    print walk
-    return ''.join(map(encode, sorted(walk)))
-
 def get_cell_ids(lat, long, radius = 10):
     origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
     walk = [origin.id()]
@@ -172,25 +157,18 @@ def find_poi(api, lat, lng):
     step_size = 0.0015
     step_limit = 49
     coords = generate_spiral(lat, lng, step_size, step_limit)
-    timestamp = "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
     for coord in coords:
         lat = coord['lat']
         lng = coord['lng']
         api.set_position(lat, lng, 0)
 
-        #cellid = get_cellid(lat, lng)
-        #api.get_map_objects(latitude=f2i(lat), longitude=f2i(lng), since_timestamp_ms=timestamp, cell_id=cellid)
-
+        
         #get_cellid was buggy -> replaced through get_cell_ids from pokecli
-        #timestamp gets computed a different way
-
+        #timestamp gets computed a different way:
         cell_ids = get_cell_ids(lat, lng)
         timestamps = [0,] * len(cell_ids)
         api.get_map_objects(latitude = util.f2i(lat), longitude = util.f2i(lng), since_timestamp_ms = timestamps, cell_id = cell_ids)
-	print "lalal"
-        print lat, lng
         response_dict = api.call()
-	print response_dict
         if 'status' in response_dict['responses']['GET_MAP_OBJECTS']:
 	    if response_dict['responses']['GET_MAP_OBJECTS']['status'] == 1:
                 for map_cell in response_dict['responses']['GET_MAP_OBJECTS']['map_cells']:
