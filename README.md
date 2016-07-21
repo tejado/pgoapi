@@ -27,7 +27,7 @@ It allows automatic parsing of requests/responses by finding the correct protobu
    * ...
    * more should be possible now but have to be tested (PLEASE support here)
 
-## Installation
+## Installation (lib only - without pokecli etc.)
 
     pip.exe install  git+https://github.com/tejado/pgoapi.git
 
