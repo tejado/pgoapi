@@ -106,7 +106,7 @@ def init_config():
     # Passed in arguments shoud trump
     for key in config.__dict__:
         if key in load and config.__dict__[key] == None:
-            config.__dict__[key] = load[key]
+            config.__dict__[key] = str(load[key])
 
     if config.__dict__["password"] is None:
         log.info("Secure Password Input (if there is no password prompt, use --password <pw>):")
