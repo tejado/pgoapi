@@ -6,7 +6,8 @@ It allows automatic parsing of requests/responses by finding the correct protobu
  * I don't play pokemon go !
  * No bot/farming code included !
 
-![Slack](https://www.librato.com/docs/kb/_images/slack-logo.png)
+![Slack](https://www.librato.com/docs/kb/_images/slack-logo.png = 100x300)
+
 Our slack channel can be found here: [pgoapi.slack.com](pgoapi.slack.com)
 
 Please send all join requests to mike.resoli@gmail.com.
