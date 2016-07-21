@@ -37,6 +37,7 @@ import argparse
 
 from pgoapi import PGoApi
 from pgoapi.utilities import f2i, h2f
+from pgoapi import utilities as util
 
 from google.protobuf.internal import encoder
 from geopy.geocoders import GoogleV3
@@ -65,7 +66,24 @@ def get_cellid(lat, long):
         walk.append(next.id())
         next = next.next()
         prev = prev.prev()
+    print walk
     return ''.join(map(encode, sorted(walk)))
+
+def get_cell_ids(lat, long, radius = 10):
+    origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
+    walk = [origin.id()]
+    right = origin.next()
+    left = origin.prev()
+
+    # Search around provided radius
+    for i in range(radius):
+        walk.append(right.id())
+        walk.append(left.id())
+        right = right.next()
+        left = left.prev()
+
+    # Return everything
+    return sorted(walk)
 
 def encode(cellid):
     output = []
@@ -160,17 +178,27 @@ def find_poi(api, lat, lng):
         lng = coord['lng']
         api.set_position(lat, lng, 0)
 
-        cellid = get_cellid(lat, lng)
-        api.get_map_objects(latitude=f2i(lat), longitude=f2i(lng), since_timestamp_ms=timestamp, cell_id=cellid)
+        #cellid = get_cellid(lat, lng)
+        #api.get_map_objects(latitude=f2i(lat), longitude=f2i(lng), since_timestamp_ms=timestamp, cell_id=cellid)
 
+        #get_cellid was buggy -> replaced through get_cell_ids from pokecli
+        #timestamp gets computed a different way
+
+        cell_ids = get_cell_ids(lat, lng)
+        timestamps = [0,] * len(cell_ids)
+        api.get_map_objects(latitude = util.f2i(lat), longitude = util.f2i(lng), since_timestamp_ms = timestamps, cell_id = cell_ids)
+	print "lalal"
+        print lat, lng
         response_dict = api.call()
-        if response_dict['responses']['GET_MAP_OBJECTS']['status'] == 1:
-            for map_cell in response_dict['responses']['GET_MAP_OBJECTS']['map_cells']:
-                if 'wild_pokemons' in map_cell:
-                    for pokemon in map_cell['wild_pokemons']:
-                        pokekey = get_key_from_pokemon(pokemon)
-                        pokemon['hides_at'] = time.time() + pokemon['time_till_hidden_ms']/1000
-                        poi['pokemons'][pokekey] = pokemon
+	print response_dict
+        if 'status' in response_dict['responses']['GET_MAP_OBJECTS']:
+	    if response_dict['responses']['GET_MAP_OBJECTS']['status'] == 1:
+                for map_cell in response_dict['responses']['GET_MAP_OBJECTS']['map_cells']:
+                    if 'wild_pokemons' in map_cell:
+                        for pokemon in map_cell['wild_pokemons']:
+                            pokekey = get_key_from_pokemon(pokemon)
+                            pokemon['hides_at'] = time.time() + pokemon['time_till_hidden_ms']/1000
+                            poi['pokemons'][pokekey] = pokemon
 
         # time.sleep(0.51)
     print('POI dictionary: \n\r{}'.format(json.dumps(poi, indent=2)))
