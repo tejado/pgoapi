@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os
-from distutils.core import setup
+from setuptools import setup, find_packages
 from pip.req import parse_requirements
 
 setup_dir = os.path.dirname(os.path.realpath(__file__))
@@ -15,6 +15,6 @@ setup(name='pgoapi',
       description='Pokemon Go API lib',
       version='1.1.0',
       url='https://github.com/tejado/pgoapi',
-      packages=['pgoapi'],
-      install_requires=reqs
+      packages=find_packages(),
+      install_requires=reqs,
      )
