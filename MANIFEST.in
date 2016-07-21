@@ -1,0 +1,6 @@
+recursive-include protos
+
+global-exclude *.dll
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.so
