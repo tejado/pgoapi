@@ -34,6 +34,7 @@ import random
 import logging
 import requests
 import argparse
+import pprint
 
 from pgoapi import PGoApi
 from pgoapi.utilities import f2i, h2f
@@ -149,7 +150,10 @@ def main():
 
     # execute the RPC call
     response_dict = api.call()
-    print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2)))
+
+    # apparently new dict has binary data in it, so formatting it with this method no longer works, pprint works here but there are other alternatives    
+    # print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2)))
+    print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
     find_poi(api, position[0], position[1])
 
 def find_poi(api, lat, lng):
@@ -170,7 +174,7 @@ def find_poi(api, lat, lng):
         api.get_map_objects(latitude = util.f2i(lat), longitude = util.f2i(lng), since_timestamp_ms = timestamps, cell_id = cell_ids)
         response_dict = api.call()
         if 'status' in response_dict['responses']['GET_MAP_OBJECTS']:
-	    if response_dict['responses']['GET_MAP_OBJECTS']['status'] == 1:
+            if response_dict['responses']['GET_MAP_OBJECTS']['status'] == 1:
                 for map_cell in response_dict['responses']['GET_MAP_OBJECTS']['map_cells']:
                     if 'wild_pokemons' in map_cell:
                         for pokemon in map_cell['wild_pokemons']:
@@ -179,7 +183,9 @@ def find_poi(api, lat, lng):
                             poi['pokemons'][pokekey] = pokemon
 
         # time.sleep(0.51)
-    print('POI dictionary: \n\r{}'.format(json.dumps(poi, indent=2)))
+    # new dict, binary data
+    # print('POI dictionary: \n\r{}'.format(json.dumps(poi, indent=2)))
+    print('POI dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(poi)))
     print('Open this in a browser to see the path the spiral search took:')
     print_gmaps_dbug(coords)
 
