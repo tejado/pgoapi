@@ -205,7 +205,9 @@ class RpcApi:
     def _parse_sub_responses(self, response_proto, subrequests_list, response_proto_dict):
         self.log.debug('Parsing sub RPC responses...')
         response_proto_dict['responses'] = {}
-        del response_proto_dict['returns']
+        
+        if 'returns' in response_proto_dict:
+            del response_proto_dict['returns']
 
         list_len = len(subrequests_list) -1
         i = 0
