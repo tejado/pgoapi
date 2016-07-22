@@ -54,7 +54,8 @@ log = logging.getLogger(__name__)
 def get_pos_by_name(location_name):
     geolocator = GoogleV3()
     loc = geolocator.geocode(location_name, timeout=10)
-
+    if not loc:
+        return None
     log.info('Your given location: %s', loc.address.encode('utf-8'))
     log.info('lat/long/alt: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
 
@@ -140,6 +141,9 @@ def main():
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
 
     position = get_pos_by_name(config.location)
+    if not position:
+        return
+        
     if config.test:
         return
 
