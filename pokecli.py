@@ -142,6 +142,7 @@ def main():
 
     position = get_pos_by_name(config.location)
     if not position:
+        log.error('Position could not be found by name')
         return
         
     if config.test:
