@@ -51,7 +51,7 @@ class AuthPtc(Auth):
         self.log.info('Login for: %s', username)
         
         head = {'User-Agent': 'niantic'}
-        r = self._session.get(self.PTC_LOGIN_URL, headers=head, requests=10)
+        r = self._session.get(self.PTC_LOGIN_URL, headers=head, timeout=10)
         
         jdata = json.loads(r.content.decode('utf-8'))
         data = {
@@ -61,7 +61,7 @@ class AuthPtc(Auth):
             'username': username,
             'password': password,
         }
-        r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head, requests=10)
+        r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head, timeout=10)
 
         ticket = None
         try:
@@ -81,7 +81,7 @@ class AuthPtc(Auth):
             'code': ticket,
         }
         
-        r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1, requests=10)
+        r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1, timeout=10)
         access_token = re.sub('&expires.*', '', r2.content.decode('utf-8'))
         access_token = re.sub('.*access_token=', '', access_token)
 
