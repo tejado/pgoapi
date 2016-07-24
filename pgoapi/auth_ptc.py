@@ -51,9 +51,18 @@ class AuthPtc(Auth):
         self.log.info('Login for: %s', username)
         
         head = {'User-Agent': 'niantic'}
-        r = self._session.get(self.PTC_LOGIN_URL, headers=head)
+        try:
+            r = self._session.get(self.PTC_LOGIN_URL, headers=head, timeout=10)
+        except requests.exceptions.ReadTimeout:
+            self.log.error('Server timed out')
+            return False
         
-        jdata = json.loads(r.content.decode('utf-8'))
+        try:
+            jdata = json.loads(r.content.decode('utf-8'))
+        except ValueError:
+            self.log.error('Could not decode response')
+            return False
+            
         data = {
             'lt': jdata['lt'],
             'execution': jdata['execution'],
@@ -61,7 +70,11 @@ class AuthPtc(Auth):
             'username': username,
             'password': password,
         }
-        r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head)
+        try:
+            r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head, timeout=10)
+        except requests.exceptions.ReadTimeout:
+            self.log.error('Server timed out')
+            return False
 
         ticket = None
         try:
@@ -81,7 +94,11 @@ class AuthPtc(Auth):
             'code': ticket,
         }
         
-        r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1)
+        try:
+            r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1, timeout=10)
+        except requests.exceptions.ReadTimeout:
+            self.log.error('Server timed out')
+            return False
         access_token = re.sub('&expires.*', '', r2.content.decode('utf-8'))
         access_token = re.sub('.*access_token=', '', access_token)
 
