@@ -166,6 +166,8 @@ def main():
     # execute the RPC call
     response_dict = api.call()
 
+    approot = os.path.dirname(os.path.realpath(__file__))
+
     with open(os.path.join(approot, 'data/moves.json')) as data_file:
         moves = json.load(data_file)
 
