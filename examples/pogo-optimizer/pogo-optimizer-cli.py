@@ -61,7 +61,7 @@ def get_pos_by_name(location_name):
 
     log.info('Your given location: %s', loc.address.encode('utf-8'))
     log.info('lat/long/alt: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
-    
+
     return (loc.latitude, loc.longitude, loc.altitude)
 
 def get_cell_ids(lat, long, radius = 10):
@@ -79,12 +79,12 @@ def get_cell_ids(lat, long, radius = 10):
 
     # Return everything
     return sorted(walk)
-    
+
 def encode(cellid):
     output = []
     encoder._VarintEncoder()(output.append, cellid)
     return ''.join(output)
-    
+
 def init_config():
     parser = argparse.ArgumentParser()
     config_file = "config.json"
@@ -119,9 +119,9 @@ def init_config():
     if config.auth_service not in ['ptc', 'google']:
       log.error("Invalid Auth service specified! ('ptc' or 'google')")
       return None
-    
+
     return config
-    
+
 
 def main():
     # log settings
@@ -137,39 +137,39 @@ def main():
     config = init_config()
     if not config:
         return
-        
+
     if config.debug:
         logging.getLogger("requests").setLevel(logging.DEBUG)
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
-    
+
     position = get_pos_by_name(config.location)
     if not position:
         return
-        
+
     if config.test:
         return
-    
-    # instantiate pgoapi 
+
+    # instantiate pgoapi
     api = pgoapi.PGoApi()
-    
+
     # provide player position on the earth
     api.set_position(*position)
-    
+
     if not api.login(config.auth_service, config.username, config.password):
         return
-    
+
     # get inventory call
     # ----------------------
     api.get_inventory()
-    
+
     # execute the RPC call
     response_dict = api.call()
 
     with open('data/moves.json') as data_file:
         moves = json.load(data_file)
 
-    with open('data/pokemon.json') as data_file:    
+    with open('data/pokemon.json') as data_file:
         pokemon = json.load(data_file)
 
     def format(i):
