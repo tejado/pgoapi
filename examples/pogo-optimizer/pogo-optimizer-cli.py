@@ -174,16 +174,16 @@ def main():
         i['individual_attack'] =  i.get('individual_attack', 0)
         i['individual_stamina'] =  i.get('individual_stamina', 0)
         i['power_quotient'] = round(((float(i['individual_defense']) + float(i['individual_attack']) + float(i['individual_stamina'])) / 45) * 100)
-        i['name'] = filter(lambda j: int(j['Number']) == i['pokemon_id'], pokemon)[0]['Name']
-        i['move_1'] = filter(lambda j: j['id'] == i['move_1'], moves)[0]['name']
-        i['move_2'] = filter(lambda j: j['id'] == i['move_2'], moves)[0]['name']
+        i['name'] = list(filter(lambda j: int(j['Number']) == i['pokemon_id'], pokemon))[0]['Name']
+        i['move_1'] = list(filter(lambda j: j['id'] == i['move_1'], moves))[0]['name']
+        i['move_2'] = list(filter(lambda j: j['id'] == i['move_2'], moves))[0]['name']
         return i
 
-    all_pokemon = filter(lambda i: i['inventory_item_data'].has_key('pokemon_data') and not i['inventory_item_data']['pokemon_data'].has_key('is_egg'), response_dict['responses']['GET_INVENTORY']['inventory_delta']['inventory_items'])
-    all_pokemon = map(format, all_pokemon)
+    all_pokemon = filter(lambda i: 'pokemon_data' in i['inventory_item_data'] and 'is_egg' not in i['inventory_item_data']['pokemon_data'], response_dict['responses']['GET_INVENTORY']['inventory_delta']['inventory_items'])
+    all_pokemon = list(map(format, all_pokemon))
     all_pokemon.sort(key=lambda x: x['power_quotient'], reverse=True)
 
-    print tabulate(all_pokemon, headers = "keys")
+    print(tabulate(all_pokemon, headers = "keys"))
 
 if __name__ == '__main__':
     main()
