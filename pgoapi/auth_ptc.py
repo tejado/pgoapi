@@ -52,15 +52,22 @@ class AuthPtc(Auth):
         
         head = {'User-Agent': 'niantic'}
         r = self._session.get(self.PTC_LOGIN_URL, headers=head)
-        
-        jdata = json.loads(r.content.decode('utf-8'))
-        data = {
-            'lt': jdata['lt'],
-            'execution': jdata['execution'],
-            '_eventId': 'submit',
-            'username': username,
-            'password': password,
-        }
+
+        try:
+            jdata = json.loads(r.content.decode('utf-8'))
+            data = {
+                'lt': jdata['lt'],
+                'execution': jdata['execution'],
+                '_eventId': 'submit',
+                'username': username,
+                'password': password,
+            }
+        except ValueError as e:
+            self.log.error('Field missing in response: %s' % e)
+            return False
+        except KeyError as e:
+            self.log.error('Field missing in response.content: %s' % e)
+            return False
         r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head)
 
         ticket = None
