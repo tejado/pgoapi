@@ -28,6 +28,7 @@ from __future__ import absolute_import
 import logging
 import re
 import requests
+import time
 
 from .utilities import f2i, h2f
 from pgoapi.rpc_api import RpcApi
@@ -83,10 +84,24 @@ class PGoApi:
 
         # cleanup after call execution
         if no_cleanup == False:
-            self.log.info('Cleanup of request!')
-            self._req_method_list = []
+            self.cleanup_call()
 
         return response
+
+    def call_until(self, delay):
+        response = self.call(no_cleanup=True)
+
+        while response is None:
+            time.sleep(delay)
+            response = self.call(no_cleanup=True)
+
+        cleanup_call()
+
+        return response
+
+    def cleanup_call():
+        self.log.info('Cleanup of request!')
+        self._req_method_list = []
 
     def list_curr_methods(self):
         for i in self._req_method_list:
