@@ -91,7 +91,12 @@ class RpcApi:
         response = self._make_rpc(endpoint, request_proto)
         
         response_dict = self._parse_main_response(response, subrequests)
-        
+
+        if isinstance(response_dict, dict) and 'status_code' in response_dict:
+            sc = response_dict['status_code']
+            if sc == 102:
+                raise NotLoggedInException()
+
         return response_dict
     
     def _build_main_request(self, subrequests, player_position = None):
