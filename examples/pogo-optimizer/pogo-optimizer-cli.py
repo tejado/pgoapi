@@ -166,10 +166,10 @@ def main():
     # execute the RPC call
     response_dict = api.call()
 
-    with open('data/moves.json') as data_file:
+    with open(os.path.join(approot, 'data/moves.json')) as data_file:
         moves = json.load(data_file)
 
-    with open('data/pokemon.json') as data_file:
+    with open(os.path.join(approot, 'data/pokemon.json')) as data_file:
         pokemon = json.load(data_file)
 
     def format(i):
