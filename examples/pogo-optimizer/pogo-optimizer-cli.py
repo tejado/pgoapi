@@ -47,6 +47,8 @@ from pgoapi import utilities as util
 from google.protobuf.internal import encoder
 from geopy.geocoders import GoogleV3
 from s2sphere import Cell, CellId, LatLng
+from tabulate import tabulate
+from collections import defaultdict
 
 
 log = logging.getLogger(__name__)
@@ -57,7 +59,7 @@ def get_pos_by_name(location_name):
 
     log.info('Your given location: %s', loc.address.encode('utf-8'))
     log.info('lat/long/alt: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
-
+    
     return (loc.latitude, loc.longitude, loc.altitude)
 
 def get_cell_ids(lat, long, radius = 10):
@@ -75,12 +77,12 @@ def get_cell_ids(lat, long, radius = 10):
 
     # Return everything
     return sorted(walk)
-
+    
 def encode(cellid):
     output = []
     encoder._VarintEncoder()(output.append, cellid)
     return ''.join(output)
-
+    
 def init_config():
     parser = argparse.ArgumentParser()
     config_file = "config.json"
@@ -115,9 +117,9 @@ def init_config():
     if config.auth_service not in ['ptc', 'google']:
       log.error("Invalid Auth service specified! ('ptc' or 'google')")
       return None
-
+    
     return config
-
+    
 
 def main():
     # log settings
@@ -133,67 +135,55 @@ def main():
     config = init_config()
     if not config:
         return
-
+        
     if config.debug:
         logging.getLogger("requests").setLevel(logging.DEBUG)
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
-
+    
     position = get_pos_by_name(config.location)
     if config.test:
         return
-
-    # instantiate pgoapi
+    
+    # instantiate pgoapi 
     api = pgoapi.PGoApi()
-
+    
     # provide player position on the earth
     api.set_position(*position)
-
+    
     if not api.login(config.auth_service, config.username, config.password):
         return
-
-    # chain subrequests (methods) into one RPC call
-
-    # get player profile call
-    # ----------------------
-    api.get_player()
-
+    
     # get inventory call
     # ----------------------
     api.get_inventory()
-
-    # get map objects call
-    # repeated fields (e.g. cell_id and since_timestamp_ms in get_map_objects) can be provided over a list
-    # ----------------------
-    #cell_ids = get_cell_ids(position[0], position[1])
-    #timestamps = [0,] * len(cell_ids)
-    #api.get_map_objects(latitude = util.f2i(position[0]), longitude = util.f2i(position[1]), since_timestamp_ms = timestamps, cell_id = cell_ids)
-
-    # spin a fort
-    # ----------------------
-    #fortid = '<your fortid>'
-    #lng = <your longitude>
-    #lat = <your latitude>
-    #api.fort_search(fort_id=fortid, fort_latitude=lat, fort_longitude=lng, player_latitude=f2i(position[0]), player_longitude=f2i(position[1]))
-
-    # release/transfer a pokemon and get candy for it
-    # ----------------------
-    #api.release_pokemon(pokemon_id = <your pokemonid>)
-
-    # evolve a pokemon if you have enough candies
-    # ----------------------
-    #api.evolve_pokemon(pokemon_id = <your pokemonid>)
-
-    # get download settings call
-    # ----------------------
-    #api.download_settings(hash="05daf51635c82611d1aac95c0b051d3ec088a930")
-
+    
     # execute the RPC call
     response_dict = api.call()
-    print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
 
-    # alternative:
-    # api.get_player().get_inventory().get_map_objects().download_settings(hash="05daf51635c82611d1aac95c0b051d3ec088a930").call()
+    with open('data/moves.json') as data_file:
+        moves = json.load(data_file)
+
+    with open('data/pokemon.json') as data_file:    
+        pokemon = json.load(data_file)
+
+    def format(i):
+        i = i['inventory_item_data']['pokemon_data']
+        i = {k: v for k, v in i.items() if k in ['nickname','move_1', 'move_2', 'pokemon_id', 'individual_defense', 'stamina', 'cp', 'individual_stamina', 'individual_attack']}
+        i['individual_defense'] =  i.get('individual_defense', 0)
+        i['individual_attack'] =  i.get('individual_attack', 0)
+        i['individual_stamina'] =  i.get('individual_stamina', 0)
+        i['power_quotient'] = round(((float(i['individual_defense']) + float(i['individual_attack']) + float(i['individual_stamina'])) / 45) * 100)
+        i['name'] = filter(lambda j: int(j['Number']) == i['pokemon_id'], pokemon)[0]['Name']
+        i['move_1'] = filter(lambda j: j['id'] == i['move_1'], moves)[0]['name']
+        i['move_2'] = filter(lambda j: j['id'] == i['move_2'], moves)[0]['name']
+        return i
+
+    all_pokemon = filter(lambda i: i['inventory_item_data'].has_key('pokemon_data') and not i['inventory_item_data']['pokemon_data'].has_key('is_egg'), response_dict['responses']['GET_INVENTORY']['inventory_delta']['inventory_items'])
+    all_pokemon = map(format, all_pokemon)
+    all_pokemon.sort(key=lambda x: x['power_quotient'], reverse=True)
+
+    print tabulate(all_pokemon, headers = "keys")
 
 if __name__ == '__main__':
     main()
