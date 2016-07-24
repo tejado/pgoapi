@@ -95,7 +95,7 @@ class PGoApi:
             time.sleep(delay)
             response = self.call(no_cleanup=True)
 
-        cleanup_call()
+        self.cleanup_call()
 
         return response
 
