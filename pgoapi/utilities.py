@@ -36,12 +36,7 @@ def h2f(hex):
   return struct.unpack('<d', struct.pack('<Q', int(hex,16)))[0]
   
 def to_camel_case(value):
-  def camelcase():
-    while True:
-      yield str.capitalize
-
-  c = camelcase()
-  return "".join(next(c)(x) if x else '_' for x in value.split("_"))
+  return ''.join(word.capitalize() if word else '_' for word in value.split('_'))
 
 
             
