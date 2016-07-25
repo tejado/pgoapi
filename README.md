@@ -108,19 +108,19 @@ Optionally create an alias:
     alias pokecli='docker run pokecli'
 
 ## pgoapi extension
-All (known) RPC calls against the original Pokemon Go servers are listed in the RequestMethod Enum in the pgoapi/protos/RpcEnum.proto file. These can be executed over the name, e.g. the call for get_player is:
+All (known) RPC calls against the original Pokemon Go servers are listed in the RequestType Enum in the [POGOProtos/Networking/Requests/RequestType.proto](https://github.com/AeonLucid/POGOProtos/blob/master/src/POGOProtos/Networking/Requests/RequestType.proto) file. These can be executed over the name, e.g. the call for get_player is:
 
     api = PGoApi()
     ...
     api.get_player()
     api.call()
     
-The pgoapi will send this as a RPC request and tries to parse the response over a protobuf object with the same name (get_player) converted to CamelCase + 'Response'. In our example, it would be 'GetPlayerResponse'. These protobuf definitions have to be inside RpcSub (pgoapi/protos/RpcSub.proto).
+The pgoapi will send this as a RPC request and tries to parse the response over a protobuf object with the same name (get_player) converted to CamelCase + 'Response'. In our example, it would be 'GetPlayerResponse'.
 
 If a request needs parameters, they can be added as arguments and pgoapi will try to add them automatically to the request, e.g.:
 
-    *RpcSub.proto:*
-    message DownloadSettingsRequest {
+    *DownloadSettingsMessage.proto:*
+    message DownloadSettingsMessage {
       optional string hash = 1;
     }
     
