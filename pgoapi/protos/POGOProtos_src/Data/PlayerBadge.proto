@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+import "POGOProtos/Enums/BadgeType.proto";
+
+message PlayerBadge {
+	.POGOProtos.Enums.BadgeType badge_type = 1;
+	int32 rank = 2;
+	int32 start_value = 3;
+	int32 end_value = 4;
+	double current_value = 5;
+}

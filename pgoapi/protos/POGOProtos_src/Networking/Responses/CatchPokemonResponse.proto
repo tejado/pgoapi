@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Capture/CaptureAward.proto";
+
+message CatchPokemonResponse {
+	.POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus status = 1;
+	double miss_percent = 2;
+	fixed64 captured_pokemon_id = 3;
+	.POGOProtos.Data.Capture.CaptureAward capture_award = 4;
+
+	enum CatchStatus {
+		CATCH_ERROR = 0;
+		CATCH_SUCCESS = 1;
+		CATCH_ESCAPE = 2;
+		CATCH_FLEE = 3;
+		CATCH_MISSED = 4;
+	}
+}

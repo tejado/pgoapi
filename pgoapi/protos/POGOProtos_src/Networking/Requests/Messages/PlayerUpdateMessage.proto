@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message PlayerUpdateMessage {
+	double latitude = 1;
+	double longitude = 2;
+}

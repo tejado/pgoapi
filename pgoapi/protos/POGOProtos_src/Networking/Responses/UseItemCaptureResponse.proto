@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message UseItemCaptureResponse {
+	bool success = 1;
+	double item_capture_mult = 2;
+	double item_flee_mult = 3;
+	bool stop_movement = 4;
+	bool stop_attack = 5;
+	bool target_max = 6;
+	bool target_slow = 7;
+}

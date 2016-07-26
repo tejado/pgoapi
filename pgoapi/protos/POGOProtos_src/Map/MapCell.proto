@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Map;
+
+import "POGOProtos/Map/SpawnPoint.proto";
+import "POGOProtos/Map/Fort/FortData.proto";
+import "POGOProtos/Map/Fort/FortSummary.proto";
+import "POGOProtos/Map/Pokemon/NearbyPokemon.proto";
+import "POGOProtos/Map/Pokemon/WildPokemon.proto";
+import "POGOProtos/Map/Pokemon/MapPokemon.proto";
+
+// A cell is a geographical "zone" containing objects like pokemon, gyms, and pokestops.
+message MapCell {
+	// S2 geographic area that the cell covers (http://s2map.com/) (https://code.google.com/archive/p/s2-geometry-library/)
+	uint64 s2_cell_id = 1;
+	int64 current_timestamp_ms = 2;
+	repeated .POGOProtos.Map.Fort.FortData forts = 3;
+	repeated .POGOProtos.Map.SpawnPoint spawn_points = 4;
+	repeated string deleted_objects = 6;
+	bool is_truncated_list = 7;
+	repeated .POGOProtos.Map.Fort.FortSummary fort_summaries = 8;
+	repeated .POGOProtos.Map.SpawnPoint decimated_spawn_points = 9;
+
+	// Pokemon within 2 steps or less.
+	repeated .POGOProtos.Map.Pokemon.WildPokemon wild_pokemons = 5;
+	// Pokemon within 1 step or none.
+	repeated .POGOProtos.Map.Pokemon.MapPokemon catchable_pokemons = 10;
+	// Pokemon farther away than 2 steps, but still in the area.
+	repeated .POGOProtos.Map.Pokemon.NearbyPokemon nearby_pokemons = 11;
+}

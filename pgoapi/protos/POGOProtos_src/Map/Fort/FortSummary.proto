@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Map.Fort;
+
+message FortSummary {
+	string fort_summary_id = 1;
+	int64 last_modified_timestamp_ms = 2;
+	double latitude = 3;
+	double longitude = 4;
+}

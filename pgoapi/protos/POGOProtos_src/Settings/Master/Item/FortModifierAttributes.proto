@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Item;
+
+message FortModifierAttributes {
+	int32 modifier_lifetime_seconds = 1;
+	int32 troy_disk_num_pokemon_spawned = 2;
+}

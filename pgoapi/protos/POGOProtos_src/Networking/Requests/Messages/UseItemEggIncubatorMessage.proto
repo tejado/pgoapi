@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message UseItemEggIncubatorMessage {
+	string item_id = 1;
+	uint64 pokemon_id = 2;
+}

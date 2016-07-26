@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Envelopes;
+
+message AuthTicket {
+	bytes start = 1;
+	uint64 expire_timestamp_ms = 2;
+	bytes end = 3;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/BadgeType.proto";
+
+message CheckAwardedBadgesResponse {
+	bool success = 1;
+	repeated .POGOProtos.Enums.BadgeType awarded_badges = 2;
+	repeated int32 awarded_badge_levels = 3;
+}

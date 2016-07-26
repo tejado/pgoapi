@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message GymBattleSettings {
+	float energy_per_sec = 1;
+	float dodge_energy_cost = 2;
+	float retarget_seconds = 3;
+	float enemy_attack_interval = 4;
+	float attack_server_interval = 5;
+	float round_duration_seconds = 6;
+	float bonus_time_per_ally_seconds = 7;
+	int32 maximum_attackers_per_battle = 8;
+	float same_type_attack_bonus_multiplier = 9;
+	int32 maximum_energy = 10;
+	float energy_delta_per_health_lost = 11;
+	int32 dodge_duration_ms = 12;
+	int32 minimum_player_level = 13;
+	int32 swap_duration_ms = 14;
+}

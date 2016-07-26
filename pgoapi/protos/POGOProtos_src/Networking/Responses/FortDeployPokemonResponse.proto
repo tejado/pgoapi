@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Gym/GymState.proto";
+import "POGOProtos/Networking/Responses/FortDetailsResponse.proto";
+
+message FortDeployPokemonResponse {
+	.POGOProtos.Networking.Responses.FortDeployPokemonResponse.Result result = 1;
+	.POGOProtos.Networking.Responses.FortDetailsResponse fort_details = 2;
+	.POGOProtos.Data.PokemonData pokemon_data = 3;
+	.POGOProtos.Data.Gym.GymState gym_state = 4;
+
+	enum Result {
+		NO_RESULT_SET = 0;
+		SUCCESS = 1;
+		ERROR_ALREADY_HAS_POKEMON_ON_FORT = 2;
+		ERROR_OPPOSING_TEAM_OWNS_FORT = 3;
+		ERROR_FORT_IS_FULL = 4;
+		ERROR_NOT_IN_RANGE = 5;
+		ERROR_PLAYER_HAS_NO_TEAM = 6;
+		ERROR_POKEMON_NOT_FULL_HP = 7;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 8;
+	}
+}

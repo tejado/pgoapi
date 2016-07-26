@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import "POGOProtos/Inventory/InventoryItemData.proto";
+
+message InventoryItem {
+	int64 modified_timestamp_ms = 1;
+	int64 deleted_item_key = 2;
+	.POGOProtos.Inventory.InventoryItemData inventory_item_data = 3;
+}

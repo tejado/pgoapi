@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message FortSettings {
+	double interaction_range_meters = 1;
+	int32 max_total_deployed_pokemon = 2;
+	int32 max_player_deployed_pokemon = 3;
+	double deploy_stamina_multiplier = 4;
+	double deploy_attack_multiplier = 5;
+	double far_interaction_range_meters = 6;
+}

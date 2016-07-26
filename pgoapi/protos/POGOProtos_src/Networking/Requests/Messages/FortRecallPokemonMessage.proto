@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message FortRecallPokemonMessage {
+	string fort_id = 1;
+	fixed64 pokemon_id = 2;
+	double player_latitude = 3;
+	double player_longitude = 4;
+}

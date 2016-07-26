@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message ReleasePokemonResponse {
+	.POGOProtos.Networking.Responses.ReleasePokemonResponse.Result result = 1;
+	int32 candy_awarded = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		POKEMON_DEPLOYED = 2;
+		FAILED = 3;
+		ERROR_POKEMON_IS_EGG = 4;
+	}
+}

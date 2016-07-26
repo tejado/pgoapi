@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonData.proto";
+
+message EvolvePokemonResponse {
+	.POGOProtos.Networking.Responses.EvolvePokemonResponse.Result result = 1;
+	.POGOProtos.Data.PokemonData evolved_pokemon_data = 2;
+	int32 experience_awarded = 3;
+	int32 candy_awarded = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILED_POKEMON_MISSING = 2;
+		FAILED_INSUFFICIENT_RESOURCES = 3;
+		FAILED_POKEMON_CANNOT_EVOLVE = 4;
+		FAILED_POKEMON_IS_DEPLOYED = 5;
+	}
+}

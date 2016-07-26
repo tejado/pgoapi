@@ -13,156 +13,130 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from POGOProtos.Data import Battle_pb2 as POGOProtos_dot_Data_dot_Battle__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Gym__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Gym__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Map_dot_Fort__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Map_dot_Fort__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos.Data import Capture_pb2 as POGOProtos_dot_Data_dot_Capture__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos import Enums_pb2 as POGOProtos_dot_Enums__pb2
-from POGOProtos import Data_pb2 as POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos.Settings import Master_pb2 as POGOProtos_dot_Settings_dot_Master__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Settings_dot_Master_dot_Item__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Settings_dot_Master_dot_Item__pb2
-POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Settings_dot_Master_dot_Pokemon__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Settings_dot_Master_dot_Pokemon__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos import Settings_pb2 as POGOProtos_dot_Settings__pb2
+from POGOProtos.Map import Fort_pb2 as POGOProtos_dot_Map_dot_Fort__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
 from POGOProtos.Map import Pokemon_pb2 as POGOProtos_dot_Map_dot_Pokemon__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Pokemon__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Data__pb2 = POGOProtos_dot_Map_dot_Pokemon__pb2.POGOProtos_dot_Data__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Pokemon__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Map_dot_Pokemon__pb2.POGOProtos_dot_Data_dot_Player__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Pokemon__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos.Data import Player_pb2 as POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Player__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Map_dot_Pokemon__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+from POGOProtos import Inventory_pb2 as POGOProtos_dot_Inventory__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Data__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Data__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
+from POGOProtos import Settings_pb2 as POGOProtos_dot_Settings__pb2
+from POGOProtos import Data_pb2 as POGOProtos_dot_Data__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+from POGOProtos.Data import Battle_pb2 as POGOProtos_dot_Data_dot_Battle__pb2
+POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Data_dot_Gym__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Gym__pb2
+POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Map_dot_Fort__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Map_dot_Fort__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Battle__pb2.POGOProtos_dot_Enums__pb2
 from POGOProtos.Data import Gym_pb2 as POGOProtos_dot_Data_dot_Gym__pb2
 POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Data__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Data_dot_Player__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
 POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Data_dot_Player__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Map_dot_Fort__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Map_dot_Fort__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos.Map import Fort_pb2 as POGOProtos_dot_Map_dot_Fort__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map_dot_Fort__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos import Inventory_pb2 as POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Inventory__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data_dot_Gym__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+from POGOProtos.Inventory import Item_pb2 as POGOProtos_dot_Inventory_dot_Item__pb2
+from POGOProtos.Settings import Master_pb2 as POGOProtos_dot_Settings_dot_Master__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Settings_dot_Master_dot_Item__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Settings_dot_Master_dot_Item__pb2
+POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Inventory__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Data__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Settings_dot_Master_dot_Pokemon__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Settings_dot_Master_dot_Pokemon__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Settings_dot_Master__pb2.POGOProtos_dot_Enums__pb2
+from POGOProtos.Data import Player_pb2 as POGOProtos_dot_Data_dot_Player__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Player__pb2.POGOProtos_dot_Enums__pb2
+from POGOProtos.Data import Capture_pb2 as POGOProtos_dot_Data_dot_Capture__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data_dot_Capture__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
 from POGOProtos import Map_pb2 as POGOProtos_dot_Map__pb2
 POGOProtos_dot_Map_dot_Fort__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Map_dot_Fort__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Inventory__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Inventory__pb2
-POGOProtos_dot_Data__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Data__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Data_dot_Player__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
-POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
 POGOProtos_dot_Map_dot_Pokemon__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Map_dot_Pokemon__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Data__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Data__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Data_dot_Player__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Map__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
+from POGOProtos import Enums_pb2 as POGOProtos_dot_Enums__pb2
+from POGOProtos.Data import Logs_pb2 as POGOProtos_dot_Data_dot_Logs__pb2
+POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Logs__pb2.POGOProtos_dot_Enums__pb2
+POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data_dot_Logs__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
 
-from POGOProtos.Data.Battle_pb2 import *
-from POGOProtos.Data.Capture_pb2 import *
-from POGOProtos.Enums_pb2 import *
-from POGOProtos.Data_pb2 import *
-from POGOProtos.Settings.Master_pb2 import *
-from POGOProtos.Settings_pb2 import *
-from POGOProtos.Map.Pokemon_pb2 import *
-from POGOProtos.Data.Player_pb2 import *
-from POGOProtos.Data.Gym_pb2 import *
 from POGOProtos.Map.Fort_pb2 import *
+from POGOProtos.Map.Pokemon_pb2 import *
 from POGOProtos.Inventory_pb2 import *
+from POGOProtos.Settings_pb2 import *
+from POGOProtos.Data_pb2 import *
+from POGOProtos.Data.Battle_pb2 import *
+from POGOProtos.Data.Gym_pb2 import *
+from POGOProtos.Inventory.Item_pb2 import *
+from POGOProtos.Settings.Master_pb2 import *
+from POGOProtos.Data.Player_pb2 import *
+from POGOProtos.Data.Capture_pb2 import *
 from POGOProtos.Map_pb2 import *
+from POGOProtos.Enums_pb2 import *
+from POGOProtos.Data.Logs_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos.Networking.Responses.proto',
   package='POGOProtos.Networking.Responses',
   syntax='proto3',
-  serialized_pb=_b('\n%POGOProtos.Networking.Responses.proto\x12\x1fPOGOProtos.Networking.Responses\x1a\x1cPOGOProtos.Data.Battle.proto\x1a\x1dPOGOProtos.Data.Capture.proto\x1a\x16POGOProtos.Enums.proto\x1a\x15POGOProtos.Data.proto\x1a POGOProtos.Settings.Master.proto\x1a\x19POGOProtos.Settings.proto\x1a\x1cPOGOProtos.Map.Pokemon.proto\x1a\x1cPOGOProtos.Data.Player.proto\x1a\x19POGOProtos.Data.Gym.proto\x1a\x19POGOProtos.Map.Fort.proto\x1a\x1aPOGOProtos.Inventory.proto\x1a\x14POGOProtos.Map.proto\"\x19\n\x17\x41\x64\x64\x46ortModifierResponse\"\x8c\x03\n\x11\x41ttackGymResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x39.POGOProtos.Networking.Responses.AttackGymResponse.Result\x12\x35\n\nbattle_log\x18\x02 \x01(\x0b\x32!.POGOProtos.Data.Battle.BattleLog\x12\x11\n\tbattle_id\x18\x03 \x01(\t\x12\x42\n\x0f\x61\x63tive_defender\x18\x04 \x01(\x0b\x32).POGOProtos.Data.Battle.BattlePokemonInfo\x12\x42\n\x0f\x61\x63tive_attacker\x18\x05 \x01(\x0b\x32).POGOProtos.Data.Battle.BattlePokemonInfo\"Z\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12 \n\x1c\x45RROR_INVALID_ATTACK_ACTIONS\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\"\xc1\x02\n\x14\x43\x61tchPokemonResponse\x12Q\n\x06status\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus\x12\x14\n\x0cmiss_percent\x18\x02 \x01(\x01\x12\x1b\n\x13\x63\x61ptured_pokemon_id\x18\x03 \x01(\x04\x12<\n\rcapture_award\x18\x04 \x01(\x0b\x32%.POGOProtos.Data.Capture.CaptureAward\"e\n\x0b\x43\x61tchStatus\x12\x0f\n\x0b\x43\x41TCH_ERROR\x10\x00\x12\x11\n\rCATCH_SUCCESS\x10\x01\x12\x10\n\x0c\x43\x41TCH_ESCAPE\x10\x02\x12\x0e\n\nCATCH_FLEE\x10\x03\x12\x10\n\x0c\x43\x41TCH_MISSED\x10\x04\"\x80\x01\n\x1a\x43heckAwardedBadgesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x33\n\x0e\x61warded_badges\x18\x02 \x03(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\x1c\n\x14\x61warded_badge_levels\x18\x03 \x03(\x05\"\xc2\x02\n\x1e\x43heckCodenameAvailableResponse\x12\x10\n\x08\x63odename\x18\x01 \x01(\t\x12\x14\n\x0cuser_message\x18\x02 \x01(\t\x12\x15\n\ris_assignable\x18\x03 \x01(\x08\x12V\n\x06status\x18\x04 \x01(\x0e\x32\x46.POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.Status\"\x88\x01\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x43ODENAME_NOT_AVAILABLE\x10\x02\x12\x16\n\x12\x43ODENAME_NOT_VALID\x10\x03\x12\x11\n\rCURRENT_OWNER\x10\x04\x12\x1f\n\x1b\x43ODENAME_CHANGE_NOT_ALLOWED\x10\x05\"\xb0\x02\n\x15\x43laimCodenameResponse\x12\x10\n\x08\x63odename\x18\x01 \x01(\t\x12\x14\n\x0cuser_message\x18\x02 \x01(\t\x12\x15\n\ris_assignable\x18\x03 \x01(\x08\x12M\n\x06status\x18\x04 \x01(\x0e\x32=.POGOProtos.Networking.Responses.ClaimCodenameResponse.Status\"\x88\x01\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x43ODENAME_NOT_AVAILABLE\x10\x02\x12\x16\n\x12\x43ODENAME_NOT_VALID\x10\x03\x12\x11\n\rCURRENT_OWNER\x10\x04\x12\x1f\n\x1b\x43ODENAME_CHANGE_NOT_ALLOWED\x10\x05\"\xab\x01\n\x19\x43ollectDailyBonusResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.CollectDailyBonusResponse.Result\";\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x12\x0c\n\x08TOO_SOON\x10\x03\"\x97\x02\n!CollectDailyDefenderBonusResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32I.POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.Result\x12\x15\n\rcurrency_type\x18\x02 \x03(\t\x12\x18\n\x10\x63urrency_awarded\x18\x03 \x03(\x05\x12\x17\n\x0f\x64\x65\x66\x65nders_count\x18\x04 \x01(\x05\"M\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x12\x0c\n\x08TOO_SOON\x10\x03\x12\x10\n\x0cNO_DEFENDERS\x10\x04\"\xea\x02\n\x15\x44iskEncounterResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.DiskEncounterResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12H\n\x13\x63\x61pture_probability\x18\x03 \x01(\x0b\x32+.POGOProtos.Data.Capture.CaptureProbability\"\x83\x01\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x11\n\rNOT_AVAILABLE\x10\x02\x12\x10\n\x0cNOT_IN_RANGE\x10\x03\x12\x1e\n\x1a\x45NCOUNTER_ALREADY_FINISHED\x10\x04\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x05\"\xf0\t\n\x1d\x44ownloadItemTemplatesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x63\n\x0eitem_templates\x18\x02 \x03(\x0b\x32K.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate\x12\x14\n\x0ctimestamp_ms\x18\x03 \x01(\x04\x1a\xc2\x08\n\x0cItemTemplate\x12\x13\n\x0btemplate_id\x18\x01 \x01(\t\x12\x45\n\x10pokemon_settings\x18\x02 \x01(\x0b\x32+.POGOProtos.Settings.Master.PokemonSettings\x12?\n\ritem_settings\x18\x03 \x01(\x0b\x32(.POGOProtos.Settings.Master.ItemSettings\x12?\n\rmove_settings\x18\x04 \x01(\x0b\x32(.POGOProtos.Settings.Master.MoveSettings\x12P\n\x16move_sequence_settings\x18\x05 \x01(\x0b\x32\x30.POGOProtos.Settings.Master.MoveSequenceSettings\x12I\n\x0etype_effective\x18\x08 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.TypeEffectiveSettings\x12\x41\n\x0e\x62\x61\x64ge_settings\x18\n \x01(\x0b\x32).POGOProtos.Settings.Master.BadgeSettings\x12:\n\x06\x63\x61mera\x18\x0b \x01(\x0b\x32*.POGOProtos.Settings.Master.CameraSettings\x12\x45\n\x0cplayer_level\x18\x0c \x01(\x0b\x32/.POGOProtos.Settings.Master.PlayerLevelSettings\x12?\n\tgym_level\x18\r \x01(\x0b\x32,.POGOProtos.Settings.Master.GymLevelSettings\x12\x46\n\x0f\x62\x61ttle_settings\x18\x0e \x01(\x0b\x32-.POGOProtos.Settings.Master.GymBattleSettings\x12I\n\x12\x65ncounter_settings\x18\x0f \x01(\x0b\x32-.POGOProtos.Settings.Master.EncounterSettings\x12\x44\n\x10iap_item_display\x18\x10 \x01(\x0b\x32*.POGOProtos.Settings.Master.IapItemDisplay\x12=\n\x0ciap_settings\x18\x11 \x01(\x0b\x32\'.POGOProtos.Settings.Master.IapSettings\x12L\n\x10pokemon_upgrades\x18\x12 \x01(\x0b\x32\x32.POGOProtos.Settings.Master.PokemonUpgradeSettings\x12J\n\x0f\x65quipped_badges\x18\x13 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.EquippedBadgeSettings\"\xec\x01\n#DownloadRemoteConfigVersionResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32K.POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.Result\x12#\n\x1bitem_templates_timestamp_ms\x18\x02 \x01(\x04\x12!\n\x19\x61sset_digest_timestamp_ms\x18\x03 \x01(\x04\" \n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\"n\n\x18\x44ownloadSettingsResponse\x12\r\n\x05\x65rror\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x35\n\x08settings\x18\x03 \x01(\x0b\x32#.POGOProtos.Settings.GlobalSettings\"\x1f\n\x0c\x45\x63hoResponse\x12\x0f\n\x07\x63ontext\x18\x01 \x01(\t\"\xb4\x04\n\x11\x45ncounterResponse\x12\x39\n\x0cwild_pokemon\x18\x01 \x01(\x0b\x32#.POGOProtos.Map.Pokemon.WildPokemon\x12Q\n\nbackground\x18\x02 \x01(\x0e\x32=.POGOProtos.Networking.Responses.EncounterResponse.Background\x12I\n\x06status\x18\x03 \x01(\x0e\x32\x39.POGOProtos.Networking.Responses.EncounterResponse.Status\x12H\n\x13\x63\x61pture_probability\x18\x04 \x01(\x0b\x32+.POGOProtos.Data.Capture.CaptureProbability\"\"\n\nBackground\x12\x08\n\x04PARK\x10\x00\x12\n\n\x06\x44\x45SERT\x10\x01\"\xd7\x01\n\x06Status\x12\x13\n\x0f\x45NCOUNTER_ERROR\x10\x00\x12\x15\n\x11\x45NCOUNTER_SUCCESS\x10\x01\x12\x17\n\x13\x45NCOUNTER_NOT_FOUND\x10\x02\x12\x14\n\x10\x45NCOUNTER_CLOSED\x10\x03\x12\x1a\n\x16\x45NCOUNTER_POKEMON_FLED\x10\x04\x12\x1a\n\x16\x45NCOUNTER_NOT_IN_RANGE\x10\x05\x12\x1e\n\x1a\x45NCOUNTER_ALREADY_HAPPENED\x10\x06\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x07\"\xad\x02\n!EncounterTutorialCompleteResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32I.POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12<\n\rcapture_award\x18\x03 \x01(\x0b\x32%.POGOProtos.Data.Capture.CaptureAward\";\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x19\n\x15\x45RROR_INVALID_POKEMON\x10\x02\"\xe3\x01\n\x12\x45quipBadgeResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.EquipBadgeResponse.Result\x12\x37\n\x08\x65quipped\x18\x02 \x01(\x0b\x32%.POGOProtos.Data.Player.EquippedBadge\"H\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x13\n\x0f\x43OOLDOWN_ACTIVE\x10\x02\x12\x11\n\rNOT_QUALIFIED\x10\x03\"\xf9\x02\n\x15\x45volvePokemonResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.EvolvePokemonResponse.Result\x12:\n\x14\x65volved_pokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x1a\n\x12\x65xperience_awarded\x18\x03 \x01(\x05\x12\x15\n\rcandy_awarded\x18\x04 \x01(\x05\"\xa1\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x46\x41ILED_POKEMON_MISSING\x10\x02\x12!\n\x1d\x46\x41ILED_INSUFFICIENT_RESOURCES\x10\x03\x12 \n\x1c\x46\x41ILED_POKEMON_CANNOT_EVOLVE\x10\x04\x12\x1e\n\x1a\x46\x41ILED_POKEMON_IS_DEPLOYED\x10\x05\"\xa8\x04\n\x19\x46ortDeployPokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.FortDeployPokemonResponse.Result\x12J\n\x0c\x66ort_details\x18\x02 \x01(\x0b\x32\x34.POGOProtos.Networking.Responses.FortDetailsResponse\x12\x32\n\x0cpokemon_data\x18\x03 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x30\n\tgym_state\x18\x04 \x01(\x0b\x32\x1d.POGOProtos.Data.Gym.GymState\"\x85\x02\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12%\n!ERROR_ALREADY_HAS_POKEMON_ON_FORT\x10\x02\x12!\n\x1d\x45RROR_OPPOSING_TEAM_OWNS_FORT\x10\x03\x12\x16\n\x12\x45RROR_FORT_IS_FULL\x10\x04\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x05\x12\x1c\n\x18\x45RROR_PLAYER_HAS_NO_TEAM\x10\x06\x12\x1d\n\x19\x45RROR_POKEMON_NOT_FULL_HP\x10\x07\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x08\"\xfc\x02\n\x13\x46ortDetailsResponse\x12\x0f\n\x07\x66ort_id\x18\x01 \x01(\t\x12/\n\nteam_color\x18\x02 \x01(\x0e\x32\x1b.POGOProtos.Enums.TeamColor\x12\x32\n\x0cpokemon_data\x18\x03 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x12\n\nimage_urls\x18\x05 \x03(\t\x12\n\n\x02\x66p\x18\x06 \x01(\x05\x12\x0f\n\x07stamina\x18\x07 \x01(\x05\x12\x13\n\x0bmax_stamina\x18\x08 \x01(\x05\x12+\n\x04type\x18\t \x01(\x0e\x32\x1d.POGOProtos.Map.Fort.FortType\x12\x10\n\x08latitude\x18\n \x01(\x01\x12\x11\n\tlongitude\x18\x0b \x01(\x01\x12\x13\n\x0b\x64\x65scription\x18\x0c \x01(\t\x12\x34\n\tmodifiers\x18\r \x03(\x0b\x32!.POGOProtos.Map.Fort.FortModifier\"\xb0\x02\n\x19\x46ortRecallPokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.FortRecallPokemonResponse.Result\x12J\n\x0c\x66ort_details\x18\x02 \x01(\x0b\x32\x34.POGOProtos.Networking.Responses.FortDetailsResponse\"t\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\x12\x1d\n\x19\x45RROR_POKEMON_NOT_ON_FORT\x10\x03\x12\x13\n\x0f\x45RROR_NO_PLAYER\x10\x04\"\xb6\x03\n\x12\x46ortSearchResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.FortSearchResponse.Result\x12\x36\n\ritems_awarded\x18\x02 \x03(\x0b\x32\x1f.POGOProtos.Inventory.ItemAward\x12\x14\n\x0cgems_awarded\x18\x03 \x01(\x05\x12\x36\n\x10pokemon_data_egg\x18\x04 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x1a\n\x12\x65xperience_awarded\x18\x05 \x01(\x05\x12&\n\x1e\x63ooldown_complete_timestamp_ms\x18\x06 \x01(\x03\x12\"\n\x1a\x63hain_hack_sequence_number\x18\x07 \x01(\x05\"f\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x10\n\x0cOUT_OF_RANGE\x10\x02\x12\x16\n\x12IN_COOLDOWN_PERIOD\x10\x03\x12\x12\n\x0eINVENTORY_FULL\x10\x04\"a\n\x16GetAssetDigestResponse\x12\x31\n\x06\x64igest\x18\x01 \x03(\x0b\x32!.POGOProtos.Data.AssetDigestEntry\x12\x14\n\x0ctimestamp_ms\x18\x02 \x01(\x04\"S\n\x17GetDownloadUrlsResponse\x12\x38\n\rdownload_urls\x18\x01 \x03(\x0b\x32!.POGOProtos.Data.DownloadUrlEntry\"\x83\x02\n\x15GetGymDetailsResponse\x12\x30\n\tgym_state\x18\x01 \x01(\x0b\x32\x1d.POGOProtos.Data.Gym.GymState\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04urls\x18\x03 \x03(\t\x12M\n\x06result\x18\x04 \x01(\x0e\x32=.POGOProtos.Networking.Responses.GetGymDetailsResponse.Result\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\"8\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\"\x8e\x01\n\x16GetHatchedEggsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x16\n\npokemon_id\x18\x02 \x03(\x04\x42\x02\x10\x01\x12\x1a\n\x12\x65xperience_awarded\x18\x03 \x03(\x05\x12\x15\n\rcandy_awarded\x18\x04 \x03(\x05\x12\x18\n\x10stardust_awarded\x18\x05 \x03(\x05\"\xed\x02\n\x19GetIncensePokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result\x12\x17\n\x0fpokemon_type_id\x18\x02 \x01(\x05\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x1a\n\x12\x65ncounter_location\x18\x05 \x01(\t\x12\x14\n\x0c\x65ncounter_id\x18\x06 \x01(\x04\x12\x1e\n\x16\x64isappear_timestamp_ms\x18\x07 \x01(\x03\"m\n\x06Result\x12\x1d\n\x19INCENSE_ENCOUNTER_UNKNOWN\x10\x00\x12\x1f\n\x1bINCENSE_ENCOUNTER_AVAILABLE\x10\x01\x12#\n\x1fINCENSE_ENCOUNTER_NOT_AVAILABLE\x10\x02\"f\n\x14GetInventoryResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12=\n\x0finventory_delta\x18\x02 \x01(\x0b\x32$.POGOProtos.Inventory.InventoryDelta\"u\n\x15GetMapObjectsResponse\x12*\n\tmap_cells\x18\x01 \x03(\x0b\x32\x17.POGOProtos.Map.MapCell\x12\x30\n\x06status\x18\x02 \x01(\x0e\x32 .POGOProtos.Map.MapObjectsStatus\"\xd0\x01\n\x18GetPlayerProfileResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32@.POGOProtos.Networking.Responses.GetPlayerProfileResponse.Result\x12\x12\n\nstart_time\x18\x02 \x01(\x03\x12,\n\x06\x62\x61\x64ges\x18\x03 \x03(\x0b\x32\x1c.POGOProtos.Data.PlayerBadge\" \n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\"V\n\x11GetPlayerResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"C\n\x1dGetSuggestedCodenamesResponse\x12\x11\n\tcodenames\x18\x01 \x03(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\xf4\x02\n\x18IncenseEncounterResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32@.POGOProtos.Networking.Responses.IncenseEncounterResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12H\n\x13\x63\x61pture_probability\x18\x03 \x01(\x0b\x32+.POGOProtos.Data.Capture.CaptureProbability\"\x87\x01\n\x06Result\x12\x1d\n\x19INCENSE_ENCOUNTER_UNKNOWN\x10\x00\x12\x1d\n\x19INCENSE_ENCOUNTER_SUCCESS\x10\x01\x12#\n\x1fINCENSE_ENCOUNTER_NOT_AVAILABLE\x10\x02\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x03\"\x8d\x02\n\x16LevelUpRewardsResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.LevelUpRewardsResponse.Result\x12\x36\n\ritems_awarded\x18\x02 \x03(\x0b\x32\x1f.POGOProtos.Inventory.ItemAward\x12\x34\n\x0eitems_unlocked\x18\x04 \x03(\x0e\x32\x1c.POGOProtos.Inventory.ItemId\"5\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x13\n\x0f\x41WARDED_ALREADY\x10\x02\"\xdf\x01\n\x17NicknamePokemonResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32?.POGOProtos.Networking.Responses.NicknamePokemonResponse.Result\"s\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x45RROR_INVALID_NICKNAME\x10\x02\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x03\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x04\"\x96\x01\n\x14PlayerUpdateResponse\x12:\n\rwild_pokemons\x18\x01 \x03(\x0b\x32#.POGOProtos.Map.Pokemon.WildPokemon\x12,\n\x05\x66orts\x18\x02 \x03(\x0b\x32\x1d.POGOProtos.Map.Fort.FortData\x12\x14\n\x0c\x66orts_nearby\x18\x03 \x01(\x05\"\xeb\x01\n\x1cRecycleInventoryItemResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x44.POGOProtos.Networking.Responses.RecycleInventoryItemResponse.Result\x12\x11\n\tnew_count\x18\x02 \x01(\x05\"b\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_NOT_ENOUGH_COPIES\x10\x02\x12#\n\x1f\x45RROR_CANNOT_RECYCLE_INCUBATORS\x10\x03\"\xdd\x01\n\x16ReleasePokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.ReleasePokemonResponse.Result\x12\x15\n\rcandy_awarded\x18\x02 \x01(\x05\"\\\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10POKEMON_DEPLOYED\x10\x02\x12\n\n\x06\x46\x41ILED\x10\x03\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x04\"\xd7\x01\n\x11SetAvatarResponse\x12I\n\x06status\x18\x01 \x01(\x0e\x32\x39.POGOProtos.Networking.Responses.SetAvatarResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"E\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x41VATAR_ALREADY_SET\x10\x02\x12\x0b\n\x07\x46\x41ILURE\x10\x03\"\xd1\x01\n\x1aSetContactSettingsResponse\x12R\n\x06status\x18\x01 \x01(\x0e\x32\x42.POGOProtos.Networking.Responses.SetContactSettingsResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"-\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\"\xc9\x01\n\x1aSetFavoritePokemonResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x42.POGOProtos.Networking.Responses.SetFavoritePokemonResponse.Result\"W\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x02\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x03\"\xdd\x01\n\x15SetPlayerTeamResponse\x12M\n\x06status\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.SetPlayerTeamResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"C\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10TEAM_ALREADY_SET\x10\x02\x12\x0b\n\x07\x46\x41ILURE\x10\x03\"\xaf\x05\n\x16StartGymBattleResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.StartGymBattleResponse.Result\x12!\n\x19\x62\x61ttle_start_timestamp_ms\x18\x02 \x01(\x03\x12\x1f\n\x17\x62\x61ttle_end_timestamp_ms\x18\x03 \x01(\x03\x12\x11\n\tbattle_id\x18\x04 \x01(\t\x12;\n\x08\x64\x65\x66\x65nder\x18\x05 \x01(\x0b\x32).POGOProtos.Data.Battle.BattleParticipant\x12\x35\n\nbattle_log\x18\x06 \x01(\x0b\x32!.POGOProtos.Data.Battle.BattleLog\"\xf9\x02\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x17\n\x13\x45RROR_GYM_NOT_FOUND\x10\x02\x12\x15\n\x11\x45RROR_GYM_NEUTRAL\x10\x03\x12\x18\n\x14\x45RROR_GYM_WRONG_TEAM\x10\x04\x12\x13\n\x0f\x45RROR_GYM_EMPTY\x10\x05\x12\x1a\n\x16\x45RROR_INVALID_DEFENDER\x10\x06\x12)\n%ERROR_TRAINING_INVALID_ATTACKER_COUNT\x10\x07\x12\x1d\n\x19\x45RROR_ALL_POKEMON_FAINTED\x10\x08\x12\x1a\n\x16\x45RROR_TOO_MANY_BATTLES\x10\t\x12\x1a\n\x16\x45RROR_TOO_MANY_PLAYERS\x10\n\x12\x1c\n\x18\x45RROR_GYM_BATTLE_LOCKOUT\x10\x0b\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x0c\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\r\"\xc2\x02\n\x16UpgradePokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.UpgradePokemonResponse.Result\x12\x36\n\x10upgraded_pokemon\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\"\x9f\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x02\x12 \n\x1c\x45RROR_INSUFFICIENT_RESOURCES\x10\x03\x12\x1f\n\x1b\x45RROR_UPGRADE_NOT_AVAILABLE\x10\x04\x12\x1d\n\x19\x45RROR_POKEMON_IS_DEPLOYED\x10\x05\"\x87\x02\n\x12UseIncenseResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.UseIncenseResponse.Result\x12:\n\x0f\x61pplied_incense\x18\x02 \x01(\x0b\x32!.POGOProtos.Inventory.AppliedItem\"i\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16INCENSE_ALREADY_ACTIVE\x10\x02\x12\x15\n\x11NONE_IN_INVENTORY\x10\x03\x12\x12\n\x0eLOCATION_UNSET\x10\x04\"\xb1\x01\n\x16UseItemCaptureResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x19\n\x11item_capture_mult\x18\x02 \x01(\x01\x12\x16\n\x0eitem_flee_mult\x18\x03 \x01(\x01\x12\x15\n\rstop_movement\x18\x04 \x01(\x08\x12\x13\n\x0bstop_attack\x18\x05 \x01(\x08\x12\x12\n\ntarget_max\x18\x06 \x01(\x08\x12\x13\n\x0btarget_slow\x18\x07 \x01(\x08\"\x9f\x03\n\x1bUseItemEggIncubatorResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x43.POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.Result\x12\x39\n\regg_incubator\x18\x02 \x01(\x0b\x32\".POGOProtos.Inventory.EggIncubator\"\xef\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1d\n\x19\x45RROR_INCUBATOR_NOT_FOUND\x10\x02\x12\x1f\n\x1b\x45RROR_POKEMON_EGG_NOT_FOUND\x10\x03\x12\x1c\n\x18\x45RROR_POKEMON_ID_NOT_EGG\x10\x04\x12\"\n\x1e\x45RROR_INCUBATOR_ALREADY_IN_USE\x10\x05\x12$\n ERROR_POKEMON_ALREADY_INCUBATING\x10\x06\x12%\n!ERROR_INCUBATOR_NO_USES_REMAINING\x10\x07\"\xc4\x01\n\x12UseItemGymResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.UseItemGymResponse.Result\x12\x12\n\nupdated_gp\x18\x02 \x01(\x03\"N\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\"\xe1\x01\n\x15UseItemPotionResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.UseItemPotionResponse.Result\x12\x0f\n\x07stamina\x18\x02 \x01(\x05\"h\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_NO_POKEMON\x10\x02\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x03\x12\x1a\n\x16\x45RROR_DEPLOYED_TO_FORT\x10\x04\"\xe5\x01\n\x17UseRevivePotionResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32?.POGOProtos.Networking.Responses.UseRevivePotionResponse.Result\x12\x0f\n\x07stamina\x18\x02 \x01(\x05\"h\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_NO_POKEMON\x10\x02\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x03\x12\x1a\n\x16\x45RROR_DEPLOYED_TO_FORT\x10\x04\"\xbe\x02\n\x16UseItemXpBoostResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.UseItemXpBoostResponse.Result\x12\x39\n\rapplied_items\x18\x02 \x01(\x0b\x32\".POGOProtos.Inventory.AppliedItems\"\x98\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_ITEM_TYPE\x10\x02\x12!\n\x1d\x45RROR_XP_BOOST_ALREADY_ACTIVE\x10\x03\x12\x1c\n\x18\x45RROR_NO_ITEMS_REMAINING\x10\x04\x12\x18\n\x14\x45RROR_LOCATION_UNSET\x10\x05P\x00P\x01P\x02P\x03P\x04P\x05P\x06P\x07P\x08P\tP\nP\x0b\x62\x06proto3')
+  serialized_pb=_b('\n%POGOProtos.Networking.Responses.proto\x12\x1fPOGOProtos.Networking.Responses\x1a\x19POGOProtos.Map.Fort.proto\x1a\x1cPOGOProtos.Map.Pokemon.proto\x1a\x1aPOGOProtos.Inventory.proto\x1a\x19POGOProtos.Settings.proto\x1a\x15POGOProtos.Data.proto\x1a\x1cPOGOProtos.Data.Battle.proto\x1a\x19POGOProtos.Data.Gym.proto\x1a\x1fPOGOProtos.Inventory.Item.proto\x1a POGOProtos.Settings.Master.proto\x1a\x1cPOGOProtos.Data.Player.proto\x1a\x1dPOGOProtos.Data.Capture.proto\x1a\x14POGOProtos.Map.proto\x1a\x16POGOProtos.Enums.proto\x1a\x1aPOGOProtos.Data.Logs.proto\"\x96\x01\n\x14PlayerUpdateResponse\x12:\n\rwild_pokemons\x18\x01 \x03(\x0b\x32#.POGOProtos.Map.Pokemon.WildPokemon\x12,\n\x05\x66orts\x18\x02 \x03(\x0b\x32\x1d.POGOProtos.Map.Fort.FortData\x12\x14\n\x0c\x66orts_nearby\x18\x03 \x01(\x05\"\x9f\x03\n\x1bUseItemEggIncubatorResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x43.POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.Result\x12\x39\n\regg_incubator\x18\x02 \x01(\x0b\x32\".POGOProtos.Inventory.EggIncubator\"\xef\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1d\n\x19\x45RROR_INCUBATOR_NOT_FOUND\x10\x02\x12\x1f\n\x1b\x45RROR_POKEMON_EGG_NOT_FOUND\x10\x03\x12\x1c\n\x18\x45RROR_POKEMON_ID_NOT_EGG\x10\x04\x12\"\n\x1e\x45RROR_INCUBATOR_ALREADY_IN_USE\x10\x05\x12$\n ERROR_POKEMON_ALREADY_INCUBATING\x10\x06\x12%\n!ERROR_INCUBATOR_NO_USES_REMAINING\x10\x07\"\xb1\x01\n\x16UseItemCaptureResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x19\n\x11item_capture_mult\x18\x02 \x01(\x01\x12\x16\n\x0eitem_flee_mult\x18\x03 \x01(\x01\x12\x15\n\rstop_movement\x18\x04 \x01(\x08\x12\x13\n\x0bstop_attack\x18\x05 \x01(\x08\x12\x12\n\ntarget_max\x18\x06 \x01(\x08\x12\x13\n\x0btarget_slow\x18\x07 \x01(\x08\"n\n\x18\x44ownloadSettingsResponse\x12\r\n\x05\x65rror\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x35\n\x08settings\x18\x03 \x01(\x0b\x32#.POGOProtos.Settings.GlobalSettings\"\xb0\x02\n\x15\x43laimCodenameResponse\x12\x10\n\x08\x63odename\x18\x01 \x01(\t\x12\x14\n\x0cuser_message\x18\x02 \x01(\t\x12\x15\n\ris_assignable\x18\x03 \x01(\x08\x12M\n\x06status\x18\x04 \x01(\x0e\x32=.POGOProtos.Networking.Responses.ClaimCodenameResponse.Status\"\x88\x01\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x43ODENAME_NOT_AVAILABLE\x10\x02\x12\x16\n\x12\x43ODENAME_NOT_VALID\x10\x03\x12\x11\n\rCURRENT_OWNER\x10\x04\x12\x1f\n\x1b\x43ODENAME_CHANGE_NOT_ALLOWED\x10\x05\"S\n\x17GetDownloadUrlsResponse\x12\x38\n\rdownload_urls\x18\x01 \x03(\x0b\x32!.POGOProtos.Data.DownloadUrlEntry\"\xaf\x05\n\x16StartGymBattleResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.StartGymBattleResponse.Result\x12!\n\x19\x62\x61ttle_start_timestamp_ms\x18\x02 \x01(\x03\x12\x1f\n\x17\x62\x61ttle_end_timestamp_ms\x18\x03 \x01(\x03\x12\x11\n\tbattle_id\x18\x04 \x01(\t\x12;\n\x08\x64\x65\x66\x65nder\x18\x05 \x01(\x0b\x32).POGOProtos.Data.Battle.BattleParticipant\x12\x35\n\nbattle_log\x18\x06 \x01(\x0b\x32!.POGOProtos.Data.Battle.BattleLog\"\xf9\x02\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x17\n\x13\x45RROR_GYM_NOT_FOUND\x10\x02\x12\x15\n\x11\x45RROR_GYM_NEUTRAL\x10\x03\x12\x18\n\x14\x45RROR_GYM_WRONG_TEAM\x10\x04\x12\x13\n\x0f\x45RROR_GYM_EMPTY\x10\x05\x12\x1a\n\x16\x45RROR_INVALID_DEFENDER\x10\x06\x12)\n%ERROR_TRAINING_INVALID_ATTACKER_COUNT\x10\x07\x12\x1d\n\x19\x45RROR_ALL_POKEMON_FAINTED\x10\x08\x12\x1a\n\x16\x45RROR_TOO_MANY_BATTLES\x10\t\x12\x1a\n\x16\x45RROR_TOO_MANY_PLAYERS\x10\n\x12\x1c\n\x18\x45RROR_GYM_BATTLE_LOCKOUT\x10\x0b\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x0c\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\r\"\x83\x02\n\x15GetGymDetailsResponse\x12\x30\n\tgym_state\x18\x01 \x01(\x0b\x32\x1d.POGOProtos.Data.Gym.GymState\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04urls\x18\x03 \x03(\t\x12M\n\x06result\x18\x04 \x01(\x0e\x32=.POGOProtos.Networking.Responses.GetGymDetailsResponse.Result\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\"8\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\"\xe1\x01\n\x15UseItemPotionResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.UseItemPotionResponse.Result\x12\x0f\n\x07stamina\x18\x02 \x01(\x05\"h\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_NO_POKEMON\x10\x02\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x03\x12\x1a\n\x16\x45RROR_DEPLOYED_TO_FORT\x10\x04\"V\n\x11GetPlayerResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"\x19\n\x17\x41\x64\x64\x46ortModifierResponse\"\xbb\x03\n\x12\x46ortSearchResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.FortSearchResponse.Result\x12;\n\ritems_awarded\x18\x02 \x03(\x0b\x32$.POGOProtos.Inventory.Item.ItemAward\x12\x14\n\x0cgems_awarded\x18\x03 \x01(\x05\x12\x36\n\x10pokemon_data_egg\x18\x04 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x1a\n\x12\x65xperience_awarded\x18\x05 \x01(\x05\x12&\n\x1e\x63ooldown_complete_timestamp_ms\x18\x06 \x01(\x03\x12\"\n\x1a\x63hain_hack_sequence_number\x18\x07 \x01(\x05\"f\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x10\n\x0cOUT_OF_RANGE\x10\x02\x12\x16\n\x12IN_COOLDOWN_PERIOD\x10\x03\x12\x12\n\x0eINVENTORY_FULL\x10\x04\"\xc9\x01\n\x1aSetFavoritePokemonResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x42.POGOProtos.Networking.Responses.SetFavoritePokemonResponse.Result\"W\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x02\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x03\"\xa8\x04\n\x19\x46ortDeployPokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.FortDeployPokemonResponse.Result\x12J\n\x0c\x66ort_details\x18\x02 \x01(\x0b\x32\x34.POGOProtos.Networking.Responses.FortDetailsResponse\x12\x32\n\x0cpokemon_data\x18\x03 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x30\n\tgym_state\x18\x04 \x01(\x0b\x32\x1d.POGOProtos.Data.Gym.GymState\"\x85\x02\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12%\n!ERROR_ALREADY_HAS_POKEMON_ON_FORT\x10\x02\x12!\n\x1d\x45RROR_OPPOSING_TEAM_OWNS_FORT\x10\x03\x12\x16\n\x12\x45RROR_FORT_IS_FULL\x10\x04\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x05\x12\x1c\n\x18\x45RROR_PLAYER_HAS_NO_TEAM\x10\x06\x12\x1d\n\x19\x45RROR_POKEMON_NOT_FULL_HP\x10\x07\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x08\"\xf0\t\n\x1d\x44ownloadItemTemplatesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x63\n\x0eitem_templates\x18\x02 \x03(\x0b\x32K.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate\x12\x14\n\x0ctimestamp_ms\x18\x03 \x01(\x04\x1a\xc2\x08\n\x0cItemTemplate\x12\x13\n\x0btemplate_id\x18\x01 \x01(\t\x12\x45\n\x10pokemon_settings\x18\x02 \x01(\x0b\x32+.POGOProtos.Settings.Master.PokemonSettings\x12?\n\ritem_settings\x18\x03 \x01(\x0b\x32(.POGOProtos.Settings.Master.ItemSettings\x12?\n\rmove_settings\x18\x04 \x01(\x0b\x32(.POGOProtos.Settings.Master.MoveSettings\x12P\n\x16move_sequence_settings\x18\x05 \x01(\x0b\x32\x30.POGOProtos.Settings.Master.MoveSequenceSettings\x12I\n\x0etype_effective\x18\x08 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.TypeEffectiveSettings\x12\x41\n\x0e\x62\x61\x64ge_settings\x18\n \x01(\x0b\x32).POGOProtos.Settings.Master.BadgeSettings\x12:\n\x06\x63\x61mera\x18\x0b \x01(\x0b\x32*.POGOProtos.Settings.Master.CameraSettings\x12\x45\n\x0cplayer_level\x18\x0c \x01(\x0b\x32/.POGOProtos.Settings.Master.PlayerLevelSettings\x12?\n\tgym_level\x18\r \x01(\x0b\x32,.POGOProtos.Settings.Master.GymLevelSettings\x12\x46\n\x0f\x62\x61ttle_settings\x18\x0e \x01(\x0b\x32-.POGOProtos.Settings.Master.GymBattleSettings\x12I\n\x12\x65ncounter_settings\x18\x0f \x01(\x0b\x32-.POGOProtos.Settings.Master.EncounterSettings\x12\x44\n\x10iap_item_display\x18\x10 \x01(\x0b\x32*.POGOProtos.Settings.Master.IapItemDisplay\x12=\n\x0ciap_settings\x18\x11 \x01(\x0b\x32\'.POGOProtos.Settings.Master.IapSettings\x12L\n\x10pokemon_upgrades\x18\x12 \x01(\x0b\x32\x32.POGOProtos.Settings.Master.PokemonUpgradeSettings\x12J\n\x0f\x65quipped_badges\x18\x13 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.EquippedBadgeSettings\"\xe1\x01\n\x15UseItemReviveResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.UseItemReviveResponse.Result\x12\x0f\n\x07stamina\x18\x02 \x01(\x05\"h\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_NO_POKEMON\x10\x02\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x03\x12\x1a\n\x16\x45RROR_DEPLOYED_TO_FORT\x10\x04\"a\n\x1cMarkTutorialCompleteResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"\xe3\x01\n\x12\x45quipBadgeResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.EquipBadgeResponse.Result\x12\x37\n\x08\x65quipped\x18\x02 \x01(\x0b\x32%.POGOProtos.Data.Player.EquippedBadge\"H\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x13\n\x0f\x43OOLDOWN_ACTIVE\x10\x02\x12\x11\n\rNOT_QUALIFIED\x10\x03\"\xd1\x01\n\x1aSetContactSettingsResponse\x12R\n\x06status\x18\x01 \x01(\x0e\x32\x42.POGOProtos.Networking.Responses.SetContactSettingsResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"-\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\"\xea\x02\n\x15\x44iskEncounterResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.DiskEncounterResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12H\n\x13\x63\x61pture_probability\x18\x03 \x01(\x0b\x32+.POGOProtos.Data.Capture.CaptureProbability\"\x83\x01\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x11\n\rNOT_AVAILABLE\x10\x02\x12\x10\n\x0cNOT_IN_RANGE\x10\x03\x12\x1e\n\x1a\x45NCOUNTER_ALREADY_FINISHED\x10\x04\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x05\"C\n\x1dGetSuggestedCodenamesResponse\x12\x11\n\tcodenames\x18\x01 \x03(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"u\n\x15GetMapObjectsResponse\x12*\n\tmap_cells\x18\x01 \x03(\x0b\x32\x17.POGOProtos.Map.MapCell\x12\x30\n\x06status\x18\x02 \x01(\x0e\x32 .POGOProtos.Map.MapObjectsStatus\"\xc2\x02\n\x16UpgradePokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.UpgradePokemonResponse.Result\x12\x36\n\x10upgraded_pokemon\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\"\x9f\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x02\x12 \n\x1c\x45RROR_INSUFFICIENT_RESOURCES\x10\x03\x12\x1f\n\x1b\x45RROR_UPGRADE_NOT_AVAILABLE\x10\x04\x12\x1d\n\x19\x45RROR_POKEMON_IS_DEPLOYED\x10\x05\"\xb0\x02\n\x19\x46ortRecallPokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.FortRecallPokemonResponse.Result\x12J\n\x0c\x66ort_details\x18\x02 \x01(\x0b\x32\x34.POGOProtos.Networking.Responses.FortDetailsResponse\"t\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\x12\x1d\n\x19\x45RROR_POKEMON_NOT_ON_FORT\x10\x03\x12\x13\n\x0f\x45RROR_NO_PLAYER\x10\x04\"\xeb\x01\n\x1cRecycleInventoryItemResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x44.POGOProtos.Networking.Responses.RecycleInventoryItemResponse.Result\x12\x11\n\tnew_count\x18\x02 \x01(\x05\"b\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_NOT_ENOUGH_COPIES\x10\x02\x12#\n\x1f\x45RROR_CANNOT_RECYCLE_INCUBATORS\x10\x03\"\x8e\x01\n\x16GetHatchedEggsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x16\n\npokemon_id\x18\x02 \x03(\x06\x42\x02\x10\x01\x12\x1a\n\x12\x65xperience_awarded\x18\x03 \x03(\x05\x12\x15\n\rcandy_awarded\x18\x04 \x03(\x05\x12\x18\n\x10stardust_awarded\x18\x05 \x03(\x05\"\xfc\x02\n\x13\x46ortDetailsResponse\x12\x0f\n\x07\x66ort_id\x18\x01 \x01(\t\x12/\n\nteam_color\x18\x02 \x01(\x0e\x32\x1b.POGOProtos.Enums.TeamColor\x12\x32\n\x0cpokemon_data\x18\x03 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x12\n\nimage_urls\x18\x05 \x03(\t\x12\n\n\x02\x66p\x18\x06 \x01(\x05\x12\x0f\n\x07stamina\x18\x07 \x01(\x05\x12\x13\n\x0bmax_stamina\x18\x08 \x01(\x05\x12+\n\x04type\x18\t \x01(\x0e\x32\x1d.POGOProtos.Map.Fort.FortType\x12\x10\n\x08latitude\x18\n \x01(\x01\x12\x11\n\tlongitude\x18\x0b \x01(\x01\x12\x13\n\x0b\x64\x65scription\x18\x0c \x01(\t\x12\x34\n\tmodifiers\x18\r \x03(\x0b\x32!.POGOProtos.Map.Fort.FortModifier\"\xec\x01\n#DownloadRemoteConfigVersionResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32K.POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.Result\x12#\n\x1bitem_templates_timestamp_ms\x18\x02 \x01(\x04\x12!\n\x19\x61sset_digest_timestamp_ms\x18\x03 \x01(\x04\" \n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\"\x87\x02\n\x12UseIncenseResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.UseIncenseResponse.Result\x12:\n\x0f\x61pplied_incense\x18\x02 \x01(\x0b\x32!.POGOProtos.Inventory.AppliedItem\"i\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16INCENSE_ALREADY_ACTIVE\x10\x02\x12\x15\n\x11NONE_IN_INVENTORY\x10\x03\x12\x12\n\x0eLOCATION_UNSET\x10\x04\"\xbe\x02\n\x16UseItemXpBoostResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.UseItemXpBoostResponse.Result\x12\x39\n\rapplied_items\x18\x02 \x01(\x0b\x32\".POGOProtos.Inventory.AppliedItems\"\x98\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_ITEM_TYPE\x10\x02\x12!\n\x1d\x45RROR_XP_BOOST_ALREADY_ACTIVE\x10\x03\x12\x1c\n\x18\x45RROR_NO_ITEMS_REMAINING\x10\x04\x12\x18\n\x14\x45RROR_LOCATION_UNSET\x10\x05\"\x8c\x03\n\x11\x41ttackGymResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x39.POGOProtos.Networking.Responses.AttackGymResponse.Result\x12\x35\n\nbattle_log\x18\x02 \x01(\x0b\x32!.POGOProtos.Data.Battle.BattleLog\x12\x11\n\tbattle_id\x18\x03 \x01(\t\x12\x42\n\x0f\x61\x63tive_defender\x18\x04 \x01(\x0b\x32).POGOProtos.Data.Battle.BattlePokemonInfo\x12\x42\n\x0f\x61\x63tive_attacker\x18\x05 \x01(\x0b\x32).POGOProtos.Data.Battle.BattlePokemonInfo\"Z\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12 \n\x1c\x45RROR_INVALID_ATTACK_ACTIONS\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\"\xad\x02\n!EncounterTutorialCompleteResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32I.POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12<\n\rcapture_award\x18\x03 \x01(\x0b\x32%.POGOProtos.Data.Capture.CaptureAward\";\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x19\n\x15\x45RROR_INVALID_POKEMON\x10\x02\"\xd7\x01\n\x11SetAvatarResponse\x12I\n\x06status\x18\x01 \x01(\x0e\x32\x39.POGOProtos.Networking.Responses.SetAvatarResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"E\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x41VATAR_ALREADY_SET\x10\x02\x12\x0b\n\x07\x46\x41ILURE\x10\x03\"\xc1\x02\n\x14\x43\x61tchPokemonResponse\x12Q\n\x06status\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus\x12\x14\n\x0cmiss_percent\x18\x02 \x01(\x01\x12\x1b\n\x13\x63\x61ptured_pokemon_id\x18\x03 \x01(\x06\x12<\n\rcapture_award\x18\x04 \x01(\x0b\x32%.POGOProtos.Data.Capture.CaptureAward\"e\n\x0b\x43\x61tchStatus\x12\x0f\n\x0b\x43\x41TCH_ERROR\x10\x00\x12\x11\n\rCATCH_SUCCESS\x10\x01\x12\x10\n\x0c\x43\x41TCH_ESCAPE\x10\x02\x12\x0e\n\nCATCH_FLEE\x10\x03\x12\x10\n\x0c\x43\x41TCH_MISSED\x10\x04\"\xc2\x02\n\x1e\x43heckCodenameAvailableResponse\x12\x10\n\x08\x63odename\x18\x01 \x01(\t\x12\x14\n\x0cuser_message\x18\x02 \x01(\t\x12\x15\n\ris_assignable\x18\x03 \x01(\x08\x12V\n\x06status\x18\x04 \x01(\x0e\x32\x46.POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.Status\"\x88\x01\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x43ODENAME_NOT_AVAILABLE\x10\x02\x12\x16\n\x12\x43ODENAME_NOT_VALID\x10\x03\x12\x11\n\rCURRENT_OWNER\x10\x04\x12\x1f\n\x1b\x43ODENAME_CHANGE_NOT_ALLOWED\x10\x05\"\xab\x01\n\x19\x43ollectDailyBonusResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.CollectDailyBonusResponse.Result\";\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x12\x0c\n\x08TOO_SOON\x10\x03\"f\n\x14GetInventoryResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12=\n\x0finventory_delta\x18\x02 \x01(\x0b\x32$.POGOProtos.Inventory.InventoryDelta\"\x1f\n\x0c\x45\x63hoResponse\x12\x0f\n\x07\x63ontext\x18\x01 \x01(\t\"\xd0\x01\n\x18GetPlayerProfileResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32@.POGOProtos.Networking.Responses.GetPlayerProfileResponse.Result\x12\x12\n\nstart_time\x18\x02 \x01(\x03\x12,\n\x06\x62\x61\x64ges\x18\x03 \x03(\x0b\x32\x1c.POGOProtos.Data.PlayerBadge\" \n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\"\xc4\x01\n\x12UseItemGymResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.POGOProtos.Networking.Responses.UseItemGymResponse.Result\x12\x12\n\nupdated_gp\x18\x02 \x01(\x03\"N\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\"\x85\x03\n\x19GetIncensePokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x1a\n\x12\x65ncounter_location\x18\x05 \x01(\t\x12\x14\n\x0c\x65ncounter_id\x18\x06 \x01(\x06\x12\x1e\n\x16\x64isappear_timestamp_ms\x18\x07 \x01(\x03\"m\n\x06Result\x12\x1d\n\x19INCENSE_ENCOUNTER_UNKNOWN\x10\x00\x12\x1f\n\x1bINCENSE_ENCOUNTER_AVAILABLE\x10\x01\x12#\n\x1fINCENSE_ENCOUNTER_NOT_AVAILABLE\x10\x02\"\xf9\x02\n\x15\x45volvePokemonResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.EvolvePokemonResponse.Result\x12:\n\x14\x65volved_pokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x1a\n\x12\x65xperience_awarded\x18\x03 \x01(\x05\x12\x15\n\rcandy_awarded\x18\x04 \x01(\x05\"\xa1\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x46\x41ILED_POKEMON_MISSING\x10\x02\x12!\n\x1d\x46\x41ILED_INSUFFICIENT_RESOURCES\x10\x03\x12 \n\x1c\x46\x41ILED_POKEMON_CANNOT_EVOLVE\x10\x04\x12\x1e\n\x1a\x46\x41ILED_POKEMON_IS_DEPLOYED\x10\x05\"\xb4\x04\n\x11\x45ncounterResponse\x12\x39\n\x0cwild_pokemon\x18\x01 \x01(\x0b\x32#.POGOProtos.Map.Pokemon.WildPokemon\x12Q\n\nbackground\x18\x02 \x01(\x0e\x32=.POGOProtos.Networking.Responses.EncounterResponse.Background\x12I\n\x06status\x18\x03 \x01(\x0e\x32\x39.POGOProtos.Networking.Responses.EncounterResponse.Status\x12H\n\x13\x63\x61pture_probability\x18\x04 \x01(\x0b\x32+.POGOProtos.Data.Capture.CaptureProbability\"\"\n\nBackground\x12\x08\n\x04PARK\x10\x00\x12\n\n\x06\x44\x45SERT\x10\x01\"\xd7\x01\n\x06Status\x12\x13\n\x0f\x45NCOUNTER_ERROR\x10\x00\x12\x15\n\x11\x45NCOUNTER_SUCCESS\x10\x01\x12\x17\n\x13\x45NCOUNTER_NOT_FOUND\x10\x02\x12\x14\n\x10\x45NCOUNTER_CLOSED\x10\x03\x12\x1a\n\x16\x45NCOUNTER_POKEMON_FLED\x10\x04\x12\x1a\n\x16\x45NCOUNTER_NOT_IN_RANGE\x10\x05\x12\x1e\n\x1a\x45NCOUNTER_ALREADY_HAPPENED\x10\x06\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x07\"\xdf\x01\n\x17NicknamePokemonResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32?.POGOProtos.Networking.Responses.NicknamePokemonResponse.Result\"s\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x45RROR_INVALID_NICKNAME\x10\x02\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x03\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x04\"\xf4\x02\n\x18IncenseEncounterResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32@.POGOProtos.Networking.Responses.IncenseEncounterResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12H\n\x13\x63\x61pture_probability\x18\x03 \x01(\x0b\x32+.POGOProtos.Data.Capture.CaptureProbability\"\x87\x01\n\x06Result\x12\x1d\n\x19INCENSE_ENCOUNTER_UNKNOWN\x10\x00\x12\x1d\n\x19INCENSE_ENCOUNTER_SUCCESS\x10\x01\x12#\n\x1fINCENSE_ENCOUNTER_NOT_AVAILABLE\x10\x02\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x03\"\xdd\x01\n\x15SetPlayerTeamResponse\x12M\n\x06status\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Responses.SetPlayerTeamResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.POGOProtos.Data.PlayerData\"C\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10TEAM_ALREADY_SET\x10\x02\x12\x0b\n\x07\x46\x41ILURE\x10\x03\"\x80\x01\n\x1a\x43heckAwardedBadgesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x33\n\x0e\x61warded_badges\x18\x02 \x03(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\x1c\n\x14\x61warded_badge_levels\x18\x03 \x03(\x05\"a\n\x16GetAssetDigestResponse\x12\x31\n\x06\x64igest\x18\x01 \x03(\x0b\x32!.POGOProtos.Data.AssetDigestEntry\x12\x14\n\x0ctimestamp_ms\x18\x02 \x01(\x04\"\xc5\x01\n\x16SfidaActionLogResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.SfidaActionLogResponse.Result\x12\x39\n\x0blog_entries\x18\x02 \x03(\x0b\x32$.POGOProtos.Data.Logs.ActionLogEntry\" \n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\"\x97\x02\n\x16LevelUpRewardsResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.LevelUpRewardsResponse.Result\x12;\n\ritems_awarded\x18\x02 \x03(\x0b\x32$.POGOProtos.Inventory.Item.ItemAward\x12\x39\n\x0eitems_unlocked\x18\x04 \x03(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\"5\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x13\n\x0f\x41WARDED_ALREADY\x10\x02\"\x97\x02\n!CollectDailyDefenderBonusResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32I.POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.Result\x12\x15\n\rcurrency_type\x18\x02 \x03(\t\x12\x18\n\x10\x63urrency_awarded\x18\x03 \x03(\x05\x12\x17\n\x0f\x64\x65\x66\x65nders_count\x18\x04 \x01(\x05\"M\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x12\x0c\n\x08TOO_SOON\x10\x03\x12\x10\n\x0cNO_DEFENDERS\x10\x04\"\xdd\x01\n\x16ReleasePokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.POGOProtos.Networking.Responses.ReleasePokemonResponse.Result\x12\x15\n\rcandy_awarded\x18\x02 \x01(\x05\"\\\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10POKEMON_DEPLOYED\x10\x02\x12\n\n\x06\x46\x41ILED\x10\x03\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x04P\x00P\x01P\x02P\x03P\x04P\x05P\x06P\x07P\x08P\tP\nP\x0bP\x0cP\rb\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Data_dot_Battle__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Capture__pb2.DESCRIPTOR,POGOProtos_dot_Enums__pb2.DESCRIPTOR,POGOProtos_dot_Data__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master__pb2.DESCRIPTOR,POGOProtos_dot_Settings__pb2.DESCRIPTOR,POGOProtos_dot_Map_dot_Pokemon__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Gym__pb2.DESCRIPTOR,POGOProtos_dot_Map_dot_Fort__pb2.DESCRIPTOR,POGOProtos_dot_Inventory__pb2.DESCRIPTOR,POGOProtos_dot_Map__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Map_dot_Fort__pb2.DESCRIPTOR,POGOProtos_dot_Map_dot_Pokemon__pb2.DESCRIPTOR,POGOProtos_dot_Inventory__pb2.DESCRIPTOR,POGOProtos_dot_Settings__pb2.DESCRIPTOR,POGOProtos_dot_Data__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Battle__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Gym__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_Item__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Capture__pb2.DESCRIPTOR,POGOProtos_dot_Map__pb2.DESCRIPTOR,POGOProtos_dot_Enums__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Logs__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
-_ATTACKGYMRESPONSE_RESULT = _descriptor.EnumDescriptor(
+_USEITEMEGGINCUBATORRESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
-  full_name='POGOProtos.Networking.Responses.AttackGymResponse.Result',
+  full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.Result',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -175,92 +149,36 @@ _ATTACKGYMRESPONSE_RESULT = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_INVALID_ATTACK_ACTIONS', index=2, number=2,
+      name='ERROR_INCUBATOR_NOT_FOUND', index=2, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_IN_RANGE', index=3, number=3,
+      name='ERROR_POKEMON_EGG_NOT_FOUND', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_ID_NOT_EGG', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_INCUBATOR_ALREADY_IN_USE', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_ALREADY_INCUBATING', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_INCUBATOR_NO_USES_REMAINING', index=7, number=7,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=741,
-  serialized_end=831,
+  serialized_start=798,
+  serialized_end=1037,
 )
-_sym_db.RegisterEnumDescriptor(_ATTACKGYMRESPONSE_RESULT)
-
-_CATCHPOKEMONRESPONSE_CATCHSTATUS = _descriptor.EnumDescriptor(
-  name='CatchStatus',
-  full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='CATCH_ERROR', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CATCH_SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CATCH_ESCAPE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CATCH_FLEE', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CATCH_MISSED', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=1054,
-  serialized_end=1155,
-)
-_sym_db.RegisterEnumDescriptor(_CATCHPOKEMONRESPONSE_CATCHSTATUS)
-
-_CHECKCODENAMEAVAILABLERESPONSE_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CODENAME_NOT_AVAILABLE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CODENAME_NOT_VALID', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CURRENT_OWNER', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CODENAME_CHANGE_NOT_ALLOWED', index=5, number=5,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=1475,
-  serialized_end=1611,
-)
-_sym_db.RegisterEnumDescriptor(_CHECKCODENAMEAVAILABLERESPONSE_STATUS)
+_sym_db.RegisterEnumDescriptor(_USEITEMEGGINCUBATORRESPONSE_RESULT)
 
 _CLAIMCODENAMERESPONSE_STATUS = _descriptor.EnumDescriptor(
   name='Status',
@@ -295,758 +213,10 @@ _CLAIMCODENAMERESPONSE_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1475,
-  serialized_end=1611,
+  serialized_start=1500,
+  serialized_end=1636,
 )
 _sym_db.RegisterEnumDescriptor(_CLAIMCODENAMERESPONSE_STATUS)
-
-_COLLECTDAILYBONUSRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.CollectDailyBonusResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TOO_SOON', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=2033,
-  serialized_end=2092,
-)
-_sym_db.RegisterEnumDescriptor(_COLLECTDAILYBONUSRESPONSE_RESULT)
-
-_COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TOO_SOON', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NO_DEFENDERS', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=2297,
-  serialized_end=2374,
-)
-_sym_db.RegisterEnumDescriptor(_COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT)
-
-_DISKENCOUNTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NOT_AVAILABLE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NOT_IN_RANGE', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_ALREADY_FINISHED', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POKEMON_INVENTORY_FULL', index=5, number=5,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=2608,
-  serialized_end=2739,
-)
-_sym_db.RegisterEnumDescriptor(_DISKENCOUNTERRESPONSE_RESULT)
-
-_DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=741,
-  serialized_end=773,
-)
-_sym_db.RegisterEnumDescriptor(_DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT)
-
-_ENCOUNTERRESPONSE_BACKGROUND = _descriptor.EnumDescriptor(
-  name='Background',
-  full_name='POGOProtos.Networking.Responses.EncounterResponse.Background',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='PARK', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DESERT', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=4705,
-  serialized_end=4739,
-)
-_sym_db.RegisterEnumDescriptor(_ENCOUNTERRESPONSE_BACKGROUND)
-
-_ENCOUNTERRESPONSE_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='POGOProtos.Networking.Responses.EncounterResponse.Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_ERROR', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_NOT_FOUND', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_CLOSED', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_POKEMON_FLED', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_NOT_IN_RANGE', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ENCOUNTER_ALREADY_HAPPENED', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POKEMON_INVENTORY_FULL', index=7, number=7,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=4742,
-  serialized_end=4957,
-)
-_sym_db.RegisterEnumDescriptor(_ENCOUNTERRESPONSE_STATUS)
-
-_ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_INVALID_POKEMON', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=5202,
-  serialized_end=5261,
-)
-_sym_db.RegisterEnumDescriptor(_ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT)
-
-_EQUIPBADGERESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.EquipBadgeResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='COOLDOWN_ACTIVE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NOT_QUALIFIED', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=5419,
-  serialized_end=5491,
-)
-_sym_db.RegisterEnumDescriptor(_EQUIPBADGERESPONSE_RESULT)
-
-_EVOLVEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED_POKEMON_MISSING', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED_INSUFFICIENT_RESOURCES', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED_POKEMON_CANNOT_EVOLVE', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED_POKEMON_IS_DEPLOYED', index=5, number=5,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=5710,
-  serialized_end=5871,
-)
-_sym_db.RegisterEnumDescriptor(_EVOLVEPOKEMONRESPONSE_RESULT)
-
-_FORTDEPLOYPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='NO_RESULT_SET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ALREADY_HAS_POKEMON_ON_FORT', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_OPPOSING_TEAM_OWNS_FORT', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_FORT_IS_FULL', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_IN_RANGE', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_PLAYER_HAS_NO_TEAM', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_NOT_FULL_HP', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_PLAYER_BELOW_MINIMUM_LEVEL', index=8, number=8,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=6165,
-  serialized_end=6426,
-)
-_sym_db.RegisterEnumDescriptor(_FORTDEPLOYPOKEMONRESPONSE_RESULT)
-
-_FORTRECALLPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='NO_RESULT_SET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_IN_RANGE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_NOT_ON_FORT', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PLAYER', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=7000,
-  serialized_end=7116,
-)
-_sym_db.RegisterEnumDescriptor(_FORTRECALLPOKEMONRESPONSE_RESULT)
-
-_FORTSEARCHRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.FortSearchResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='NO_RESULT_SET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='OUT_OF_RANGE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='IN_COOLDOWN_PERIOD', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVENTORY_FULL', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=7455,
-  serialized_end=7557,
-)
-_sym_db.RegisterEnumDescriptor(_FORTSEARCHRESPONSE_RESULT)
-
-_GETGYMDETAILSRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_IN_RANGE', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=7947,
-  serialized_end=8003,
-)
-_sym_db.RegisterEnumDescriptor(_GETGYMDETAILSRESPONSE_RESULT)
-
-_GETINCENSEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='INCENSE_ENCOUNTER_UNKNOWN', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INCENSE_ENCOUNTER_AVAILABLE', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INCENSE_ENCOUNTER_NOT_AVAILABLE', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=8407,
-  serialized_end=8516,
-)
-_sym_db.RegisterEnumDescriptor(_GETINCENSEPOKEMONRESPONSE_RESULT)
-
-_GETPLAYERPROFILERESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.GetPlayerProfileResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=741,
-  serialized_end=773,
-)
-_sym_db.RegisterEnumDescriptor(_GETPLAYERPROFILERESPONSE_RESULT)
-
-_INCENSEENCOUNTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.IncenseEncounterResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='INCENSE_ENCOUNTER_UNKNOWN', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INCENSE_ENCOUNTER_SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INCENSE_ENCOUNTER_NOT_AVAILABLE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POKEMON_INVENTORY_FULL', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=9347,
-  serialized_end=9482,
-)
-_sym_db.RegisterEnumDescriptor(_INCENSEENCOUNTERRESPONSE_RESULT)
-
-_LEVELUPREWARDSRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.LevelUpRewardsResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='AWARDED_ALREADY', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=9701,
-  serialized_end=9754,
-)
-_sym_db.RegisterEnumDescriptor(_LEVELUPREWARDSRESPONSE_RESULT)
-
-_NICKNAMEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.NicknamePokemonResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_INVALID_NICKNAME', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_NOT_FOUND', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_IS_EGG', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=9865,
-  serialized_end=9980,
-)
-_sym_db.RegisterEnumDescriptor(_NICKNAMEPOKEMONRESPONSE_RESULT)
-
-_RECYCLEINVENTORYITEMRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_ENOUGH_COPIES', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_CANNOT_RECYCLE_INCUBATORS', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=10273,
-  serialized_end=10371,
-)
-_sym_db.RegisterEnumDescriptor(_RECYCLEINVENTORYITEMRESPONSE_RESULT)
-
-_RELEASEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.ReleasePokemonResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='POKEMON_DEPLOYED', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_IS_EGG', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=10503,
-  serialized_end=10595,
-)
-_sym_db.RegisterEnumDescriptor(_RELEASEPOKEMONRESPONSE_RESULT)
-
-_SETAVATARRESPONSE_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='POGOProtos.Networking.Responses.SetAvatarResponse.Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='AVATAR_ALREADY_SET', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=10744,
-  serialized_end=10813,
-)
-_sym_db.RegisterEnumDescriptor(_SETAVATARRESPONSE_STATUS)
-
-_SETCONTACTSETTINGSRESPONSE_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse.Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=10980,
-  serialized_end=11025,
-)
-_sym_db.RegisterEnumDescriptor(_SETCONTACTSETTINGSRESPONSE_STATUS)
-
-_SETFAVORITEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.SetFavoritePokemonResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_NOT_FOUND', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_IS_EGG', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=11142,
-  serialized_end=11229,
-)
-_sym_db.RegisterEnumDescriptor(_SETFAVORITEPOKEMONRESPONSE_RESULT)
-
-_SETPLAYERTEAMRESPONSE_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse.Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_ALREADY_SET', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=11386,
-  serialized_end=11453,
-)
-_sym_db.RegisterEnumDescriptor(_SETPLAYERTEAMRESPONSE_STATUS)
 
 _STARTGYMBATTLERESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
@@ -1113,10 +283,312 @@ _STARTGYMBATTLERESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11766,
-  serialized_end=12143,
+  serialized_start=2034,
+  serialized_end=2411,
 )
 _sym_db.RegisterEnumDescriptor(_STARTGYMBATTLERESPONSE_RESULT)
+
+_GETGYMDETAILSRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_IN_RANGE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2617,
+  serialized_end=2673,
+)
+_sym_db.RegisterEnumDescriptor(_GETGYMDETAILSRESPONSE_RESULT)
+
+_USEITEMPOTIONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.UseItemPotionResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NO_POKEMON', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_CANNOT_USE', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_DEPLOYED_TO_FORT', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2797,
+  serialized_end=2901,
+)
+_sym_db.RegisterEnumDescriptor(_USEITEMPOTIONRESPONSE_RESULT)
+
+_FORTSEARCHRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.FortSearchResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NO_RESULT_SET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OUT_OF_RANGE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IN_COOLDOWN_PERIOD', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVENTORY_FULL', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=3360,
+  serialized_end=3462,
+)
+_sym_db.RegisterEnumDescriptor(_FORTSEARCHRESPONSE_RESULT)
+
+_SETFAVORITEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.SetFavoritePokemonResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_NOT_FOUND', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_IS_EGG', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=3579,
+  serialized_end=3666,
+)
+_sym_db.RegisterEnumDescriptor(_SETFAVORITEPOKEMONRESPONSE_RESULT)
+
+_FORTDEPLOYPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NO_RESULT_SET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_ALREADY_HAS_POKEMON_ON_FORT', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_OPPOSING_TEAM_OWNS_FORT', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_FORT_IS_FULL', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_IN_RANGE', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_PLAYER_HAS_NO_TEAM', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_NOT_FULL_HP', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_PLAYER_BELOW_MINIMUM_LEVEL', index=8, number=8,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=3960,
+  serialized_end=4221,
+)
+_sym_db.RegisterEnumDescriptor(_FORTDEPLOYPOKEMONRESPONSE_RESULT)
+
+_USEITEMREVIVERESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.UseItemReviveResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NO_POKEMON', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_CANNOT_USE', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_DEPLOYED_TO_FORT', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2797,
+  serialized_end=2901,
+)
+_sym_db.RegisterEnumDescriptor(_USEITEMREVIVERESPONSE_RESULT)
+
+_EQUIPBADGERESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.EquipBadgeResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='COOLDOWN_ACTIVE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOT_QUALIFIED', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=5973,
+  serialized_end=6045,
+)
+_sym_db.RegisterEnumDescriptor(_EQUIPBADGERESPONSE_RESULT)
+
+_SETCONTACTSETTINGSRESPONSE_STATUS = _descriptor.EnumDescriptor(
+  name='Status',
+  full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse.Status',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=6212,
+  serialized_end=6257,
+)
+_sym_db.RegisterEnumDescriptor(_SETCONTACTSETTINGSRESPONSE_STATUS)
+
+_DISKENCOUNTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOT_AVAILABLE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOT_IN_RANGE', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_ALREADY_FINISHED', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POKEMON_INVENTORY_FULL', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=6491,
+  serialized_end=6622,
+)
+_sym_db.RegisterEnumDescriptor(_DISKENCOUNTERRESPONSE_RESULT)
 
 _UPGRADEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
@@ -1151,10 +623,96 @@ _UPGRADEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12309,
-  serialized_end=12468,
+  serialized_start=6976,
+  serialized_end=7135,
 )
 _sym_db.RegisterEnumDescriptor(_UPGRADEPOKEMONRESPONSE_RESULT)
+
+_FORTRECALLPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NO_RESULT_SET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_IN_RANGE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_NOT_ON_FORT', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NO_PLAYER', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7326,
+  serialized_end=7442,
+)
+_sym_db.RegisterEnumDescriptor(_FORTRECALLPOKEMONRESPONSE_RESULT)
+
+_RECYCLEINVENTORYITEMRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_ENOUGH_COPIES', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_CANNOT_RECYCLE_INCUBATORS', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=7582,
+  serialized_end=7680,
+)
+_sym_db.RegisterEnumDescriptor(_RECYCLEINVENTORYITEMRESPONSE_RESULT)
+
+_DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=798,
+  serialized_end=830,
+)
+_sym_db.RegisterEnumDescriptor(_DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT)
 
 _USEINCENSERESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
@@ -1185,154 +743,10 @@ _USEINCENSERESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12629,
-  serialized_end=12734,
+  serialized_start=8608,
+  serialized_end=8713,
 )
 _sym_db.RegisterEnumDescriptor(_USEINCENSERESPONSE_RESULT)
-
-_USEITEMEGGINCUBATORRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_INCUBATOR_NOT_FOUND', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_EGG_NOT_FOUND', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_ID_NOT_EGG', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_INCUBATOR_ALREADY_IN_USE', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_POKEMON_ALREADY_INCUBATING', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_INCUBATOR_NO_USES_REMAINING', index=7, number=7,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=13093,
-  serialized_end=13332,
-)
-_sym_db.RegisterEnumDescriptor(_USEITEMEGGINCUBATORRESPONSE_RESULT)
-
-_USEITEMGYMRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.UseItemGymResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_CANNOT_USE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_IN_RANGE', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=13453,
-  serialized_end=13531,
-)
-_sym_db.RegisterEnumDescriptor(_USEITEMGYMRESPONSE_RESULT)
-
-_USEITEMPOTIONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.UseItemPotionResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_POKEMON', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_CANNOT_USE', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_DEPLOYED_TO_FORT', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=13655,
-  serialized_end=13759,
-)
-_sym_db.RegisterEnumDescriptor(_USEITEMPOTIONRESPONSE_RESULT)
-
-_USEREVIVEPOTIONRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='POGOProtos.Networking.Responses.UseRevivePotionResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_POKEMON', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_CANNOT_USE', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_DEPLOYED_TO_FORT', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=13655,
-  serialized_end=13759,
-)
-_sym_db.RegisterEnumDescriptor(_USEREVIVEPOTIONRESPONSE_RESULT)
 
 _USEITEMXPBOOSTRESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
@@ -1367,19 +781,622 @@ _USEITEMXPBOOSTRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14160,
-  serialized_end=14312,
+  serialized_start=8882,
+  serialized_end=9034,
 )
 _sym_db.RegisterEnumDescriptor(_USEITEMXPBOOSTRESPONSE_RESULT)
 
+_ATTACKGYMRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.AttackGymResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_INVALID_ATTACK_ACTIONS', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_IN_RANGE', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=9343,
+  serialized_end=9433,
+)
+_sym_db.RegisterEnumDescriptor(_ATTACKGYMRESPONSE_RESULT)
 
-_ADDFORTMODIFIERRESPONSE = _descriptor.Descriptor(
-  name='AddFortModifierResponse',
-  full_name='POGOProtos.Networking.Responses.AddFortModifierResponse',
+_ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_INVALID_POKEMON', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=9678,
+  serialized_end=9737,
+)
+_sym_db.RegisterEnumDescriptor(_ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT)
+
+_SETAVATARRESPONSE_STATUS = _descriptor.EnumDescriptor(
+  name='Status',
+  full_name='POGOProtos.Networking.Responses.SetAvatarResponse.Status',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AVATAR_ALREADY_SET', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=9886,
+  serialized_end=9955,
+)
+_sym_db.RegisterEnumDescriptor(_SETAVATARRESPONSE_STATUS)
+
+_CATCHPOKEMONRESPONSE_CATCHSTATUS = _descriptor.EnumDescriptor(
+  name='CatchStatus',
+  full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='CATCH_ERROR', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CATCH_SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CATCH_ESCAPE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CATCH_FLEE', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CATCH_MISSED', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=10178,
+  serialized_end=10279,
+)
+_sym_db.RegisterEnumDescriptor(_CATCHPOKEMONRESPONSE_CATCHSTATUS)
+
+_CHECKCODENAMEAVAILABLERESPONSE_STATUS = _descriptor.EnumDescriptor(
+  name='Status',
+  full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.Status',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CODENAME_NOT_AVAILABLE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CODENAME_NOT_VALID', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CURRENT_OWNER', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CODENAME_CHANGE_NOT_ALLOWED', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=1500,
+  serialized_end=1636,
+)
+_sym_db.RegisterEnumDescriptor(_CHECKCODENAMEAVAILABLERESPONSE_STATUS)
+
+_COLLECTDAILYBONUSRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.CollectDailyBonusResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOO_SOON', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=10719,
+  serialized_end=10778,
+)
+_sym_db.RegisterEnumDescriptor(_COLLECTDAILYBONUSRESPONSE_RESULT)
+
+_GETPLAYERPROFILERESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.GetPlayerProfileResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=798,
+  serialized_end=830,
+)
+_sym_db.RegisterEnumDescriptor(_GETPLAYERPROFILERESPONSE_RESULT)
+
+_USEITEMGYMRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.UseItemGymResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_CANNOT_USE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_IN_RANGE', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=11247,
+  serialized_end=11325,
+)
+_sym_db.RegisterEnumDescriptor(_USEITEMGYMRESPONSE_RESULT)
+
+_GETINCENSEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='INCENSE_ENCOUNTER_UNKNOWN', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INCENSE_ENCOUNTER_AVAILABLE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INCENSE_ENCOUNTER_NOT_AVAILABLE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=11608,
+  serialized_end=11717,
+)
+_sym_db.RegisterEnumDescriptor(_GETINCENSEPOKEMONRESPONSE_RESULT)
+
+_EVOLVEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILED_POKEMON_MISSING', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILED_INSUFFICIENT_RESOURCES', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILED_POKEMON_CANNOT_EVOLVE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILED_POKEMON_IS_DEPLOYED', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=11936,
+  serialized_end=12097,
+)
+_sym_db.RegisterEnumDescriptor(_EVOLVEPOKEMONRESPONSE_RESULT)
+
+_ENCOUNTERRESPONSE_BACKGROUND = _descriptor.EnumDescriptor(
+  name='Background',
+  full_name='POGOProtos.Networking.Responses.EncounterResponse.Background',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='PARK', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DESERT', index=1, number=1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=12412,
+  serialized_end=12446,
+)
+_sym_db.RegisterEnumDescriptor(_ENCOUNTERRESPONSE_BACKGROUND)
+
+_ENCOUNTERRESPONSE_STATUS = _descriptor.EnumDescriptor(
+  name='Status',
+  full_name='POGOProtos.Networking.Responses.EncounterResponse.Status',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_ERROR', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_NOT_FOUND', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_CLOSED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_POKEMON_FLED', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_NOT_IN_RANGE', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER_ALREADY_HAPPENED', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POKEMON_INVENTORY_FULL', index=7, number=7,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=12449,
+  serialized_end=12664,
+)
+_sym_db.RegisterEnumDescriptor(_ENCOUNTERRESPONSE_STATUS)
+
+_NICKNAMEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.NicknamePokemonResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_INVALID_NICKNAME', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_NOT_FOUND', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_IS_EGG', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=12775,
+  serialized_end=12890,
+)
+_sym_db.RegisterEnumDescriptor(_NICKNAMEPOKEMONRESPONSE_RESULT)
+
+_INCENSEENCOUNTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.IncenseEncounterResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='INCENSE_ENCOUNTER_UNKNOWN', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INCENSE_ENCOUNTER_SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INCENSE_ENCOUNTER_NOT_AVAILABLE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POKEMON_INVENTORY_FULL', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=13130,
+  serialized_end=13265,
+)
+_sym_db.RegisterEnumDescriptor(_INCENSEENCOUNTERRESPONSE_RESULT)
+
+_SETPLAYERTEAMRESPONSE_STATUS = _descriptor.EnumDescriptor(
+  name='Status',
+  full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse.Status',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_ALREADY_SET', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=13422,
+  serialized_end=13489,
+)
+_sym_db.RegisterEnumDescriptor(_SETPLAYERTEAMRESPONSE_STATUS)
+
+_SFIDAACTIONLOGRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.SfidaActionLogResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=798,
+  serialized_end=830,
+)
+_sym_db.RegisterEnumDescriptor(_SFIDAACTIONLOGRESPONSE_RESULT)
+
+_LEVELUPREWARDSRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.LevelUpRewardsResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AWARDED_ALREADY', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=14148,
+  serialized_end=14201,
+)
+_sym_db.RegisterEnumDescriptor(_LEVELUPREWARDSRESPONSE_RESULT)
+
+_COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOO_SOON', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NO_DEFENDERS', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=14406,
+  serialized_end=14483,
+)
+_sym_db.RegisterEnumDescriptor(_COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT)
+
+_RELEASEPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.ReleasePokemonResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POKEMON_DEPLOYED', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_POKEMON_IS_EGG', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=14615,
+  serialized_end=14707,
+)
+_sym_db.RegisterEnumDescriptor(_RELEASEPOKEMONRESPONSE_RESULT)
+
+
+_PLAYERUPDATERESPONSE = _descriptor.Descriptor(
+  name='PlayerUpdateResponse',
+  full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='wild_pokemons', full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse.wild_pokemons', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='forts', full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse.forts', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='forts_nearby', full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse.forts_nearby', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1392,59 +1409,38 @@ _ADDFORTMODIFIERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=407,
-  serialized_end=432,
+  serialized_start=469,
+  serialized_end=619,
 )
 
 
-_ATTACKGYMRESPONSE = _descriptor.Descriptor(
-  name='AttackGymResponse',
-  full_name='POGOProtos.Networking.Responses.AttackGymResponse',
+_USEITEMEGGINCUBATORRESPONSE = _descriptor.Descriptor(
+  name='UseItemEggIncubatorResponse',
+  full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.AttackGymResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='battle_log', full_name='POGOProtos.Networking.Responses.AttackGymResponse.battle_log', index=1,
+      name='egg_incubator', full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.egg_incubator', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-    _descriptor.FieldDescriptor(
-      name='battle_id', full_name='POGOProtos.Networking.Responses.AttackGymResponse.battle_id', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='active_defender', full_name='POGOProtos.Networking.Responses.AttackGymResponse.active_defender', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='active_attacker', full_name='POGOProtos.Networking.Responses.AttackGymResponse.active_attacker', index=4,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
-    _ATTACKGYMRESPONSE_RESULT,
+    _USEITEMEGGINCUBATORRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -1452,89 +1448,64 @@ _ATTACKGYMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=435,
-  serialized_end=831,
+  serialized_start=622,
+  serialized_end=1037,
 )
 
 
-_CATCHPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='CatchPokemonResponse',
-  full_name='POGOProtos.Networking.Responses.CatchPokemonResponse',
+_USEITEMCAPTURERESPONSE = _descriptor.Descriptor(
+  name='UseItemCaptureResponse',
+  full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.status', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='miss_percent', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.miss_percent', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='captured_pokemon_id', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.captured_pokemon_id', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='capture_award', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.capture_award', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CATCHPOKEMONRESPONSE_CATCHSTATUS,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=834,
-  serialized_end=1155,
-)
-
-
-_CHECKAWARDEDBADGESRESPONSE = _descriptor.Descriptor(
-  name='CheckAwardedBadgesResponse',
-  full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='success', full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.success', index=0,
+      name='success', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='awarded_badges', full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.awarded_badges', index=1,
-      number=2, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
+      name='item_capture_mult', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.item_capture_mult', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='awarded_badge_levels', full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.awarded_badge_levels', index=2,
-      number=3, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
+      name='item_flee_mult', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.item_flee_mult', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='stop_movement', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.stop_movement', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='stop_attack', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.stop_attack', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_max', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.target_max', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_slow', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.target_slow', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1550,43 +1521,36 @@ _CHECKAWARDEDBADGESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1158,
-  serialized_end=1286,
+  serialized_start=1040,
+  serialized_end=1217,
 )
 
 
-_CHECKCODENAMEAVAILABLERESPONSE = _descriptor.Descriptor(
-  name='CheckCodenameAvailableResponse',
-  full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse',
+_DOWNLOADSETTINGSRESPONSE = _descriptor.Descriptor(
+  name='DownloadSettingsResponse',
+  full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='codename', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.codename', index=0,
+      name='error', full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse.error', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='user_message', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.user_message', index=1,
+      name='hash', full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse.hash', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_assignable', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.is_assignable', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.status', index=3,
-      number=4, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      name='settings', full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse.settings', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1595,7 +1559,6 @@ _CHECKCODENAMEAVAILABLERESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _CHECKCODENAMEAVAILABLERESPONSE_STATUS,
   ],
   options=None,
   is_extendable=False,
@@ -1603,8 +1566,8 @@ _CHECKCODENAMEAVAILABLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1289,
-  serialized_end=1611,
+  serialized_start=1219,
+  serialized_end=1329,
 )
 
 
@@ -1656,20 +1619,353 @@ _CLAIMCODENAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1614,
-  serialized_end=1918,
+  serialized_start=1332,
+  serialized_end=1636,
 )
 
 
-_COLLECTDAILYBONUSRESPONSE = _descriptor.Descriptor(
-  name='CollectDailyBonusResponse',
-  full_name='POGOProtos.Networking.Responses.CollectDailyBonusResponse',
+_GETDOWNLOADURLSRESPONSE = _descriptor.Descriptor(
+  name='GetDownloadUrlsResponse',
+  full_name='POGOProtos.Networking.Responses.GetDownloadUrlsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.CollectDailyBonusResponse.result', index=0,
+      name='download_urls', full_name='POGOProtos.Networking.Responses.GetDownloadUrlsResponse.download_urls', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1638,
+  serialized_end=1721,
+)
+
+
+_STARTGYMBATTLERESPONSE = _descriptor.Descriptor(
+  name='StartGymBattleResponse',
+  full_name='POGOProtos.Networking.Responses.StartGymBattleResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_start_timestamp_ms', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_start_timestamp_ms', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_end_timestamp_ms', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_end_timestamp_ms', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_id', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.defender', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_log', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_log', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _STARTGYMBATTLERESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1724,
+  serialized_end=2411,
+)
+
+
+_GETGYMDETAILSRESPONSE = _descriptor.Descriptor(
+  name='GetGymDetailsResponse',
+  full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gym_state', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.gym_state', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='urls', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.urls', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.result', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.description', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _GETGYMDETAILSRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2414,
+  serialized_end=2673,
+)
+
+
+_USEITEMPOTIONRESPONSE = _descriptor.Descriptor(
+  name='UseItemPotionResponse',
+  full_name='POGOProtos.Networking.Responses.UseItemPotionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.UseItemPotionResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='stamina', full_name='POGOProtos.Networking.Responses.UseItemPotionResponse.stamina', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _USEITEMPOTIONRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2676,
+  serialized_end=2901,
+)
+
+
+_GETPLAYERRESPONSE = _descriptor.Descriptor(
+  name='GetPlayerResponse',
+  full_name='POGOProtos.Networking.Responses.GetPlayerResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='success', full_name='POGOProtos.Networking.Responses.GetPlayerResponse.success', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='player_data', full_name='POGOProtos.Networking.Responses.GetPlayerResponse.player_data', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2903,
+  serialized_end=2989,
+)
+
+
+_ADDFORTMODIFIERRESPONSE = _descriptor.Descriptor(
+  name='AddFortModifierResponse',
+  full_name='POGOProtos.Networking.Responses.AddFortModifierResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2991,
+  serialized_end=3016,
+)
+
+
+_FORTSEARCHRESPONSE = _descriptor.Descriptor(
+  name='FortSearchResponse',
+  full_name='POGOProtos.Networking.Responses.FortSearchResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.FortSearchResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='items_awarded', full_name='POGOProtos.Networking.Responses.FortSearchResponse.items_awarded', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gems_awarded', full_name='POGOProtos.Networking.Responses.FortSearchResponse.gems_awarded', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pokemon_data_egg', full_name='POGOProtos.Networking.Responses.FortSearchResponse.pokemon_data_egg', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='experience_awarded', full_name='POGOProtos.Networking.Responses.FortSearchResponse.experience_awarded', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cooldown_complete_timestamp_ms', full_name='POGOProtos.Networking.Responses.FortSearchResponse.cooldown_complete_timestamp_ms', index=5,
+      number=6, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='chain_hack_sequence_number', full_name='POGOProtos.Networking.Responses.FortSearchResponse.chain_hack_sequence_number', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _FORTSEARCHRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3019,
+  serialized_end=3462,
+)
+
+
+_SETFAVORITEPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='SetFavoritePokemonResponse',
+  full_name='POGOProtos.Networking.Responses.SetFavoritePokemonResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.SetFavoritePokemonResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1680,7 +1976,7 @@ _COLLECTDAILYBONUSRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _COLLECTDAILYBONUSRESPONSE_RESULT,
+    _SETFAVORITEPOKEMONRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -1688,88 +1984,42 @@ _COLLECTDAILYBONUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1921,
-  serialized_end=2092,
+  serialized_start=3465,
+  serialized_end=3666,
 )
 
 
-_COLLECTDAILYDEFENDERBONUSRESPONSE = _descriptor.Descriptor(
-  name='CollectDailyDefenderBonusResponse',
-  full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse',
+_FORTDEPLOYPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='FortDeployPokemonResponse',
+  full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='currency_type', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.currency_type', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='currency_awarded', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.currency_awarded', index=2,
-      number=3, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='defenders_count', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.defenders_count', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2095,
-  serialized_end=2374,
-)
-
-
-_DISKENCOUNTERRESPONSE = _descriptor.Descriptor(
-  name='DiskEncounterResponse',
-  full_name='POGOProtos.Networking.Responses.DiskEncounterResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pokemon_data', full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.pokemon_data', index=1,
+      name='fort_details', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.fort_details', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='capture_probability', full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.capture_probability', index=2,
+      name='pokemon_data', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.pokemon_data', index=2,
       number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gym_state', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.gym_state', index=3,
+      number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1779,7 +2029,7 @@ _DISKENCOUNTERRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _DISKENCOUNTERRESPONSE_RESULT,
+    _FORTDEPLOYPOKEMONRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -1787,8 +2037,8 @@ _DISKENCOUNTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2377,
-  serialized_end=2739,
+  serialized_start=3669,
+  serialized_end=4221,
 )
 
 
@@ -1923,8 +2173,8 @@ _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2916,
-  serialized_end=4006,
+  serialized_start=4398,
+  serialized_end=5488,
 )
 
 _DOWNLOADITEMTEMPLATESRESPONSE = _descriptor.Descriptor(
@@ -1967,35 +2217,28 @@ _DOWNLOADITEMTEMPLATESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2742,
-  serialized_end=4006,
+  serialized_start=4224,
+  serialized_end=5488,
 )
 
 
-_DOWNLOADREMOTECONFIGVERSIONRESPONSE = _descriptor.Descriptor(
-  name='DownloadRemoteConfigVersionResponse',
-  full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse',
+_USEITEMREVIVERESPONSE = _descriptor.Descriptor(
+  name='UseItemReviveResponse',
+  full_name='POGOProtos.Networking.Responses.UseItemReviveResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.UseItemReviveResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_templates_timestamp_ms', full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.item_templates_timestamp_ms', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='asset_digest_timestamp_ms', full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.asset_digest_timestamp_ms', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      name='stamina', full_name='POGOProtos.Networking.Responses.UseItemReviveResponse.stamina', index=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2005,7 +2248,7 @@ _DOWNLOADREMOTECONFIGVERSIONRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT,
+    _USEITEMREVIVERESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -2013,175 +2256,37 @@ _DOWNLOADREMOTECONFIGVERSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4009,
-  serialized_end=4245,
+  serialized_start=5491,
+  serialized_end=5716,
 )
 
 
-_DOWNLOADSETTINGSRESPONSE = _descriptor.Descriptor(
-  name='DownloadSettingsResponse',
-  full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse',
+_MARKTUTORIALCOMPLETERESPONSE = _descriptor.Descriptor(
+  name='MarkTutorialCompleteResponse',
+  full_name='POGOProtos.Networking.Responses.MarkTutorialCompleteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='error', full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse.error', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='success', full_name='POGOProtos.Networking.Responses.MarkTutorialCompleteResponse.success', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='hash', full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse.hash', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='settings', full_name='POGOProtos.Networking.Responses.DownloadSettingsResponse.settings', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4247,
-  serialized_end=4357,
-)
-
-
-_ECHORESPONSE = _descriptor.Descriptor(
-  name='EchoResponse',
-  full_name='POGOProtos.Networking.Responses.EchoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='context', full_name='POGOProtos.Networking.Responses.EchoResponse.context', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4359,
-  serialized_end=4390,
-)
-
-
-_ENCOUNTERRESPONSE = _descriptor.Descriptor(
-  name='EncounterResponse',
-  full_name='POGOProtos.Networking.Responses.EncounterResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='wild_pokemon', full_name='POGOProtos.Networking.Responses.EncounterResponse.wild_pokemon', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='background', full_name='POGOProtos.Networking.Responses.EncounterResponse.background', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Responses.EncounterResponse.status', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='capture_probability', full_name='POGOProtos.Networking.Responses.EncounterResponse.capture_probability', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _ENCOUNTERRESPONSE_BACKGROUND,
-    _ENCOUNTERRESPONSE_STATUS,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4393,
-  serialized_end=4957,
-)
-
-
-_ENCOUNTERTUTORIALCOMPLETERESPONSE = _descriptor.Descriptor(
-  name='EncounterTutorialCompleteResponse',
-  full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pokemon_data', full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.pokemon_data', index=1,
+      name='player_data', full_name='POGOProtos.Networking.Responses.MarkTutorialCompleteResponse.player_data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-    _descriptor.FieldDescriptor(
-      name='capture_award', full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.capture_award', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
-    _ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -2189,8 +2294,8 @@ _ENCOUNTERTUTORIALCOMPLETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4960,
-  serialized_end=5261,
+  serialized_start=5718,
+  serialized_end=5815,
 )
 
 
@@ -2228,43 +2333,29 @@ _EQUIPBADGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5264,
-  serialized_end=5491,
+  serialized_start=5818,
+  serialized_end=6045,
 )
 
 
-_EVOLVEPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='EvolvePokemonResponse',
-  full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse',
+_SETCONTACTSETTINGSRESPONSE = _descriptor.Descriptor(
+  name='SetContactSettingsResponse',
+  full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.result', index=0,
+      name='status', full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='evolved_pokemon_data', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.evolved_pokemon_data', index=1,
+      name='player_data', full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse.player_data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='experience_awarded', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.experience_awarded', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='candy_awarded', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.candy_awarded', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2273,7 +2364,7 @@ _EVOLVEPOKEMONRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _EVOLVEPOKEMONRESPONSE_RESULT,
+    _SETCONTACTSETTINGSRESPONSE_STATUS,
   ],
   options=None,
   is_extendable=False,
@@ -2281,42 +2372,150 @@ _EVOLVEPOKEMONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5494,
-  serialized_end=5871,
+  serialized_start=6048,
+  serialized_end=6257,
 )
 
 
-_FORTDEPLOYPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='FortDeployPokemonResponse',
-  full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse',
+_DISKENCOUNTERRESPONSE = _descriptor.Descriptor(
+  name='DiskEncounterResponse',
+  full_name='POGOProtos.Networking.Responses.DiskEncounterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fort_details', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.fort_details', index=1,
+      name='pokemon_data', full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.pokemon_data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pokemon_data', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.pokemon_data', index=2,
+      name='capture_probability', full_name='POGOProtos.Networking.Responses.DiskEncounterResponse.capture_probability', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _DISKENCOUNTERRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6260,
+  serialized_end=6622,
+)
+
+
+_GETSUGGESTEDCODENAMESRESPONSE = _descriptor.Descriptor(
+  name='GetSuggestedCodenamesResponse',
+  full_name='POGOProtos.Networking.Responses.GetSuggestedCodenamesResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
     _descriptor.FieldDescriptor(
-      name='gym_state', full_name='POGOProtos.Networking.Responses.FortDeployPokemonResponse.gym_state', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      name='codenames', full_name='POGOProtos.Networking.Responses.GetSuggestedCodenamesResponse.codenames', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='POGOProtos.Networking.Responses.GetSuggestedCodenamesResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6624,
+  serialized_end=6691,
+)
+
+
+_GETMAPOBJECTSRESPONSE = _descriptor.Descriptor(
+  name='GetMapObjectsResponse',
+  full_name='POGOProtos.Networking.Responses.GetMapObjectsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='map_cells', full_name='POGOProtos.Networking.Responses.GetMapObjectsResponse.map_cells', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='POGOProtos.Networking.Responses.GetMapObjectsResponse.status', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6693,
+  serialized_end=6810,
+)
+
+
+_UPGRADEPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='UpgradePokemonResponse',
+  full_name='POGOProtos.Networking.Responses.UpgradePokemonResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.UpgradePokemonResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='upgraded_pokemon', full_name='POGOProtos.Networking.Responses.UpgradePokemonResponse.upgraded_pokemon', index=1,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2326,7 +2525,7 @@ _FORTDEPLOYPOKEMONRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _FORTDEPLOYPOKEMONRESPONSE_RESULT,
+    _UPGRADEPOKEMONRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -2334,8 +2533,145 @@ _FORTDEPLOYPOKEMONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5874,
-  serialized_end=6426,
+  serialized_start=6813,
+  serialized_end=7135,
+)
+
+
+_FORTRECALLPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='FortRecallPokemonResponse',
+  full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fort_details', full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse.fort_details', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _FORTRECALLPOKEMONRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7138,
+  serialized_end=7442,
+)
+
+
+_RECYCLEINVENTORYITEMRESPONSE = _descriptor.Descriptor(
+  name='RecycleInventoryItemResponse',
+  full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='new_count', full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse.new_count', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _RECYCLEINVENTORYITEMRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7445,
+  serialized_end=7680,
+)
+
+
+_GETHATCHEDEGGSRESPONSE = _descriptor.Descriptor(
+  name='GetHatchedEggsResponse',
+  full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='success', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.success', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pokemon_id', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.pokemon_id', index=1,
+      number=2, type=6, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
+    _descriptor.FieldDescriptor(
+      name='experience_awarded', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.experience_awarded', index=2,
+      number=3, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='candy_awarded', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.candy_awarded', index=3,
+      number=4, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='stardust_awarded', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.stardust_awarded', index=4,
+      number=5, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7683,
+  serialized_end=7825,
 )
 
 
@@ -2449,27 +2785,73 @@ _FORTDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6429,
-  serialized_end=6809,
+  serialized_start=7828,
+  serialized_end=8208,
 )
 
 
-_FORTRECALLPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='FortRecallPokemonResponse',
-  full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse',
+_DOWNLOADREMOTECONFIGVERSIONRESPONSE = _descriptor.Descriptor(
+  name='DownloadRemoteConfigVersionResponse',
+  full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fort_details', full_name='POGOProtos.Networking.Responses.FortRecallPokemonResponse.fort_details', index=1,
+      name='item_templates_timestamp_ms', full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.item_templates_timestamp_ms', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='asset_digest_timestamp_ms', full_name='POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse.asset_digest_timestamp_ms', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8211,
+  serialized_end=8447,
+)
+
+
+_USEINCENSERESPONSE = _descriptor.Descriptor(
+  name='UseIncenseResponse',
+  full_name='POGOProtos.Networking.Responses.UseIncenseResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.UseIncenseResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='applied_incense', full_name='POGOProtos.Networking.Responses.UseIncenseResponse.applied_incense', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -2480,7 +2862,7 @@ _FORTRECALLPOKEMONRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _FORTRECALLPOKEMONRESPONSE_RESULT,
+    _USEINCENSERESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -2488,202 +2870,98 @@ _FORTRECALLPOKEMONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6812,
-  serialized_end=7116,
+  serialized_start=8450,
+  serialized_end=8713,
 )
 
 
-_FORTSEARCHRESPONSE = _descriptor.Descriptor(
-  name='FortSearchResponse',
-  full_name='POGOProtos.Networking.Responses.FortSearchResponse',
+_USEITEMXPBOOSTRESPONSE = _descriptor.Descriptor(
+  name='UseItemXpBoostResponse',
+  full_name='POGOProtos.Networking.Responses.UseItemXpBoostResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.FortSearchResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.UseItemXpBoostResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='items_awarded', full_name='POGOProtos.Networking.Responses.FortSearchResponse.items_awarded', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='applied_items', full_name='POGOProtos.Networking.Responses.UseItemXpBoostResponse.applied_items', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _USEITEMXPBOOSTRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8716,
+  serialized_end=9034,
+)
+
+
+_ATTACKGYMRESPONSE = _descriptor.Descriptor(
+  name='AttackGymResponse',
+  full_name='POGOProtos.Networking.Responses.AttackGymResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
     _descriptor.FieldDescriptor(
-      name='gems_awarded', full_name='POGOProtos.Networking.Responses.FortSearchResponse.gems_awarded', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      name='result', full_name='POGOProtos.Networking.Responses.AttackGymResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pokemon_data_egg', full_name='POGOProtos.Networking.Responses.FortSearchResponse.pokemon_data_egg', index=3,
+      name='battle_log', full_name='POGOProtos.Networking.Responses.AttackGymResponse.battle_log', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_id', full_name='POGOProtos.Networking.Responses.AttackGymResponse.battle_id', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='active_defender', full_name='POGOProtos.Networking.Responses.AttackGymResponse.active_defender', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='experience_awarded', full_name='POGOProtos.Networking.Responses.FortSearchResponse.experience_awarded', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cooldown_complete_timestamp_ms', full_name='POGOProtos.Networking.Responses.FortSearchResponse.cooldown_complete_timestamp_ms', index=5,
-      number=6, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='chain_hack_sequence_number', full_name='POGOProtos.Networking.Responses.FortSearchResponse.chain_hack_sequence_number', index=6,
-      number=7, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _FORTSEARCHRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=7119,
-  serialized_end=7557,
-)
-
-
-_GETASSETDIGESTRESPONSE = _descriptor.Descriptor(
-  name='GetAssetDigestResponse',
-  full_name='POGOProtos.Networking.Responses.GetAssetDigestResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='digest', full_name='POGOProtos.Networking.Responses.GetAssetDigestResponse.digest', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='timestamp_ms', full_name='POGOProtos.Networking.Responses.GetAssetDigestResponse.timestamp_ms', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=7559,
-  serialized_end=7656,
-)
-
-
-_GETDOWNLOADURLSRESPONSE = _descriptor.Descriptor(
-  name='GetDownloadUrlsResponse',
-  full_name='POGOProtos.Networking.Responses.GetDownloadUrlsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='download_urls', full_name='POGOProtos.Networking.Responses.GetDownloadUrlsResponse.download_urls', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=7658,
-  serialized_end=7741,
-)
-
-
-_GETGYMDETAILSRESPONSE = _descriptor.Descriptor(
-  name='GetGymDetailsResponse',
-  full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='gym_state', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.gym_state', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      name='active_attacker', full_name='POGOProtos.Networking.Responses.AttackGymResponse.active_attacker', index=4,
+      number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='urls', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.urls', index=2,
-      number=3, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.result', index=3,
-      number=4, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='POGOProtos.Networking.Responses.GetGymDetailsResponse.description', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
-    _GETGYMDETAILSRESPONSE_RESULT,
+    _ATTACKGYMRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -2691,122 +2969,180 @@ _GETGYMDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7744,
-  serialized_end=8003,
+  serialized_start=9037,
+  serialized_end=9433,
 )
 
 
-_GETHATCHEDEGGSRESPONSE = _descriptor.Descriptor(
-  name='GetHatchedEggsResponse',
-  full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse',
+_ENCOUNTERTUTORIALCOMPLETERESPONSE = _descriptor.Descriptor(
+  name='EncounterTutorialCompleteResponse',
+  full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.success', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pokemon_id', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.pokemon_id', index=1,
-      number=2, type=4, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
-    _descriptor.FieldDescriptor(
-      name='experience_awarded', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.experience_awarded', index=2,
-      number=3, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='candy_awarded', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.candy_awarded', index=3,
-      number=4, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='stardust_awarded', full_name='POGOProtos.Networking.Responses.GetHatchedEggsResponse.stardust_awarded', index=4,
-      number=5, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=8006,
-  serialized_end=8148,
-)
-
-
-_GETINCENSEPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='GetIncensePokemonResponse',
-  full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pokemon_type_id', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.pokemon_type_id', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      name='pokemon_data', full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.pokemon_data', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='capture_award', full_name='POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.capture_award', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9436,
+  serialized_end=9737,
+)
+
+
+_SETAVATARRESPONSE = _descriptor.Descriptor(
+  name='SetAvatarResponse',
+  full_name='POGOProtos.Networking.Responses.SetAvatarResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='status', full_name='POGOProtos.Networking.Responses.SetAvatarResponse.status', index=0,
+      number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='latitude', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.latitude', index=2,
-      number=3, type=1, cpp_type=5, label=1,
+      name='player_data', full_name='POGOProtos.Networking.Responses.SetAvatarResponse.player_data', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _SETAVATARRESPONSE_STATUS,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9740,
+  serialized_end=9955,
+)
+
+
+_CATCHPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='CatchPokemonResponse',
+  full_name='POGOProtos.Networking.Responses.CatchPokemonResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='status', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.status', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='miss_percent', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.miss_percent', index=1,
+      number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='longitude', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.longitude', index=3,
-      number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
+      name='captured_pokemon_id', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.captured_pokemon_id', index=2,
+      number=3, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='encounter_location', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.encounter_location', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='capture_award', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.capture_award', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CATCHPOKEMONRESPONSE_CATCHSTATUS,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9958,
+  serialized_end=10279,
+)
+
+
+_CHECKCODENAMEAVAILABLERESPONSE = _descriptor.Descriptor(
+  name='CheckCodenameAvailableResponse',
+  full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='codename', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.codename', index=0,
+      number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='encounter_id', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.encounter_id', index=5,
-      number=6, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      name='user_message', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.user_message', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='disappear_timestamp_ms', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.disappear_timestamp_ms', index=6,
-      number=7, type=3, cpp_type=2, label=1,
+      name='is_assignable', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.is_assignable', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.status', index=3,
+      number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2816,7 +3152,7 @@ _GETINCENSEPOKEMONRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _GETINCENSEPOKEMONRESPONSE_RESULT,
+    _CHECKCODENAMEAVAILABLERESPONSE_STATUS,
   ],
   options=None,
   is_extendable=False,
@@ -2824,8 +3160,40 @@ _GETINCENSEPOKEMONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8151,
-  serialized_end=8516,
+  serialized_start=10282,
+  serialized_end=10604,
+)
+
+
+_COLLECTDAILYBONUSRESPONSE = _descriptor.Descriptor(
+  name='CollectDailyBonusResponse',
+  full_name='POGOProtos.Networking.Responses.CollectDailyBonusResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.CollectDailyBonusResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _COLLECTDAILYBONUSRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10607,
+  serialized_end=10778,
 )
 
 
@@ -2862,29 +3230,22 @@ _GETINVENTORYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8518,
-  serialized_end=8620,
+  serialized_start=10780,
+  serialized_end=10882,
 )
 
 
-_GETMAPOBJECTSRESPONSE = _descriptor.Descriptor(
-  name='GetMapObjectsResponse',
-  full_name='POGOProtos.Networking.Responses.GetMapObjectsResponse',
+_ECHORESPONSE = _descriptor.Descriptor(
+  name='EchoResponse',
+  full_name='POGOProtos.Networking.Responses.EchoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='map_cells', full_name='POGOProtos.Networking.Responses.GetMapObjectsResponse.map_cells', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Responses.GetMapObjectsResponse.status', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      name='context', full_name='POGOProtos.Networking.Responses.EchoResponse.context', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2900,8 +3261,8 @@ _GETMAPOBJECTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8622,
-  serialized_end=8739,
+  serialized_start=10884,
+  serialized_end=10915,
 )
 
 
@@ -2946,28 +3307,208 @@ _GETPLAYERPROFILERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8742,
-  serialized_end=8950,
+  serialized_start=10918,
+  serialized_end=11126,
 )
 
 
-_GETPLAYERRESPONSE = _descriptor.Descriptor(
-  name='GetPlayerResponse',
-  full_name='POGOProtos.Networking.Responses.GetPlayerResponse',
+_USEITEMGYMRESPONSE = _descriptor.Descriptor(
+  name='UseItemGymResponse',
+  full_name='POGOProtos.Networking.Responses.UseItemGymResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='POGOProtos.Networking.Responses.GetPlayerResponse.success', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='result', full_name='POGOProtos.Networking.Responses.UseItemGymResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_data', full_name='POGOProtos.Networking.Responses.GetPlayerResponse.player_data', index=1,
+      name='updated_gp', full_name='POGOProtos.Networking.Responses.UseItemGymResponse.updated_gp', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _USEITEMGYMRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11129,
+  serialized_end=11325,
+)
+
+
+_GETINCENSEPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='GetIncensePokemonResponse',
+  full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pokemon_id', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.pokemon_id', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='latitude', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.latitude', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='longitude', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.longitude', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='encounter_location', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.encounter_location', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='encounter_id', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.encounter_id', index=5,
+      number=6, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='disappear_timestamp_ms', full_name='POGOProtos.Networking.Responses.GetIncensePokemonResponse.disappear_timestamp_ms', index=6,
+      number=7, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _GETINCENSEPOKEMONRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11328,
+  serialized_end=11717,
+)
+
+
+_EVOLVEPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='EvolvePokemonResponse',
+  full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='evolved_pokemon_data', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.evolved_pokemon_data', index=1,
       number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='experience_awarded', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.experience_awarded', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='candy_awarded', full_name='POGOProtos.Networking.Responses.EvolvePokemonResponse.candy_awarded', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _EVOLVEPOKEMONRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11720,
+  serialized_end=12097,
+)
+
+
+_ENCOUNTERRESPONSE = _descriptor.Descriptor(
+  name='EncounterResponse',
+  full_name='POGOProtos.Networking.Responses.EncounterResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='wild_pokemon', full_name='POGOProtos.Networking.Responses.EncounterResponse.wild_pokemon', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='background', full_name='POGOProtos.Networking.Responses.EncounterResponse.background', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='POGOProtos.Networking.Responses.EncounterResponse.status', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='capture_probability', full_name='POGOProtos.Networking.Responses.EncounterResponse.capture_probability', index=3,
+      number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -2977,6 +3518,8 @@ _GETPLAYERRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
+    _ENCOUNTERRESPONSE_BACKGROUND,
+    _ENCOUNTERRESPONSE_STATUS,
   ],
   options=None,
   is_extendable=False,
@@ -2984,29 +3527,22 @@ _GETPLAYERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8952,
-  serialized_end=9038,
+  serialized_start=12100,
+  serialized_end=12664,
 )
 
 
-_GETSUGGESTEDCODENAMESRESPONSE = _descriptor.Descriptor(
-  name='GetSuggestedCodenamesResponse',
-  full_name='POGOProtos.Networking.Responses.GetSuggestedCodenamesResponse',
+_NICKNAMEPOKEMONRESPONSE = _descriptor.Descriptor(
+  name='NicknamePokemonResponse',
+  full_name='POGOProtos.Networking.Responses.NicknamePokemonResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='codenames', full_name='POGOProtos.Networking.Responses.GetSuggestedCodenamesResponse.codenames', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='success', full_name='POGOProtos.Networking.Responses.GetSuggestedCodenamesResponse.success', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='result', full_name='POGOProtos.Networking.Responses.NicknamePokemonResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3015,6 +3551,7 @@ _GETSUGGESTEDCODENAMESRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
+    _NICKNAMEPOKEMONRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -3022,8 +3559,8 @@ _GETSUGGESTEDCODENAMESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9040,
-  serialized_end=9107,
+  serialized_start=12667,
+  serialized_end=12890,
 )
 
 
@@ -3068,8 +3605,169 @@ _INCENSEENCOUNTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9110,
-  serialized_end=9482,
+  serialized_start=12893,
+  serialized_end=13265,
+)
+
+
+_SETPLAYERTEAMRESPONSE = _descriptor.Descriptor(
+  name='SetPlayerTeamResponse',
+  full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='status', full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse.status', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='player_data', full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse.player_data', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _SETPLAYERTEAMRESPONSE_STATUS,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13268,
+  serialized_end=13489,
+)
+
+
+_CHECKAWARDEDBADGESRESPONSE = _descriptor.Descriptor(
+  name='CheckAwardedBadgesResponse',
+  full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='success', full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.success', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='awarded_badges', full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.awarded_badges', index=1,
+      number=2, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='awarded_badge_levels', full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.awarded_badge_levels', index=2,
+      number=3, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13492,
+  serialized_end=13620,
+)
+
+
+_GETASSETDIGESTRESPONSE = _descriptor.Descriptor(
+  name='GetAssetDigestResponse',
+  full_name='POGOProtos.Networking.Responses.GetAssetDigestResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='digest', full_name='POGOProtos.Networking.Responses.GetAssetDigestResponse.digest', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='timestamp_ms', full_name='POGOProtos.Networking.Responses.GetAssetDigestResponse.timestamp_ms', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13622,
+  serialized_end=13719,
+)
+
+
+_SFIDAACTIONLOGRESPONSE = _descriptor.Descriptor(
+  name='SfidaActionLogResponse',
+  full_name='POGOProtos.Networking.Responses.SfidaActionLogResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='POGOProtos.Networking.Responses.SfidaActionLogResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='log_entries', full_name='POGOProtos.Networking.Responses.SfidaActionLogResponse.log_entries', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _SFIDAACTIONLOGRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13722,
+  serialized_end=13919,
 )
 
 
@@ -3114,105 +3812,42 @@ _LEVELUPREWARDSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9485,
-  serialized_end=9754,
+  serialized_start=13922,
+  serialized_end=14201,
 )
 
 
-_NICKNAMEPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='NicknamePokemonResponse',
-  full_name='POGOProtos.Networking.Responses.NicknamePokemonResponse',
+_COLLECTDAILYDEFENDERBONUSRESPONSE = _descriptor.Descriptor(
+  name='CollectDailyDefenderBonusResponse',
+  full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.NicknamePokemonResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _NICKNAMEPOKEMONRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=9757,
-  serialized_end=9980,
-)
-
-
-_PLAYERUPDATERESPONSE = _descriptor.Descriptor(
-  name='PlayerUpdateResponse',
-  full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='wild_pokemons', full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse.wild_pokemons', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='forts', full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse.forts', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='forts_nearby', full_name='POGOProtos.Networking.Responses.PlayerUpdateResponse.forts_nearby', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=9983,
-  serialized_end=10133,
-)
-
-
-_RECYCLEINVENTORYITEMRESPONSE = _descriptor.Descriptor(
-  name='RecycleInventoryItemResponse',
-  full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse.result', index=0,
+      name='result', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='new_count', full_name='POGOProtos.Networking.Responses.RecycleInventoryItemResponse.new_count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      name='currency_type', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.currency_type', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='currency_awarded', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.currency_awarded', index=2,
+      number=3, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defenders_count', full_name='POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.defenders_count', index=3,
+      number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -3222,7 +3857,7 @@ _RECYCLEINVENTORYITEMRESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _RECYCLEINVENTORYITEMRESPONSE_RESULT,
+    _COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -3230,8 +3865,8 @@ _RECYCLEINVENTORYITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10136,
-  serialized_end=10371,
+  serialized_start=14204,
+  serialized_end=14483,
 )
 
 
@@ -3269,593 +3904,40 @@ _RELEASEPOKEMONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10374,
-  serialized_end=10595,
+  serialized_start=14486,
+  serialized_end=14707,
 )
 
-
-_SETAVATARRESPONSE = _descriptor.Descriptor(
-  name='SetAvatarResponse',
-  full_name='POGOProtos.Networking.Responses.SetAvatarResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Responses.SetAvatarResponse.status', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_data', full_name='POGOProtos.Networking.Responses.SetAvatarResponse.player_data', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _SETAVATARRESPONSE_STATUS,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=10598,
-  serialized_end=10813,
-)
-
-
-_SETCONTACTSETTINGSRESPONSE = _descriptor.Descriptor(
-  name='SetContactSettingsResponse',
-  full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse.status', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_data', full_name='POGOProtos.Networking.Responses.SetContactSettingsResponse.player_data', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _SETCONTACTSETTINGSRESPONSE_STATUS,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=10816,
-  serialized_end=11025,
-)
-
-
-_SETFAVORITEPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='SetFavoritePokemonResponse',
-  full_name='POGOProtos.Networking.Responses.SetFavoritePokemonResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.SetFavoritePokemonResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _SETFAVORITEPOKEMONRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=11028,
-  serialized_end=11229,
-)
-
-
-_SETPLAYERTEAMRESPONSE = _descriptor.Descriptor(
-  name='SetPlayerTeamResponse',
-  full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse.status', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_data', full_name='POGOProtos.Networking.Responses.SetPlayerTeamResponse.player_data', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _SETPLAYERTEAMRESPONSE_STATUS,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=11232,
-  serialized_end=11453,
-)
-
-
-_STARTGYMBATTLERESPONSE = _descriptor.Descriptor(
-  name='StartGymBattleResponse',
-  full_name='POGOProtos.Networking.Responses.StartGymBattleResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='battle_start_timestamp_ms', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_start_timestamp_ms', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='battle_end_timestamp_ms', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_end_timestamp_ms', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='battle_id', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='defender', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.defender', index=4,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='battle_log', full_name='POGOProtos.Networking.Responses.StartGymBattleResponse.battle_log', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _STARTGYMBATTLERESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=11456,
-  serialized_end=12143,
-)
-
-
-_UPGRADEPOKEMONRESPONSE = _descriptor.Descriptor(
-  name='UpgradePokemonResponse',
-  full_name='POGOProtos.Networking.Responses.UpgradePokemonResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.UpgradePokemonResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='upgraded_pokemon', full_name='POGOProtos.Networking.Responses.UpgradePokemonResponse.upgraded_pokemon', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _UPGRADEPOKEMONRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=12146,
-  serialized_end=12468,
-)
-
-
-_USEINCENSERESPONSE = _descriptor.Descriptor(
-  name='UseIncenseResponse',
-  full_name='POGOProtos.Networking.Responses.UseIncenseResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.UseIncenseResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='applied_incense', full_name='POGOProtos.Networking.Responses.UseIncenseResponse.applied_incense', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _USEINCENSERESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=12471,
-  serialized_end=12734,
-)
-
-
-_USEITEMCAPTURERESPONSE = _descriptor.Descriptor(
-  name='UseItemCaptureResponse',
-  full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='success', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.success', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_capture_mult', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.item_capture_mult', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_flee_mult', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.item_flee_mult', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='stop_movement', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.stop_movement', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='stop_attack', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.stop_attack', index=4,
-      number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='target_max', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.target_max', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='target_slow', full_name='POGOProtos.Networking.Responses.UseItemCaptureResponse.target_slow', index=6,
-      number=7, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=12737,
-  serialized_end=12914,
-)
-
-
-_USEITEMEGGINCUBATORRESPONSE = _descriptor.Descriptor(
-  name='UseItemEggIncubatorResponse',
-  full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='egg_incubator', full_name='POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.egg_incubator', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _USEITEMEGGINCUBATORRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=12917,
-  serialized_end=13332,
-)
-
-
-_USEITEMGYMRESPONSE = _descriptor.Descriptor(
-  name='UseItemGymResponse',
-  full_name='POGOProtos.Networking.Responses.UseItemGymResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.UseItemGymResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='updated_gp', full_name='POGOProtos.Networking.Responses.UseItemGymResponse.updated_gp', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _USEITEMGYMRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=13335,
-  serialized_end=13531,
-)
-
-
-_USEITEMPOTIONRESPONSE = _descriptor.Descriptor(
-  name='UseItemPotionResponse',
-  full_name='POGOProtos.Networking.Responses.UseItemPotionResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.UseItemPotionResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='stamina', full_name='POGOProtos.Networking.Responses.UseItemPotionResponse.stamina', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _USEITEMPOTIONRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=13534,
-  serialized_end=13759,
-)
-
-
-_USEREVIVEPOTIONRESPONSE = _descriptor.Descriptor(
-  name='UseRevivePotionResponse',
-  full_name='POGOProtos.Networking.Responses.UseRevivePotionResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.UseRevivePotionResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='stamina', full_name='POGOProtos.Networking.Responses.UseRevivePotionResponse.stamina', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _USEREVIVEPOTIONRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=13762,
-  serialized_end=13991,
-)
-
-
-_USEITEMXPBOOSTRESPONSE = _descriptor.Descriptor(
-  name='UseItemXpBoostResponse',
-  full_name='POGOProtos.Networking.Responses.UseItemXpBoostResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='POGOProtos.Networking.Responses.UseItemXpBoostResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='applied_items', full_name='POGOProtos.Networking.Responses.UseItemXpBoostResponse.applied_items', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _USEITEMXPBOOSTRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=13994,
-  serialized_end=14312,
-)
-
-_ATTACKGYMRESPONSE.fields_by_name['result'].enum_type = _ATTACKGYMRESPONSE_RESULT
-_ATTACKGYMRESPONSE.fields_by_name['battle_log'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLELOG
-_ATTACKGYMRESPONSE.fields_by_name['active_defender'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLEPOKEMONINFO
-_ATTACKGYMRESPONSE.fields_by_name['active_attacker'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLEPOKEMONINFO
-_ATTACKGYMRESPONSE_RESULT.containing_type = _ATTACKGYMRESPONSE
-_CATCHPOKEMONRESPONSE.fields_by_name['status'].enum_type = _CATCHPOKEMONRESPONSE_CATCHSTATUS
-_CATCHPOKEMONRESPONSE.fields_by_name['capture_award'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREAWARD
-_CATCHPOKEMONRESPONSE_CATCHSTATUS.containing_type = _CATCHPOKEMONRESPONSE
-_CHECKAWARDEDBADGESRESPONSE.fields_by_name['awarded_badges'].enum_type = POGOProtos_dot_Enums__pb2._BADGETYPE
-_CHECKCODENAMEAVAILABLERESPONSE.fields_by_name['status'].enum_type = _CHECKCODENAMEAVAILABLERESPONSE_STATUS
-_CHECKCODENAMEAVAILABLERESPONSE_STATUS.containing_type = _CHECKCODENAMEAVAILABLERESPONSE
+_PLAYERUPDATERESPONSE.fields_by_name['wild_pokemons'].message_type = POGOProtos_dot_Map_dot_Pokemon__pb2._WILDPOKEMON
+_PLAYERUPDATERESPONSE.fields_by_name['forts'].message_type = POGOProtos_dot_Map_dot_Fort__pb2._FORTDATA
+_USEITEMEGGINCUBATORRESPONSE.fields_by_name['result'].enum_type = _USEITEMEGGINCUBATORRESPONSE_RESULT
+_USEITEMEGGINCUBATORRESPONSE.fields_by_name['egg_incubator'].message_type = POGOProtos_dot_Inventory__pb2._EGGINCUBATOR
+_USEITEMEGGINCUBATORRESPONSE_RESULT.containing_type = _USEITEMEGGINCUBATORRESPONSE
+_DOWNLOADSETTINGSRESPONSE.fields_by_name['settings'].message_type = POGOProtos_dot_Settings__pb2._GLOBALSETTINGS
 _CLAIMCODENAMERESPONSE.fields_by_name['status'].enum_type = _CLAIMCODENAMERESPONSE_STATUS
 _CLAIMCODENAMERESPONSE_STATUS.containing_type = _CLAIMCODENAMERESPONSE
-_COLLECTDAILYBONUSRESPONSE.fields_by_name['result'].enum_type = _COLLECTDAILYBONUSRESPONSE_RESULT
-_COLLECTDAILYBONUSRESPONSE_RESULT.containing_type = _COLLECTDAILYBONUSRESPONSE
-_COLLECTDAILYDEFENDERBONUSRESPONSE.fields_by_name['result'].enum_type = _COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT
-_COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT.containing_type = _COLLECTDAILYDEFENDERBONUSRESPONSE
-_DISKENCOUNTERRESPONSE.fields_by_name['result'].enum_type = _DISKENCOUNTERRESPONSE_RESULT
-_DISKENCOUNTERRESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
-_DISKENCOUNTERRESPONSE.fields_by_name['capture_probability'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREPROBABILITY
-_DISKENCOUNTERRESPONSE_RESULT.containing_type = _DISKENCOUNTERRESPONSE
+_GETDOWNLOADURLSRESPONSE.fields_by_name['download_urls'].message_type = POGOProtos_dot_Data__pb2._DOWNLOADURLENTRY
+_STARTGYMBATTLERESPONSE.fields_by_name['result'].enum_type = _STARTGYMBATTLERESPONSE_RESULT
+_STARTGYMBATTLERESPONSE.fields_by_name['defender'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLEPARTICIPANT
+_STARTGYMBATTLERESPONSE.fields_by_name['battle_log'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLELOG
+_STARTGYMBATTLERESPONSE_RESULT.containing_type = _STARTGYMBATTLERESPONSE
+_GETGYMDETAILSRESPONSE.fields_by_name['gym_state'].message_type = POGOProtos_dot_Data_dot_Gym__pb2._GYMSTATE
+_GETGYMDETAILSRESPONSE.fields_by_name['result'].enum_type = _GETGYMDETAILSRESPONSE_RESULT
+_GETGYMDETAILSRESPONSE_RESULT.containing_type = _GETGYMDETAILSRESPONSE
+_USEITEMPOTIONRESPONSE.fields_by_name['result'].enum_type = _USEITEMPOTIONRESPONSE_RESULT
+_USEITEMPOTIONRESPONSE_RESULT.containing_type = _USEITEMPOTIONRESPONSE
+_GETPLAYERRESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
+_FORTSEARCHRESPONSE.fields_by_name['result'].enum_type = _FORTSEARCHRESPONSE_RESULT
+_FORTSEARCHRESPONSE.fields_by_name['items_awarded'].message_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMAWARD
+_FORTSEARCHRESPONSE.fields_by_name['pokemon_data_egg'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
+_FORTSEARCHRESPONSE_RESULT.containing_type = _FORTSEARCHRESPONSE
+_SETFAVORITEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _SETFAVORITEPOKEMONRESPONSE_RESULT
+_SETFAVORITEPOKEMONRESPONSE_RESULT.containing_type = _SETFAVORITEPOKEMONRESPONSE
+_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['result'].enum_type = _FORTDEPLOYPOKEMONRESPONSE_RESULT
+_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['fort_details'].message_type = _FORTDETAILSRESPONSE
+_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
+_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['gym_state'].message_type = POGOProtos_dot_Data_dot_Gym__pb2._GYMSTATE
+_FORTDEPLOYPOKEMONRESPONSE_RESULT.containing_type = _FORTDEPLOYPOKEMONRESPONSE
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['pokemon_settings'].message_type = POGOProtos_dot_Settings_dot_Master__pb2._POKEMONSETTINGS
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['item_settings'].message_type = POGOProtos_dot_Settings_dot_Master__pb2._ITEMSETTINGS
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['move_settings'].message_type = POGOProtos_dot_Settings_dot_Master__pb2._MOVESETTINGS
@@ -3873,189 +3955,180 @@ _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['pokemon_upgrades'].m
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['equipped_badges'].message_type = POGOProtos_dot_Settings_dot_Master__pb2._EQUIPPEDBADGESETTINGS
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.containing_type = _DOWNLOADITEMTEMPLATESRESPONSE
 _DOWNLOADITEMTEMPLATESRESPONSE.fields_by_name['item_templates'].message_type = _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE
+_USEITEMREVIVERESPONSE.fields_by_name['result'].enum_type = _USEITEMREVIVERESPONSE_RESULT
+_USEITEMREVIVERESPONSE_RESULT.containing_type = _USEITEMREVIVERESPONSE
+_MARKTUTORIALCOMPLETERESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
+_EQUIPBADGERESPONSE.fields_by_name['result'].enum_type = _EQUIPBADGERESPONSE_RESULT
+_EQUIPBADGERESPONSE.fields_by_name['equipped'].message_type = POGOProtos_dot_Data_dot_Player__pb2._EQUIPPEDBADGE
+_EQUIPBADGERESPONSE_RESULT.containing_type = _EQUIPBADGERESPONSE
+_SETCONTACTSETTINGSRESPONSE.fields_by_name['status'].enum_type = _SETCONTACTSETTINGSRESPONSE_STATUS
+_SETCONTACTSETTINGSRESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
+_SETCONTACTSETTINGSRESPONSE_STATUS.containing_type = _SETCONTACTSETTINGSRESPONSE
+_DISKENCOUNTERRESPONSE.fields_by_name['result'].enum_type = _DISKENCOUNTERRESPONSE_RESULT
+_DISKENCOUNTERRESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
+_DISKENCOUNTERRESPONSE.fields_by_name['capture_probability'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREPROBABILITY
+_DISKENCOUNTERRESPONSE_RESULT.containing_type = _DISKENCOUNTERRESPONSE
+_GETMAPOBJECTSRESPONSE.fields_by_name['map_cells'].message_type = POGOProtos_dot_Map__pb2._MAPCELL
+_GETMAPOBJECTSRESPONSE.fields_by_name['status'].enum_type = POGOProtos_dot_Map__pb2._MAPOBJECTSSTATUS
+_UPGRADEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _UPGRADEPOKEMONRESPONSE_RESULT
+_UPGRADEPOKEMONRESPONSE.fields_by_name['upgraded_pokemon'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
+_UPGRADEPOKEMONRESPONSE_RESULT.containing_type = _UPGRADEPOKEMONRESPONSE
+_FORTRECALLPOKEMONRESPONSE.fields_by_name['result'].enum_type = _FORTRECALLPOKEMONRESPONSE_RESULT
+_FORTRECALLPOKEMONRESPONSE.fields_by_name['fort_details'].message_type = _FORTDETAILSRESPONSE
+_FORTRECALLPOKEMONRESPONSE_RESULT.containing_type = _FORTRECALLPOKEMONRESPONSE
+_RECYCLEINVENTORYITEMRESPONSE.fields_by_name['result'].enum_type = _RECYCLEINVENTORYITEMRESPONSE_RESULT
+_RECYCLEINVENTORYITEMRESPONSE_RESULT.containing_type = _RECYCLEINVENTORYITEMRESPONSE
+_FORTDETAILSRESPONSE.fields_by_name['team_color'].enum_type = POGOProtos_dot_Enums__pb2._TEAMCOLOR
+_FORTDETAILSRESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
+_FORTDETAILSRESPONSE.fields_by_name['type'].enum_type = POGOProtos_dot_Map_dot_Fort__pb2._FORTTYPE
+_FORTDETAILSRESPONSE.fields_by_name['modifiers'].message_type = POGOProtos_dot_Map_dot_Fort__pb2._FORTMODIFIER
 _DOWNLOADREMOTECONFIGVERSIONRESPONSE.fields_by_name['result'].enum_type = _DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT
 _DOWNLOADREMOTECONFIGVERSIONRESPONSE_RESULT.containing_type = _DOWNLOADREMOTECONFIGVERSIONRESPONSE
-_DOWNLOADSETTINGSRESPONSE.fields_by_name['settings'].message_type = POGOProtos_dot_Settings__pb2._GLOBALSETTINGS
+_USEINCENSERESPONSE.fields_by_name['result'].enum_type = _USEINCENSERESPONSE_RESULT
+_USEINCENSERESPONSE.fields_by_name['applied_incense'].message_type = POGOProtos_dot_Inventory__pb2._APPLIEDITEM
+_USEINCENSERESPONSE_RESULT.containing_type = _USEINCENSERESPONSE
+_USEITEMXPBOOSTRESPONSE.fields_by_name['result'].enum_type = _USEITEMXPBOOSTRESPONSE_RESULT
+_USEITEMXPBOOSTRESPONSE.fields_by_name['applied_items'].message_type = POGOProtos_dot_Inventory__pb2._APPLIEDITEMS
+_USEITEMXPBOOSTRESPONSE_RESULT.containing_type = _USEITEMXPBOOSTRESPONSE
+_ATTACKGYMRESPONSE.fields_by_name['result'].enum_type = _ATTACKGYMRESPONSE_RESULT
+_ATTACKGYMRESPONSE.fields_by_name['battle_log'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLELOG
+_ATTACKGYMRESPONSE.fields_by_name['active_defender'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLEPOKEMONINFO
+_ATTACKGYMRESPONSE.fields_by_name['active_attacker'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLEPOKEMONINFO
+_ATTACKGYMRESPONSE_RESULT.containing_type = _ATTACKGYMRESPONSE
+_ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['result'].enum_type = _ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT
+_ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
+_ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['capture_award'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREAWARD
+_ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT.containing_type = _ENCOUNTERTUTORIALCOMPLETERESPONSE
+_SETAVATARRESPONSE.fields_by_name['status'].enum_type = _SETAVATARRESPONSE_STATUS
+_SETAVATARRESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
+_SETAVATARRESPONSE_STATUS.containing_type = _SETAVATARRESPONSE
+_CATCHPOKEMONRESPONSE.fields_by_name['status'].enum_type = _CATCHPOKEMONRESPONSE_CATCHSTATUS
+_CATCHPOKEMONRESPONSE.fields_by_name['capture_award'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREAWARD
+_CATCHPOKEMONRESPONSE_CATCHSTATUS.containing_type = _CATCHPOKEMONRESPONSE
+_CHECKCODENAMEAVAILABLERESPONSE.fields_by_name['status'].enum_type = _CHECKCODENAMEAVAILABLERESPONSE_STATUS
+_CHECKCODENAMEAVAILABLERESPONSE_STATUS.containing_type = _CHECKCODENAMEAVAILABLERESPONSE
+_COLLECTDAILYBONUSRESPONSE.fields_by_name['result'].enum_type = _COLLECTDAILYBONUSRESPONSE_RESULT
+_COLLECTDAILYBONUSRESPONSE_RESULT.containing_type = _COLLECTDAILYBONUSRESPONSE
+_GETINVENTORYRESPONSE.fields_by_name['inventory_delta'].message_type = POGOProtos_dot_Inventory__pb2._INVENTORYDELTA
+_GETPLAYERPROFILERESPONSE.fields_by_name['result'].enum_type = _GETPLAYERPROFILERESPONSE_RESULT
+_GETPLAYERPROFILERESPONSE.fields_by_name['badges'].message_type = POGOProtos_dot_Data__pb2._PLAYERBADGE
+_GETPLAYERPROFILERESPONSE_RESULT.containing_type = _GETPLAYERPROFILERESPONSE
+_USEITEMGYMRESPONSE.fields_by_name['result'].enum_type = _USEITEMGYMRESPONSE_RESULT
+_USEITEMGYMRESPONSE_RESULT.containing_type = _USEITEMGYMRESPONSE
+_GETINCENSEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _GETINCENSEPOKEMONRESPONSE_RESULT
+_GETINCENSEPOKEMONRESPONSE.fields_by_name['pokemon_id'].enum_type = POGOProtos_dot_Enums__pb2._POKEMONID
+_GETINCENSEPOKEMONRESPONSE_RESULT.containing_type = _GETINCENSEPOKEMONRESPONSE
+_EVOLVEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _EVOLVEPOKEMONRESPONSE_RESULT
+_EVOLVEPOKEMONRESPONSE.fields_by_name['evolved_pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
+_EVOLVEPOKEMONRESPONSE_RESULT.containing_type = _EVOLVEPOKEMONRESPONSE
 _ENCOUNTERRESPONSE.fields_by_name['wild_pokemon'].message_type = POGOProtos_dot_Map_dot_Pokemon__pb2._WILDPOKEMON
 _ENCOUNTERRESPONSE.fields_by_name['background'].enum_type = _ENCOUNTERRESPONSE_BACKGROUND
 _ENCOUNTERRESPONSE.fields_by_name['status'].enum_type = _ENCOUNTERRESPONSE_STATUS
 _ENCOUNTERRESPONSE.fields_by_name['capture_probability'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREPROBABILITY
 _ENCOUNTERRESPONSE_BACKGROUND.containing_type = _ENCOUNTERRESPONSE
 _ENCOUNTERRESPONSE_STATUS.containing_type = _ENCOUNTERRESPONSE
-_ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['result'].enum_type = _ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT
-_ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
-_ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['capture_award'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREAWARD
-_ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT.containing_type = _ENCOUNTERTUTORIALCOMPLETERESPONSE
-_EQUIPBADGERESPONSE.fields_by_name['result'].enum_type = _EQUIPBADGERESPONSE_RESULT
-_EQUIPBADGERESPONSE.fields_by_name['equipped'].message_type = POGOProtos_dot_Data_dot_Player__pb2._EQUIPPEDBADGE
-_EQUIPBADGERESPONSE_RESULT.containing_type = _EQUIPBADGERESPONSE
-_EVOLVEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _EVOLVEPOKEMONRESPONSE_RESULT
-_EVOLVEPOKEMONRESPONSE.fields_by_name['evolved_pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
-_EVOLVEPOKEMONRESPONSE_RESULT.containing_type = _EVOLVEPOKEMONRESPONSE
-_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['result'].enum_type = _FORTDEPLOYPOKEMONRESPONSE_RESULT
-_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['fort_details'].message_type = _FORTDETAILSRESPONSE
-_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
-_FORTDEPLOYPOKEMONRESPONSE.fields_by_name['gym_state'].message_type = POGOProtos_dot_Data_dot_Gym__pb2._GYMSTATE
-_FORTDEPLOYPOKEMONRESPONSE_RESULT.containing_type = _FORTDEPLOYPOKEMONRESPONSE
-_FORTDETAILSRESPONSE.fields_by_name['team_color'].enum_type = POGOProtos_dot_Enums__pb2._TEAMCOLOR
-_FORTDETAILSRESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
-_FORTDETAILSRESPONSE.fields_by_name['type'].enum_type = POGOProtos_dot_Map_dot_Fort__pb2._FORTTYPE
-_FORTDETAILSRESPONSE.fields_by_name['modifiers'].message_type = POGOProtos_dot_Map_dot_Fort__pb2._FORTMODIFIER
-_FORTRECALLPOKEMONRESPONSE.fields_by_name['result'].enum_type = _FORTRECALLPOKEMONRESPONSE_RESULT
-_FORTRECALLPOKEMONRESPONSE.fields_by_name['fort_details'].message_type = _FORTDETAILSRESPONSE
-_FORTRECALLPOKEMONRESPONSE_RESULT.containing_type = _FORTRECALLPOKEMONRESPONSE
-_FORTSEARCHRESPONSE.fields_by_name['result'].enum_type = _FORTSEARCHRESPONSE_RESULT
-_FORTSEARCHRESPONSE.fields_by_name['items_awarded'].message_type = POGOProtos_dot_Inventory__pb2._ITEMAWARD
-_FORTSEARCHRESPONSE.fields_by_name['pokemon_data_egg'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
-_FORTSEARCHRESPONSE_RESULT.containing_type = _FORTSEARCHRESPONSE
-_GETASSETDIGESTRESPONSE.fields_by_name['digest'].message_type = POGOProtos_dot_Data__pb2._ASSETDIGESTENTRY
-_GETDOWNLOADURLSRESPONSE.fields_by_name['download_urls'].message_type = POGOProtos_dot_Data__pb2._DOWNLOADURLENTRY
-_GETGYMDETAILSRESPONSE.fields_by_name['gym_state'].message_type = POGOProtos_dot_Data_dot_Gym__pb2._GYMSTATE
-_GETGYMDETAILSRESPONSE.fields_by_name['result'].enum_type = _GETGYMDETAILSRESPONSE_RESULT
-_GETGYMDETAILSRESPONSE_RESULT.containing_type = _GETGYMDETAILSRESPONSE
-_GETINCENSEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _GETINCENSEPOKEMONRESPONSE_RESULT
-_GETINCENSEPOKEMONRESPONSE_RESULT.containing_type = _GETINCENSEPOKEMONRESPONSE
-_GETINVENTORYRESPONSE.fields_by_name['inventory_delta'].message_type = POGOProtos_dot_Inventory__pb2._INVENTORYDELTA
-_GETMAPOBJECTSRESPONSE.fields_by_name['map_cells'].message_type = POGOProtos_dot_Map__pb2._MAPCELL
-_GETMAPOBJECTSRESPONSE.fields_by_name['status'].enum_type = POGOProtos_dot_Map__pb2._MAPOBJECTSSTATUS
-_GETPLAYERPROFILERESPONSE.fields_by_name['result'].enum_type = _GETPLAYERPROFILERESPONSE_RESULT
-_GETPLAYERPROFILERESPONSE.fields_by_name['badges'].message_type = POGOProtos_dot_Data__pb2._PLAYERBADGE
-_GETPLAYERPROFILERESPONSE_RESULT.containing_type = _GETPLAYERPROFILERESPONSE
-_GETPLAYERRESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
+_NICKNAMEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _NICKNAMEPOKEMONRESPONSE_RESULT
+_NICKNAMEPOKEMONRESPONSE_RESULT.containing_type = _NICKNAMEPOKEMONRESPONSE
 _INCENSEENCOUNTERRESPONSE.fields_by_name['result'].enum_type = _INCENSEENCOUNTERRESPONSE_RESULT
 _INCENSEENCOUNTERRESPONSE.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
 _INCENSEENCOUNTERRESPONSE.fields_by_name['capture_probability'].message_type = POGOProtos_dot_Data_dot_Capture__pb2._CAPTUREPROBABILITY
 _INCENSEENCOUNTERRESPONSE_RESULT.containing_type = _INCENSEENCOUNTERRESPONSE
-_LEVELUPREWARDSRESPONSE.fields_by_name['result'].enum_type = _LEVELUPREWARDSRESPONSE_RESULT
-_LEVELUPREWARDSRESPONSE.fields_by_name['items_awarded'].message_type = POGOProtos_dot_Inventory__pb2._ITEMAWARD
-_LEVELUPREWARDSRESPONSE.fields_by_name['items_unlocked'].enum_type = POGOProtos_dot_Inventory__pb2._ITEMID
-_LEVELUPREWARDSRESPONSE_RESULT.containing_type = _LEVELUPREWARDSRESPONSE
-_NICKNAMEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _NICKNAMEPOKEMONRESPONSE_RESULT
-_NICKNAMEPOKEMONRESPONSE_RESULT.containing_type = _NICKNAMEPOKEMONRESPONSE
-_PLAYERUPDATERESPONSE.fields_by_name['wild_pokemons'].message_type = POGOProtos_dot_Map_dot_Pokemon__pb2._WILDPOKEMON
-_PLAYERUPDATERESPONSE.fields_by_name['forts'].message_type = POGOProtos_dot_Map_dot_Fort__pb2._FORTDATA
-_RECYCLEINVENTORYITEMRESPONSE.fields_by_name['result'].enum_type = _RECYCLEINVENTORYITEMRESPONSE_RESULT
-_RECYCLEINVENTORYITEMRESPONSE_RESULT.containing_type = _RECYCLEINVENTORYITEMRESPONSE
-_RELEASEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _RELEASEPOKEMONRESPONSE_RESULT
-_RELEASEPOKEMONRESPONSE_RESULT.containing_type = _RELEASEPOKEMONRESPONSE
-_SETAVATARRESPONSE.fields_by_name['status'].enum_type = _SETAVATARRESPONSE_STATUS
-_SETAVATARRESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
-_SETAVATARRESPONSE_STATUS.containing_type = _SETAVATARRESPONSE
-_SETCONTACTSETTINGSRESPONSE.fields_by_name['status'].enum_type = _SETCONTACTSETTINGSRESPONSE_STATUS
-_SETCONTACTSETTINGSRESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
-_SETCONTACTSETTINGSRESPONSE_STATUS.containing_type = _SETCONTACTSETTINGSRESPONSE
-_SETFAVORITEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _SETFAVORITEPOKEMONRESPONSE_RESULT
-_SETFAVORITEPOKEMONRESPONSE_RESULT.containing_type = _SETFAVORITEPOKEMONRESPONSE
 _SETPLAYERTEAMRESPONSE.fields_by_name['status'].enum_type = _SETPLAYERTEAMRESPONSE_STATUS
 _SETPLAYERTEAMRESPONSE.fields_by_name['player_data'].message_type = POGOProtos_dot_Data__pb2._PLAYERDATA
 _SETPLAYERTEAMRESPONSE_STATUS.containing_type = _SETPLAYERTEAMRESPONSE
-_STARTGYMBATTLERESPONSE.fields_by_name['result'].enum_type = _STARTGYMBATTLERESPONSE_RESULT
-_STARTGYMBATTLERESPONSE.fields_by_name['defender'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLEPARTICIPANT
-_STARTGYMBATTLERESPONSE.fields_by_name['battle_log'].message_type = POGOProtos_dot_Data_dot_Battle__pb2._BATTLELOG
-_STARTGYMBATTLERESPONSE_RESULT.containing_type = _STARTGYMBATTLERESPONSE
-_UPGRADEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _UPGRADEPOKEMONRESPONSE_RESULT
-_UPGRADEPOKEMONRESPONSE.fields_by_name['upgraded_pokemon'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
-_UPGRADEPOKEMONRESPONSE_RESULT.containing_type = _UPGRADEPOKEMONRESPONSE
-_USEINCENSERESPONSE.fields_by_name['result'].enum_type = _USEINCENSERESPONSE_RESULT
-_USEINCENSERESPONSE.fields_by_name['applied_incense'].message_type = POGOProtos_dot_Inventory__pb2._APPLIEDITEM
-_USEINCENSERESPONSE_RESULT.containing_type = _USEINCENSERESPONSE
-_USEITEMEGGINCUBATORRESPONSE.fields_by_name['result'].enum_type = _USEITEMEGGINCUBATORRESPONSE_RESULT
-_USEITEMEGGINCUBATORRESPONSE.fields_by_name['egg_incubator'].message_type = POGOProtos_dot_Inventory__pb2._EGGINCUBATOR
-_USEITEMEGGINCUBATORRESPONSE_RESULT.containing_type = _USEITEMEGGINCUBATORRESPONSE
-_USEITEMGYMRESPONSE.fields_by_name['result'].enum_type = _USEITEMGYMRESPONSE_RESULT
-_USEITEMGYMRESPONSE_RESULT.containing_type = _USEITEMGYMRESPONSE
-_USEITEMPOTIONRESPONSE.fields_by_name['result'].enum_type = _USEITEMPOTIONRESPONSE_RESULT
-_USEITEMPOTIONRESPONSE_RESULT.containing_type = _USEITEMPOTIONRESPONSE
-_USEREVIVEPOTIONRESPONSE.fields_by_name['result'].enum_type = _USEREVIVEPOTIONRESPONSE_RESULT
-_USEREVIVEPOTIONRESPONSE_RESULT.containing_type = _USEREVIVEPOTIONRESPONSE
-_USEITEMXPBOOSTRESPONSE.fields_by_name['result'].enum_type = _USEITEMXPBOOSTRESPONSE_RESULT
-_USEITEMXPBOOSTRESPONSE.fields_by_name['applied_items'].message_type = POGOProtos_dot_Inventory__pb2._APPLIEDITEMS
-_USEITEMXPBOOSTRESPONSE_RESULT.containing_type = _USEITEMXPBOOSTRESPONSE
-DESCRIPTOR.message_types_by_name['AddFortModifierResponse'] = _ADDFORTMODIFIERRESPONSE
-DESCRIPTOR.message_types_by_name['AttackGymResponse'] = _ATTACKGYMRESPONSE
-DESCRIPTOR.message_types_by_name['CatchPokemonResponse'] = _CATCHPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['CheckAwardedBadgesResponse'] = _CHECKAWARDEDBADGESRESPONSE
-DESCRIPTOR.message_types_by_name['CheckCodenameAvailableResponse'] = _CHECKCODENAMEAVAILABLERESPONSE
-DESCRIPTOR.message_types_by_name['ClaimCodenameResponse'] = _CLAIMCODENAMERESPONSE
-DESCRIPTOR.message_types_by_name['CollectDailyBonusResponse'] = _COLLECTDAILYBONUSRESPONSE
-DESCRIPTOR.message_types_by_name['CollectDailyDefenderBonusResponse'] = _COLLECTDAILYDEFENDERBONUSRESPONSE
-DESCRIPTOR.message_types_by_name['DiskEncounterResponse'] = _DISKENCOUNTERRESPONSE
-DESCRIPTOR.message_types_by_name['DownloadItemTemplatesResponse'] = _DOWNLOADITEMTEMPLATESRESPONSE
-DESCRIPTOR.message_types_by_name['DownloadRemoteConfigVersionResponse'] = _DOWNLOADREMOTECONFIGVERSIONRESPONSE
-DESCRIPTOR.message_types_by_name['DownloadSettingsResponse'] = _DOWNLOADSETTINGSRESPONSE
-DESCRIPTOR.message_types_by_name['EchoResponse'] = _ECHORESPONSE
-DESCRIPTOR.message_types_by_name['EncounterResponse'] = _ENCOUNTERRESPONSE
-DESCRIPTOR.message_types_by_name['EncounterTutorialCompleteResponse'] = _ENCOUNTERTUTORIALCOMPLETERESPONSE
-DESCRIPTOR.message_types_by_name['EquipBadgeResponse'] = _EQUIPBADGERESPONSE
-DESCRIPTOR.message_types_by_name['EvolvePokemonResponse'] = _EVOLVEPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['FortDeployPokemonResponse'] = _FORTDEPLOYPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['FortDetailsResponse'] = _FORTDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['FortRecallPokemonResponse'] = _FORTRECALLPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['FortSearchResponse'] = _FORTSEARCHRESPONSE
-DESCRIPTOR.message_types_by_name['GetAssetDigestResponse'] = _GETASSETDIGESTRESPONSE
-DESCRIPTOR.message_types_by_name['GetDownloadUrlsResponse'] = _GETDOWNLOADURLSRESPONSE
-DESCRIPTOR.message_types_by_name['GetGymDetailsResponse'] = _GETGYMDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['GetHatchedEggsResponse'] = _GETHATCHEDEGGSRESPONSE
-DESCRIPTOR.message_types_by_name['GetIncensePokemonResponse'] = _GETINCENSEPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['GetInventoryResponse'] = _GETINVENTORYRESPONSE
-DESCRIPTOR.message_types_by_name['GetMapObjectsResponse'] = _GETMAPOBJECTSRESPONSE
-DESCRIPTOR.message_types_by_name['GetPlayerProfileResponse'] = _GETPLAYERPROFILERESPONSE
-DESCRIPTOR.message_types_by_name['GetPlayerResponse'] = _GETPLAYERRESPONSE
-DESCRIPTOR.message_types_by_name['GetSuggestedCodenamesResponse'] = _GETSUGGESTEDCODENAMESRESPONSE
-DESCRIPTOR.message_types_by_name['IncenseEncounterResponse'] = _INCENSEENCOUNTERRESPONSE
-DESCRIPTOR.message_types_by_name['LevelUpRewardsResponse'] = _LEVELUPREWARDSRESPONSE
-DESCRIPTOR.message_types_by_name['NicknamePokemonResponse'] = _NICKNAMEPOKEMONRESPONSE
+_CHECKAWARDEDBADGESRESPONSE.fields_by_name['awarded_badges'].enum_type = POGOProtos_dot_Enums__pb2._BADGETYPE
+_GETASSETDIGESTRESPONSE.fields_by_name['digest'].message_type = POGOProtos_dot_Data__pb2._ASSETDIGESTENTRY
+_SFIDAACTIONLOGRESPONSE.fields_by_name['result'].enum_type = _SFIDAACTIONLOGRESPONSE_RESULT
+_SFIDAACTIONLOGRESPONSE.fields_by_name['log_entries'].message_type = POGOProtos_dot_Data_dot_Logs__pb2._ACTIONLOGENTRY
+_SFIDAACTIONLOGRESPONSE_RESULT.containing_type = _SFIDAACTIONLOGRESPONSE
+_LEVELUPREWARDSRESPONSE.fields_by_name['result'].enum_type = _LEVELUPREWARDSRESPONSE_RESULT
+_LEVELUPREWARDSRESPONSE.fields_by_name['items_awarded'].message_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMAWARD
+_LEVELUPREWARDSRESPONSE.fields_by_name['items_unlocked'].enum_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMID
+_LEVELUPREWARDSRESPONSE_RESULT.containing_type = _LEVELUPREWARDSRESPONSE
+_COLLECTDAILYDEFENDERBONUSRESPONSE.fields_by_name['result'].enum_type = _COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT
+_COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT.containing_type = _COLLECTDAILYDEFENDERBONUSRESPONSE
+_RELEASEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _RELEASEPOKEMONRESPONSE_RESULT
+_RELEASEPOKEMONRESPONSE_RESULT.containing_type = _RELEASEPOKEMONRESPONSE
 DESCRIPTOR.message_types_by_name['PlayerUpdateResponse'] = _PLAYERUPDATERESPONSE
-DESCRIPTOR.message_types_by_name['RecycleInventoryItemResponse'] = _RECYCLEINVENTORYITEMRESPONSE
-DESCRIPTOR.message_types_by_name['ReleasePokemonResponse'] = _RELEASEPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['SetAvatarResponse'] = _SETAVATARRESPONSE
-DESCRIPTOR.message_types_by_name['SetContactSettingsResponse'] = _SETCONTACTSETTINGSRESPONSE
-DESCRIPTOR.message_types_by_name['SetFavoritePokemonResponse'] = _SETFAVORITEPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['SetPlayerTeamResponse'] = _SETPLAYERTEAMRESPONSE
-DESCRIPTOR.message_types_by_name['StartGymBattleResponse'] = _STARTGYMBATTLERESPONSE
-DESCRIPTOR.message_types_by_name['UpgradePokemonResponse'] = _UPGRADEPOKEMONRESPONSE
-DESCRIPTOR.message_types_by_name['UseIncenseResponse'] = _USEINCENSERESPONSE
-DESCRIPTOR.message_types_by_name['UseItemCaptureResponse'] = _USEITEMCAPTURERESPONSE
 DESCRIPTOR.message_types_by_name['UseItemEggIncubatorResponse'] = _USEITEMEGGINCUBATORRESPONSE
-DESCRIPTOR.message_types_by_name['UseItemGymResponse'] = _USEITEMGYMRESPONSE
+DESCRIPTOR.message_types_by_name['UseItemCaptureResponse'] = _USEITEMCAPTURERESPONSE
+DESCRIPTOR.message_types_by_name['DownloadSettingsResponse'] = _DOWNLOADSETTINGSRESPONSE
+DESCRIPTOR.message_types_by_name['ClaimCodenameResponse'] = _CLAIMCODENAMERESPONSE
+DESCRIPTOR.message_types_by_name['GetDownloadUrlsResponse'] = _GETDOWNLOADURLSRESPONSE
+DESCRIPTOR.message_types_by_name['StartGymBattleResponse'] = _STARTGYMBATTLERESPONSE
+DESCRIPTOR.message_types_by_name['GetGymDetailsResponse'] = _GETGYMDETAILSRESPONSE
 DESCRIPTOR.message_types_by_name['UseItemPotionResponse'] = _USEITEMPOTIONRESPONSE
-DESCRIPTOR.message_types_by_name['UseRevivePotionResponse'] = _USEREVIVEPOTIONRESPONSE
+DESCRIPTOR.message_types_by_name['GetPlayerResponse'] = _GETPLAYERRESPONSE
+DESCRIPTOR.message_types_by_name['AddFortModifierResponse'] = _ADDFORTMODIFIERRESPONSE
+DESCRIPTOR.message_types_by_name['FortSearchResponse'] = _FORTSEARCHRESPONSE
+DESCRIPTOR.message_types_by_name['SetFavoritePokemonResponse'] = _SETFAVORITEPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['FortDeployPokemonResponse'] = _FORTDEPLOYPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['DownloadItemTemplatesResponse'] = _DOWNLOADITEMTEMPLATESRESPONSE
+DESCRIPTOR.message_types_by_name['UseItemReviveResponse'] = _USEITEMREVIVERESPONSE
+DESCRIPTOR.message_types_by_name['MarkTutorialCompleteResponse'] = _MARKTUTORIALCOMPLETERESPONSE
+DESCRIPTOR.message_types_by_name['EquipBadgeResponse'] = _EQUIPBADGERESPONSE
+DESCRIPTOR.message_types_by_name['SetContactSettingsResponse'] = _SETCONTACTSETTINGSRESPONSE
+DESCRIPTOR.message_types_by_name['DiskEncounterResponse'] = _DISKENCOUNTERRESPONSE
+DESCRIPTOR.message_types_by_name['GetSuggestedCodenamesResponse'] = _GETSUGGESTEDCODENAMESRESPONSE
+DESCRIPTOR.message_types_by_name['GetMapObjectsResponse'] = _GETMAPOBJECTSRESPONSE
+DESCRIPTOR.message_types_by_name['UpgradePokemonResponse'] = _UPGRADEPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['FortRecallPokemonResponse'] = _FORTRECALLPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['RecycleInventoryItemResponse'] = _RECYCLEINVENTORYITEMRESPONSE
+DESCRIPTOR.message_types_by_name['GetHatchedEggsResponse'] = _GETHATCHEDEGGSRESPONSE
+DESCRIPTOR.message_types_by_name['FortDetailsResponse'] = _FORTDETAILSRESPONSE
+DESCRIPTOR.message_types_by_name['DownloadRemoteConfigVersionResponse'] = _DOWNLOADREMOTECONFIGVERSIONRESPONSE
+DESCRIPTOR.message_types_by_name['UseIncenseResponse'] = _USEINCENSERESPONSE
 DESCRIPTOR.message_types_by_name['UseItemXpBoostResponse'] = _USEITEMXPBOOSTRESPONSE
+DESCRIPTOR.message_types_by_name['AttackGymResponse'] = _ATTACKGYMRESPONSE
+DESCRIPTOR.message_types_by_name['EncounterTutorialCompleteResponse'] = _ENCOUNTERTUTORIALCOMPLETERESPONSE
+DESCRIPTOR.message_types_by_name['SetAvatarResponse'] = _SETAVATARRESPONSE
+DESCRIPTOR.message_types_by_name['CatchPokemonResponse'] = _CATCHPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['CheckCodenameAvailableResponse'] = _CHECKCODENAMEAVAILABLERESPONSE
+DESCRIPTOR.message_types_by_name['CollectDailyBonusResponse'] = _COLLECTDAILYBONUSRESPONSE
+DESCRIPTOR.message_types_by_name['GetInventoryResponse'] = _GETINVENTORYRESPONSE
+DESCRIPTOR.message_types_by_name['EchoResponse'] = _ECHORESPONSE
+DESCRIPTOR.message_types_by_name['GetPlayerProfileResponse'] = _GETPLAYERPROFILERESPONSE
+DESCRIPTOR.message_types_by_name['UseItemGymResponse'] = _USEITEMGYMRESPONSE
+DESCRIPTOR.message_types_by_name['GetIncensePokemonResponse'] = _GETINCENSEPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['EvolvePokemonResponse'] = _EVOLVEPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['EncounterResponse'] = _ENCOUNTERRESPONSE
+DESCRIPTOR.message_types_by_name['NicknamePokemonResponse'] = _NICKNAMEPOKEMONRESPONSE
+DESCRIPTOR.message_types_by_name['IncenseEncounterResponse'] = _INCENSEENCOUNTERRESPONSE
+DESCRIPTOR.message_types_by_name['SetPlayerTeamResponse'] = _SETPLAYERTEAMRESPONSE
+DESCRIPTOR.message_types_by_name['CheckAwardedBadgesResponse'] = _CHECKAWARDEDBADGESRESPONSE
+DESCRIPTOR.message_types_by_name['GetAssetDigestResponse'] = _GETASSETDIGESTRESPONSE
+DESCRIPTOR.message_types_by_name['SfidaActionLogResponse'] = _SFIDAACTIONLOGRESPONSE
+DESCRIPTOR.message_types_by_name['LevelUpRewardsResponse'] = _LEVELUPREWARDSRESPONSE
+DESCRIPTOR.message_types_by_name['CollectDailyDefenderBonusResponse'] = _COLLECTDAILYDEFENDERBONUSRESPONSE
+DESCRIPTOR.message_types_by_name['ReleasePokemonResponse'] = _RELEASEPOKEMONRESPONSE
 
-AddFortModifierResponse = _reflection.GeneratedProtocolMessageType('AddFortModifierResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ADDFORTMODIFIERRESPONSE,
+PlayerUpdateResponse = _reflection.GeneratedProtocolMessageType('PlayerUpdateResponse', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYERUPDATERESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.AddFortModifierResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.PlayerUpdateResponse)
   ))
-_sym_db.RegisterMessage(AddFortModifierResponse)
+_sym_db.RegisterMessage(PlayerUpdateResponse)
 
-AttackGymResponse = _reflection.GeneratedProtocolMessageType('AttackGymResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ATTACKGYMRESPONSE,
+UseItemEggIncubatorResponse = _reflection.GeneratedProtocolMessageType('UseItemEggIncubatorResponse', (_message.Message,), dict(
+  DESCRIPTOR = _USEITEMEGGINCUBATORRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.AttackGymResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemEggIncubatorResponse)
   ))
-_sym_db.RegisterMessage(AttackGymResponse)
+_sym_db.RegisterMessage(UseItemEggIncubatorResponse)
 
-CatchPokemonResponse = _reflection.GeneratedProtocolMessageType('CatchPokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CATCHPOKEMONRESPONSE,
+UseItemCaptureResponse = _reflection.GeneratedProtocolMessageType('UseItemCaptureResponse', (_message.Message,), dict(
+  DESCRIPTOR = _USEITEMCAPTURERESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CatchPokemonResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemCaptureResponse)
   ))
-_sym_db.RegisterMessage(CatchPokemonResponse)
+_sym_db.RegisterMessage(UseItemCaptureResponse)
 
-CheckAwardedBadgesResponse = _reflection.GeneratedProtocolMessageType('CheckAwardedBadgesResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CHECKAWARDEDBADGESRESPONSE,
+DownloadSettingsResponse = _reflection.GeneratedProtocolMessageType('DownloadSettingsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _DOWNLOADSETTINGSRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CheckAwardedBadgesResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.DownloadSettingsResponse)
   ))
-_sym_db.RegisterMessage(CheckAwardedBadgesResponse)
-
-CheckCodenameAvailableResponse = _reflection.GeneratedProtocolMessageType('CheckCodenameAvailableResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CHECKCODENAMEAVAILABLERESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CheckCodenameAvailableResponse)
-  ))
-_sym_db.RegisterMessage(CheckCodenameAvailableResponse)
+_sym_db.RegisterMessage(DownloadSettingsResponse)
 
 ClaimCodenameResponse = _reflection.GeneratedProtocolMessageType('ClaimCodenameResponse', (_message.Message,), dict(
   DESCRIPTOR = _CLAIMCODENAMERESPONSE,
@@ -4064,26 +4137,68 @@ ClaimCodenameResponse = _reflection.GeneratedProtocolMessageType('ClaimCodenameR
   ))
 _sym_db.RegisterMessage(ClaimCodenameResponse)
 
-CollectDailyBonusResponse = _reflection.GeneratedProtocolMessageType('CollectDailyBonusResponse', (_message.Message,), dict(
-  DESCRIPTOR = _COLLECTDAILYBONUSRESPONSE,
+GetDownloadUrlsResponse = _reflection.GeneratedProtocolMessageType('GetDownloadUrlsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETDOWNLOADURLSRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CollectDailyBonusResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetDownloadUrlsResponse)
   ))
-_sym_db.RegisterMessage(CollectDailyBonusResponse)
+_sym_db.RegisterMessage(GetDownloadUrlsResponse)
 
-CollectDailyDefenderBonusResponse = _reflection.GeneratedProtocolMessageType('CollectDailyDefenderBonusResponse', (_message.Message,), dict(
-  DESCRIPTOR = _COLLECTDAILYDEFENDERBONUSRESPONSE,
+StartGymBattleResponse = _reflection.GeneratedProtocolMessageType('StartGymBattleResponse', (_message.Message,), dict(
+  DESCRIPTOR = _STARTGYMBATTLERESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.StartGymBattleResponse)
   ))
-_sym_db.RegisterMessage(CollectDailyDefenderBonusResponse)
+_sym_db.RegisterMessage(StartGymBattleResponse)
 
-DiskEncounterResponse = _reflection.GeneratedProtocolMessageType('DiskEncounterResponse', (_message.Message,), dict(
-  DESCRIPTOR = _DISKENCOUNTERRESPONSE,
+GetGymDetailsResponse = _reflection.GeneratedProtocolMessageType('GetGymDetailsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETGYMDETAILSRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.DiskEncounterResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetGymDetailsResponse)
   ))
-_sym_db.RegisterMessage(DiskEncounterResponse)
+_sym_db.RegisterMessage(GetGymDetailsResponse)
+
+UseItemPotionResponse = _reflection.GeneratedProtocolMessageType('UseItemPotionResponse', (_message.Message,), dict(
+  DESCRIPTOR = _USEITEMPOTIONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemPotionResponse)
+  ))
+_sym_db.RegisterMessage(UseItemPotionResponse)
+
+GetPlayerResponse = _reflection.GeneratedProtocolMessageType('GetPlayerResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETPLAYERRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetPlayerResponse)
+  ))
+_sym_db.RegisterMessage(GetPlayerResponse)
+
+AddFortModifierResponse = _reflection.GeneratedProtocolMessageType('AddFortModifierResponse', (_message.Message,), dict(
+  DESCRIPTOR = _ADDFORTMODIFIERRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.AddFortModifierResponse)
+  ))
+_sym_db.RegisterMessage(AddFortModifierResponse)
+
+FortSearchResponse = _reflection.GeneratedProtocolMessageType('FortSearchResponse', (_message.Message,), dict(
+  DESCRIPTOR = _FORTSEARCHRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortSearchResponse)
+  ))
+_sym_db.RegisterMessage(FortSearchResponse)
+
+SetFavoritePokemonResponse = _reflection.GeneratedProtocolMessageType('SetFavoritePokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SETFAVORITEPOKEMONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetFavoritePokemonResponse)
+  ))
+_sym_db.RegisterMessage(SetFavoritePokemonResponse)
+
+FortDeployPokemonResponse = _reflection.GeneratedProtocolMessageType('FortDeployPokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _FORTDEPLOYPOKEMONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortDeployPokemonResponse)
+  ))
+_sym_db.RegisterMessage(FortDeployPokemonResponse)
 
 DownloadItemTemplatesResponse = _reflection.GeneratedProtocolMessageType('DownloadItemTemplatesResponse', (_message.Message,), dict(
 
@@ -4100,40 +4215,19 @@ DownloadItemTemplatesResponse = _reflection.GeneratedProtocolMessageType('Downlo
 _sym_db.RegisterMessage(DownloadItemTemplatesResponse)
 _sym_db.RegisterMessage(DownloadItemTemplatesResponse.ItemTemplate)
 
-DownloadRemoteConfigVersionResponse = _reflection.GeneratedProtocolMessageType('DownloadRemoteConfigVersionResponse', (_message.Message,), dict(
-  DESCRIPTOR = _DOWNLOADREMOTECONFIGVERSIONRESPONSE,
+UseItemReviveResponse = _reflection.GeneratedProtocolMessageType('UseItemReviveResponse', (_message.Message,), dict(
+  DESCRIPTOR = _USEITEMREVIVERESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemReviveResponse)
   ))
-_sym_db.RegisterMessage(DownloadRemoteConfigVersionResponse)
+_sym_db.RegisterMessage(UseItemReviveResponse)
 
-DownloadSettingsResponse = _reflection.GeneratedProtocolMessageType('DownloadSettingsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _DOWNLOADSETTINGSRESPONSE,
+MarkTutorialCompleteResponse = _reflection.GeneratedProtocolMessageType('MarkTutorialCompleteResponse', (_message.Message,), dict(
+  DESCRIPTOR = _MARKTUTORIALCOMPLETERESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.DownloadSettingsResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.MarkTutorialCompleteResponse)
   ))
-_sym_db.RegisterMessage(DownloadSettingsResponse)
-
-EchoResponse = _reflection.GeneratedProtocolMessageType('EchoResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ECHORESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EchoResponse)
-  ))
-_sym_db.RegisterMessage(EchoResponse)
-
-EncounterResponse = _reflection.GeneratedProtocolMessageType('EncounterResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ENCOUNTERRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EncounterResponse)
-  ))
-_sym_db.RegisterMessage(EncounterResponse)
-
-EncounterTutorialCompleteResponse = _reflection.GeneratedProtocolMessageType('EncounterTutorialCompleteResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ENCOUNTERTUTORIALCOMPLETERESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse)
-  ))
-_sym_db.RegisterMessage(EncounterTutorialCompleteResponse)
+_sym_db.RegisterMessage(MarkTutorialCompleteResponse)
 
 EquipBadgeResponse = _reflection.GeneratedProtocolMessageType('EquipBadgeResponse', (_message.Message,), dict(
   DESCRIPTOR = _EQUIPBADGERESPONSE,
@@ -4142,103 +4236,19 @@ EquipBadgeResponse = _reflection.GeneratedProtocolMessageType('EquipBadgeRespons
   ))
 _sym_db.RegisterMessage(EquipBadgeResponse)
 
-EvolvePokemonResponse = _reflection.GeneratedProtocolMessageType('EvolvePokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _EVOLVEPOKEMONRESPONSE,
+SetContactSettingsResponse = _reflection.GeneratedProtocolMessageType('SetContactSettingsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SETCONTACTSETTINGSRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EvolvePokemonResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetContactSettingsResponse)
   ))
-_sym_db.RegisterMessage(EvolvePokemonResponse)
+_sym_db.RegisterMessage(SetContactSettingsResponse)
 
-FortDeployPokemonResponse = _reflection.GeneratedProtocolMessageType('FortDeployPokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _FORTDEPLOYPOKEMONRESPONSE,
+DiskEncounterResponse = _reflection.GeneratedProtocolMessageType('DiskEncounterResponse', (_message.Message,), dict(
+  DESCRIPTOR = _DISKENCOUNTERRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortDeployPokemonResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.DiskEncounterResponse)
   ))
-_sym_db.RegisterMessage(FortDeployPokemonResponse)
-
-FortDetailsResponse = _reflection.GeneratedProtocolMessageType('FortDetailsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _FORTDETAILSRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortDetailsResponse)
-  ))
-_sym_db.RegisterMessage(FortDetailsResponse)
-
-FortRecallPokemonResponse = _reflection.GeneratedProtocolMessageType('FortRecallPokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _FORTRECALLPOKEMONRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortRecallPokemonResponse)
-  ))
-_sym_db.RegisterMessage(FortRecallPokemonResponse)
-
-FortSearchResponse = _reflection.GeneratedProtocolMessageType('FortSearchResponse', (_message.Message,), dict(
-  DESCRIPTOR = _FORTSEARCHRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortSearchResponse)
-  ))
-_sym_db.RegisterMessage(FortSearchResponse)
-
-GetAssetDigestResponse = _reflection.GeneratedProtocolMessageType('GetAssetDigestResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETASSETDIGESTRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetAssetDigestResponse)
-  ))
-_sym_db.RegisterMessage(GetAssetDigestResponse)
-
-GetDownloadUrlsResponse = _reflection.GeneratedProtocolMessageType('GetDownloadUrlsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETDOWNLOADURLSRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetDownloadUrlsResponse)
-  ))
-_sym_db.RegisterMessage(GetDownloadUrlsResponse)
-
-GetGymDetailsResponse = _reflection.GeneratedProtocolMessageType('GetGymDetailsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETGYMDETAILSRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetGymDetailsResponse)
-  ))
-_sym_db.RegisterMessage(GetGymDetailsResponse)
-
-GetHatchedEggsResponse = _reflection.GeneratedProtocolMessageType('GetHatchedEggsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETHATCHEDEGGSRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetHatchedEggsResponse)
-  ))
-_sym_db.RegisterMessage(GetHatchedEggsResponse)
-
-GetIncensePokemonResponse = _reflection.GeneratedProtocolMessageType('GetIncensePokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETINCENSEPOKEMONRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetIncensePokemonResponse)
-  ))
-_sym_db.RegisterMessage(GetIncensePokemonResponse)
-
-GetInventoryResponse = _reflection.GeneratedProtocolMessageType('GetInventoryResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETINVENTORYRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetInventoryResponse)
-  ))
-_sym_db.RegisterMessage(GetInventoryResponse)
-
-GetMapObjectsResponse = _reflection.GeneratedProtocolMessageType('GetMapObjectsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETMAPOBJECTSRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetMapObjectsResponse)
-  ))
-_sym_db.RegisterMessage(GetMapObjectsResponse)
-
-GetPlayerProfileResponse = _reflection.GeneratedProtocolMessageType('GetPlayerProfileResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETPLAYERPROFILERESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetPlayerProfileResponse)
-  ))
-_sym_db.RegisterMessage(GetPlayerProfileResponse)
-
-GetPlayerResponse = _reflection.GeneratedProtocolMessageType('GetPlayerResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETPLAYERRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetPlayerResponse)
-  ))
-_sym_db.RegisterMessage(GetPlayerResponse)
+_sym_db.RegisterMessage(DiskEncounterResponse)
 
 GetSuggestedCodenamesResponse = _reflection.GeneratedProtocolMessageType('GetSuggestedCodenamesResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETSUGGESTEDCODENAMESRESPONSE,
@@ -4247,82 +4257,12 @@ GetSuggestedCodenamesResponse = _reflection.GeneratedProtocolMessageType('GetSug
   ))
 _sym_db.RegisterMessage(GetSuggestedCodenamesResponse)
 
-IncenseEncounterResponse = _reflection.GeneratedProtocolMessageType('IncenseEncounterResponse', (_message.Message,), dict(
-  DESCRIPTOR = _INCENSEENCOUNTERRESPONSE,
+GetMapObjectsResponse = _reflection.GeneratedProtocolMessageType('GetMapObjectsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETMAPOBJECTSRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.IncenseEncounterResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetMapObjectsResponse)
   ))
-_sym_db.RegisterMessage(IncenseEncounterResponse)
-
-LevelUpRewardsResponse = _reflection.GeneratedProtocolMessageType('LevelUpRewardsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _LEVELUPREWARDSRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.LevelUpRewardsResponse)
-  ))
-_sym_db.RegisterMessage(LevelUpRewardsResponse)
-
-NicknamePokemonResponse = _reflection.GeneratedProtocolMessageType('NicknamePokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _NICKNAMEPOKEMONRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.NicknamePokemonResponse)
-  ))
-_sym_db.RegisterMessage(NicknamePokemonResponse)
-
-PlayerUpdateResponse = _reflection.GeneratedProtocolMessageType('PlayerUpdateResponse', (_message.Message,), dict(
-  DESCRIPTOR = _PLAYERUPDATERESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.PlayerUpdateResponse)
-  ))
-_sym_db.RegisterMessage(PlayerUpdateResponse)
-
-RecycleInventoryItemResponse = _reflection.GeneratedProtocolMessageType('RecycleInventoryItemResponse', (_message.Message,), dict(
-  DESCRIPTOR = _RECYCLEINVENTORYITEMRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.RecycleInventoryItemResponse)
-  ))
-_sym_db.RegisterMessage(RecycleInventoryItemResponse)
-
-ReleasePokemonResponse = _reflection.GeneratedProtocolMessageType('ReleasePokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _RELEASEPOKEMONRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.ReleasePokemonResponse)
-  ))
-_sym_db.RegisterMessage(ReleasePokemonResponse)
-
-SetAvatarResponse = _reflection.GeneratedProtocolMessageType('SetAvatarResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SETAVATARRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetAvatarResponse)
-  ))
-_sym_db.RegisterMessage(SetAvatarResponse)
-
-SetContactSettingsResponse = _reflection.GeneratedProtocolMessageType('SetContactSettingsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SETCONTACTSETTINGSRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetContactSettingsResponse)
-  ))
-_sym_db.RegisterMessage(SetContactSettingsResponse)
-
-SetFavoritePokemonResponse = _reflection.GeneratedProtocolMessageType('SetFavoritePokemonResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SETFAVORITEPOKEMONRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetFavoritePokemonResponse)
-  ))
-_sym_db.RegisterMessage(SetFavoritePokemonResponse)
-
-SetPlayerTeamResponse = _reflection.GeneratedProtocolMessageType('SetPlayerTeamResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SETPLAYERTEAMRESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetPlayerTeamResponse)
-  ))
-_sym_db.RegisterMessage(SetPlayerTeamResponse)
-
-StartGymBattleResponse = _reflection.GeneratedProtocolMessageType('StartGymBattleResponse', (_message.Message,), dict(
-  DESCRIPTOR = _STARTGYMBATTLERESPONSE,
-  __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.StartGymBattleResponse)
-  ))
-_sym_db.RegisterMessage(StartGymBattleResponse)
+_sym_db.RegisterMessage(GetMapObjectsResponse)
 
 UpgradePokemonResponse = _reflection.GeneratedProtocolMessageType('UpgradePokemonResponse', (_message.Message,), dict(
   DESCRIPTOR = _UPGRADEPOKEMONRESPONSE,
@@ -4331,6 +4271,41 @@ UpgradePokemonResponse = _reflection.GeneratedProtocolMessageType('UpgradePokemo
   ))
 _sym_db.RegisterMessage(UpgradePokemonResponse)
 
+FortRecallPokemonResponse = _reflection.GeneratedProtocolMessageType('FortRecallPokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _FORTRECALLPOKEMONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortRecallPokemonResponse)
+  ))
+_sym_db.RegisterMessage(FortRecallPokemonResponse)
+
+RecycleInventoryItemResponse = _reflection.GeneratedProtocolMessageType('RecycleInventoryItemResponse', (_message.Message,), dict(
+  DESCRIPTOR = _RECYCLEINVENTORYITEMRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.RecycleInventoryItemResponse)
+  ))
+_sym_db.RegisterMessage(RecycleInventoryItemResponse)
+
+GetHatchedEggsResponse = _reflection.GeneratedProtocolMessageType('GetHatchedEggsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETHATCHEDEGGSRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetHatchedEggsResponse)
+  ))
+_sym_db.RegisterMessage(GetHatchedEggsResponse)
+
+FortDetailsResponse = _reflection.GeneratedProtocolMessageType('FortDetailsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _FORTDETAILSRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.FortDetailsResponse)
+  ))
+_sym_db.RegisterMessage(FortDetailsResponse)
+
+DownloadRemoteConfigVersionResponse = _reflection.GeneratedProtocolMessageType('DownloadRemoteConfigVersionResponse', (_message.Message,), dict(
+  DESCRIPTOR = _DOWNLOADREMOTECONFIGVERSIONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.DownloadRemoteConfigVersionResponse)
+  ))
+_sym_db.RegisterMessage(DownloadRemoteConfigVersionResponse)
+
 UseIncenseResponse = _reflection.GeneratedProtocolMessageType('UseIncenseResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEINCENSERESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
@@ -4338,19 +4313,75 @@ UseIncenseResponse = _reflection.GeneratedProtocolMessageType('UseIncenseRespons
   ))
 _sym_db.RegisterMessage(UseIncenseResponse)
 
-UseItemCaptureResponse = _reflection.GeneratedProtocolMessageType('UseItemCaptureResponse', (_message.Message,), dict(
-  DESCRIPTOR = _USEITEMCAPTURERESPONSE,
+UseItemXpBoostResponse = _reflection.GeneratedProtocolMessageType('UseItemXpBoostResponse', (_message.Message,), dict(
+  DESCRIPTOR = _USEITEMXPBOOSTRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemCaptureResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemXpBoostResponse)
   ))
-_sym_db.RegisterMessage(UseItemCaptureResponse)
+_sym_db.RegisterMessage(UseItemXpBoostResponse)
 
-UseItemEggIncubatorResponse = _reflection.GeneratedProtocolMessageType('UseItemEggIncubatorResponse', (_message.Message,), dict(
-  DESCRIPTOR = _USEITEMEGGINCUBATORRESPONSE,
+AttackGymResponse = _reflection.GeneratedProtocolMessageType('AttackGymResponse', (_message.Message,), dict(
+  DESCRIPTOR = _ATTACKGYMRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemEggIncubatorResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.AttackGymResponse)
   ))
-_sym_db.RegisterMessage(UseItemEggIncubatorResponse)
+_sym_db.RegisterMessage(AttackGymResponse)
+
+EncounterTutorialCompleteResponse = _reflection.GeneratedProtocolMessageType('EncounterTutorialCompleteResponse', (_message.Message,), dict(
+  DESCRIPTOR = _ENCOUNTERTUTORIALCOMPLETERESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse)
+  ))
+_sym_db.RegisterMessage(EncounterTutorialCompleteResponse)
+
+SetAvatarResponse = _reflection.GeneratedProtocolMessageType('SetAvatarResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SETAVATARRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetAvatarResponse)
+  ))
+_sym_db.RegisterMessage(SetAvatarResponse)
+
+CatchPokemonResponse = _reflection.GeneratedProtocolMessageType('CatchPokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CATCHPOKEMONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CatchPokemonResponse)
+  ))
+_sym_db.RegisterMessage(CatchPokemonResponse)
+
+CheckCodenameAvailableResponse = _reflection.GeneratedProtocolMessageType('CheckCodenameAvailableResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CHECKCODENAMEAVAILABLERESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CheckCodenameAvailableResponse)
+  ))
+_sym_db.RegisterMessage(CheckCodenameAvailableResponse)
+
+CollectDailyBonusResponse = _reflection.GeneratedProtocolMessageType('CollectDailyBonusResponse', (_message.Message,), dict(
+  DESCRIPTOR = _COLLECTDAILYBONUSRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CollectDailyBonusResponse)
+  ))
+_sym_db.RegisterMessage(CollectDailyBonusResponse)
+
+GetInventoryResponse = _reflection.GeneratedProtocolMessageType('GetInventoryResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETINVENTORYRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetInventoryResponse)
+  ))
+_sym_db.RegisterMessage(GetInventoryResponse)
+
+EchoResponse = _reflection.GeneratedProtocolMessageType('EchoResponse', (_message.Message,), dict(
+  DESCRIPTOR = _ECHORESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EchoResponse)
+  ))
+_sym_db.RegisterMessage(EchoResponse)
+
+GetPlayerProfileResponse = _reflection.GeneratedProtocolMessageType('GetPlayerProfileResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETPLAYERPROFILERESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetPlayerProfileResponse)
+  ))
+_sym_db.RegisterMessage(GetPlayerProfileResponse)
 
 UseItemGymResponse = _reflection.GeneratedProtocolMessageType('UseItemGymResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMGYMRESPONSE,
@@ -4359,26 +4390,89 @@ UseItemGymResponse = _reflection.GeneratedProtocolMessageType('UseItemGymRespons
   ))
 _sym_db.RegisterMessage(UseItemGymResponse)
 
-UseItemPotionResponse = _reflection.GeneratedProtocolMessageType('UseItemPotionResponse', (_message.Message,), dict(
-  DESCRIPTOR = _USEITEMPOTIONRESPONSE,
+GetIncensePokemonResponse = _reflection.GeneratedProtocolMessageType('GetIncensePokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETINCENSEPOKEMONRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemPotionResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetIncensePokemonResponse)
   ))
-_sym_db.RegisterMessage(UseItemPotionResponse)
+_sym_db.RegisterMessage(GetIncensePokemonResponse)
 
-UseRevivePotionResponse = _reflection.GeneratedProtocolMessageType('UseRevivePotionResponse', (_message.Message,), dict(
-  DESCRIPTOR = _USEREVIVEPOTIONRESPONSE,
+EvolvePokemonResponse = _reflection.GeneratedProtocolMessageType('EvolvePokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _EVOLVEPOKEMONRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseRevivePotionResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EvolvePokemonResponse)
   ))
-_sym_db.RegisterMessage(UseRevivePotionResponse)
+_sym_db.RegisterMessage(EvolvePokemonResponse)
 
-UseItemXpBoostResponse = _reflection.GeneratedProtocolMessageType('UseItemXpBoostResponse', (_message.Message,), dict(
-  DESCRIPTOR = _USEITEMXPBOOSTRESPONSE,
+EncounterResponse = _reflection.GeneratedProtocolMessageType('EncounterResponse', (_message.Message,), dict(
+  DESCRIPTOR = _ENCOUNTERRESPONSE,
   __module__ = 'POGOProtos.Networking.Responses_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.UseItemXpBoostResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.EncounterResponse)
   ))
-_sym_db.RegisterMessage(UseItemXpBoostResponse)
+_sym_db.RegisterMessage(EncounterResponse)
+
+NicknamePokemonResponse = _reflection.GeneratedProtocolMessageType('NicknamePokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _NICKNAMEPOKEMONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.NicknamePokemonResponse)
+  ))
+_sym_db.RegisterMessage(NicknamePokemonResponse)
+
+IncenseEncounterResponse = _reflection.GeneratedProtocolMessageType('IncenseEncounterResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INCENSEENCOUNTERRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.IncenseEncounterResponse)
+  ))
+_sym_db.RegisterMessage(IncenseEncounterResponse)
+
+SetPlayerTeamResponse = _reflection.GeneratedProtocolMessageType('SetPlayerTeamResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SETPLAYERTEAMRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SetPlayerTeamResponse)
+  ))
+_sym_db.RegisterMessage(SetPlayerTeamResponse)
+
+CheckAwardedBadgesResponse = _reflection.GeneratedProtocolMessageType('CheckAwardedBadgesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CHECKAWARDEDBADGESRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CheckAwardedBadgesResponse)
+  ))
+_sym_db.RegisterMessage(CheckAwardedBadgesResponse)
+
+GetAssetDigestResponse = _reflection.GeneratedProtocolMessageType('GetAssetDigestResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETASSETDIGESTRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.GetAssetDigestResponse)
+  ))
+_sym_db.RegisterMessage(GetAssetDigestResponse)
+
+SfidaActionLogResponse = _reflection.GeneratedProtocolMessageType('SfidaActionLogResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SFIDAACTIONLOGRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.SfidaActionLogResponse)
+  ))
+_sym_db.RegisterMessage(SfidaActionLogResponse)
+
+LevelUpRewardsResponse = _reflection.GeneratedProtocolMessageType('LevelUpRewardsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _LEVELUPREWARDSRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.LevelUpRewardsResponse)
+  ))
+_sym_db.RegisterMessage(LevelUpRewardsResponse)
+
+CollectDailyDefenderBonusResponse = _reflection.GeneratedProtocolMessageType('CollectDailyDefenderBonusResponse', (_message.Message,), dict(
+  DESCRIPTOR = _COLLECTDAILYDEFENDERBONUSRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse)
+  ))
+_sym_db.RegisterMessage(CollectDailyDefenderBonusResponse)
+
+ReleasePokemonResponse = _reflection.GeneratedProtocolMessageType('ReleasePokemonResponse', (_message.Message,), dict(
+  DESCRIPTOR = _RELEASEPOKEMONRESPONSE,
+  __module__ = 'POGOProtos.Networking.Responses_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Responses.ReleasePokemonResponse)
+  ))
+_sym_db.RegisterMessage(ReleasePokemonResponse)
 
 
 _GETHATCHEDEGGSRESPONSE.fields_by_name['pokemon_id'].has_options = True

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/AssetDigestEntry.proto";
+
+message GetAssetDigestResponse {
+	repeated .POGOProtos.Data.AssetDigestEntry digest = 1;
+	uint64 timestamp_ms = 2;
+}

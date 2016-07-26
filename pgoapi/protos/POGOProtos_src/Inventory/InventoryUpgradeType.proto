@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+enum InventoryUpgradeType {
+	UPGRADE_UNSET = 0;
+	INCREASE_ITEM_STORAGE = 1;
+	INCREASE_POKEMON_STORAGE = 2;
+}

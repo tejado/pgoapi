@@ -1,0 +1,28 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message PlayerStats {
+	int32 level = 1;
+	int64 experience = 2;
+	int64 prev_level_xp = 3;
+	int64 next_level_xp = 4;
+	float km_walked = 5;
+	int32 pokemons_encountered = 6;
+	int32 unique_pokedex_entries = 7;
+	int32 pokemons_captured = 8;
+	int32 evolutions = 9;
+	int32 poke_stop_visits = 10;
+	int32 pokeballs_thrown = 11;
+	int32 eggs_hatched = 12;
+	int32 big_magikarp_caught = 13;
+	int32 battle_attack_won = 14;
+	int32 battle_attack_total = 15;
+	int32 battle_defended_won = 16;
+	int32 battle_training_won = 17;
+	int32 battle_training_total = 18;
+	int32 prestige_raised_total = 19;
+	int32 prestige_dropped_total = 20;
+	int32 pokemon_deployed = 21;
+	bytes pokemon_caught_by_type = 22; // TODO: repeated PokemonType ??
+	int32 small_rattata_caught = 23;
+}

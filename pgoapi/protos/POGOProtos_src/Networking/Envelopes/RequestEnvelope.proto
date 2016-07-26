@@ -1,0 +1,31 @@
+syntax = "proto3";
+package POGOProtos.Networking.Envelopes;
+
+import "POGOProtos/Networking/Requests/Request.proto";
+import "POGOProtos/Networking/Envelopes/AuthTicket.proto";
+import "POGOProtos/Networking/Envelopes/Unknown6.proto";
+
+message RequestEnvelope {
+	int32 status_code = 1;
+
+	uint64 request_id = 3;
+	repeated .POGOProtos.Networking.Requests.Request requests = 4;
+
+	.POGOProtos.Networking.Envelopes.Unknown6 unknown6 = 6;
+	double latitude = 7;
+	double longitude = 8;
+	double altitude = 9;
+	AuthInfo auth_info = 10;
+	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 11;
+	int64 unknown12 = 12;
+
+	message AuthInfo {
+		string provider = 1;
+		JWT token = 2;
+
+		message JWT {
+			string contents = 1;
+			int32 unknown2  = 2;
+		}
+	}
+}

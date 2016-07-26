@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Inventory/Item/ItemAward.proto";
+
+message FortSearchResponse {
+	.POGOProtos.Networking.Responses.FortSearchResponse.Result result = 1;
+	repeated .POGOProtos.Inventory.Item.ItemAward items_awarded = 2;
+	int32 gems_awarded = 3;
+	.POGOProtos.Data.PokemonData pokemon_data_egg = 4;
+	int32 experience_awarded = 5;
+	int64 cooldown_complete_timestamp_ms = 6;
+	int32 chain_hack_sequence_number = 7;
+
+	enum Result {
+		NO_RESULT_SET = 0;
+		SUCCESS = 1;
+		OUT_OF_RANGE = 2;
+		IN_COOLDOWN_PERIOD = 3;
+		INVENTORY_FULL = 4;
+	}
+}

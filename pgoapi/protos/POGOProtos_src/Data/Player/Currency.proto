@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message Currency {
+    string name = 1;
+    int32 amount = 2;
+}

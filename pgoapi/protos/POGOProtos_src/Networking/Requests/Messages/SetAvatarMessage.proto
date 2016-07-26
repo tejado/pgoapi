@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Data/Player/PlayerAvatar.proto";
+
+message SetAvatarMessage {
+	.POGOProtos.Data.Player.PlayerAvatar player_avatar = 2;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonType.proto";
+import "POGOProtos/Enums/PokemonMovementType.proto";
+
+message MoveSettings {
+	.POGOProtos.Enums.PokemonMovementType movement_id = 1;
+	int32 animation_id = 2;
+	.POGOProtos.Enums.PokemonType pokemon_type = 3;
+	float power = 4;
+	float accuracy_chance = 5;
+	float critical_chance = 6;
+	float heal_scalar = 7;
+	float stamina_loss_scalar = 8;
+	int32 trainer_level_min = 9;
+	int32 trainer_level_max = 10;
+	string vfx_name = 11;
+	int32 duration_ms = 12;
+	int32 damage_window_start_ms = 13;
+	int32 damage_window_end_ms = 14;
+	int32 energy_delta = 15;
+}

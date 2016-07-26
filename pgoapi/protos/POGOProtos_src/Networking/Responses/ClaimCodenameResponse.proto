@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+// TODO: Might be incorrect, please test.
+message ClaimCodenameResponse {
+	string codename = 1;
+	string user_message = 2;
+	bool is_assignable = 3;
+	.POGOProtos.Networking.Responses.ClaimCodenameResponse.Status status = 4;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		CODENAME_NOT_AVAILABLE = 2;
+		CODENAME_NOT_VALID = 3;
+		CURRENT_OWNER = 4;
+		CODENAME_CHANGE_NOT_ALLOWED = 5;
+	}
+}

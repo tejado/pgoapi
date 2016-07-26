@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Gym/GymState.proto";
+
+message GetGymDetailsResponse {
+	.POGOProtos.Data.Gym.GymState gym_state = 1;
+	string name = 2;
+	repeated string urls = 3;
+	POGOProtos.Networking.Responses.GetGymDetailsResponse.Result result = 4;
+	string description = 5;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_NOT_IN_RANGE = 2;
+	}
+}

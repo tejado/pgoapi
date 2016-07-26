@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message RecycleInventoryItemResponse {
+	.POGOProtos.Networking.Responses.RecycleInventoryItemResponse.Result result = 1;
+	int32 new_count = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_NOT_ENOUGH_COPIES = 2;
+		ERROR_CANNOT_RECYCLE_INCUBATORS = 3;
+	}
+}

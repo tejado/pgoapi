@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Map/Fort/FortData.proto";
+import "POGOProtos/Map/Pokemon/WildPokemon.proto";
+
+message PlayerUpdateResponse {
+	repeated .POGOProtos.Map.Pokemon.WildPokemon wild_pokemons = 1;
+	repeated .POGOProtos.Map.Fort.FortData forts = 2;
+	int32 forts_nearby = 3;
+}

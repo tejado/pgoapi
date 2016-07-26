@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GetIncensePokemonResponse {
+	.POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result result = 1;
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
+	double latitude = 3;
+	double longitude = 4;
+	string encounter_location = 5;
+	fixed64 encounter_id = 6;
+	int64 disappear_timestamp_ms = 7;
+
+	enum Result {
+		INCENSE_ENCOUNTER_UNKNOWN = 0;
+		INCENSE_ENCOUNTER_AVAILABLE = 1;
+		INCENSE_ENCOUNTER_NOT_AVAILABLE = 2;
+	}
+}

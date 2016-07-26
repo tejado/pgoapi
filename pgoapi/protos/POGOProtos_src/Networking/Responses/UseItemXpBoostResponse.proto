@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Inventory/AppliedItems.proto";
+
+message UseItemXpBoostResponse {
+	.POGOProtos.Networking.Responses.UseItemXpBoostResponse.Result result = 1;
+	.POGOProtos.Inventory.AppliedItems applied_items = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_ITEM_TYPE = 2;
+		ERROR_XP_BOOST_ALREADY_ACTIVE = 3;
+		ERROR_NO_ITEMS_REMAINING = 4;
+		ERROR_LOCATION_UNSET = 5;
+	}
+}

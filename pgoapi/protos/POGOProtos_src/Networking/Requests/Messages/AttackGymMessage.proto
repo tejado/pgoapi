@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Data/Battle/BattleAction.proto";
+
+message AttackGymMessage {
+	string gym_id = 1;
+	string battle_id = 2;
+	repeated .POGOProtos.Data.Battle.BattleAction attack_actions = 3;
+	.POGOProtos.Data.Battle.BattleAction last_retrieved_actions = 4;
+	double player_latitude = 5;
+	double player_longitude = 6;
+}

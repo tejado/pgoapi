@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Capture/CaptureAward.proto";
+
+message EncounterTutorialCompleteResponse {
+	.POGOProtos.Networking.Responses.EncounterTutorialCompleteResponse.Result result = 1;
+	.POGOProtos.Data.PokemonData pokemon_data = 2;
+	.POGOProtos.Data.Capture.CaptureAward capture_award = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_POKEMON = 2;
+	}
+}

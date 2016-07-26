@@ -101,9 +101,9 @@ class PGoApi:
     def set_position(self, lat, lng, alt):
         self.log.debug('Set Position - Lat: %s Long: %s Alt: %s', lat, lng, alt)
 
-        self._position_lat = f2i(lat)
-        self._position_lng = f2i(lng)
-        self._position_alt = f2i(alt)
+        self._position_lat = lat
+        self._position_lng = lng
+        self._position_alt = alt
 
     def __getattr__(self, func):
         def function(**kwargs):

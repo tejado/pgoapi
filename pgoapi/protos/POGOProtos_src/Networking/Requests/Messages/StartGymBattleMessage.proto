@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message StartGymBattleMessage {
+	string gym_id = 1;
+	repeated fixed64 attacking_pokemon_ids = 2;
+	uint64 defending_pokemon_id = 3;
+	double player_latitude = 4;
+	double player_longitude = 5;
+}

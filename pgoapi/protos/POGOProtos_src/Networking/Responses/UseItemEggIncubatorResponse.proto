@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Inventory/EggIncubator.proto";
+
+message UseItemEggIncubatorResponse {
+	.POGOProtos.Networking.Responses.UseItemEggIncubatorResponse.Result result = 1;
+	.POGOProtos.Inventory.EggIncubator egg_incubator = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INCUBATOR_NOT_FOUND = 2;
+		ERROR_POKEMON_EGG_NOT_FOUND = 3;
+		ERROR_POKEMON_ID_NOT_EGG = 4;
+		ERROR_INCUBATOR_ALREADY_IN_USE = 5;
+		ERROR_POKEMON_ALREADY_INCUBATING = 6;
+		ERROR_INCUBATOR_NO_USES_REMAINING = 7;
+	}
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Settings/GlobalSettings.proto";
+
+message DownloadSettingsResponse {
+	string error = 1;
+	string hash = 2;
+	.POGOProtos.Settings.GlobalSettings settings = 3;
+}

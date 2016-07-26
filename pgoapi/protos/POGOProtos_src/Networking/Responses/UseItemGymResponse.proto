@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message UseItemGymResponse {
+	POGOProtos.Networking.Responses.UseItemGymResponse.Result result = 1;
+	int64 updated_gp = 2; // Gym Points (?)
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_CANNOT_USE = 2;
+		ERROR_NOT_IN_RANGE = 3;
+	}
+}

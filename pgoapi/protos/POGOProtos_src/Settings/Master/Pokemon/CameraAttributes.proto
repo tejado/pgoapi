@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Pokemon;
+
+message CameraAttributes {
+	float disk_radius_m = 1;
+	float cylinder_radius_m = 2;
+	float cylinder_height_m = 3;
+	float cylinder_ground_m = 4;
+	float shoulder_mode_scale = 5;
+}

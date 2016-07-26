@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message GetMapObjectsMessage {
+	repeated uint64 cell_id = 1 [packed=true];
+	repeated int64 since_timestamp_ms = 2 [packed=true];
+	double latitude = 3;
+	double longitude = 4;
+}

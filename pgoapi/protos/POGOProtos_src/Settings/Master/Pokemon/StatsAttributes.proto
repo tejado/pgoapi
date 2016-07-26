@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Pokemon;
+
+message StatsAttributes {
+	int32 base_stamina = 1;
+	int32 base_attack = 2;
+	int32 base_defense = 3;
+	int32 dodge_energy_delta = 8;
+}

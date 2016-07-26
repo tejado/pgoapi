@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message MapSettings {
+	double pokemon_visible_range = 1;
+	double poke_nav_range_meters = 2;
+	double encounter_range_meters = 3;
+	float get_map_objects_min_refresh_seconds = 4;
+	float get_map_objects_max_refresh_seconds = 5;
+	float get_map_objects_min_distance_meters = 6;
+	string google_maps_api_key = 7;
+}

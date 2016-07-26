@@ -1,0 +1,1 @@
+Requests message name should be the "RequestType" in camelcase with "Message" as suffix.

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message FortSearchMessage {
+	string fort_id = 1;
+	double player_latitude = 2;
+	double player_longitude = 3;
+	double fort_latitude = 4;
+	double fort_longitude = 5;
+}

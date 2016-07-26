@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/CameraTarget.proto";
+import "POGOProtos/Enums/CameraInterpolation.proto";
+
+message CameraSettings {
+	string next_camera = 1;
+	repeated .POGOProtos.Enums.CameraInterpolation interpolation = 2;
+	repeated .POGOProtos.Enums.CameraTarget target_type = 3;
+	repeated float ease_in_speed = 4;
+	repeated float east_out_speed = 5;
+	repeated float duration_seconds = 6;
+	repeated float wait_seconds = 7;
+	repeated float transition_seconds = 8;
+	repeated float angle_degree = 9;
+	repeated float angle_offset_degree = 10;
+	repeated float pitch_degree = 11;
+	repeated float pitch_offset_degree = 12;
+	repeated float roll_degree = 13;
+	repeated float distance_meters = 14;
+	repeated float height_percent = 15;
+	repeated float vert_ctr_ratio = 16;
+}

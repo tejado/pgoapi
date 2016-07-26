@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message EncounterSettings {
+	float spin_bonus_threshold = 1;
+	float excellent_throw_threshold = 2;
+	float great_throw_threshold = 3;
+	float nice_throw_threshold = 4;
+	int32 milestone_threshold = 5;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message ReleasePokemonMessage {
+	fixed64 pokemon_id = 1;
+}

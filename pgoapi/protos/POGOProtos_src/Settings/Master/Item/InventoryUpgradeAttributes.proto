@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Item;
+
+import "POGOProtos/Inventory/InventoryUpgradeType.proto";
+
+message InventoryUpgradeAttributes {
+	int32 additional_storage = 1;
+	.POGOProtos.Inventory.InventoryUpgradeType upgrade_type = 2;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Item;
+
+import "POGOProtos/Inventory/EggIncubatorType.proto";
+
+message EggIncubatorAttributes {
+  .POGOProtos.Inventory.EggIncubatorType incubator_type = 1;
+  int32 uses = 2;
+  float distance_multiplier = 3;
+}

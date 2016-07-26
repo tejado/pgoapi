@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message PlayerLevelSettings {
+	repeated int32 rank_num = 1;
+	repeated int32 required_experience = 2;
+	repeated float cp_multiplier = 3;
+	int32 max_egg_player_level = 4;
+	int32 max_encounter_player_level = 5;
+}

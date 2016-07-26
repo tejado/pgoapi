@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PlayerData.proto";
+
+message SetPlayerTeamResponse {
+	.POGOProtos.Networking.Responses.SetPlayerTeamResponse.Status status = 1;
+	.POGOProtos.Data.PlayerData player_data = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		TEAM_ALREADY_SET = 2;
+		FAILURE = 3;
+	}
+}

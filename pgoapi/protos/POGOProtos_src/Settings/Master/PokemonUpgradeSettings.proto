@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message PokemonUpgradeSettings {
+	int32 upgrades_per_level = 1;
+	int32 allowed_levels_above_player = 2;
+	repeated int32 candy_cost = 3;
+	repeated int32 stardust_cost = 4;
+}

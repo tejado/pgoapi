@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message DailyBonus {
+	int64 next_collected_timestamp_ms = 1;
+	int64 next_defender_bonus_collect_timestamp_ms = 2;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GetHatchedEggsResponse {
+	bool success = 1;
+	repeated fixed64 pokemon_id = 2 [packed=true];
+	repeated int32 experience_awarded = 3;
+	repeated int32 candy_awarded = 4;
+	repeated int32 stardust_awarded = 5;
+}

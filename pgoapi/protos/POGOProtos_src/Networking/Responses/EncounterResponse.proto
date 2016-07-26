@@ -1,0 +1,28 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Capture/CaptureProbability.proto";
+import "POGOProtos/Map/Pokemon/WildPokemon.proto";
+
+message EncounterResponse {
+	.POGOProtos.Map.Pokemon.WildPokemon wild_pokemon = 1;
+	Background background = 2;
+	Status status = 3;
+	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 4;
+
+	enum Background {
+		PARK = 0;
+		DESERT = 1;
+	}
+
+	enum Status {
+		ENCOUNTER_ERROR = 0;
+		ENCOUNTER_SUCCESS = 1;
+		ENCOUNTER_NOT_FOUND = 2;
+		ENCOUNTER_CLOSED = 3;
+		ENCOUNTER_POKEMON_FLED = 4;
+		ENCOUNTER_NOT_IN_RANGE = 5;
+		ENCOUNTER_ALREADY_HAPPENED = 6;
+		POKEMON_INVENTORY_FULL = 7;
+	}
+}

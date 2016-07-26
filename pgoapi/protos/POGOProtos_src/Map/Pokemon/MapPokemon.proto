@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Map.Pokemon;
+
+import "POGOProtos/Enums/PokemonId.proto";
+
+message MapPokemon {
+	string spawn_point_id = 1;
+	fixed64 encounter_id = 2;
+	.POGOProtos.Enums.PokemonId pokemon_id = 3;
+	// After this timestamp, the pokemon will be gone.
+	int64 expiration_timestamp_ms = 4;
+	double latitude = 5;
+	double longitude = 6;
+}

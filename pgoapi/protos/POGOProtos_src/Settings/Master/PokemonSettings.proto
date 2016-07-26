@@ -1,0 +1,35 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/PokemonRarity.proto";
+import "POGOProtos/Enums/PokemonType.proto";
+import "POGOProtos/Enums/PokemonMove.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Settings/Master/Pokemon/StatsAttributes.proto";
+import "POGOProtos/Settings/Master/Pokemon/CameraAttributes.proto";
+import "POGOProtos/Settings/Master/Pokemon/EncounterAttributes.proto";
+
+message PokemonSettings {
+	.POGOProtos.Enums.PokemonId pokemon_id = 1;
+	float model_scale = 3;
+	.POGOProtos.Enums.PokemonType type = 4;
+	.POGOProtos.Enums.PokemonType type_2 = 5;
+	.POGOProtos.Settings.Master.Pokemon.CameraAttributes camera = 6;
+	.POGOProtos.Settings.Master.Pokemon.EncounterAttributes encounter = 7;
+	.POGOProtos.Settings.Master.Pokemon.StatsAttributes stats = 8;
+	repeated .POGOProtos.Enums.PokemonMove quick_moves = 9;
+	repeated .POGOProtos.Enums.PokemonMove cinematic_moves = 10;
+	repeated float animation_time = 11;
+	repeated .POGOProtos.Enums.PokemonId evolution_ids = 12;
+	int32 evolution_pips = 13;
+	.POGOProtos.Enums.PokemonRarity rarity = 14;
+	float pokedex_height_m = 15;
+	float pokedex_weight_kg = 16;
+	.POGOProtos.Enums.PokemonId parent_pokemon_id = 17;
+	float height_std_dev = 18;
+	float weight_std_dev = 19;
+	float km_distance_to_hatch = 20;
+	.POGOProtos.Enums.PokemonId family_id = 21;
+	int32 candy_to_evolve = 22;
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Settings/Master/ItemSettings.proto";
+import "POGOProtos/Settings/Master/MoveSettings.proto";
+import "POGOProtos/Settings/Master/BadgeSettings.proto";
+import "POGOProtos/Settings/Master/PokemonSettings.proto";
+import "POGOProtos/Settings/Master/MoveSequenceSettings.proto";
+import "POGOProtos/Settings/Master/TypeEffectiveSettings.proto";
+import "POGOProtos/Settings/Master/CameraSettings.proto";
+import "POGOProtos/Settings/Master/PlayerLevelSettings.proto";
+import "POGOProtos/Settings/Master/GymLevelSettings.proto";
+import "POGOProtos/Settings/Master/GymBattleSettings.proto";
+import "POGOProtos/Settings/Master/EncounterSettings.proto";
+import "POGOProtos/Settings/Master/IapItemDisplay.proto";
+import "POGOProtos/Settings/Master/IapSettings.proto";
+import "POGOProtos/Settings/Master/PokemonUpgradeSettings.proto";
+import "POGOProtos/Settings/Master/EquippedBadgeSettings.proto";
+
+
+
+message DownloadItemTemplatesResponse {
+	bool success = 1;
+	repeated .POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate item_templates = 2;
+	uint64 timestamp_ms = 3;
+
+	message ItemTemplate {
+		string template_id = 1;
+		.POGOProtos.Settings.Master.PokemonSettings pokemon_settings = 2;
+		.POGOProtos.Settings.Master.ItemSettings item_settings = 3;
+		.POGOProtos.Settings.Master.MoveSettings move_settings = 4;
+		.POGOProtos.Settings.Master.MoveSequenceSettings move_sequence_settings = 5;
+		.POGOProtos.Settings.Master.TypeEffectiveSettings type_effective = 8;
+		.POGOProtos.Settings.Master.BadgeSettings badge_settings = 10; 
+		.POGOProtos.Settings.Master.CameraSettings camera = 11;
+		.POGOProtos.Settings.Master.PlayerLevelSettings player_level = 12;
+		.POGOProtos.Settings.Master.GymLevelSettings gym_level = 13;
+		.POGOProtos.Settings.Master.GymBattleSettings battle_settings = 14;
+		.POGOProtos.Settings.Master.EncounterSettings encounter_settings = 15;
+		.POGOProtos.Settings.Master.IapItemDisplay iap_item_display = 16;
+		.POGOProtos.Settings.Master.IapSettings iap_settings = 17;
+		.POGOProtos.Settings.Master.PokemonUpgradeSettings pokemon_upgrades = 18;
+		.POGOProtos.Settings.Master.EquippedBadgeSettings equipped_badges = 19;
+	}
+}

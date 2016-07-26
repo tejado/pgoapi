@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message InventorySettings {
+	int32 max_pokemon = 1;
+	int32 max_bag_items = 2;
+	int32 base_pokemon = 3;
+	int32 base_bag_items = 4;
+	int32 base_eggs = 5;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Battle/BattleLog.proto";
+import "POGOProtos/Data/Battle/BattlePokemonInfo.proto";
+
+message AttackGymResponse {
+	.POGOProtos.Networking.Responses.AttackGymResponse.Result result = 1;
+	.POGOProtos.Data.Battle.BattleLog battle_log = 2;
+	string battle_id = 3;
+	.POGOProtos.Data.Battle.BattlePokemonInfo active_defender = 4;
+	.POGOProtos.Data.Battle.BattlePokemonInfo active_attacker = 5;
+
+    enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_ATTACK_ACTIONS = 2;
+		ERROR_NOT_IN_RANGE = 3;
+    }
+}

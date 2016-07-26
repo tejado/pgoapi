@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message DownloadSettingsAction {
+	string hash = 1;
+}

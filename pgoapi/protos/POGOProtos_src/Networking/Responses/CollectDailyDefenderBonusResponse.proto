@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message CollectDailyDefenderBonusResponse {
+	.POGOProtos.Networking.Responses.CollectDailyDefenderBonusResponse.Result result = 1;
+	repeated string currency_type = 2;
+	repeated int32 currency_awarded = 3;
+	int32 defenders_count = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+		TOO_SOON = 3;
+		NO_DEFENDERS = 4;
+	}
+}

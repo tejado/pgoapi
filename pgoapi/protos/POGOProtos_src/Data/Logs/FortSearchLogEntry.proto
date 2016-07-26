@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Inventory/Item/ItemData.proto";
+
+message FortSearchLogEntry {
+	.POGOProtos.Data.Logs.FortSearchLogEntry.Result result = 1;
+	string fort_id = 2;
+	repeated .POGOProtos.Inventory.Item.ItemData items = 3;
+	int32 eggs = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

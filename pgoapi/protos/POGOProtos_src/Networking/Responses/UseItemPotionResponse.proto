@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message UseItemPotionResponse {
+	.POGOProtos.Networking.Responses.UseItemPotionResponse.Result result = 1;
+	int32 stamina = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_NO_POKEMON = 2;
+		ERROR_CANNOT_USE = 3;
+		ERROR_DEPLOYED_TO_FORT = 4;
+	}
+}

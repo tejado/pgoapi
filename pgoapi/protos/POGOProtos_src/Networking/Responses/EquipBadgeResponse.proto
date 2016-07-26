@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Player/EquippedBadge.proto";
+
+message EquipBadgeResponse {
+	.POGOProtos.Networking.Responses.EquipBadgeResponse.Result result = 1;
+	.POGOProtos.Data.Player.EquippedBadge equipped = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		COOLDOWN_ACTIVE = 2;
+		NOT_QUALIFIED = 3;
+	}
+}

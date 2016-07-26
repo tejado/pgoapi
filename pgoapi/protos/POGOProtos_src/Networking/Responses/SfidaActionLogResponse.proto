@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Logs/ActionLogEntry.proto";
+
+message SfidaActionLogResponse {
+	.POGOProtos.Networking.Responses.SfidaActionLogResponse.Result result = 1;
+	repeated .POGOProtos.Data.Logs.ActionLogEntry log_entries = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

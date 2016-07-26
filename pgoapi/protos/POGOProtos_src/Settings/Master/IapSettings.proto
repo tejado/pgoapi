@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message IapSettings {
+	int32 daily_bonus_coins = 1;
+	repeated int32 daily_defender_bonus_per_pokemon = 2;
+	int32 daily_defender_bonus_max_defenders = 3;
+	repeated string daily_defender_bonus_currency = 4;
+	int64 min_time_between_claims_ms = 5;
+	bool daily_bonus_enabled = 6;
+	bool daily_defender_bonus_enabled = 7;
+}

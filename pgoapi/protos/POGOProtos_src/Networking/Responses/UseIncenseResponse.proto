@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Inventory/AppliedItem.proto";
+
+message UseIncenseResponse {
+	.POGOProtos.Networking.Responses.UseIncenseResponse.Result result = 1;
+	.POGOProtos.Inventory.AppliedItem applied_incense = 2;
+
+	enum Result {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		INCENSE_ALREADY_ACTIVE = 2;
+		NONE_IN_INVENTORY = 3;
+		LOCATION_UNSET = 4;
+	}
+}

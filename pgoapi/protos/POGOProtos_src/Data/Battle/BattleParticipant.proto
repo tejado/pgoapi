@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Battle;
+
+import "POGOProtos/Data/Battle/BattlePokemonInfo.proto";
+import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
+
+message BattleParticipant {
+	.POGOProtos.Data.Battle.BattlePokemonInfo active_pokemon = 1;
+	.POGOProtos.Data.Player.PlayerPublicProfile trainer_public_profile = 2;
+	repeated .POGOProtos.Data.Battle.BattlePokemonInfo reverse_pokemon = 3;
+	repeated .POGOProtos.Data.Battle.BattlePokemonInfo defeated_pokemon = 4;
+}

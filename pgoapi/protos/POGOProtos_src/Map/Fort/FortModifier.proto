@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Map.Fort;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message FortModifier {
+	.POGOProtos.Inventory.Item.ItemId item_id = 1;
+	int64 expiration_timestamp_ms = 2;
+	string deployer_player_codename = 3;
+}

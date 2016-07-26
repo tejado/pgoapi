@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Inventory/Item/ItemType.proto";
+
+message AppliedItem {
+	.POGOProtos.Inventory.Item.ItemId item_id = 1;
+	.POGOProtos.Inventory.Item.ItemType item_type = 2;
+	int64 expire_ms = 3;
+	int64 applied_ms = 4;
+}

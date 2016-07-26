@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Battle;
+
+import "POGOProtos/Data/Gym/GymState.proto";
+import "POGOProtos/Data/Battle/BattleParticipant.proto";
+
+message BattleResults {
+	.POGOProtos.Data.Gym.GymState gym_state = 1;
+	repeated .POGOProtos.Data.Battle.BattleParticipant attackers = 2;
+	repeated int32 player_experience_awarded = 3;
+	int64 next_defender_pokemon_id = 4;
+	int32 gym_points_delta = 5;
+}

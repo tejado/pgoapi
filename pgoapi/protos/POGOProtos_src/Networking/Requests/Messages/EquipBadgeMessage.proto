@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Enums/BadgeType.proto";
+
+message EquipBadgeMessage {
+	.POGOProtos.Enums.BadgeType badge_type = 1;
+}

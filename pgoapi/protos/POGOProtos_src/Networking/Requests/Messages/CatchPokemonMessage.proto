@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message CatchPokemonMessage {
+	fixed64 encounter_id = 1;
+	.POGOProtos.Inventory.Item.ItemId pokeball = 2;
+	double normalized_reticle_size = 3;
+	string spawn_point_id = 4;
+	bool hit_pokemon = 5;
+	double spin_modifier = 6;
+	double normalized_hit_position = 7;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message UseItemCaptureMessage {
+	.POGOProtos.Inventory.Item.ItemId item_id = 1;
+	fixed64 encounter_id = 2;
+	string spawn_point_id = 3;
+}

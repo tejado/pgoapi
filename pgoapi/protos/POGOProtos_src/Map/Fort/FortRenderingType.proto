@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Map.Fort;
+
+enum FortRenderingType {
+	DEFAULT = 0;
+	INTERNAL_TEST = 1;
+}

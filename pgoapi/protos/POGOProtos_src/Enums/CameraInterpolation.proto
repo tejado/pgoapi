@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum CameraInterpolation {
+	CAM_INTERP_CUT = 0;
+	CAM_INTERP_LINEAR = 1;
+	CAM_INTERP_SMOOTH = 2;
+	CAM_INTERP_SMOOTH_ROT_LINEAR_MOVE = 3;
+	CAM_INTERP_DEPENDS = 4;
+}

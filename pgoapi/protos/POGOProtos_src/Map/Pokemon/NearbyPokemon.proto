@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Map.Pokemon;
+
+import "POGOProtos/Enums/PokemonId.proto";
+
+message NearbyPokemon {
+	.POGOProtos.Enums.PokemonId pokemon_id = 1;
+	float distance_in_meters = 2;
+	fixed64 encounter_id = 3;
+}
