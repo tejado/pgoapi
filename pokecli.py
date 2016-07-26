@@ -25,14 +25,10 @@ Author: tjado <https://github.com/tejado>
 """
 
 import os
-import re
 import sys
 import json
-import time
-import struct
 import pprint
 import logging
-import requests
 import argparse
 import getpass
 
@@ -43,44 +39,8 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from pgoapi import pgoapi
 from pgoapi import utilities as util
 
-# other stuff
-from google.protobuf.internal import encoder
-from geopy.geocoders import GoogleV3
-from s2sphere import Cell, CellId, LatLng
-
 
 log = logging.getLogger(__name__)
-
-def get_pos_by_name(location_name):
-    geolocator = GoogleV3()
-    loc = geolocator.geocode(location_name, timeout=10)
-    if not loc:
-        return None
-    log.info('Your given location: %s', loc.address.encode('utf-8'))
-    log.info('lat/long/alt: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
-
-    return (loc.latitude, loc.longitude, loc.altitude)
-
-def get_cell_ids(lat, long, radius = 10):
-    origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
-    walk = [origin.id()]
-    right = origin.next()
-    left = origin.prev()
-
-    # Search around provided radius
-    for i in range(radius):
-        walk.append(right.id())
-        walk.append(left.id())
-        right = right.next()
-        left = left.prev()
-
-    # Return everything
-    return sorted(walk)
-
-def encode(cellid):
-    output = []
-    encoder._VarintEncoder()(output.append, cellid)
-    return ''.join(output)
 
 def init_config():
     parser = argparse.ArgumentParser()
@@ -140,11 +100,11 @@ def main():
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
 
-    position = get_pos_by_name(config.location)
+    position = util.get_pos_by_name(config.location)
     if not position:
-        log.error('Position could not be found by name')
+        log.error('Your given location could not be found by name')
         return
-        
+
     if config.test:
         return
 
@@ -195,7 +155,12 @@ def main():
 
     # execute the RPC call
     response_dict = api.call()
+
+    # print the response dict
     print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
+
+    # or dumps it as a JSON
+    #print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2, cls=util.JSONByteEncoder)))
 
     # alternative:
     # api.get_player().get_inventory().get_map_objects().download_settings(hash="05daf51635c82611d1aac95c0b051d3ec088a930").call()
