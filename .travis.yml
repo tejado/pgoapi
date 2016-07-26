@@ -18,6 +18,9 @@ before_install:
   - export PREFIX=$HOME/usr
   - mkdir -p $SRCDIR $PREFIX/{bin,lib}
   - export PATH=$PREFIX/bin:$PATH
+  - ls -l $SRCDIR
+  - ls -l $PREFIX/bin
+
 
 install:
   - .travis/install_protobuf.sh
