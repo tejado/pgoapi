@@ -3,12 +3,10 @@ language: python
 
 python:
   - "2.7"
-  - "3.2"
   - "3.3"
   - "3.4"
   - "3.5"
   - "3.5-dev" # 3.5 development branch
-  - "nightly" # currently points to 3.6-dev
 
 cache:
   - pip
@@ -18,7 +16,6 @@ cache:
 before_install:
   - export SRCDIR=$HOME/src
   - export PREFIX=$HOME/usr
-  - rm -rf $SRCDIR $PREFIX
   - mkdir -p $SRCDIR $PREFIX/{bin,lib}
   - export PATH=$PREFIX/bin:$PATH
 
