@@ -1,14 +1,8 @@
-sudo: false
 language: python
+
 python:
   - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.5-dev" # 3.5 development branch
-  - "nightly" # currently points to 3.6-dev
-  
+
 before_install:
   - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
@@ -18,6 +12,9 @@ before_install:
   - sudo rm -rf /dev/shm
   - sudo ln -s /run/shm /dev/shm
 
-install: pip install -r requirements.txt
+install:
+  - pip install -r requirements.txt
+  - pip install .
+
 script:
-- nosetests
+  - nosetests
