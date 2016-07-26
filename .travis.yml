@@ -8,6 +8,16 @@ python:
   - "3.5"
   - "3.5-dev" # 3.5 development branch
   - "nightly" # currently points to 3.6-dev
+  
+before_install:
+  - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+  - chmod +x miniconda.sh
+  - ./miniconda.sh -b
+  - export PATH=/home/travis/miniconda/bin:$PATH
+  - conda update --yes conda
+  - sudo rm -rf /dev/shm
+  - sudo ln -s /run/shm /dev/shm
+
 install: pip install -r requirements.txt
 script:
 - nosetests
