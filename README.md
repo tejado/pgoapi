@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/RyanHope/pgoapi.svg?branch=master)](https://travis-ci.org/RyanHope/pgoapi)
+
 # pgoapi - a python pokemon go api lib/demo
 pgoapi is a client/api/demo for Pokemon Go by https://github.com/tejado.  
 It allows automatic parsing of requests/responses by finding the correct protobuf objects over a naming convention and will return the response in a parsed python dictionary format.   
@@ -114,7 +116,7 @@ All (known) RPC calls against the original Pokemon Go servers are listed in the 
     ...
     api.get_player()
     api.call()
-    
+
 The pgoapi will send this as a RPC request and tries to parse the response over a protobuf object with the same name (get_player) converted to CamelCase + 'Response'. In our example, it would be 'GetPlayerResponse'.
 
 If a request needs parameters, they can be added as arguments and pgoapi will try to add them automatically to the request, e.g.:
@@ -123,7 +125,7 @@ If a request needs parameters, they can be added as arguments and pgoapi will tr
     message DownloadSettingsMessage {
       optional string hash = 1;
     }
-    
+
     *python:*
     api = PGoApi()
     ...
