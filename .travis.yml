@@ -10,12 +10,14 @@ python:
   - "3.5-dev" # 3.5 development branch
   - "nightly" # currently points to 3.6-dev
 
-cache: .cache
+cache:
+  - pip
+  - $HOME/src
+  - $HOME/usr
 
 before_install:
-  - export CACHEDIR=$PWD/.cache/$(sha256sum .travis.yml .travis/* | sha256sum | cut -f1 -d' ')
-  - export SRCDIR=$CACHEDIR/src
-  - export PREFIX=$CACHEDIR/usr
+  - export SRCDIR=$HOME/src
+  - export PREFIX=$HOME/usr
   - mkdir -p $SRCDIR $PREFIX/{bin,lib}
   - export PATH=$PREFIX/bin:$PATH
 
