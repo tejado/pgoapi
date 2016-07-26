@@ -18,6 +18,7 @@ cache:
 before_install:
   - export SRCDIR=$HOME/src
   - export PREFIX=$HOME/usr
+  - rm -rf $SRCDIR $PREFIX
   - mkdir -p $SRCDIR $PREFIX/{bin,lib}
   - export PATH=$PREFIX/bin:$PATH
 
