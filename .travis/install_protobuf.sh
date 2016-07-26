@@ -5,7 +5,7 @@ cd $SRCDIR
 PROTOBUF=protobuf-2.4.1
 ARCHIVE=$PROTOBUF.tar.gz
 
-if [ -d $DIR ]
+if [ -d $PROTOBUF ]
 then
     echo "Protobuf already cached. Skipping compilation and installation."
     exit 0
