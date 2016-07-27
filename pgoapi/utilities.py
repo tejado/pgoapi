@@ -36,6 +36,9 @@ from s2sphere import Cell, CellId, LatLng
 
 log = logging.getLogger(__name__)
 
+def i2f(long):
+  return struct.unpack('<d', struct.pack('<Q', long))[0]
+
 def f2i(float):
   return struct.unpack('<Q', struct.pack('<d', float))[0]
 
@@ -79,4 +82,3 @@ def get_cell_ids(lat, long, radius = 10):
 
     # Return everything
     return sorted(walk)
-
