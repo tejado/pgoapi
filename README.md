@@ -143,6 +143,8 @@ If a request needs parameters, they can be added as arguments and pgoapi will tr
 ## Contribution
 Contributions are highly welcome. Please use github or [pgoapi.slack.com](https://pgoapi.slack.com) for it!  
 Join pgoapi.slack.com [here](https://pgoapislack.herokuapp.com/)!
+Setup by [mikeres0](https://github.com/mikeres0)
+Auto signup [repo](https://github.com/mikeres0/PgoAPI-Slack-Signup)
 
 ## Credits
 [Mila432](https://github.com/Mila432/Pokemon_Go_API) for the login secrets  
