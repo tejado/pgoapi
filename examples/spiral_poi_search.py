@@ -190,7 +190,7 @@ def find_poi(api, lat, lng):
     print_gmaps_dbug(coords)
 
 def get_key_from_pokemon(pokemon):
-    return '{}-{}'.format(pokemon['spawnpoint_id'], pokemon['pokemon_data']['pokemon_id'])
+    return '{}-{}'.format(pokemon['spawn_point_id'], pokemon['pokemon_data']['pokemon_id'])
 
 def print_gmaps_dbug(coords):
     url_string = 'http://maps.googleapis.com/maps/api/staticmap?size=400x400&path='
