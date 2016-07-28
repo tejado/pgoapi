@@ -30,7 +30,6 @@ import re
 import requests
 import six
 
-from .utilities import f2i, h2f
 from pgoapi.rpc_api import RpcApi
 from pgoapi.auth_ptc import AuthPtc
 from pgoapi.auth_google import AuthGoogle
@@ -127,8 +126,7 @@ class PGoApi:
         else:
             raise AttributeError
 
-
-    def login(self, provider, username, password):
+    def login(self, provider, username, password, auth_token=None):
 
         if not isinstance(username, six.string_types) or not isinstance(password, six.string_types):
             raise AuthException("Username/password not correctly specified")
@@ -142,9 +140,17 @@ class PGoApi:
 
         self.log.debug('Auth provider: %s', provider)
 
-        if not self._auth_provider.login(username, password):
-            self.log.info('Login process failed')
-            return False
+        if auth_token is None:
+            if not self._auth_provider.login(username, password):
+                self.log.info('Login process failed')
+                return False
+            with open("token.txt", "w") as f:
+                f.write(self._auth_provider.get_token())
+                self.log.info('Token saved')
+        else:
+            self.log.info('Reuse token')
+            self._auth_provider._login = True
+            self._auth_provider.set_token(auth_token)
 
         self.log.info('Starting RPC login sequence (app simulation)')
 
