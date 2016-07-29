@@ -11,10 +11,11 @@ install_reqs = parse_requirements(path_req, session=False)
 reqs = [str(ir.req) for ir in install_reqs]
 
 setup(name='pgoapi',
-      author='tjado',
-      description='Pokemon Go API lib',
-      version='1.1.0',
-      url='https://github.com/tejado/pgoapi',
-      packages=find_packages(),
-      install_requires=reqs,
+      author = 'tjado',
+      description = 'Pokemon Go API lib',
+      version = '1.1.5',
+      url = 'https://github.com/tejado/pgoapi',
+      download_url = "https://github.com/tejado/pgoapi/releases",
+      packages = find_packages(),
+      install_requires = reqs,
      )
