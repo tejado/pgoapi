@@ -167,7 +167,7 @@ class PGoApiRequest:
         if not self._req_method_list:
             raise EmptySubrequestChainException()
             
-        if (self._position_lat is None) or (self._position_lat is None) or (self._position_lat is None):
+        if (self._position_lat is None) or (self._position_lng is None) or (self._position_alt is None):
             raise NoPlayerPositionSetException()
 
         if self._auth_provider is None or not self._auth_provider.is_login():
