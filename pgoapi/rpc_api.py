@@ -104,6 +104,8 @@ class RpcApi:
         response = self._make_rpc(endpoint, request_proto)
 
         response_dict = self._parse_main_response(response, subrequests)
+        if not response_dict:
+            raise ServerBusyOrOfflineException()
 
         if ('auth_ticket' in response_dict) and ('expire_timestamp_ms' in response_dict['auth_ticket']) and (self._auth_provider.is_new_ticket(response_dict['auth_ticket']['expire_timestamp_ms'])):
             had_ticket = self._auth_provider.has_ticket()
