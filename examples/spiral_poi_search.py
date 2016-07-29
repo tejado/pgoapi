@@ -151,10 +151,7 @@ def main():
 
     # get player profile call
     # ----------------------
-    api.get_player()
-
-    # execute the RPC call
-    response_dict = api.call()
+    response_dict = api.get_player()
 
     # apparently new dict has binary data in it, so formatting it with this method no longer works, pprint works here but there are other alternatives    
     # print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2)))
@@ -176,8 +173,7 @@ def find_poi(api, lat, lng):
         #timestamp gets computed a different way:
         cell_ids = get_cell_ids(lat, lng)
         timestamps = [0,] * len(cell_ids)
-        api.get_map_objects(latitude = util.f2i(lat), longitude = util.f2i(lng), since_timestamp_ms = timestamps, cell_id = cell_ids)
-        response_dict = api.call()
+        response_dict = api.get_map_objects(latitude = util.f2i(lat), longitude = util.f2i(lng), since_timestamp_ms = timestamps, cell_id = cell_ids)
         if (response_dict['responses']):
             if 'status' in response_dict['responses']['GET_MAP_OBJECTS']:
                 if response_dict['responses']['GET_MAP_OBJECTS']['status'] == 1:
