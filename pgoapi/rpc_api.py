@@ -72,7 +72,7 @@ class RpcApi:
     def decode_raw(self, raw):
         output = error = None
         try:
-            process = subprocess.Popen(['protoc', '--decode_raw'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.Popen(['protoc', '--decode_raw'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True)
             output, error = process.communicate(raw)
         except:
             output = "Couldn't find protoc in your environment OR other issue..."
