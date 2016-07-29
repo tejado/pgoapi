@@ -44,5 +44,5 @@ Join pgoapi.slack.com [here](https://pgoapislack.herokuapp.com/)!
 [DeirhX](https://github.com/DeirhX) for thread-safety
 
 ## Ports
-[Node Port](https://github.com/Armax/Pokemon-GO-node-api) by Arm4x 
+[Node Port](https://github.com/Armax/Pokemon-GO-node-api) by Arm4x  
 [Node Port - pogobuf](https://github.com/cyraxx/pogobuf) by cyraxx 
