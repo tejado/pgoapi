@@ -155,6 +155,13 @@ class RpcApi:
                                 r.append(i)
                             except Exception as e:
                                 self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, i, proto_name, str(e))
+                    elif isinstance(value, dict):
+                        for k in value.keys():
+                            try:
+                                r = getattr(subrequest_extension, key)
+                                setattr(r, k, value[k])
+                            except Exception as e:
+                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, str(value), proto_name, str(e))
                     else:
                         try:
                             setattr(subrequest_extension, key, value)
