@@ -89,7 +89,7 @@ def init_config():
             load.update(json.load(data))
 
     # Read passed in Arguments
-    required = lambda x: not x in load
+    required = lambda x: x not in load
     parser.add_argument("-a", "--auth_service", help="Auth Service ('ptc' or 'google')",
         required=required("auth_service"))
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
