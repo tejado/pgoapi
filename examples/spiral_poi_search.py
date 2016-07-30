@@ -36,6 +36,9 @@ import requests
 import argparse
 import pprint
 
+# add directory of this file to PATH, so that the package will be found
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+
 from pgoapi import PGoApi
 from pgoapi.utilities import f2i, h2f
 from pgoapi import utilities as util
@@ -134,7 +137,7 @@ def main():
     position = get_pos_by_name(config.location)
     if not position:
         return
-        
+
     if config.test:
         return
 
@@ -153,7 +156,7 @@ def main():
     # ----------------------
     response_dict = api.get_player()
 
-    # apparently new dict has binary data in it, so formatting it with this method no longer works, pprint works here but there are other alternatives    
+    # apparently new dict has binary data in it, so formatting it with this method no longer works, pprint works here but there are other alternatives
     # print('Response dictionary: \n\r{}'.format(json.dumps(response_dict, indent=2)))
     print('Response dictionary: \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
     find_poi(api, position[0], position[1])
@@ -168,7 +171,7 @@ def find_poi(api, lat, lng):
         lng = coord['lng']
         api.set_position(lat, lng, 0)
 
-        
+
         #get_cellid was buggy -> replaced through get_cell_ids from pokecli
         #timestamp gets computed a different way:
         cell_ids = get_cell_ids(lat, lng)

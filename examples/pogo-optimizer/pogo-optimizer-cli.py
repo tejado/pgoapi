@@ -37,7 +37,7 @@ import argparse
 import getpass
 
 # add directory of this file to PATH, so that the package will be found
-sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), "../.."))
 
 # import Pokemon Go API lib
 from pgoapi import pgoapi
