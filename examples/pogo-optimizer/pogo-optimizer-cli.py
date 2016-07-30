@@ -161,10 +161,7 @@ def main():
 
     # get inventory call
     # ----------------------
-    api.get_inventory()
-
-    # execute the RPC call
-    response_dict = api.call()
+    response_dict = api.get_inventory()
 
     approot = os.path.dirname(os.path.realpath(__file__))
 
