@@ -54,6 +54,8 @@ class PGoApi:
         self._position_lng = None
         self._position_alt = None
 
+        self._certificate = None
+
         self.log.info('%s v%s - %s', __title__, __version__, __copyright__ )
 
     def set_logger(self, logger = None):
@@ -71,9 +73,9 @@ class PGoApi:
         self._position_lat = lat
         self._position_lng = lng
         self._position_alt = alt
-        
-    def create_request(self):    
-        request = PGoApiRequest(self._api_endpoint, self._auth_provider, self._position_lat, self._position_lng, self._position_alt)
+
+    def create_request(self):
+        request = PGoApiRequest(self._api_endpoint, self._auth_provider, self._position_lat, self._position_lng, self._position_alt, self._certificate)
         return request
 
     def __getattr__(self, func):
@@ -87,13 +89,16 @@ class PGoApi:
             return function
         else:
             raise AttributeError
-        
-    def login(self, provider, username, password, lat = None, lng = None, alt = None, app_simulation = True):
+
+    def login(self, provider, username, password, lat = None, lng = None, alt = None, app_simulation = True, cert = None):
 
         if lat and lng and alt:
             self._position_lat = lat
             self._position_lng = lng
             self._position_alt = alt
+
+        if cert:
+            self._certificate = cert
 
         if not isinstance(username, six.string_types) or not isinstance(password, six.string_types):
             raise AuthException("Username/password not correctly specified")
@@ -107,7 +112,7 @@ class PGoApi:
 
         self.log.debug('Auth provider: %s', provider)
 
-        if not self._auth_provider.login(username, password):
+        if not self._auth_provider.login(username, password, self._certificate):
             self.log.info('Login process failed')
             return False
 
@@ -150,7 +155,7 @@ class PGoApi:
         
 
 class PGoApiRequest:
-    def __init__(self, api_endpoint, auth_provider, position_lat, position_lng, position_alt):
+    def __init__(self, api_endpoint, auth_provider, position_lat, position_lng, position_alt, certificate):
         self.log = logging.getLogger(__name__)
 
         """ Inherit necessary parameters """
@@ -160,6 +165,8 @@ class PGoApiRequest:
         self._position_lat = position_lat
         self._position_lng = position_lng
         self._position_alt = position_alt
+
+        self._certificate = certificate
 
         self._req_method_list = []
 
@@ -174,7 +181,7 @@ class PGoApiRequest:
             self.log.info('Not logged in')
             return NotLoggedInException()
 
-        request = RpcApi(self._auth_provider)
+        request = RpcApi(self._auth_provider, self._certificate)
 
         self.log.info('Execution of RPC')
         response = None

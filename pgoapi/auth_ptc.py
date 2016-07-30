@@ -46,12 +46,12 @@ class AuthPtc(Auth):
         self._session = requests.session()
         self._session.verify = True
 
-    def login(self, username, password):
+    def login(self, username, password, cert):
 
         self.log.info('Login for: %s', username)
         
         head = {'User-Agent': 'niantic'}
-        r = self._session.get(self.PTC_LOGIN_URL, headers=head)
+        r = self._session.get(self.PTC_LOGIN_URL, headers=head, verify=cert)
 
         try:
             jdata = json.loads(r.content.decode('utf-8'))

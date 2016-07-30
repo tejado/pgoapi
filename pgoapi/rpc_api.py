@@ -49,7 +49,7 @@ class RpcApi:
 
     RPC_ID = 0
 
-    def __init__(self, auth_provider):
+    def __init__(self, auth_provider, certificate):
 
         self.log = logging.getLogger(__name__)
 
@@ -58,6 +58,7 @@ class RpcApi:
         self._session.verify = True
 
         self._auth_provider = auth_provider
+        self._certificate = certificate
 
         if RpcApi.RPC_ID == 0:
             RpcApi.RPC_ID = int(random.random() * 10 ** 18)
@@ -89,7 +90,7 @@ class RpcApi:
 
         request_proto_serialized = request_proto_plain.SerializeToString()
         try:
-            http_response = self._session.post(endpoint, data=request_proto_serialized)
+            http_response = self._session.post(endpoint, data=request_proto_serialized, verify=self._certificate)
         except requests.exceptions.ConnectionError as e:
             raise ServerBusyOrOfflineException
 
