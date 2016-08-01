@@ -37,7 +37,7 @@ from google.protobuf import message
 from importlib import import_module
 
 from pgoapi.protobuf_to_dict import protobuf_to_dict
-from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException
+from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException, ServerSideAccessForbiddenException, UnexpectedResponseException
 from pgoapi.utilities import f2i, h2f, to_camel_case, get_time_ms, get_format_time_diff
 
 from . import protos
@@ -105,7 +105,25 @@ class RpcApi:
 
         response_dict = self._parse_main_response(response, subrequests)
 
-        if ('auth_ticket' in response_dict) and ('expire_timestamp_ms' in response_dict['auth_ticket']) and (self._auth_provider.is_new_ticket(response_dict['auth_ticket']['expire_timestamp_ms'])):
+        self.check_authentication(response_dict)
+
+        """ 
+        some response validations 
+        """
+        if isinstance(response_dict, dict) and 'status_code' in response_dict:
+            sc = response_dict['status_code']
+            if sc == 102:
+                raise NotLoggedInException()
+            elif sc == 52:
+                raise ServerSideRequestThrottlingException("Request throttled by server... slow down man")
+
+        return response_dict
+
+    def check_authentication(self, response_dict):
+        if isinstance(response_dict, dict) and ('auth_ticket' in response_dict) and \
+           ('expire_timestamp_ms' in response_dict['auth_ticket']) and \
+           (self._auth_provider.is_new_ticket(response_dict['auth_ticket']['expire_timestamp_ms'])):
+
             had_ticket = self._auth_provider.has_ticket()
 
             auth_ticket = response_dict['auth_ticket']
@@ -119,15 +137,6 @@ class RpcApi:
                 self.log.debug('Replacing old auth ticket with new one valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
             else:
                 self.log.debug('Received auth ticket valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
-
-        if isinstance(response_dict, dict) and 'status_code' in response_dict:
-            sc = response_dict['status_code']
-            if sc == 102:
-                raise NotLoggedInException()
-            elif sc == 52:
-                raise ServerSideRequestThrottlingException("Request throttled by server... slow down man")
-
-        return response_dict
 
     def _build_main_request(self, subrequests, player_position = None):
         self.log.debug('Generating main RPC request...')
@@ -219,10 +228,13 @@ class RpcApi:
     def _parse_main_response(self, response_raw, subrequests):
         self.log.debug('Parsing main RPC response...')
 
-        if response_raw.status_code != 200:
-            self.log.warning('Unexpected HTTP server response - needs 200 got %s', response_raw.status_code)
+        if response_raw.status_code == 403:
+            raise ServerSideAccessForbiddenException("Seems your IP Address is banned or something else went badly wrong...")
+        elif response_raw.status_code != 200:
+            error = 'Unexpected HTTP server response - needs 200 got {}'.format(response_raw.status_code)
+            self.log.warning(error)
             self.log.debug('HTTP output: \n%s', response_raw.content.decode('utf-8'))
-            return False
+            raise UnexpectedResponseException(error)
 
         if response_raw.content is None:
             self.log.warning('Empty server response!')

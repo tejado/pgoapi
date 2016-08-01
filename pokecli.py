@@ -123,8 +123,8 @@ def main():
     # ----------------------
     response_dict = api.get_player()
     print('Response dictionary (get_player): \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
-    
-    # sleep 200ms due to server-side throttling
+
+    # sleep due to server-side throttling
     time.sleep(0.2)
 
     # get player profile + inventory call (thread-safe/chaining example)
