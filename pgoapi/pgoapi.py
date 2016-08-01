@@ -90,7 +90,7 @@ class PGoApi:
         
     def login(self, provider, username, password, lat = None, lng = None, alt = None, app_simulation = True):
 
-        if lat and lng and alt:
+        if (lat is not None) and (lng is not None) and (alt is not None):
             self._position_lat = lat
             self._position_lng = lng
             self._position_alt = alt
