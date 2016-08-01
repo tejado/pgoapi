@@ -33,7 +33,7 @@ from json import JSONEncoder
 # other stuff
 from google.protobuf.internal import encoder
 from geopy.geocoders import GoogleV3
-from s2sphere import Cell, CellId, LatLng
+from s2sphere import LatLng, Angle, Cap, RegionCoverer, math
 
 log = logging.getLogger(__name__)
 
@@ -65,21 +65,19 @@ def get_pos_by_name(location_name):
 
     return (loc.latitude, loc.longitude, loc.altitude)
 
-def get_cell_ids(lat, long, radius = 10):
-    origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
-    walk = [origin.id()]
-    right = origin.next()
-    left = origin.prev()
-
-    # Search around provided radius
-    for i in range(radius):
-        walk.append(right.id())
-        walk.append(left.id())
-        right = right.next()
-        left = left.prev()
-
-    # Return everything
-    return sorted(walk)
+EARTH_RADIUS = 6371 * 1000
+def get_cell_ids(lat, long, radius=1000):
+    # Max values allowed by server according to this comment:
+    # https://github.com/AeonLucid/POGOProtos/issues/83#issuecomment-235612285
+    if radius > 1500:
+        radius = 1500  # radius = 1500 is max allowed by the server
+    region = Cap.from_axis_angle(LatLng.from_degrees(lat, long).to_point(), Angle.from_degrees(360*radius/(2*math.pi*EARTH_RADIUS)))
+    coverer = RegionCoverer()
+    coverer.min_level = 15
+    coverer.max_level = 15
+    cells = coverer.get_covering(region)
+    cells = cells[:100]  # len(cells) = 100 is max allowed by the server
+    return sorted([x.id() for x in cells])
 
 def get_time_ms():
     return int(round(time.time() * 1000))
