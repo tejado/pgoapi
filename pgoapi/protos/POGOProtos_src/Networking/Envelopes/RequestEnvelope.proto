@@ -11,7 +11,7 @@ message RequestEnvelope {
 	uint64 request_id = 3;
 	repeated .POGOProtos.Networking.Requests.Request requests = 4;
 
-	.POGOProtos.Networking.Envelopes.Unknown6 unknown6 = 6;
+	repeated .POGOProtos.Networking.Envelopes.Unknown6 unknown6 = 6;
 	double latitude = 7;
 	double longitude = 8;
 	double altitude = 9;

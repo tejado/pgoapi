@@ -1,11 +1,32 @@
 syntax = "proto3";
 package POGOProtos.Networking.Envelopes;
 
+import "POGOProtos/Data/Player/Currency.proto";
+import "POGOProtos/Inventory/Item/ItemData.proto";
+
 message Unknown6Response {
-	int32 unknown1 = 1; //6
-	Unknown2 unknown2 = 2;
+	int32 response_type = 1; // Still don't know what 6 is, but 5 lists items available via IAPs. 
+	Unknown2 unknown2 = 2; // Response data
 
 	message Unknown2 {
-		uint64 unknown1 = 1;
+		uint64 unknown1 = 1; // Maybe status? It's always 1 (success), so it's probably that.
+		repeated StoreItem items = 2; // Items to show in the shop
+		repeated .POGOProtos.Data.Player.Currency player_currencies = 3; // currencies that player has at the moment
+		string unknown4 = 4; // Some base64 encoded stuff...
+		
+		message StoreItem {
+			string item_id = 1; // Internal ID (probably for Google Play/App Store) example: "pgorelease.incenseordinary.1"
+			bool is_iap = 2; // If true, this item is bought with real currency (USD, etc.) through the Play/App Store instead of Pokecoins
+			.POGOProtos.Data.Player.Currency currency_to_buy = 3; // This defines how much the item costs (with the exception of items that cost real money like Pokecoins, that's defined in the respective store)
+			.POGOProtos.Data.Player.Currency yields_currency = 4; // When bought, this IAP will yield this much currency
+			.POGOProtos.Inventory.Item.ItemData yields_item = 5; // The item and count of such item that this IAP will yield
+			repeated Tag tags = 6; // Stuff like SORT:12, CATEGORY:ITEMS
+			int32 unknown7 = 7; // Possibly something to toggle visibility in the store/purchasibility?
+			
+			message Tag {
+				string key = 1;
+				string value = 2;
+			}
+		}
 	}
 }

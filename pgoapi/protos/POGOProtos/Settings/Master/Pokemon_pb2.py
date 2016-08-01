@@ -21,12 +21,71 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos.Settings.Master.Pokemon.proto',
   package='POGOProtos.Settings.Master.Pokemon',
   syntax='proto3',
-  serialized_pb=_b('\n(POGOProtos.Settings.Master.Pokemon.proto\x12\"POGOProtos.Settings.Master.Pokemon\x1a\x16POGOProtos.Enums.proto\"\xa6\x02\n\x13\x45ncounterAttributes\x12\x19\n\x11\x62\x61se_capture_rate\x18\x01 \x01(\x02\x12\x16\n\x0e\x62\x61se_flee_rate\x18\x02 \x01(\x02\x12\x1a\n\x12\x63ollision_radius_m\x18\x03 \x01(\x02\x12\x1a\n\x12\x63ollision_height_m\x18\x04 \x01(\x02\x12\x1f\n\x17\x63ollision_head_radius_m\x18\x05 \x01(\x02\x12<\n\rmovement_type\x18\x06 \x01(\x0e\x32%.POGOProtos.Enums.PokemonMovementType\x12\x18\n\x10movement_timer_s\x18\x07 \x01(\x02\x12\x13\n\x0bjump_time_s\x18\x08 \x01(\x02\x12\x16\n\x0e\x61ttack_timer_s\x18\t \x01(\x02\"\x97\x01\n\x10\x43\x61meraAttributes\x12\x15\n\rdisk_radius_m\x18\x01 \x01(\x02\x12\x19\n\x11\x63ylinder_radius_m\x18\x02 \x01(\x02\x12\x19\n\x11\x63ylinder_height_m\x18\x03 \x01(\x02\x12\x19\n\x11\x63ylinder_ground_m\x18\x04 \x01(\x02\x12\x1b\n\x13shoulder_mode_scale\x18\x05 \x01(\x02\"n\n\x0fStatsAttributes\x12\x14\n\x0c\x62\x61se_stamina\x18\x01 \x01(\x05\x12\x13\n\x0b\x62\x61se_attack\x18\x02 \x01(\x05\x12\x14\n\x0c\x62\x61se_defense\x18\x03 \x01(\x05\x12\x1a\n\x12\x64odge_energy_delta\x18\x08 \x01(\x05P\x00\x62\x06proto3')
+  serialized_pb=_b('\n(POGOProtos.Settings.Master.Pokemon.proto\x12\"POGOProtos.Settings.Master.Pokemon\x1a\x16POGOProtos.Enums.proto\"\x97\x01\n\x10\x43\x61meraAttributes\x12\x15\n\rdisk_radius_m\x18\x01 \x01(\x02\x12\x19\n\x11\x63ylinder_radius_m\x18\x02 \x01(\x02\x12\x19\n\x11\x63ylinder_height_m\x18\x03 \x01(\x02\x12\x19\n\x11\x63ylinder_ground_m\x18\x04 \x01(\x02\x12\x1b\n\x13shoulder_mode_scale\x18\x05 \x01(\x02\"\xa6\x02\n\x13\x45ncounterAttributes\x12\x19\n\x11\x62\x61se_capture_rate\x18\x01 \x01(\x02\x12\x16\n\x0e\x62\x61se_flee_rate\x18\x02 \x01(\x02\x12\x1a\n\x12\x63ollision_radius_m\x18\x03 \x01(\x02\x12\x1a\n\x12\x63ollision_height_m\x18\x04 \x01(\x02\x12\x1f\n\x17\x63ollision_head_radius_m\x18\x05 \x01(\x02\x12<\n\rmovement_type\x18\x06 \x01(\x0e\x32%.POGOProtos.Enums.PokemonMovementType\x12\x18\n\x10movement_timer_s\x18\x07 \x01(\x02\x12\x13\n\x0bjump_time_s\x18\x08 \x01(\x02\x12\x16\n\x0e\x61ttack_timer_s\x18\t \x01(\x02\"n\n\x0fStatsAttributes\x12\x14\n\x0c\x62\x61se_stamina\x18\x01 \x01(\x05\x12\x13\n\x0b\x62\x61se_attack\x18\x02 \x01(\x05\x12\x14\n\x0c\x62\x61se_defense\x18\x03 \x01(\x05\x12\x1a\n\x12\x64odge_energy_delta\x18\x08 \x01(\x05P\x00\x62\x06proto3')
   ,
   dependencies=[POGOProtos_dot_Enums__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
+
+
+_CAMERAATTRIBUTES = _descriptor.Descriptor(
+  name='CameraAttributes',
+  full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='disk_radius_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.disk_radius_m', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cylinder_radius_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.cylinder_radius_m', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cylinder_height_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.cylinder_height_m', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cylinder_ground_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.cylinder_ground_m', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='shoulder_mode_scale', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.shoulder_mode_scale', index=4,
+      number=5, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=105,
+  serialized_end=256,
+)
 
 
 _ENCOUNTERATTRIBUTES = _descriptor.Descriptor(
@@ -111,66 +170,7 @@ _ENCOUNTERATTRIBUTES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=105,
-  serialized_end=399,
-)
-
-
-_CAMERAATTRIBUTES = _descriptor.Descriptor(
-  name='CameraAttributes',
-  full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='disk_radius_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.disk_radius_m', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cylinder_radius_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.cylinder_radius_m', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cylinder_height_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.cylinder_height_m', index=2,
-      number=3, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cylinder_ground_m', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.cylinder_ground_m', index=3,
-      number=4, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='shoulder_mode_scale', full_name='POGOProtos.Settings.Master.Pokemon.CameraAttributes.shoulder_mode_scale', index=4,
-      number=5, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=402,
+  serialized_start=259,
   serialized_end=553,
 )
 
@@ -227,16 +227,9 @@ _STATSATTRIBUTES = _descriptor.Descriptor(
 )
 
 _ENCOUNTERATTRIBUTES.fields_by_name['movement_type'].enum_type = POGOProtos_dot_Enums__pb2._POKEMONMOVEMENTTYPE
-DESCRIPTOR.message_types_by_name['EncounterAttributes'] = _ENCOUNTERATTRIBUTES
 DESCRIPTOR.message_types_by_name['CameraAttributes'] = _CAMERAATTRIBUTES
+DESCRIPTOR.message_types_by_name['EncounterAttributes'] = _ENCOUNTERATTRIBUTES
 DESCRIPTOR.message_types_by_name['StatsAttributes'] = _STATSATTRIBUTES
-
-EncounterAttributes = _reflection.GeneratedProtocolMessageType('EncounterAttributes', (_message.Message,), dict(
-  DESCRIPTOR = _ENCOUNTERATTRIBUTES,
-  __module__ = 'POGOProtos.Settings.Master.Pokemon_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Settings.Master.Pokemon.EncounterAttributes)
-  ))
-_sym_db.RegisterMessage(EncounterAttributes)
 
 CameraAttributes = _reflection.GeneratedProtocolMessageType('CameraAttributes', (_message.Message,), dict(
   DESCRIPTOR = _CAMERAATTRIBUTES,
@@ -244,6 +237,13 @@ CameraAttributes = _reflection.GeneratedProtocolMessageType('CameraAttributes', 
   # @@protoc_insertion_point(class_scope:POGOProtos.Settings.Master.Pokemon.CameraAttributes)
   ))
 _sym_db.RegisterMessage(CameraAttributes)
+
+EncounterAttributes = _reflection.GeneratedProtocolMessageType('EncounterAttributes', (_message.Message,), dict(
+  DESCRIPTOR = _ENCOUNTERATTRIBUTES,
+  __module__ = 'POGOProtos.Settings.Master.Pokemon_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Settings.Master.Pokemon.EncounterAttributes)
+  ))
+_sym_db.RegisterMessage(EncounterAttributes)
 
 StatsAttributes = _reflection.GeneratedProtocolMessageType('StatsAttributes', (_message.Message,), dict(
   DESCRIPTOR = _STATSATTRIBUTES,

@@ -2,6 +2,6 @@ syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
 
 message SetFavoritePokemonMessage {
-	fixed64 pokemon_id = 1;
+	uint64 pokemon_id = 1; // needs to be uint64, tested by Grover
 	bool is_favorite = 2;
 }

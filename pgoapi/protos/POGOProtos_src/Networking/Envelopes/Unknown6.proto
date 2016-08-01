@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Envelopes;
 
 message Unknown6 {
-	int32 unknown1 = 1; //6
+	int32 request_type = 1; // 5 for IAPs, 6 is unknown still
 	Unknown2 unknown2 = 2;
 
 	message Unknown2 {

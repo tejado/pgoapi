@@ -15,6 +15,7 @@ _sym_db = _symbol_database.Default()
 
 
 from POGOProtos.Inventory import Item_pb2 as POGOProtos_dot_Inventory_dot_Item__pb2
+from POGOProtos import Enums_pb2 as POGOProtos_dot_Enums__pb2
 from POGOProtos import Data_pb2 as POGOProtos_dot_Data__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Data_dot_Player__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Data_dot_Player__pb2
@@ -22,22 +23,44 @@ POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Enums__pb2
 POGOProtos_dot_Inventory_dot_Item__pb2 = POGOProtos_dot_Data__pb2.POGOProtos_dot_Inventory_dot_Item__pb2
 from POGOProtos.Data import Player_pb2 as POGOProtos_dot_Data_dot_Player__pb2
 POGOProtos_dot_Enums__pb2 = POGOProtos_dot_Data_dot_Player__pb2.POGOProtos_dot_Enums__pb2
-from POGOProtos import Enums_pb2 as POGOProtos_dot_Enums__pb2
 
 from POGOProtos.Inventory.Item_pb2 import *
+from POGOProtos.Enums_pb2 import *
 from POGOProtos.Data_pb2 import *
 from POGOProtos.Data.Player_pb2 import *
-from POGOProtos.Enums_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos.Inventory.proto',
   package='POGOProtos.Inventory',
   syntax='proto3',
-  serialized_pb=_b('\n\x1aPOGOProtos.Inventory.proto\x12\x14POGOProtos.Inventory\x1a\x1fPOGOProtos.Inventory.Item.proto\x1a\x15POGOProtos.Data.proto\x1a\x1cPOGOProtos.Data.Player.proto\x1a\x16POGOProtos.Enums.proto\"?\n\x0c\x41ppliedItems\x12/\n\x04item\x18\x04 \x03(\x0b\x32!.POGOProtos.Inventory.AppliedItem\"\xa0\x01\n\x0b\x41ppliedItem\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12\x36\n\titem_type\x18\x02 \x01(\x0e\x32#.POGOProtos.Inventory.Item.ItemType\x12\x11\n\texpire_ms\x18\x03 \x01(\x03\x12\x12\n\napplied_ms\x18\x04 \x01(\x03\"\x87\x01\n\x0eInventoryDelta\x12\x1d\n\x15original_timestamp_ms\x18\x01 \x01(\x03\x12\x18\n\x10new_timestamp_ms\x18\x02 \x01(\x03\x12<\n\x0finventory_items\x18\x03 \x03(\x0b\x32#.POGOProtos.Inventory.InventoryItem\"\xed\x01\n\x0c\x45ggIncubator\x12\n\n\x02id\x18\x01 \x01(\t\x12\x32\n\x07item_id\x18\x02 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12>\n\x0eincubator_type\x18\x03 \x01(\x0e\x32&.POGOProtos.Inventory.EggIncubatorType\x12\x16\n\x0euses_remaining\x18\x04 \x01(\x05\x12\x12\n\npokemon_id\x18\x05 \x01(\x04\x12\x17\n\x0fstart_km_walked\x18\x06 \x01(\x01\x12\x18\n\x10target_km_walked\x18\x07 \x01(\x01\"\xd2\x04\n\x11InventoryItemData\x12\x32\n\x0cpokemon_data\x18\x01 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x31\n\x04item\x18\x02 \x01(\x0b\x32#.POGOProtos.Inventory.Item.ItemData\x12\x34\n\rpokedex_entry\x18\x03 \x01(\x0b\x32\x1d.POGOProtos.Data.PokedexEntry\x12\x39\n\x0cplayer_stats\x18\x04 \x01(\x0b\x32#.POGOProtos.Data.Player.PlayerStats\x12?\n\x0fplayer_currency\x18\x05 \x01(\x0b\x32&.POGOProtos.Data.Player.PlayerCurrency\x12;\n\rplayer_camera\x18\x06 \x01(\x0b\x32$.POGOProtos.Data.Player.PlayerCamera\x12\x43\n\x12inventory_upgrades\x18\x07 \x01(\x0b\x32\'.POGOProtos.Inventory.InventoryUpgrades\x12\x39\n\rapplied_items\x18\x08 \x01(\x0b\x32\".POGOProtos.Inventory.AppliedItems\x12;\n\x0e\x65gg_incubators\x18\t \x01(\x0b\x32#.POGOProtos.Inventory.EggIncubators\x12*\n\x05\x63\x61ndy\x18\n \x01(\x0b\x32\x1b.POGOProtos.Inventory.Candy\"\xa4\x01\n\x10InventoryUpgrade\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12@\n\x0cupgrade_type\x18\x02 \x01(\x0e\x32*.POGOProtos.Inventory.InventoryUpgradeType\x12\x1a\n\x12\x61\x64\x64itional_storage\x18\x03 \x01(\x05\"W\n\x11InventoryUpgrades\x12\x42\n\x12inventory_upgrades\x18\x01 \x03(\x0b\x32&.POGOProtos.Inventory.InventoryUpgrade\"J\n\rEggIncubators\x12\x39\n\regg_incubator\x18\x01 \x03(\x0b\x32\".POGOProtos.Inventory.EggIncubator\"F\n\x05\x43\x61ndy\x12.\n\tfamily_id\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\r\n\x05\x63\x61ndy\x18\x02 \x01(\x05\"\x8e\x01\n\rInventoryItem\x12\x1d\n\x15modified_timestamp_ms\x18\x01 \x01(\x03\x12\x18\n\x10\x64\x65leted_item_key\x18\x02 \x01(\x03\x12\x44\n\x13inventory_item_data\x18\x03 \x01(\x0b\x32\'.POGOProtos.Inventory.InventoryItemData*b\n\x14InventoryUpgradeType\x12\x11\n\rUPGRADE_UNSET\x10\x00\x12\x19\n\x15INCREASE_ITEM_STORAGE\x10\x01\x12\x1c\n\x18INCREASE_POKEMON_STORAGE\x10\x02*?\n\x10\x45ggIncubatorType\x12\x13\n\x0fINCUBATOR_UNSET\x10\x00\x12\x16\n\x12INCUBATOR_DISTANCE\x10\x01P\x00P\x01P\x02P\x03\x62\x06proto3')
+  serialized_pb=_b('\n\x1aPOGOProtos.Inventory.proto\x12\x14POGOProtos.Inventory\x1a\x1fPOGOProtos.Inventory.Item.proto\x1a\x16POGOProtos.Enums.proto\x1a\x15POGOProtos.Data.proto\x1a\x1cPOGOProtos.Data.Player.proto\"\xa0\x01\n\x0b\x41ppliedItem\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12\x36\n\titem_type\x18\x02 \x01(\x0e\x32#.POGOProtos.Inventory.Item.ItemType\x12\x11\n\texpire_ms\x18\x03 \x01(\x03\x12\x12\n\napplied_ms\x18\x04 \x01(\x03\"?\n\x0c\x41ppliedItems\x12/\n\x04item\x18\x04 \x03(\x0b\x32!.POGOProtos.Inventory.AppliedItem\"L\n\x05\x43\x61ndy\x12\x34\n\tfamily_id\x18\x01 \x01(\x0e\x32!.POGOProtos.Enums.PokemonFamilyId\x12\r\n\x05\x63\x61ndy\x18\x02 \x01(\x05\"\xed\x01\n\x0c\x45ggIncubator\x12\n\n\x02id\x18\x01 \x01(\t\x12\x32\n\x07item_id\x18\x02 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12>\n\x0eincubator_type\x18\x03 \x01(\x0e\x32&.POGOProtos.Inventory.EggIncubatorType\x12\x16\n\x0euses_remaining\x18\x04 \x01(\x05\x12\x12\n\npokemon_id\x18\x05 \x01(\x04\x12\x17\n\x0fstart_km_walked\x18\x06 \x01(\x01\x12\x18\n\x10target_km_walked\x18\x07 \x01(\x01\"J\n\rEggIncubators\x12\x39\n\regg_incubator\x18\x01 \x03(\x0b\x32\".POGOProtos.Inventory.EggIncubator\"\x87\x01\n\x0eInventoryDelta\x12\x1d\n\x15original_timestamp_ms\x18\x01 \x01(\x03\x12\x18\n\x10new_timestamp_ms\x18\x02 \x01(\x03\x12<\n\x0finventory_items\x18\x03 \x03(\x0b\x32#.POGOProtos.Inventory.InventoryItem\"\x8e\x01\n\rInventoryItem\x12\x1d\n\x15modified_timestamp_ms\x18\x01 \x01(\x03\x12\x18\n\x10\x64\x65leted_item_key\x18\x02 \x01(\x03\x12\x44\n\x13inventory_item_data\x18\x03 \x01(\x0b\x32\'.POGOProtos.Inventory.InventoryItemData\"\xd2\x04\n\x11InventoryItemData\x12\x32\n\x0cpokemon_data\x18\x01 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x31\n\x04item\x18\x02 \x01(\x0b\x32#.POGOProtos.Inventory.Item.ItemData\x12\x34\n\rpokedex_entry\x18\x03 \x01(\x0b\x32\x1d.POGOProtos.Data.PokedexEntry\x12\x39\n\x0cplayer_stats\x18\x04 \x01(\x0b\x32#.POGOProtos.Data.Player.PlayerStats\x12?\n\x0fplayer_currency\x18\x05 \x01(\x0b\x32&.POGOProtos.Data.Player.PlayerCurrency\x12;\n\rplayer_camera\x18\x06 \x01(\x0b\x32$.POGOProtos.Data.Player.PlayerCamera\x12\x43\n\x12inventory_upgrades\x18\x07 \x01(\x0b\x32\'.POGOProtos.Inventory.InventoryUpgrades\x12\x39\n\rapplied_items\x18\x08 \x01(\x0b\x32\".POGOProtos.Inventory.AppliedItems\x12;\n\x0e\x65gg_incubators\x18\t \x01(\x0b\x32#.POGOProtos.Inventory.EggIncubators\x12*\n\x05\x63\x61ndy\x18\n \x01(\x0b\x32\x1b.POGOProtos.Inventory.Candy\"\xa4\x01\n\x10InventoryUpgrade\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12@\n\x0cupgrade_type\x18\x02 \x01(\x0e\x32*.POGOProtos.Inventory.InventoryUpgradeType\x12\x1a\n\x12\x61\x64\x64itional_storage\x18\x03 \x01(\x05\"W\n\x11InventoryUpgrades\x12\x42\n\x12inventory_upgrades\x18\x01 \x03(\x0b\x32&.POGOProtos.Inventory.InventoryUpgrade*?\n\x10\x45ggIncubatorType\x12\x13\n\x0fINCUBATOR_UNSET\x10\x00\x12\x16\n\x12INCUBATOR_DISTANCE\x10\x01*b\n\x14InventoryUpgradeType\x12\x11\n\rUPGRADE_UNSET\x10\x00\x12\x19\n\x15INCREASE_ITEM_STORAGE\x10\x01\x12\x1c\n\x18INCREASE_POKEMON_STORAGE\x10\x02P\x00P\x01P\x02P\x03\x62\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Inventory_dot_Item__pb2.DESCRIPTOR,POGOProtos_dot_Data__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player__pb2.DESCRIPTOR,POGOProtos_dot_Enums__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Inventory_dot_Item__pb2.DESCRIPTOR,POGOProtos_dot_Enums__pb2.DESCRIPTOR,POGOProtos_dot_Data__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+_EGGINCUBATORTYPE = _descriptor.EnumDescriptor(
+  name='EggIncubatorType',
+  full_name='POGOProtos.Inventory.EggIncubatorType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='INCUBATOR_UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INCUBATOR_DISTANCE', index=1, number=1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=1920,
+  serialized_end=1983,
+)
+_sym_db.RegisterEnumDescriptor(_EGGINCUBATORTYPE)
+
+EggIncubatorType = enum_type_wrapper.EnumTypeWrapper(_EGGINCUBATORTYPE)
 _INVENTORYUPGRADETYPE = _descriptor.EnumDescriptor(
   name='InventoryUpgradeType',
   full_name='POGOProtos.Inventory.InventoryUpgradeType',
@@ -59,72 +82,18 @@ _INVENTORYUPGRADETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1914,
-  serialized_end=2012,
+  serialized_start=1985,
+  serialized_end=2083,
 )
 _sym_db.RegisterEnumDescriptor(_INVENTORYUPGRADETYPE)
 
 InventoryUpgradeType = enum_type_wrapper.EnumTypeWrapper(_INVENTORYUPGRADETYPE)
-_EGGINCUBATORTYPE = _descriptor.EnumDescriptor(
-  name='EggIncubatorType',
-  full_name='POGOProtos.Inventory.EggIncubatorType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='INCUBATOR_UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INCUBATOR_DISTANCE', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=2014,
-  serialized_end=2077,
-)
-_sym_db.RegisterEnumDescriptor(_EGGINCUBATORTYPE)
-
-EggIncubatorType = enum_type_wrapper.EnumTypeWrapper(_EGGINCUBATORTYPE)
+INCUBATOR_UNSET = 0
+INCUBATOR_DISTANCE = 1
 UPGRADE_UNSET = 0
 INCREASE_ITEM_STORAGE = 1
 INCREASE_POKEMON_STORAGE = 2
-INCUBATOR_UNSET = 0
-INCUBATOR_DISTANCE = 1
 
-
-
-_APPLIEDITEMS = _descriptor.Descriptor(
-  name='AppliedItems',
-  full_name='POGOProtos.Inventory.AppliedItems',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='item', full_name='POGOProtos.Inventory.AppliedItems.item', index=0,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=162,
-  serialized_end=225,
-)
 
 
 _APPLIEDITEM = _descriptor.Descriptor(
@@ -174,35 +143,21 @@ _APPLIEDITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=228,
-  serialized_end=388,
+  serialized_start=163,
+  serialized_end=323,
 )
 
 
-_INVENTORYDELTA = _descriptor.Descriptor(
-  name='InventoryDelta',
-  full_name='POGOProtos.Inventory.InventoryDelta',
+_APPLIEDITEMS = _descriptor.Descriptor(
+  name='AppliedItems',
+  full_name='POGOProtos.Inventory.AppliedItems',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='original_timestamp_ms', full_name='POGOProtos.Inventory.InventoryDelta.original_timestamp_ms', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='new_timestamp_ms', full_name='POGOProtos.Inventory.InventoryDelta.new_timestamp_ms', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='inventory_items', full_name='POGOProtos.Inventory.InventoryDelta.inventory_items', index=2,
-      number=3, type=11, cpp_type=10, label=3,
+      name='item', full_name='POGOProtos.Inventory.AppliedItems.item', index=0,
+      number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -219,8 +174,46 @@ _INVENTORYDELTA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=391,
-  serialized_end=526,
+  serialized_start=325,
+  serialized_end=388,
+)
+
+
+_CANDY = _descriptor.Descriptor(
+  name='Candy',
+  full_name='POGOProtos.Inventory.Candy',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='family_id', full_name='POGOProtos.Inventory.Candy.family_id', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='candy', full_name='POGOProtos.Inventory.Candy.candy', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=390,
+  serialized_end=466,
 )
 
 
@@ -292,8 +285,129 @@ _EGGINCUBATOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=529,
-  serialized_end=766,
+  serialized_start=469,
+  serialized_end=706,
+)
+
+
+_EGGINCUBATORS = _descriptor.Descriptor(
+  name='EggIncubators',
+  full_name='POGOProtos.Inventory.EggIncubators',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='egg_incubator', full_name='POGOProtos.Inventory.EggIncubators.egg_incubator', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=708,
+  serialized_end=782,
+)
+
+
+_INVENTORYDELTA = _descriptor.Descriptor(
+  name='InventoryDelta',
+  full_name='POGOProtos.Inventory.InventoryDelta',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='original_timestamp_ms', full_name='POGOProtos.Inventory.InventoryDelta.original_timestamp_ms', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='new_timestamp_ms', full_name='POGOProtos.Inventory.InventoryDelta.new_timestamp_ms', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='inventory_items', full_name='POGOProtos.Inventory.InventoryDelta.inventory_items', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=785,
+  serialized_end=920,
+)
+
+
+_INVENTORYITEM = _descriptor.Descriptor(
+  name='InventoryItem',
+  full_name='POGOProtos.Inventory.InventoryItem',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='modified_timestamp_ms', full_name='POGOProtos.Inventory.InventoryItem.modified_timestamp_ms', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='deleted_item_key', full_name='POGOProtos.Inventory.InventoryItem.deleted_item_key', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='inventory_item_data', full_name='POGOProtos.Inventory.InventoryItem.inventory_item_data', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=923,
+  serialized_end=1065,
 )
 
 
@@ -386,8 +500,8 @@ _INVENTORYITEMDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=769,
-  serialized_end=1363,
+  serialized_start=1068,
+  serialized_end=1662,
 )
 
 
@@ -431,8 +545,8 @@ _INVENTORYUPGRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1366,
-  serialized_end=1530,
+  serialized_start=1665,
+  serialized_end=1829,
 )
 
 
@@ -462,130 +576,19 @@ _INVENTORYUPGRADES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1532,
-  serialized_end=1619,
+  serialized_start=1831,
+  serialized_end=1918,
 )
 
-
-_EGGINCUBATORS = _descriptor.Descriptor(
-  name='EggIncubators',
-  full_name='POGOProtos.Inventory.EggIncubators',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='egg_incubator', full_name='POGOProtos.Inventory.EggIncubators.egg_incubator', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1621,
-  serialized_end=1695,
-)
-
-
-_CANDY = _descriptor.Descriptor(
-  name='Candy',
-  full_name='POGOProtos.Inventory.Candy',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='family_id', full_name='POGOProtos.Inventory.Candy.family_id', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='candy', full_name='POGOProtos.Inventory.Candy.candy', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1697,
-  serialized_end=1767,
-)
-
-
-_INVENTORYITEM = _descriptor.Descriptor(
-  name='InventoryItem',
-  full_name='POGOProtos.Inventory.InventoryItem',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='modified_timestamp_ms', full_name='POGOProtos.Inventory.InventoryItem.modified_timestamp_ms', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='deleted_item_key', full_name='POGOProtos.Inventory.InventoryItem.deleted_item_key', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='inventory_item_data', full_name='POGOProtos.Inventory.InventoryItem.inventory_item_data', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1770,
-  serialized_end=1912,
-)
-
-_APPLIEDITEMS.fields_by_name['item'].message_type = _APPLIEDITEM
 _APPLIEDITEM.fields_by_name['item_id'].enum_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMID
 _APPLIEDITEM.fields_by_name['item_type'].enum_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMTYPE
-_INVENTORYDELTA.fields_by_name['inventory_items'].message_type = _INVENTORYITEM
+_APPLIEDITEMS.fields_by_name['item'].message_type = _APPLIEDITEM
+_CANDY.fields_by_name['family_id'].enum_type = POGOProtos_dot_Enums__pb2._POKEMONFAMILYID
 _EGGINCUBATOR.fields_by_name['item_id'].enum_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMID
 _EGGINCUBATOR.fields_by_name['incubator_type'].enum_type = _EGGINCUBATORTYPE
+_EGGINCUBATORS.fields_by_name['egg_incubator'].message_type = _EGGINCUBATOR
+_INVENTORYDELTA.fields_by_name['inventory_items'].message_type = _INVENTORYITEM
+_INVENTORYITEM.fields_by_name['inventory_item_data'].message_type = _INVENTORYITEMDATA
 _INVENTORYITEMDATA.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data__pb2._POKEMONDATA
 _INVENTORYITEMDATA.fields_by_name['item'].message_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMDATA
 _INVENTORYITEMDATA.fields_by_name['pokedex_entry'].message_type = POGOProtos_dot_Data__pb2._POKEDEXENTRY
@@ -599,28 +602,18 @@ _INVENTORYITEMDATA.fields_by_name['candy'].message_type = _CANDY
 _INVENTORYUPGRADE.fields_by_name['item_id'].enum_type = POGOProtos_dot_Inventory_dot_Item__pb2._ITEMID
 _INVENTORYUPGRADE.fields_by_name['upgrade_type'].enum_type = _INVENTORYUPGRADETYPE
 _INVENTORYUPGRADES.fields_by_name['inventory_upgrades'].message_type = _INVENTORYUPGRADE
-_EGGINCUBATORS.fields_by_name['egg_incubator'].message_type = _EGGINCUBATOR
-_CANDY.fields_by_name['family_id'].enum_type = POGOProtos_dot_Enums__pb2._POKEMONID
-_INVENTORYITEM.fields_by_name['inventory_item_data'].message_type = _INVENTORYITEMDATA
-DESCRIPTOR.message_types_by_name['AppliedItems'] = _APPLIEDITEMS
 DESCRIPTOR.message_types_by_name['AppliedItem'] = _APPLIEDITEM
-DESCRIPTOR.message_types_by_name['InventoryDelta'] = _INVENTORYDELTA
+DESCRIPTOR.message_types_by_name['AppliedItems'] = _APPLIEDITEMS
+DESCRIPTOR.message_types_by_name['Candy'] = _CANDY
 DESCRIPTOR.message_types_by_name['EggIncubator'] = _EGGINCUBATOR
+DESCRIPTOR.message_types_by_name['EggIncubators'] = _EGGINCUBATORS
+DESCRIPTOR.message_types_by_name['InventoryDelta'] = _INVENTORYDELTA
+DESCRIPTOR.message_types_by_name['InventoryItem'] = _INVENTORYITEM
 DESCRIPTOR.message_types_by_name['InventoryItemData'] = _INVENTORYITEMDATA
 DESCRIPTOR.message_types_by_name['InventoryUpgrade'] = _INVENTORYUPGRADE
 DESCRIPTOR.message_types_by_name['InventoryUpgrades'] = _INVENTORYUPGRADES
-DESCRIPTOR.message_types_by_name['EggIncubators'] = _EGGINCUBATORS
-DESCRIPTOR.message_types_by_name['Candy'] = _CANDY
-DESCRIPTOR.message_types_by_name['InventoryItem'] = _INVENTORYITEM
-DESCRIPTOR.enum_types_by_name['InventoryUpgradeType'] = _INVENTORYUPGRADETYPE
 DESCRIPTOR.enum_types_by_name['EggIncubatorType'] = _EGGINCUBATORTYPE
-
-AppliedItems = _reflection.GeneratedProtocolMessageType('AppliedItems', (_message.Message,), dict(
-  DESCRIPTOR = _APPLIEDITEMS,
-  __module__ = 'POGOProtos.Inventory_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.AppliedItems)
-  ))
-_sym_db.RegisterMessage(AppliedItems)
+DESCRIPTOR.enum_types_by_name['InventoryUpgradeType'] = _INVENTORYUPGRADETYPE
 
 AppliedItem = _reflection.GeneratedProtocolMessageType('AppliedItem', (_message.Message,), dict(
   DESCRIPTOR = _APPLIEDITEM,
@@ -629,12 +622,19 @@ AppliedItem = _reflection.GeneratedProtocolMessageType('AppliedItem', (_message.
   ))
 _sym_db.RegisterMessage(AppliedItem)
 
-InventoryDelta = _reflection.GeneratedProtocolMessageType('InventoryDelta', (_message.Message,), dict(
-  DESCRIPTOR = _INVENTORYDELTA,
+AppliedItems = _reflection.GeneratedProtocolMessageType('AppliedItems', (_message.Message,), dict(
+  DESCRIPTOR = _APPLIEDITEMS,
   __module__ = 'POGOProtos.Inventory_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.InventoryDelta)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.AppliedItems)
   ))
-_sym_db.RegisterMessage(InventoryDelta)
+_sym_db.RegisterMessage(AppliedItems)
+
+Candy = _reflection.GeneratedProtocolMessageType('Candy', (_message.Message,), dict(
+  DESCRIPTOR = _CANDY,
+  __module__ = 'POGOProtos.Inventory_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.Candy)
+  ))
+_sym_db.RegisterMessage(Candy)
 
 EggIncubator = _reflection.GeneratedProtocolMessageType('EggIncubator', (_message.Message,), dict(
   DESCRIPTOR = _EGGINCUBATOR,
@@ -642,6 +642,27 @@ EggIncubator = _reflection.GeneratedProtocolMessageType('EggIncubator', (_messag
   # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.EggIncubator)
   ))
 _sym_db.RegisterMessage(EggIncubator)
+
+EggIncubators = _reflection.GeneratedProtocolMessageType('EggIncubators', (_message.Message,), dict(
+  DESCRIPTOR = _EGGINCUBATORS,
+  __module__ = 'POGOProtos.Inventory_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.EggIncubators)
+  ))
+_sym_db.RegisterMessage(EggIncubators)
+
+InventoryDelta = _reflection.GeneratedProtocolMessageType('InventoryDelta', (_message.Message,), dict(
+  DESCRIPTOR = _INVENTORYDELTA,
+  __module__ = 'POGOProtos.Inventory_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.InventoryDelta)
+  ))
+_sym_db.RegisterMessage(InventoryDelta)
+
+InventoryItem = _reflection.GeneratedProtocolMessageType('InventoryItem', (_message.Message,), dict(
+  DESCRIPTOR = _INVENTORYITEM,
+  __module__ = 'POGOProtos.Inventory_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.InventoryItem)
+  ))
+_sym_db.RegisterMessage(InventoryItem)
 
 InventoryItemData = _reflection.GeneratedProtocolMessageType('InventoryItemData', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYITEMDATA,
@@ -663,27 +684,6 @@ InventoryUpgrades = _reflection.GeneratedProtocolMessageType('InventoryUpgrades'
   # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.InventoryUpgrades)
   ))
 _sym_db.RegisterMessage(InventoryUpgrades)
-
-EggIncubators = _reflection.GeneratedProtocolMessageType('EggIncubators', (_message.Message,), dict(
-  DESCRIPTOR = _EGGINCUBATORS,
-  __module__ = 'POGOProtos.Inventory_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.EggIncubators)
-  ))
-_sym_db.RegisterMessage(EggIncubators)
-
-Candy = _reflection.GeneratedProtocolMessageType('Candy', (_message.Message,), dict(
-  DESCRIPTOR = _CANDY,
-  __module__ = 'POGOProtos.Inventory_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.Candy)
-  ))
-_sym_db.RegisterMessage(Candy)
-
-InventoryItem = _reflection.GeneratedProtocolMessageType('InventoryItem', (_message.Message,), dict(
-  DESCRIPTOR = _INVENTORYITEM,
-  __module__ = 'POGOProtos.Inventory_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Inventory.InventoryItem)
-  ))
-_sym_db.RegisterMessage(InventoryItem)
 
 
 # @@protoc_insertion_point(module_scope)

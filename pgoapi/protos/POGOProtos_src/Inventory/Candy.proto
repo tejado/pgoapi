@@ -1,9 +1,9 @@
 syntax = "proto3";
 package POGOProtos.Inventory;
 
-import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/PokemonFamilyId.proto";
 
 message Candy {
-	.POGOProtos.Enums.PokemonId family_id = 1;
+	.POGOProtos.Enums.PokemonFamilyId family_id = 1;
 	int32 candy = 2;
 }

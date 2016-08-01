@@ -21,50 +21,12 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos.Data.Player.proto',
   package='POGOProtos.Data.Player',
   syntax='proto3',
-  serialized_pb=_b('\n\x1cPOGOProtos.Data.Player.proto\x12\x16POGOProtos.Data.Player\x1a\x16POGOProtos.Enums.proto\"(\n\x08\x43urrency\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\"Q\n\x0f\x43ontactSettings\x12\x1d\n\x15send_marketing_emails\x18\x01 \x01(\x08\x12\x1f\n\x17send_push_notifications\x18\x02 \x01(\x08\"\x7f\n\rEquippedBadge\x12/\n\nbadge_type\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\r\n\x05level\x18\x02 \x01(\x05\x12.\n&next_equip_change_allowed_timestamp_ms\x18\x03 \x01(\x03\")\n\x0cPlayerCamera\x12\x19\n\x11is_default_camera\x18\x01 \x01(\x08\"\x1e\n\x0ePlayerCurrency\x12\x0c\n\x04gems\x18\x01 \x01(\x05\"h\n\x13PlayerPublicProfile\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05level\x18\x02 \x01(\x05\x12\x34\n\x06\x61vatar\x18\x03 \x01(\x0b\x32$.POGOProtos.Data.Player.PlayerAvatar\"c\n\nDailyBonus\x12#\n\x1bnext_collected_timestamp_ms\x18\x01 \x01(\x03\x12\x30\n(next_defender_bonus_collect_timestamp_ms\x18\x02 \x01(\x03\"\xae\x01\n\x0cPlayerAvatar\x12\x0c\n\x04skin\x18\x02 \x01(\x05\x12\x0c\n\x04hair\x18\x03 \x01(\x05\x12\r\n\x05shirt\x18\x04 \x01(\x05\x12\r\n\x05pants\x18\x05 \x01(\x05\x12\x0b\n\x03hat\x18\x06 \x01(\x05\x12\r\n\x05shoes\x18\x07 \x01(\x05\x12(\n\x06gender\x18\x08 \x01(\x0e\x32\x18.POGOProtos.Enums.Gender\x12\x0c\n\x04\x65yes\x18\t \x01(\x05\x12\x10\n\x08\x62\x61\x63kpack\x18\n \x01(\x05\"\xed\x04\n\x0bPlayerStats\x12\r\n\x05level\x18\x01 \x01(\x05\x12\x12\n\nexperience\x18\x02 \x01(\x03\x12\x15\n\rprev_level_xp\x18\x03 \x01(\x03\x12\x15\n\rnext_level_xp\x18\x04 \x01(\x03\x12\x11\n\tkm_walked\x18\x05 \x01(\x02\x12\x1c\n\x14pokemons_encountered\x18\x06 \x01(\x05\x12\x1e\n\x16unique_pokedex_entries\x18\x07 \x01(\x05\x12\x19\n\x11pokemons_captured\x18\x08 \x01(\x05\x12\x12\n\nevolutions\x18\t \x01(\x05\x12\x18\n\x10poke_stop_visits\x18\n \x01(\x05\x12\x18\n\x10pokeballs_thrown\x18\x0b \x01(\x05\x12\x14\n\x0c\x65ggs_hatched\x18\x0c \x01(\x05\x12\x1b\n\x13\x62ig_magikarp_caught\x18\r \x01(\x05\x12\x19\n\x11\x62\x61ttle_attack_won\x18\x0e \x01(\x05\x12\x1b\n\x13\x62\x61ttle_attack_total\x18\x0f \x01(\x05\x12\x1b\n\x13\x62\x61ttle_defended_won\x18\x10 \x01(\x05\x12\x1b\n\x13\x62\x61ttle_training_won\x18\x11 \x01(\x05\x12\x1d\n\x15\x62\x61ttle_training_total\x18\x12 \x01(\x05\x12\x1d\n\x15prestige_raised_total\x18\x13 \x01(\x05\x12\x1e\n\x16prestige_dropped_total\x18\x14 \x01(\x05\x12\x18\n\x10pokemon_deployed\x18\x15 \x01(\x05\x12\x1e\n\x16pokemon_caught_by_type\x18\x16 \x01(\x0c\x12\x1c\n\x14small_rattata_caught\x18\x17 \x01(\x05P\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x1cPOGOProtos.Data.Player.proto\x12\x16POGOProtos.Data.Player\x1a\x16POGOProtos.Enums.proto\"Q\n\x0f\x43ontactSettings\x12\x1d\n\x15send_marketing_emails\x18\x01 \x01(\x08\x12\x1f\n\x17send_push_notifications\x18\x02 \x01(\x08\"(\n\x08\x43urrency\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\"c\n\nDailyBonus\x12#\n\x1bnext_collected_timestamp_ms\x18\x01 \x01(\x03\x12\x30\n(next_defender_bonus_collect_timestamp_ms\x18\x02 \x01(\x03\"\x7f\n\rEquippedBadge\x12/\n\nbadge_type\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\r\n\x05level\x18\x02 \x01(\x05\x12.\n&next_equip_change_allowed_timestamp_ms\x18\x03 \x01(\x03\"\xae\x01\n\x0cPlayerAvatar\x12\x0c\n\x04skin\x18\x02 \x01(\x05\x12\x0c\n\x04hair\x18\x03 \x01(\x05\x12\r\n\x05shirt\x18\x04 \x01(\x05\x12\r\n\x05pants\x18\x05 \x01(\x05\x12\x0b\n\x03hat\x18\x06 \x01(\x05\x12\r\n\x05shoes\x18\x07 \x01(\x05\x12(\n\x06gender\x18\x08 \x01(\x0e\x32\x18.POGOProtos.Enums.Gender\x12\x0c\n\x04\x65yes\x18\t \x01(\x05\x12\x10\n\x08\x62\x61\x63kpack\x18\n \x01(\x05\")\n\x0cPlayerCamera\x12\x19\n\x11is_default_camera\x18\x01 \x01(\x08\"\x1e\n\x0ePlayerCurrency\x12\x0c\n\x04gems\x18\x01 \x01(\x05\"h\n\x13PlayerPublicProfile\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05level\x18\x02 \x01(\x05\x12\x34\n\x06\x61vatar\x18\x03 \x01(\x0b\x32$.POGOProtos.Data.Player.PlayerAvatar\"\xed\x04\n\x0bPlayerStats\x12\r\n\x05level\x18\x01 \x01(\x05\x12\x12\n\nexperience\x18\x02 \x01(\x03\x12\x15\n\rprev_level_xp\x18\x03 \x01(\x03\x12\x15\n\rnext_level_xp\x18\x04 \x01(\x03\x12\x11\n\tkm_walked\x18\x05 \x01(\x02\x12\x1c\n\x14pokemons_encountered\x18\x06 \x01(\x05\x12\x1e\n\x16unique_pokedex_entries\x18\x07 \x01(\x05\x12\x19\n\x11pokemons_captured\x18\x08 \x01(\x05\x12\x12\n\nevolutions\x18\t \x01(\x05\x12\x18\n\x10poke_stop_visits\x18\n \x01(\x05\x12\x18\n\x10pokeballs_thrown\x18\x0b \x01(\x05\x12\x14\n\x0c\x65ggs_hatched\x18\x0c \x01(\x05\x12\x1b\n\x13\x62ig_magikarp_caught\x18\r \x01(\x05\x12\x19\n\x11\x62\x61ttle_attack_won\x18\x0e \x01(\x05\x12\x1b\n\x13\x62\x61ttle_attack_total\x18\x0f \x01(\x05\x12\x1b\n\x13\x62\x61ttle_defended_won\x18\x10 \x01(\x05\x12\x1b\n\x13\x62\x61ttle_training_won\x18\x11 \x01(\x05\x12\x1d\n\x15\x62\x61ttle_training_total\x18\x12 \x01(\x05\x12\x1d\n\x15prestige_raised_total\x18\x13 \x01(\x05\x12\x1e\n\x16prestige_dropped_total\x18\x14 \x01(\x05\x12\x18\n\x10pokemon_deployed\x18\x15 \x01(\x05\x12\x1e\n\x16pokemon_caught_by_type\x18\x16 \x01(\x0c\x12\x1c\n\x14small_rattata_caught\x18\x17 \x01(\x05P\x00\x62\x06proto3')
   ,
   dependencies=[POGOProtos_dot_Enums__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
-
-
-_CURRENCY = _descriptor.Descriptor(
-  name='Currency',
-  full_name='POGOProtos.Data.Player.Currency',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='POGOProtos.Data.Player.Currency.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='amount', full_name='POGOProtos.Data.Player.Currency.amount', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=80,
-  serialized_end=120,
-)
 
 
 _CONTACTSETTINGS = _descriptor.Descriptor(
@@ -100,8 +62,84 @@ _CONTACTSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=122,
+  serialized_start=80,
+  serialized_end=161,
+)
+
+
+_CURRENCY = _descriptor.Descriptor(
+  name='Currency',
+  full_name='POGOProtos.Data.Player.Currency',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='POGOProtos.Data.Player.Currency.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='amount', full_name='POGOProtos.Data.Player.Currency.amount', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=163,
   serialized_end=203,
+)
+
+
+_DAILYBONUS = _descriptor.Descriptor(
+  name='DailyBonus',
+  full_name='POGOProtos.Data.Player.DailyBonus',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='next_collected_timestamp_ms', full_name='POGOProtos.Data.Player.DailyBonus.next_collected_timestamp_ms', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='next_defender_bonus_collect_timestamp_ms', full_name='POGOProtos.Data.Player.DailyBonus.next_defender_bonus_collect_timestamp_ms', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=205,
+  serialized_end=304,
 )
 
 
@@ -145,153 +183,8 @@ _EQUIPPEDBADGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=205,
-  serialized_end=332,
-)
-
-
-_PLAYERCAMERA = _descriptor.Descriptor(
-  name='PlayerCamera',
-  full_name='POGOProtos.Data.Player.PlayerCamera',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='is_default_camera', full_name='POGOProtos.Data.Player.PlayerCamera.is_default_camera', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=334,
-  serialized_end=375,
-)
-
-
-_PLAYERCURRENCY = _descriptor.Descriptor(
-  name='PlayerCurrency',
-  full_name='POGOProtos.Data.Player.PlayerCurrency',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='gems', full_name='POGOProtos.Data.Player.PlayerCurrency.gems', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=377,
-  serialized_end=407,
-)
-
-
-_PLAYERPUBLICPROFILE = _descriptor.Descriptor(
-  name='PlayerPublicProfile',
-  full_name='POGOProtos.Data.Player.PlayerPublicProfile',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='POGOProtos.Data.Player.PlayerPublicProfile.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='POGOProtos.Data.Player.PlayerPublicProfile.level', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='avatar', full_name='POGOProtos.Data.Player.PlayerPublicProfile.avatar', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=409,
-  serialized_end=513,
-)
-
-
-_DAILYBONUS = _descriptor.Descriptor(
-  name='DailyBonus',
-  full_name='POGOProtos.Data.Player.DailyBonus',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='next_collected_timestamp_ms', full_name='POGOProtos.Data.Player.DailyBonus.next_collected_timestamp_ms', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='next_defender_bonus_collect_timestamp_ms', full_name='POGOProtos.Data.Player.DailyBonus.next_defender_bonus_collect_timestamp_ms', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=515,
-  serialized_end=614,
+  serialized_start=306,
+  serialized_end=433,
 )
 
 
@@ -377,7 +270,114 @@ _PLAYERAVATAR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=617,
+  serialized_start=436,
+  serialized_end=610,
+)
+
+
+_PLAYERCAMERA = _descriptor.Descriptor(
+  name='PlayerCamera',
+  full_name='POGOProtos.Data.Player.PlayerCamera',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='is_default_camera', full_name='POGOProtos.Data.Player.PlayerCamera.is_default_camera', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=612,
+  serialized_end=653,
+)
+
+
+_PLAYERCURRENCY = _descriptor.Descriptor(
+  name='PlayerCurrency',
+  full_name='POGOProtos.Data.Player.PlayerCurrency',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gems', full_name='POGOProtos.Data.Player.PlayerCurrency.gems', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=655,
+  serialized_end=685,
+)
+
+
+_PLAYERPUBLICPROFILE = _descriptor.Descriptor(
+  name='PlayerPublicProfile',
+  full_name='POGOProtos.Data.Player.PlayerPublicProfile',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='POGOProtos.Data.Player.PlayerPublicProfile.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='level', full_name='POGOProtos.Data.Player.PlayerPublicProfile.level', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar', full_name='POGOProtos.Data.Player.PlayerPublicProfile.avatar', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=687,
   serialized_end=791,
 )
 
@@ -567,24 +567,17 @@ _PLAYERSTATS = _descriptor.Descriptor(
 )
 
 _EQUIPPEDBADGE.fields_by_name['badge_type'].enum_type = POGOProtos_dot_Enums__pb2._BADGETYPE
-_PLAYERPUBLICPROFILE.fields_by_name['avatar'].message_type = _PLAYERAVATAR
 _PLAYERAVATAR.fields_by_name['gender'].enum_type = POGOProtos_dot_Enums__pb2._GENDER
-DESCRIPTOR.message_types_by_name['Currency'] = _CURRENCY
+_PLAYERPUBLICPROFILE.fields_by_name['avatar'].message_type = _PLAYERAVATAR
 DESCRIPTOR.message_types_by_name['ContactSettings'] = _CONTACTSETTINGS
+DESCRIPTOR.message_types_by_name['Currency'] = _CURRENCY
+DESCRIPTOR.message_types_by_name['DailyBonus'] = _DAILYBONUS
 DESCRIPTOR.message_types_by_name['EquippedBadge'] = _EQUIPPEDBADGE
+DESCRIPTOR.message_types_by_name['PlayerAvatar'] = _PLAYERAVATAR
 DESCRIPTOR.message_types_by_name['PlayerCamera'] = _PLAYERCAMERA
 DESCRIPTOR.message_types_by_name['PlayerCurrency'] = _PLAYERCURRENCY
 DESCRIPTOR.message_types_by_name['PlayerPublicProfile'] = _PLAYERPUBLICPROFILE
-DESCRIPTOR.message_types_by_name['DailyBonus'] = _DAILYBONUS
-DESCRIPTOR.message_types_by_name['PlayerAvatar'] = _PLAYERAVATAR
 DESCRIPTOR.message_types_by_name['PlayerStats'] = _PLAYERSTATS
-
-Currency = _reflection.GeneratedProtocolMessageType('Currency', (_message.Message,), dict(
-  DESCRIPTOR = _CURRENCY,
-  __module__ = 'POGOProtos.Data.Player_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.Currency)
-  ))
-_sym_db.RegisterMessage(Currency)
 
 ContactSettings = _reflection.GeneratedProtocolMessageType('ContactSettings', (_message.Message,), dict(
   DESCRIPTOR = _CONTACTSETTINGS,
@@ -593,12 +586,33 @@ ContactSettings = _reflection.GeneratedProtocolMessageType('ContactSettings', (_
   ))
 _sym_db.RegisterMessage(ContactSettings)
 
+Currency = _reflection.GeneratedProtocolMessageType('Currency', (_message.Message,), dict(
+  DESCRIPTOR = _CURRENCY,
+  __module__ = 'POGOProtos.Data.Player_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.Currency)
+  ))
+_sym_db.RegisterMessage(Currency)
+
+DailyBonus = _reflection.GeneratedProtocolMessageType('DailyBonus', (_message.Message,), dict(
+  DESCRIPTOR = _DAILYBONUS,
+  __module__ = 'POGOProtos.Data.Player_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.DailyBonus)
+  ))
+_sym_db.RegisterMessage(DailyBonus)
+
 EquippedBadge = _reflection.GeneratedProtocolMessageType('EquippedBadge', (_message.Message,), dict(
   DESCRIPTOR = _EQUIPPEDBADGE,
   __module__ = 'POGOProtos.Data.Player_pb2'
   # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.EquippedBadge)
   ))
 _sym_db.RegisterMessage(EquippedBadge)
+
+PlayerAvatar = _reflection.GeneratedProtocolMessageType('PlayerAvatar', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYERAVATAR,
+  __module__ = 'POGOProtos.Data.Player_pb2'
+  # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.PlayerAvatar)
+  ))
+_sym_db.RegisterMessage(PlayerAvatar)
 
 PlayerCamera = _reflection.GeneratedProtocolMessageType('PlayerCamera', (_message.Message,), dict(
   DESCRIPTOR = _PLAYERCAMERA,
@@ -620,20 +634,6 @@ PlayerPublicProfile = _reflection.GeneratedProtocolMessageType('PlayerPublicProf
   # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.PlayerPublicProfile)
   ))
 _sym_db.RegisterMessage(PlayerPublicProfile)
-
-DailyBonus = _reflection.GeneratedProtocolMessageType('DailyBonus', (_message.Message,), dict(
-  DESCRIPTOR = _DAILYBONUS,
-  __module__ = 'POGOProtos.Data.Player_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.DailyBonus)
-  ))
-_sym_db.RegisterMessage(DailyBonus)
-
-PlayerAvatar = _reflection.GeneratedProtocolMessageType('PlayerAvatar', (_message.Message,), dict(
-  DESCRIPTOR = _PLAYERAVATAR,
-  __module__ = 'POGOProtos.Data.Player_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Data.Player.PlayerAvatar)
-  ))
-_sym_db.RegisterMessage(PlayerAvatar)
 
 PlayerStats = _reflection.GeneratedProtocolMessageType('PlayerStats', (_message.Message,), dict(
   DESCRIPTOR = _PLAYERSTATS,

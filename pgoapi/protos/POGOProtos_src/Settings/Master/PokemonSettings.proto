@@ -5,7 +5,7 @@ import "POGOProtos/Enums/PokemonId.proto";
 import "POGOProtos/Enums/PokemonRarity.proto";
 import "POGOProtos/Enums/PokemonType.proto";
 import "POGOProtos/Enums/PokemonMove.proto";
-import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/PokemonFamilyId.proto";
 import "POGOProtos/Settings/Master/Pokemon/StatsAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/CameraAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/EncounterAttributes.proto";
@@ -30,6 +30,6 @@ message PokemonSettings {
 	float height_std_dev = 18;
 	float weight_std_dev = 19;
 	float km_distance_to_hatch = 20;
-	.POGOProtos.Enums.PokemonId family_id = 21;
+	.POGOProtos.Enums.PokemonFamilyId family_id = 21;
 	int32 candy_to_evolve = 22;
 }

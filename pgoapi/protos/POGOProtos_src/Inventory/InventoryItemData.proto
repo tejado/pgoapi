@@ -4,7 +4,7 @@ package POGOProtos.Inventory;
 import "POGOProtos/Inventory/Item/ItemData.proto";
 import "POGOProtos/Inventory/AppliedItems.proto";
 import "POGOProtos/Inventory/EggIncubators.proto";
-import "POGOProtos/Inventory/PokemonFamily.proto";
+import "POGOProtos/Inventory/Candy.proto";
 import "POGOProtos/Inventory/InventoryUpgrades.proto";
 import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Data/PokedexEntry.proto";

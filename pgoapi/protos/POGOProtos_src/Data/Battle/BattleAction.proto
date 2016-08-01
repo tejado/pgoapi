@@ -12,11 +12,11 @@ message BattleAction {
 	int32 energy_delta = 5;
 	int32 attacker_index = 6;
 	int32 target_index = 7;
-	uint64 active_pokemon_id = 8;
+	fixed64 active_pokemon_id = 8;
 	.POGOProtos.Data.Battle.BattleParticipant player_joined = 9;
 	.POGOProtos.Data.Battle.BattleResults battle_results = 10;
 	int64 damage_windows_start_timestamp_mss = 11;
 	int64 damage_windows_end_timestamp_mss = 12;
 	.POGOProtos.Data.Battle.BattleParticipant player_left = 13;
-	uint64 target_pokemon_id = 14;
+	fixed64 target_pokemon_id = 14;
 }

@@ -1,6 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
+import "POGOProtos/Enums/PokemonId.proto";
+
 message GetIncensePokemonResponse {
 	.POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result result = 1;
 	.POGOProtos.Enums.PokemonId pokemon_id = 2;
