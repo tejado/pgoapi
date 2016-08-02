@@ -28,7 +28,6 @@ from __future__ import absolute_import
 import re
 import six
 import logging
-import requests
 
 from . import __title__, __version__, __copyright__
 from pgoapi.rpc_api import RpcApi
@@ -54,6 +53,7 @@ class PGoApi:
             self.set_authentication(provider, oauth2_refresh_token, username, password)
 
         self.set_api_endpoint("pgorelease.nianticlabs.com/plfe")
+        self._proxy = None
 
         self._position_lat = position_lat
         self._position_lng = position_lng
@@ -93,6 +93,9 @@ class PGoApi:
         self._position_lng = lng
         self._position_alt = alt
 
+    def set_proxy(self, proxy_config):
+        self._proxy = proxy_config
+
     def get_api_endpoint(self):
         return self._api_endpoint
 
@@ -106,7 +109,8 @@ class PGoApi:
         return self._auth_provider
 
     def create_request(self):
-        request = PGoApiRequest(self, self._position_lat, self._position_lng, self._position_alt)
+        request = PGoApiRequest(self, self._position_lat, self._position_lng,
+                                self._position_alt, self._proxy)
         return request
 
     def activate_signature(self, lib_path):
@@ -177,7 +181,7 @@ class PGoApi:
 
 
 class PGoApiRequest:
-    def __init__(self, parent, position_lat, position_lng, position_alt):
+    def __init__(self, parent, position_lat, position_lng, position_alt, proxy=None):
         self.log = logging.getLogger(__name__)
 
         self.__parent__ = parent
@@ -189,6 +193,8 @@ class PGoApiRequest:
         self._position_lat = position_lat
         self._position_lng = position_lng
         self._position_alt = position_alt
+
+        self._proxy = proxy
 
         self._req_method_list = []
 
@@ -203,7 +209,7 @@ class PGoApiRequest:
             self.log.info('Not logged in')
             return NotLoggedInException()
 
-        request = RpcApi(self._auth_provider)
+        request = RpcApi(self._auth_provider, self._proxy)
 
         lib_path = self.__parent__.get_signature_lib()
         if lib_path is not None:
