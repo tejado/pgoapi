@@ -49,11 +49,14 @@ class RpcApi:
 
     RPC_ID = 0
 
-    def __init__(self, auth_provider):
+    def __init__(self, auth_provider, proxy_config=None):
 
         self.log = logging.getLogger(__name__)
-
         self._session = requests.session()
+
+        if proxy_config is not None:
+            self._session.proxies = proxy_config
+
         self._session.headers.update({'User-Agent': 'Niantic App'})
         self._session.verify = True
 
@@ -90,7 +93,7 @@ class RpcApi:
         request_proto_serialized = request_proto_plain.SerializeToString()
         try:
             http_response = self._session.post(endpoint, data=request_proto_serialized)
-        except requests.exceptions.ConnectionError as e:
+        except requests.exceptions.ConnectionError:
             raise ServerBusyOrOfflineException
 
         return http_response
