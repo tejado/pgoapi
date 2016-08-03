@@ -73,7 +73,7 @@ class PGoApi:
         self._position_alt = alt
         
     def create_request(self):    
-        request = PGoApiRequest(self._api_endpoint, self._auth_provider, self._position_lat, self._position_lng, self._position_alt)
+        request = PGoApiRequest(self._api_endpoint, self._auth_provider, self._position_lat, self._position_lng, self._position_alt, self)
         return request
 
     def __getattr__(self, func):
@@ -124,25 +124,12 @@ class PGoApi:
             request.download_settings(hash="05daf51635c82611d1aac95c0b051d3ec088a930")
 
             response = request.call()
-        else:
-            self.log.info('Starting minimal RPC login sequence')
-            response = self.get_player()
 
-        if not response:
-            self.log.info('Login failed!')
-            return False
+            if not response:
+                self.log.info('Login failed!')
+                return False
 
-        if 'api_url' in response:
-            self._api_endpoint = ('https://{}/rpc'.format(response['api_url']))
-            self.log.debug('Setting API endpoint to: %s', self._api_endpoint)
-        else:
-            self.log.error('Login failed - unexpected server response!')
-            return False
-
-        if app_simulation:
             self.log.info('Finished RPC login sequence (app simulation)')
-        else:
-            self.log.info('Finished minimal RPC login sequence')
 
         self.log.info('Login process completed')
 
@@ -150,8 +137,10 @@ class PGoApi:
         
 
 class PGoApiRequest:
-    def __init__(self, api_endpoint, auth_provider, position_lat, position_lng, position_alt):
+    def __init__(self, api_endpoint, auth_provider, position_lat, position_lng, position_alt, pgoapi=None):
         self.log = logging.getLogger(__name__)
+
+        self._pgoapi = pgoapi
 
         """ Inherit necessary parameters """
         self._api_endpoint = api_endpoint
@@ -178,10 +167,20 @@ class PGoApiRequest:
 
         self.log.info('Execution of RPC')
         response = None
-        try:
-            response = request.request(self._api_endpoint, self._req_method_list, self.get_position())
-        except ServerBusyOrOfflineException as e:
-            self.log.info('Server seems to be busy or offline - try again!')
+        retry = True
+        while retry:
+            retry = False
+            try:
+                response = request.request(self._api_endpoint, self._req_method_list, self.get_position())
+            except ServerBusyOrOfflineException as e:
+                self.log.info('Server seems to be busy or offline - try again!')
+            if isinstance(response, dict) and 'status_code' in response:
+                if response['status_code'] == 53:
+                    self._api_endpoint = 'https://{}/rpc'.format(response['api_url'])
+                    self.log.info('Server requested to change endpoint to %s, retrying request on new endpoint', self._api_endpoint)
+                    if self._pgoapi:
+                        self._pgoapi._api_endpoint = self._api_endpoint
+                    retry = True
 
         # cleanup after call execution
         self.log.info('Cleanup of request!')
