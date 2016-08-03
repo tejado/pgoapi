@@ -62,6 +62,7 @@ def init_config():
     parser.add_argument("-l", "--location", help="Location", required=required("location"))
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-t", "--test", help="Only parse the specified location", action='store_true')
+    parser.add_argument("-c", "--cert", help="Certificate")
     parser.set_defaults(DEBUG=False, TEST=False)
     config = parser.parse_args()
 
@@ -116,7 +117,7 @@ def main():
     # set player position on the earth
     api.set_position(*position)
 
-    if not api.login(config.auth_service, config.username, config.password, app_simulation = True):
+    if not api.login(config.auth_service, config.username, config.password, app_simulation = True, cert = config.cert):
         return
 
     # get player profile call (single command example)
