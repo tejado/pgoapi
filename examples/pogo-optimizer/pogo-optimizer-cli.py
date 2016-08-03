@@ -37,7 +37,7 @@ import argparse
 import getpass
 
 # add directory of this file to PATH, so that the package will be found
-sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), "../.."))
 
 # import Pokemon Go API lib
 from pgoapi import pgoapi
@@ -45,10 +45,40 @@ from pgoapi import utilities as util
 
 # other stuff
 from google.protobuf.internal import encoder
+from geopy.geocoders import GoogleV3
+from s2sphere import Cell, CellId, LatLng
 from tabulate import tabulate
 from collections import defaultdict
 
+
 log = logging.getLogger(__name__)
+
+def get_pos_by_name(location_name):
+    geolocator = GoogleV3()
+    loc = geolocator.geocode(location_name, timeout=10)
+    if not loc:
+        return None
+
+    log.info('Your given location: %s', loc.address.encode('utf-8'))
+    log.info('lat/long/alt: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
+
+    return (loc.latitude, loc.longitude, loc.altitude)
+
+def get_cell_ids(lat, long, radius = 10):
+    origin = CellId.from_lat_lng(LatLng.from_degrees(lat, long)).parent(15)
+    walk = [origin.id()]
+    right = origin.next()
+    left = origin.prev()
+
+    # Search around provided radius
+    for i in range(radius):
+        walk.append(right.id())
+        walk.append(left.id())
+        right = right.next()
+        left = left.prev()
+
+    # Return everything
+    return sorted(walk)
 
 def encode(cellid):
     output = []
@@ -71,6 +101,7 @@ def init_config():
         required=required("auth_service"))
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
     parser.add_argument("-p", "--password", help="Password")
+    parser.add_argument("-l", "--location", help="Location", required=required("location"))
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-t", "--test", help="Only parse the specified location", action='store_true')
     parser.set_defaults(DEBUG=False, TEST=False)
@@ -90,6 +121,7 @@ def init_config():
       return None
 
     return config
+
 
 def main():
     # log settings
@@ -111,21 +143,25 @@ def main():
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
 
+    position = get_pos_by_name(config.location)
+    if not position:
+        return
+
     if config.test:
         return
 
     # instantiate pgoapi
     api = pgoapi.PGoApi()
 
+    # provide player position on the earth
+    api.set_position(*position)
+
     if not api.login(config.auth_service, config.username, config.password):
         return
 
     # get inventory call
     # ----------------------
-    api.get_inventory()
-
-    # execute the RPC call
-    response_dict = api.call()
+    response_dict = api.get_inventory()
 
     approot = os.path.dirname(os.path.realpath(__file__))
 
