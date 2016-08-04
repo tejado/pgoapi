@@ -28,7 +28,6 @@ from __future__ import absolute_import
 import re
 import six
 import logging
-import requests
 
 from . import __title__, __version__, __copyright__
 from pgoapi.rpc_api import RpcApi
@@ -49,6 +48,7 @@ class PGoApi:
 
         self._auth_provider = None
         self._api_endpoint = 'https://pgorelease.nianticlabs.com/plfe/rpc'
+        self._proxy = None
 
         self._position_lat = None
         self._position_lng = None
@@ -58,6 +58,9 @@ class PGoApi:
 
     def set_logger(self, logger = None):
         self.log = logger or logging.getLogger(__name__)
+
+    def set_proxy(self, proxy_config):
+        self._proxy = proxy_config
         
     def get_api_endpoint(self):
         return self._api_endpoint
@@ -73,7 +76,8 @@ class PGoApi:
         self._position_alt = alt
         
     def create_request(self):    
-        request = PGoApiRequest(self._api_endpoint, self._auth_provider, self._position_lat, self._position_lng, self._position_alt)
+        request = PGoApiRequest(self._api_endpoint, self._auth_provider, self._position_lat,
+                                self._position_lng, self._position_alt, self._proxy)
         return request
 
     def __getattr__(self, func):
@@ -150,7 +154,7 @@ class PGoApi:
         
 
 class PGoApiRequest:
-    def __init__(self, api_endpoint, auth_provider, position_lat, position_lng, position_alt):
+    def __init__(self, api_endpoint, auth_provider, position_lat, position_lng, position_alt, proxy=None):
         self.log = logging.getLogger(__name__)
 
         """ Inherit necessary parameters """
@@ -160,6 +164,8 @@ class PGoApiRequest:
         self._position_lat = position_lat
         self._position_lng = position_lng
         self._position_alt = position_alt
+
+        self._proxy = proxy
 
         self._req_method_list = []
 
@@ -174,7 +180,7 @@ class PGoApiRequest:
             self.log.info('Not logged in')
             return NotLoggedInException()
 
-        request = RpcApi(self._auth_provider)
+        request = RpcApi(self._auth_provider, self._proxy)
 
         self.log.info('Execution of RPC')
         response = None
