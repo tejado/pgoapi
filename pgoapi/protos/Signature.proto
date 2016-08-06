@@ -71,15 +71,15 @@ message Signature {
     // Apparently iOS only
     message iOSActivityStatus {
         // all of these had 1 as their value
-        uint64 start_time_ms = 1
-        bool unknown_status = 2
-        bool walking = 3
-        bool running = 4
-        bool stationary = 5
-        bool automotive = 6
-        bool tilting = 7
-        bool cycling = 8
-        bytes status = 9
+        uint64 start_time_ms = 1;
+        bool unknown_status = 2;
+        bool walking = 3;
+        bool running = 4;
+        bool stationary = 5;
+        bool automotive = 6;
+        bool tilting = 7;
+        bool cycling = 8;
+        bytes status = 9;
     }
 
     uint64 timestamp_since_start = 2; // in ms
