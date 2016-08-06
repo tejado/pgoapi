@@ -7,23 +7,29 @@ message Signature {
         uint64 timestamp_since_start = 2; // in ms
         float latitude = 13;
         float longitude = 14;
-        float unk20 = 20; // iOS only, possibly horizontal accuracy? (range seems to be -1 to +1)
+
+        // ??? shows up in struct, dunno where these go
+        // float device_speed;
+        // float device_course;
+        float horizontal_accuracy = 20; // iOS only? (range seems to be -1 to +1)
         float altitude = 21;
-        float unk22 = 22; // iOS only, possibly vertical accuracy? (range seems to be ~10-12)
-        uint64 unk26 = 26; // Usually 3 (possibly GPS status: 1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired)
+        float vertical_accuracy = 22; // iOS only? (range seems to be ~10-12)
+        uint64 provider_status = 26; // Usually 3 (possibly GPS status: 1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired)
                            // On iOS there are some LocationFixes with unk26=1 and everything else empty
-        uint64 unk28 = 28; // Always 1 (if there is data at all)
+        uint32 floor = 27; // No idea what this is, seems to be optional
+        uint64 location_type = 28; // Always 1 (if there is data at all)
     }
 
-    message Unknown5 {
-        uint64 unk1 = 1;
-        bytes unk2 = 2;
-        repeated fixed32 unk3 = 3;
-        repeated fixed32 unk4 = 4;
-        repeated fixed32 unk5 = 5;
-        bytes unk6 = 6;
-        bytes unk7 = 7;
-        bytes unk8 = 8;
+    // don't really care about this since we're not using it
+    message AndroidGpsInfo {
+        uint64 time_to_fix = 1;
+        repeated int32 satellites_prn = 2;
+        repeated float snr = 3;
+        repeated float azimuth = 4;
+        repeated float elevation = 5; 
+        repeated bool has_almanac = 6;
+        repeated bool has_ephemeris = 7;
+        repeated bool used_in_fix = 8;
     }
 
     message SensorInfo {
@@ -63,19 +69,25 @@ message Signature {
     }
 
     // Apparently iOS only
-    message Unknown9 {
+    message iOSActivityStatus {
         // all of these had 1 as their value
-        uint64 unk3 = 3;
-        uint64 unk5 = 5;
-        uint64 unk6 = 6;
+        uint64 start_time_ms = 1
+        bool unknown_status = 2
+        bool walking = 3
+        bool running = 4
+        bool stationary = 5
+        bool automotive = 6
+        bool tilting = 7
+        bool cycling = 8
+        bytes status = 9
     }
 
     uint64 timestamp_since_start = 2; // in ms
     repeated LocationFix location_fix = 4;
-    Unknown5 unk5 = 5;
+    AndroidGpsInfo gps_info = 5;
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
-    Unknown9 unk9 = 9;
+    iOSActivityStatus activity_status = 9;
     uint32 location_hash1 = 10; // Location1 hashed based on the auth_token - xxHash32
     uint32 location_hash2 = 20; // Location2 hashed based on the auth_token - xxHash32
     bytes unk22 = 22; // possibly replay check. Generation unknown but pointed to by 0001B8614
