@@ -27,6 +27,7 @@ import re
 import time
 import struct
 import logging
+import xxhash
 
 from json import JSONEncoder
 from binascii import unhexlify
@@ -156,3 +157,23 @@ def long_to_bytes (val, endianness='big'):
         s = s[::-1]
 
     return s
+    
+    
+def generateLocation1(authticket, lat, lng, alt):                                #u10
+    firstHash = xxhash.xxh32(bytearray(authticket), seed=0x1B845238).intdigest() #Hashing the auth ticket using static seed 0x1B845238
+    locationBytes = bytearray([lat,lng,alt])                                     #Lat, long and alt as a double
+    locationHash = xxhash.xxh32(locationBytes, seed=firstHash).intdigest()       #hash of location using the hashed auth ticket as seed
+    return locationHash
+
+def generateLocation2(lat, lng, alt):                                            #u20
+    locationBytes = bytearray([lat,lng,alt])
+    locationHash = xxhash.xxh32(locationBytes, seed=0x1B845238).intdigest()      #Hash of location using static seed 0x1B845238
+    return locationHash
+
+def generateRequests(requests):                                                  #u24
+    firstHash = xxhash.xxh64(bytearray(authticket), seed=0x1B845238).intdigest() #Hashing the auth ticket using static seed 0x1B845238
+    hashList = []                                                                #Leaving as a list for now
+    for req in requests:                                                         
+        hashArray.add(xxhash.xxh64(bytearray(req), seed=firstHash).intdigest()   #Hash each request with the hashed auth ticket as seed
+    hashArray = array(I, hashList)                                               #Convert the list to an array
+    return hashArray
