@@ -25,7 +25,9 @@ Author: tjado <https://github.com/tejado>
 
 from __future__ import absolute_import
 
+import os
 import re
+import time
 import base64
 import random
 import logging
@@ -36,18 +38,23 @@ from google.protobuf import message
 
 from importlib import import_module
 
+
+import ctypes
+
 from pgoapi.protobuf_to_dict import protobuf_to_dict
 from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException, ServerSideAccessForbiddenException, UnexpectedResponseException, AuthTokenExpiredException, ServerApiEndpointRedirectException
-from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff
+from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand48, long_to_bytes, generateLocation1, generateLocation2, generateRequestHash, f2i
 
 from . import protos
 from POGOProtos.Networking.Envelopes_pb2 import RequestEnvelope
 from POGOProtos.Networking.Envelopes_pb2 import ResponseEnvelope
 from POGOProtos.Networking.Requests_pb2 import RequestType
+import Signature_pb2
 
 class RpcApi:
 
     RPC_ID = 0
+    START_TIME = 0
 
     def __init__(self, auth_provider):
 
@@ -59,9 +66,24 @@ class RpcApi:
 
         self._auth_provider = auth_provider
 
+        """ mystic unknown6 - revolved by PokemonGoDev """
+        self._signature_gen = False
+        self._signature_lib = None
+        
+        if RpcApi.START_TIME == 0:
+            RpcApi.START_TIME = get_time(ms = True)
+
         if RpcApi.RPC_ID == 0:
             RpcApi.RPC_ID = int(random.random() * 10 ** 18)
             self.log.debug('Generated new random RPC Request id: %s', RpcApi.RPC_ID)
+
+    def activate_signature(self, lib_path):
+        try:
+            ctypes.cdll.LoadLibrary(lib_path)
+            self._signature_gen = True
+            self._signature_lib = lib_path
+        except:
+            raise
 
     def get_rpc_id(self):
         RpcApi.RPC_ID += 1
@@ -146,7 +168,7 @@ class RpcApi:
             else:
                 self.log.debug('Received Session Ticket valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
 
-    def _build_main_request2(self, subrequests, player_position = None):
+    def _build_main_request(self, subrequests, player_position = None):
         self.log.debug('Generating main RPC request...')
 
         request = RequestEnvelope()
@@ -155,11 +177,38 @@ class RpcApi:
 
         if player_position is not None:
             request.latitude, request.longitude, request.altitude = player_position
+        
+        request.altitude = 0.63
+
+        """ generate sub requests before signature generation """
+        request = self._build_sub_requests(request, subrequests)
 
         ticket = self._auth_provider.get_ticket()
         if ticket:
             self.log.debug('Found Session Ticket - using this instead of oauth token')
             request.auth_ticket.expire_timestamp_ms, request.auth_ticket.start, request.auth_ticket.end = ticket
+
+            if self._signature_gen:
+                ticket_serialized = request.auth_ticket.SerializeToString()
+                
+                sig = Signature_pb2.Signature()
+                
+                sig.location_hash1 = generateLocation1(ticket_serialized, request.latitude, request.longitude, request.altitude)
+                sig.location_hash2 = generateLocation2(request.latitude, request.longitude, request.altitude)
+
+                for req in request.requests:
+                    hash = generateRequestHash(ticket_serialized, req.SerializeToString())
+                    sig.request_hash.append( hash )
+
+                sig.unk22 = os.urandom(32)
+                sig.timestamp = get_time(ms=True)
+                sig.timestamp_since_start = get_time(ms=True) - RpcApi.START_TIME
+
+                signature_proto = sig.SerializeToString()
+
+                u6 = request.unknown6.add()
+                u6.request_type = 6
+                u6.unknown2.unknown1 = self._generate_signature(signature_proto, self._signature_lib)
         else:
             self.log.debug('No Session Ticket found - using OAUTH Access Token')
             request.auth_info.provider = self._auth_provider.get_name()
@@ -169,13 +218,27 @@ class RpcApi:
         # unknown stuff
         request.unknown12 = 989
 
-        request = self._build_sub_requests(request, subrequests)
-
         self.log.debug('Generated protobuf request: \n\r%s', request )
 
         return request
 
-    def _build_main_request(self, subrequests, player_position = None):
+    def _generate_signature(self, signature_plain, lib_path = "encrypt.so"):
+        lib = ctypes.cdll.LoadLibrary(lib_path)
+        lib.argtypes = [ctypes.c_char_p, ctypes.c_size_t, ctypes.c_char_p, ctypes.c_size_t, ctypes.POINTER(ctypes.c_ubyte), ctypes.POINTER(ctypes.c_size_t)] 
+        lib.restype  = ctypes.c_int
+
+        iv = os.urandom(32)
+
+        output_size = ctypes.c_size_t()
+
+        ret = lib.encrypt(signature_plain, len(signature_plain), iv, 32, None, ctypes.byref(output_size))
+        output = (ctypes.c_ubyte * output_size.value)()
+        ret = lib.encrypt(signature_plain, len(signature_plain), iv, 32, ctypes.byref(output), ctypes.byref(output_size))
+
+        signature = b''.join(map(chr, output))
+        return signature
+
+    def _build_main_request_orig(self, subrequests, player_position = None):
         self.log.debug('Generating main RPC request...')
 
         request = RequestEnvelope()

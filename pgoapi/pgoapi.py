@@ -58,6 +58,8 @@ class PGoApi:
         self._position_lng = position_lng
         self._position_alt = position_alt
 
+        self._signature_lib = None
+
     def set_logger(self, logger = None):
         self.log = logger or logging.getLogger(__name__)
 
@@ -105,6 +107,12 @@ class PGoApi:
     def create_request(self):    
         request = PGoApiRequest(self, self._position_lat, self._position_lng, self._position_alt)
         return request
+
+    def activate_signature(self, lib_path):    
+        self._signature_lib = lib_path
+
+    def get_signature_lib(self):    
+        return self._signature_lib
 
     def __getattr__(self, func):
         def function(**kwargs):
@@ -195,6 +203,10 @@ class PGoApiRequest:
             return NotLoggedInException()
 
         request = RpcApi(self._auth_provider)
+    
+        lib_path = self.__parent__.get_signature_lib()
+        if lib_path is not None:
+            request.activate_signature(lib_path)
 
         self.log.info('Execution of RPC')
         response = None

@@ -26,8 +26,9 @@ Author: tjado <https://github.com/tejado>
 import re
 import time
 import struct
-import logging
+import ctypes
 import xxhash
+import logging
 
 from json import JSONEncoder
 from binascii import unhexlify
@@ -159,21 +160,24 @@ def long_to_bytes (val, endianness='big'):
     return s
     
     
-def generateLocation1(authticket, lat, lng, alt):                                #u10
-    firstHash = xxhash.xxh32(bytearray(authticket), seed=0x1B845238).intdigest() #Hashing the auth ticket using static seed 0x1B845238
-    locationBytes = bytearray([lat,lng,alt])                                     #Lat, long and alt as a double
-    locationHash = xxhash.xxh32(locationBytes, seed=firstHash).intdigest()       #hash of location using the hashed auth ticket as seed
-    return locationHash
+def generateLocation1(authticket, lat, lng, alt): 
+    firstHash = xxhash.xxh32(authticket, seed=0x1B845238).intdigest()
+    locationBytes = d2h(lat) + d2h(lng) + d2h(alt)
+    if not alt:
+        alt = "\x00\x00\x00\x00\x00\x00\x00\x00"
+    return xxhash.xxh32(locationBytes, seed=firstHash).intdigest()
 
-def generateLocation2(lat, lng, alt):                                            #u20
-    locationBytes = bytearray([lat,lng,alt])
-    locationHash = xxhash.xxh32(locationBytes, seed=0x1B845238).intdigest()      #Hash of location using static seed 0x1B845238
-    return locationHash
+def generateLocation2(lat, lng, alt):
+    locationBytes = d2h(lat) + d2h(lng) + d2h(alt)
+    if not alt:
+        alt = "\x00\x00\x00\x00\x00\x00\x00\x00"
+    return xxhash.xxh32(locationBytes, seed=0x1B845238).intdigest()      #Hash of location using static seed 0x1B845238
+    
 
-def generateRequests(authticket, requests):                                                  #u24
-    firstHash = xxhash.xxh64(bytearray(authticket), seed=0x1B845238).intdigest() #Hashing the auth ticket using static seed 0x1B845238
-    hashList = []                                                                #Leaving as a list for now
-    for req in requests:                                                         
-        hashList.add(xxhash.xxh64(bytearray(req), seed=firstHash).intdigest())   #Hash each request with the hashed auth ticket as seed
-    hashArray = array(I, hashList)                                               #Convert the list to an array
-    return hashArray
+def generateRequestHash(authticket, request):
+    firstHash = xxhash.xxh64(authticket, seed=0x1B845238).intdigest()                      
+    return xxhash.xxh64(request, seed=firstHash).intdigest()
+
+
+def d2h(f):
+    return hex(struct.unpack('<Q', struct.pack('<d', f))[0])[2:-1].decode("hex")
