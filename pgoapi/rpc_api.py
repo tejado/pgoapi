@@ -33,6 +33,7 @@ import requests
 import subprocess
 
 from google.protobuf import message
+from google.protobuf import internal as pb_internal
 
 from importlib import import_module
 
@@ -185,7 +186,14 @@ class RpcApi:
                 self.log.debug("Subrequest class: %s", proto_classname)
 
                 for (key, value) in entry_content.items():
-                    if isinstance(value, list):
+                    val_type = type(type(value))
+                    if val_type == pb_internal.python_message.GeneratedProtocolMessageType:
+                        r = getattr(subrequest_extension, key)
+                        for descriptor in value.DESCRIPTOR.fields:
+                            vv = getattr(value, descriptor.name)
+                            if vv is not None:
+                                setattr(r, descriptor.name, vv)
+                    elif isinstance(value, list):
                         self.log.debug("Found list: %s - trying as repeated", key)
                         for i in value:
                             try:
