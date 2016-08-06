@@ -170,7 +170,7 @@ def generateLocation2(lat, lng, alt):                                           
     locationHash = xxhash.xxh32(locationBytes, seed=0x1B845238).intdigest()      #Hash of location using static seed 0x1B845238
     return locationHash
 
-def generateRequests(requests):                                                  #u24
+def generateRequests(authticket, requests):                                                  #u24
     firstHash = xxhash.xxh64(bytearray(authticket), seed=0x1B845238).intdigest() #Hashing the auth ticket using static seed 0x1B845238
     hashList = []                                                                #Leaving as a list for now
     for req in requests:                                                         
