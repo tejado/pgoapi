@@ -68,8 +68,7 @@ message Signature {
         string firmware_fingerprint = 14; // Android only, build.fingerprint
     }
 
-    // Apparently iOS only
-    message iOSActivityStatus {
+    message ActivityStatus {
         // all of these had 1 as their value
         uint64 start_time_ms = 1;
         bool unknown_status = 2;
