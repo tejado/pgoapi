@@ -86,7 +86,7 @@ message Signature {
     AndroidGpsInfo gps_info = 5;
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
-    iOSActivityStatus activity_status = 9;
+    ActivityStatus activity_status = 9;
     uint32 location_hash1 = 10; // Location1 hashed based on the auth_token - xxHash32
     uint32 location_hash2 = 20; // Location2 hashed based on the auth_token - xxHash32
     bytes unk22 = 22; // possibly replay check. Generation unknown but pointed to by 0001B8614
