@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='Signature.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fSignature.proto\"\xfc\r\n\tSignature\x12\x1d\n\x15timestamp_since_start\x18\x02 \x01(\x04\x12,\n\x0clocation_fix\x18\x04 \x03(\x0b\x32\x16.Signature.LocationFix\x12+\n\x08gps_info\x18\x05 \x01(\x0b\x32\x19.Signature.AndroidGpsInfo\x12*\n\x0bsensor_info\x18\x07 \x01(\x0b\x32\x15.Signature.SensorInfo\x12*\n\x0b\x64\x65vice_info\x18\x08 \x01(\x0b\x32\x15.Signature.DeviceInfo\x12\x35\n\x0f\x61\x63tivity_status\x18\t \x01(\x0b\x32\x1c.Signature.iOSActivityStatus\x12\x16\n\x0elocation_hash1\x18\n \x01(\r\x12\x16\n\x0elocation_hash2\x18\x14 \x01(\r\x12\r\n\x05unk22\x18\x16 \x01(\x0c\x12\x11\n\ttimestamp\x18\x17 \x01(\x04\x12\x14\n\x0crequest_hash\x18\x18 \x03(\x04\x1a\xec\x01\n\x0bLocationFix\x12\x10\n\x08provider\x18\x01 \x01(\t\x12\x1d\n\x15timestamp_since_start\x18\x02 \x01(\x04\x12\x10\n\x08latitude\x18\r \x01(\x02\x12\x11\n\tlongitude\x18\x0e \x01(\x02\x12\x1b\n\x13horizontal_accuracy\x18\x14 \x01(\x02\x12\x10\n\x08\x61ltitude\x18\x15 \x01(\x02\x12\x19\n\x11vertical_accuracy\x18\x16 \x01(\x02\x12\x17\n\x0fprovider_status\x18\x1a \x01(\x04\x12\r\n\x05\x66loor\x18\x1b \x01(\r\x12\x15\n\rlocation_type\x18\x1c \x01(\x04\x1a\xaf\x01\n\x0e\x41ndroidGpsInfo\x12\x13\n\x0btime_to_fix\x18\x01 \x01(\x04\x12\x16\n\x0esatellites_prn\x18\x02 \x03(\x05\x12\x0b\n\x03snr\x18\x03 \x03(\x02\x12\x0f\n\x07\x61zimuth\x18\x04 \x03(\x02\x12\x11\n\televation\x18\x05 \x03(\x02\x12\x13\n\x0bhas_almanac\x18\x06 \x03(\x08\x12\x15\n\rhas_ephemeris\x18\x07 \x03(\x08\x12\x13\n\x0bused_in_fix\x18\x08 \x03(\x08\x1a\xbe\x03\n\nSensorInfo\x12\x1a\n\x12timestamp_snapshot\x18\x01 \x01(\x04\x12\x16\n\x0emagnetometer_x\x18\x03 \x01(\x01\x12\x16\n\x0emagnetometer_y\x18\x04 \x01(\x01\x12\x16\n\x0emagnetometer_z\x18\x05 \x01(\x01\x12\x1a\n\x12\x61ngle_normalized_x\x18\x06 \x01(\x01\x12\x1a\n\x12\x61ngle_normalized_y\x18\x07 \x01(\x01\x12\x1a\n\x12\x61ngle_normalized_z\x18\x08 \x01(\x01\x12\x13\n\x0b\x61\x63\x63\x65l_raw_x\x18\n \x01(\x01\x12\x13\n\x0b\x61\x63\x63\x65l_raw_y\x18\x0b \x01(\x01\x12\x13\n\x0b\x61\x63\x63\x65l_raw_z\x18\x0c \x01(\x01\x12\x17\n\x0fgyroscope_raw_x\x18\r \x01(\x01\x12\x17\n\x0fgyroscope_raw_y\x18\x0e \x01(\x01\x12\x17\n\x0fgyroscope_raw_z\x18\x0f \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65l_normalized_x\x18\x10 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65l_normalized_y\x18\x11 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65l_normalized_z\x18\x12 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65lerometer_axes\x18\x13 \x01(\x04\x1a\xda\x02\n\nDeviceInfo\x12\x11\n\tdevice_id\x18\x01 \x01(\t\x12\x1a\n\x12\x61ndroid_board_name\x18\x02 \x01(\t\x12\x1a\n\x12\x61ndroid_bootloader\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x65vice_brand\x18\x04 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x05 \x01(\t\x12\x1f\n\x17\x64\x65vice_model_identifier\x18\x06 \x01(\t\x12\x19\n\x11\x64\x65vice_model_boot\x18\x07 \x01(\t\x12\x1d\n\x15hardware_manufacturer\x18\x08 \x01(\t\x12\x16\n\x0ehardware_model\x18\t \x01(\t\x12\x16\n\x0e\x66irmware_brand\x18\n \x01(\t\x12\x15\n\rfirmware_tags\x18\x0c \x01(\t\x12\x15\n\rfirmware_type\x18\r \x01(\t\x12\x1c\n\x14\x66irmware_fingerprint\x18\x0e \x01(\t\x1a\xbe\x01\n\x11iOSActivityStatus\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x04\x12\x16\n\x0eunknown_status\x18\x02 \x01(\x08\x12\x0f\n\x07walking\x18\x03 \x01(\x08\x12\x0f\n\x07running\x18\x04 \x01(\x08\x12\x12\n\nstationary\x18\x05 \x01(\x08\x12\x12\n\nautomotive\x18\x06 \x01(\x08\x12\x0f\n\x07tilting\x18\x07 \x01(\x08\x12\x0f\n\x07\x63ycling\x18\x08 \x01(\x08\x12\x0e\n\x06status\x18\t \x01(\x0c\x62\x06proto3')
+  serialized_pb=_b('\n\x0fSignature.proto\"\xf6\r\n\tSignature\x12\x1d\n\x15timestamp_since_start\x18\x02 \x01(\x04\x12,\n\x0clocation_fix\x18\x04 \x03(\x0b\x32\x16.Signature.LocationFix\x12+\n\x08gps_info\x18\x05 \x01(\x0b\x32\x19.Signature.AndroidGpsInfo\x12*\n\x0bsensor_info\x18\x07 \x01(\x0b\x32\x15.Signature.SensorInfo\x12*\n\x0b\x64\x65vice_info\x18\x08 \x01(\x0b\x32\x15.Signature.DeviceInfo\x12\x32\n\x0f\x61\x63tivity_status\x18\t \x01(\x0b\x32\x19.Signature.ActivityStatus\x12\x16\n\x0elocation_hash1\x18\n \x01(\r\x12\x16\n\x0elocation_hash2\x18\x14 \x01(\r\x12\r\n\x05unk22\x18\x16 \x01(\x0c\x12\x11\n\ttimestamp\x18\x17 \x01(\x04\x12\x14\n\x0crequest_hash\x18\x18 \x03(\x04\x1a\xec\x01\n\x0bLocationFix\x12\x10\n\x08provider\x18\x01 \x01(\t\x12\x1d\n\x15timestamp_since_start\x18\x02 \x01(\x04\x12\x10\n\x08latitude\x18\r \x01(\x02\x12\x11\n\tlongitude\x18\x0e \x01(\x02\x12\x1b\n\x13horizontal_accuracy\x18\x14 \x01(\x02\x12\x10\n\x08\x61ltitude\x18\x15 \x01(\x02\x12\x19\n\x11vertical_accuracy\x18\x16 \x01(\x02\x12\x17\n\x0fprovider_status\x18\x1a \x01(\x04\x12\r\n\x05\x66loor\x18\x1b \x01(\r\x12\x15\n\rlocation_type\x18\x1c \x01(\x04\x1a\xaf\x01\n\x0e\x41ndroidGpsInfo\x12\x13\n\x0btime_to_fix\x18\x01 \x01(\x04\x12\x16\n\x0esatellites_prn\x18\x02 \x03(\x05\x12\x0b\n\x03snr\x18\x03 \x03(\x02\x12\x0f\n\x07\x61zimuth\x18\x04 \x03(\x02\x12\x11\n\televation\x18\x05 \x03(\x02\x12\x13\n\x0bhas_almanac\x18\x06 \x03(\x08\x12\x15\n\rhas_ephemeris\x18\x07 \x03(\x08\x12\x13\n\x0bused_in_fix\x18\x08 \x03(\x08\x1a\xbe\x03\n\nSensorInfo\x12\x1a\n\x12timestamp_snapshot\x18\x01 \x01(\x04\x12\x16\n\x0emagnetometer_x\x18\x03 \x01(\x01\x12\x16\n\x0emagnetometer_y\x18\x04 \x01(\x01\x12\x16\n\x0emagnetometer_z\x18\x05 \x01(\x01\x12\x1a\n\x12\x61ngle_normalized_x\x18\x06 \x01(\x01\x12\x1a\n\x12\x61ngle_normalized_y\x18\x07 \x01(\x01\x12\x1a\n\x12\x61ngle_normalized_z\x18\x08 \x01(\x01\x12\x13\n\x0b\x61\x63\x63\x65l_raw_x\x18\n \x01(\x01\x12\x13\n\x0b\x61\x63\x63\x65l_raw_y\x18\x0b \x01(\x01\x12\x13\n\x0b\x61\x63\x63\x65l_raw_z\x18\x0c \x01(\x01\x12\x17\n\x0fgyroscope_raw_x\x18\r \x01(\x01\x12\x17\n\x0fgyroscope_raw_y\x18\x0e \x01(\x01\x12\x17\n\x0fgyroscope_raw_z\x18\x0f \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65l_normalized_x\x18\x10 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65l_normalized_y\x18\x11 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65l_normalized_z\x18\x12 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65lerometer_axes\x18\x13 \x01(\x04\x1a\xda\x02\n\nDeviceInfo\x12\x11\n\tdevice_id\x18\x01 \x01(\t\x12\x1a\n\x12\x61ndroid_board_name\x18\x02 \x01(\t\x12\x1a\n\x12\x61ndroid_bootloader\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x65vice_brand\x18\x04 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x05 \x01(\t\x12\x1f\n\x17\x64\x65vice_model_identifier\x18\x06 \x01(\t\x12\x19\n\x11\x64\x65vice_model_boot\x18\x07 \x01(\t\x12\x1d\n\x15hardware_manufacturer\x18\x08 \x01(\t\x12\x16\n\x0ehardware_model\x18\t \x01(\t\x12\x16\n\x0e\x66irmware_brand\x18\n \x01(\t\x12\x15\n\rfirmware_tags\x18\x0c \x01(\t\x12\x15\n\rfirmware_type\x18\r \x01(\t\x12\x1c\n\x14\x66irmware_fingerprint\x18\x0e \x01(\t\x1a\xbb\x01\n\x0e\x41\x63tivityStatus\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x04\x12\x16\n\x0eunknown_status\x18\x02 \x01(\x08\x12\x0f\n\x07walking\x18\x03 \x01(\x08\x12\x0f\n\x07running\x18\x04 \x01(\x08\x12\x12\n\nstationary\x18\x05 \x01(\x08\x12\x12\n\nautomotive\x18\x06 \x01(\x08\x12\x0f\n\x07tilting\x18\x07 \x01(\x08\x12\x0f\n\x07\x63ycling\x18\x08 \x01(\x08\x12\x0e\n\x06status\x18\t \x01(\x0c\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -115,8 +115,8 @@ _SIGNATURE_LOCATIONFIX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=403,
-  serialized_end=639,
+  serialized_start=400,
+  serialized_end=636,
 )
 
 _SIGNATURE_ANDROIDGPSINFO = _descriptor.Descriptor(
@@ -194,8 +194,8 @@ _SIGNATURE_ANDROIDGPSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=642,
-  serialized_end=817,
+  serialized_start=639,
+  serialized_end=814,
 )
 
 _SIGNATURE_SENSORINFO = _descriptor.Descriptor(
@@ -336,8 +336,8 @@ _SIGNATURE_SENSORINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=820,
-  serialized_end=1266,
+  serialized_start=817,
+  serialized_end=1263,
 )
 
 _SIGNATURE_DEVICEINFO = _descriptor.Descriptor(
@@ -450,75 +450,75 @@ _SIGNATURE_DEVICEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1269,
-  serialized_end=1615,
+  serialized_start=1266,
+  serialized_end=1612,
 )
 
-_SIGNATURE_IOSACTIVITYSTATUS = _descriptor.Descriptor(
-  name='iOSActivityStatus',
-  full_name='Signature.iOSActivityStatus',
+_SIGNATURE_ACTIVITYSTATUS = _descriptor.Descriptor(
+  name='ActivityStatus',
+  full_name='Signature.ActivityStatus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='start_time_ms', full_name='Signature.iOSActivityStatus.start_time_ms', index=0,
+      name='start_time_ms', full_name='Signature.ActivityStatus.start_time_ms', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unknown_status', full_name='Signature.iOSActivityStatus.unknown_status', index=1,
+      name='unknown_status', full_name='Signature.ActivityStatus.unknown_status', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='walking', full_name='Signature.iOSActivityStatus.walking', index=2,
+      name='walking', full_name='Signature.ActivityStatus.walking', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='running', full_name='Signature.iOSActivityStatus.running', index=3,
+      name='running', full_name='Signature.ActivityStatus.running', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stationary', full_name='Signature.iOSActivityStatus.stationary', index=4,
+      name='stationary', full_name='Signature.ActivityStatus.stationary', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='automotive', full_name='Signature.iOSActivityStatus.automotive', index=5,
+      name='automotive', full_name='Signature.ActivityStatus.automotive', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tilting', full_name='Signature.iOSActivityStatus.tilting', index=6,
+      name='tilting', full_name='Signature.ActivityStatus.tilting', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='cycling', full_name='Signature.iOSActivityStatus.cycling', index=7,
+      name='cycling', full_name='Signature.ActivityStatus.cycling', index=7,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='Signature.iOSActivityStatus.status', index=8,
+      name='status', full_name='Signature.ActivityStatus.status', index=8,
       number=9, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -536,8 +536,8 @@ _SIGNATURE_IOSACTIVITYSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1618,
-  serialized_end=1808,
+  serialized_start=1615,
+  serialized_end=1802,
 )
 
 _SIGNATURE = _descriptor.Descriptor(
@@ -627,7 +627,7 @@ _SIGNATURE = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_SIGNATURE_LOCATIONFIX, _SIGNATURE_ANDROIDGPSINFO, _SIGNATURE_SENSORINFO, _SIGNATURE_DEVICEINFO, _SIGNATURE_IOSACTIVITYSTATUS, ],
+  nested_types=[_SIGNATURE_LOCATIONFIX, _SIGNATURE_ANDROIDGPSINFO, _SIGNATURE_SENSORINFO, _SIGNATURE_DEVICEINFO, _SIGNATURE_ACTIVITYSTATUS, ],
   enum_types=[
   ],
   options=None,
@@ -637,19 +637,19 @@ _SIGNATURE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=20,
-  serialized_end=1808,
+  serialized_end=1802,
 )
 
 _SIGNATURE_LOCATIONFIX.containing_type = _SIGNATURE
 _SIGNATURE_ANDROIDGPSINFO.containing_type = _SIGNATURE
 _SIGNATURE_SENSORINFO.containing_type = _SIGNATURE
 _SIGNATURE_DEVICEINFO.containing_type = _SIGNATURE
-_SIGNATURE_IOSACTIVITYSTATUS.containing_type = _SIGNATURE
+_SIGNATURE_ACTIVITYSTATUS.containing_type = _SIGNATURE
 _SIGNATURE.fields_by_name['location_fix'].message_type = _SIGNATURE_LOCATIONFIX
 _SIGNATURE.fields_by_name['gps_info'].message_type = _SIGNATURE_ANDROIDGPSINFO
 _SIGNATURE.fields_by_name['sensor_info'].message_type = _SIGNATURE_SENSORINFO
 _SIGNATURE.fields_by_name['device_info'].message_type = _SIGNATURE_DEVICEINFO
-_SIGNATURE.fields_by_name['activity_status'].message_type = _SIGNATURE_IOSACTIVITYSTATUS
+_SIGNATURE.fields_by_name['activity_status'].message_type = _SIGNATURE_ACTIVITYSTATUS
 DESCRIPTOR.message_types_by_name['Signature'] = _SIGNATURE
 
 Signature = _reflection.GeneratedProtocolMessageType('Signature', (_message.Message,), dict(
@@ -682,10 +682,10 @@ Signature = _reflection.GeneratedProtocolMessageType('Signature', (_message.Mess
     ))
   ,
 
-  iOSActivityStatus = _reflection.GeneratedProtocolMessageType('iOSActivityStatus', (_message.Message,), dict(
-    DESCRIPTOR = _SIGNATURE_IOSACTIVITYSTATUS,
+  ActivityStatus = _reflection.GeneratedProtocolMessageType('ActivityStatus', (_message.Message,), dict(
+    DESCRIPTOR = _SIGNATURE_ACTIVITYSTATUS,
     __module__ = 'Signature_pb2'
-    # @@protoc_insertion_point(class_scope:Signature.iOSActivityStatus)
+    # @@protoc_insertion_point(class_scope:Signature.ActivityStatus)
     ))
   ,
   DESCRIPTOR = _SIGNATURE,
@@ -697,7 +697,7 @@ _sym_db.RegisterMessage(Signature.LocationFix)
 _sym_db.RegisterMessage(Signature.AndroidGpsInfo)
 _sym_db.RegisterMessage(Signature.SensorInfo)
 _sym_db.RegisterMessage(Signature.DeviceInfo)
-_sym_db.RegisterMessage(Signature.iOSActivityStatus)
+_sym_db.RegisterMessage(Signature.ActivityStatus)
 
 
 # @@protoc_insertion_point(module_scope)
