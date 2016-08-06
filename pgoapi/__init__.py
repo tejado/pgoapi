@@ -31,7 +31,7 @@ import pkg_resources
 import logging
 
 __title__ = 'pgoapi'
-__version__ = '1.1.6'
+__version__ = '1.1.7'
 __author__ = 'tjado'
 __license__ = 'MIT License'
 __copyright__ = 'Copyright (c) 2016 tjado <https://github.com/tejado>'

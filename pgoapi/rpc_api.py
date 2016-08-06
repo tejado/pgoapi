@@ -37,8 +37,8 @@ from google.protobuf import message
 from importlib import import_module
 
 from pgoapi.protobuf_to_dict import protobuf_to_dict
-from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException, ServerSideAccessForbiddenException, UnexpectedResponseException
-from pgoapi.utilities import f2i, h2f, to_camel_case, get_time_ms, get_format_time_diff
+from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException, ServerSideAccessForbiddenException, UnexpectedResponseException, AuthTokenExpiredException, ServerApiEndpointRedirectException
+from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff
 
 from . import protos
 from POGOProtos.Networking.Envelopes_pb2 import RequestEnvelope
@@ -91,7 +91,7 @@ class RpcApi:
         try:
             http_response = self._session.post(endpoint, data=request_proto_serialized)
         except requests.exceptions.ConnectionError as e:
-            raise ServerBusyOrOfflineException
+            raise ServerBusyOrOfflineException(e)
 
         return http_response
 
@@ -110,12 +110,20 @@ class RpcApi:
         """ 
         some response validations 
         """
-        if isinstance(response_dict, dict) and 'status_code' in response_dict:
-            sc = response_dict['status_code']
-            if sc == 102:
-                raise NotLoggedInException()
-            elif sc == 52:
+        if isinstance(response_dict, dict):
+            status_code = response_dict.get('status_code', None)
+            if status_code == 102:
+                raise AuthTokenExpiredException()
+            elif status_code == 52:
                 raise ServerSideRequestThrottlingException("Request throttled by server... slow down man")
+            elif status_code == 53:
+                api_url = response_dict.get('api_url', None)
+                if api_url is not None:
+                    exception = ServerApiEndpointRedirectException()
+                    exception.set_redirected_endpoint(api_url)
+                    raise exception
+                else: 
+                    raise UnexpectedResponseException()
 
         return response_dict
 
@@ -130,15 +138,15 @@ class RpcApi:
             self._auth_provider.set_ticket(
                 [auth_ticket['expire_timestamp_ms'], base64.standard_b64decode(auth_ticket['start']), base64.standard_b64decode(auth_ticket['end'])])
 
-            now_ms = get_time_ms()
+            now_ms = get_time(ms = True)
             h, m, s = get_format_time_diff(now_ms, auth_ticket['expire_timestamp_ms'], True)
 
             if had_ticket:
-                self.log.debug('Replacing old auth ticket with new one valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
+                self.log.debug('Replacing old Session Ticket with new one valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
             else:
-                self.log.debug('Received auth ticket valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
+                self.log.debug('Received Session Ticket valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
 
-    def _build_main_request(self, subrequests, player_position = None):
+    def _build_main_request2(self, subrequests, player_position = None):
         self.log.debug('Generating main RPC request...')
 
         request = RequestEnvelope()
@@ -150,18 +158,47 @@ class RpcApi:
 
         ticket = self._auth_provider.get_ticket()
         if ticket:
-            self.log.debug('Found auth ticket - using this instead of oauth token')
+            self.log.debug('Found Session Ticket - using this instead of oauth token')
             request.auth_ticket.expire_timestamp_ms, request.auth_ticket.start, request.auth_ticket.end = ticket
         else:
-            self.log.debug('NO auth ticket found - using oauth token')
+            self.log.debug('No Session Ticket found - using OAUTH Access Token')
             request.auth_info.provider = self._auth_provider.get_name()
-            request.auth_info.token.contents = self._auth_provider.get_token()
+            request.auth_info.token.contents = self._auth_provider.get_access_token()
             request.auth_info.token.unknown2 = 59
 
         # unknown stuff
         request.unknown12 = 989
 
         request = self._build_sub_requests(request, subrequests)
+
+        self.log.debug('Generated protobuf request: \n\r%s', request )
+
+        return request
+
+    def _build_main_request(self, subrequests, player_position = None):
+        self.log.debug('Generating main RPC request...')
+
+        request = RequestEnvelope()
+        request.status_code = 2
+        request.request_id = self.get_rpc_id()
+
+        request = self._build_sub_requests(request, subrequests)
+
+        if player_position is not None:
+            request.latitude, request.longitude, request.altitude = player_position
+
+        ticket = self._auth_provider.get_ticket()
+        if ticket:
+            self.log.debug('Found Session Ticket - using this instead of oauth token')
+            request.auth_ticket.expire_timestamp_ms, request.auth_ticket.start, request.auth_ticket.end = ticket
+        else:
+            self.log.debug('No Session Ticket found - using OAUTH Access Token')
+            request.auth_info.provider = self._auth_provider.get_name()
+            request.auth_info.token.contents = self._auth_provider.get_access_token()
+            request.auth_info.token.unknown2 = 59
+
+        # unknown stuff
+        request.unknown12 = 3352
 
         self.log.debug('Generated protobuf request: \n\r%s', request )
 
@@ -193,14 +230,14 @@ class RpcApi:
                                 r = getattr(subrequest_extension, key)
                                 r.append(i)
                             except Exception as e:
-                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, i, proto_name, str(e))
+                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, i, proto_name, e)
                     elif isinstance(value, dict):
                         for k in value.keys():
                             try:
                                 r = getattr(subrequest_extension, key)
                                 setattr(r, k, value[k])
                             except Exception as e:
-                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, str(value), proto_name, str(e))
+                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, str(value), proto_name, e)
                     else:
                         try:
                             setattr(subrequest_extension, key, value)
@@ -210,7 +247,7 @@ class RpcApi:
                                 r = getattr(subrequest_extension, key)
                                 r.append(value)
                             except Exception as e:
-                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, value, proto_name, str(e))
+                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, value, proto_name, e)
 
                 subrequest = mainrequest.requests.add()
                 subrequest.request_type = entry_id
@@ -230,6 +267,8 @@ class RpcApi:
 
         if response_raw.status_code == 403:
             raise ServerSideAccessForbiddenException("Seems your IP Address is banned or something else went badly wrong...")
+        elif response_raw.status_code == 502:
+            raise ServerBusyOrOfflineException("502: Bad Gateway")
         elif response_raw.status_code != 200:
             error = 'Unexpected HTTP server response - needs 200 got {}'.format(response_raw.status_code)
             self.log.warning(error)
@@ -244,7 +283,7 @@ class RpcApi:
         try:
             response_proto.ParseFromString(response_raw.content)
         except message.DecodeError as e:
-            self.log.warning('Could not parse response: %s', str(e))
+            self.log.warning('Could not parse response: %s', e)
             return False
 
         self.log.debug('Protobuf structure of rpc response:\n\r%s', response_proto)
