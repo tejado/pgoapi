@@ -68,18 +68,17 @@ message Signature {
         string firmware_fingerprint = 14; // Android only, build.fingerprint
     }
 
-    // Apparently iOS only
-    message iOSActivityStatus {
+    message ActivityStatus {
         // all of these had 1 as their value
-        uint64 start_time_ms = 1
-        bool unknown_status = 2
-        bool walking = 3
-        bool running = 4
-        bool stationary = 5
-        bool automotive = 6
-        bool tilting = 7
-        bool cycling = 8
-        bytes status = 9
+        uint64 start_time_ms = 1;
+        bool unknown_status = 2;
+        bool walking = 3;
+        bool running = 4;
+        bool stationary = 5;
+        bool automotive = 6;
+        bool tilting = 7;
+        bool cycling = 8;
+        bytes status = 9;
     }
 
     uint64 timestamp_since_start = 2; // in ms
@@ -87,7 +86,7 @@ message Signature {
     AndroidGpsInfo gps_info = 5;
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
-    iOSActivityStatus activity_status = 9;
+    ActivityStatus activity_status = 9;
     uint32 location_hash1 = 10; // Location1 hashed based on the auth_token - xxHash32
     uint32 location_hash2 = 20; // Location2 hashed based on the auth_token - xxHash32
     bytes unk22 = 22; // possibly replay check. Generation unknown but pointed to by 0001B8614
