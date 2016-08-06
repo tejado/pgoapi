@@ -174,6 +174,6 @@ def generateRequests(authticket, requests):                                     
     firstHash = xxhash.xxh64(bytearray(authticket), seed=0x1B845238).intdigest() #Hashing the auth ticket using static seed 0x1B845238
     hashList = []                                                                #Leaving as a list for now
     for req in requests:                                                         
-        hashArray.add(xxhash.xxh64(bytearray(req), seed=firstHash).intdigest()   #Hash each request with the hashed auth ticket as seed
+        hashList.add(xxhash.xxh64(bytearray(req), seed=firstHash).intdigest())   #Hash each request with the hashed auth ticket as seed
     hashArray = array(I, hashList)                                               #Convert the list to an array
     return hashArray
