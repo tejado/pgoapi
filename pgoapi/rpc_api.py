@@ -33,6 +33,7 @@ import random
 import logging
 import requests
 import subprocess
+import six
 
 from google.protobuf import message
 
@@ -50,6 +51,7 @@ from POGOProtos.Networking.Envelopes_pb2 import RequestEnvelope
 from POGOProtos.Networking.Envelopes_pb2 import ResponseEnvelope
 from POGOProtos.Networking.Requests_pb2 import RequestType
 import Signature_pb2
+
 
 class RpcApi:
 
@@ -69,9 +71,9 @@ class RpcApi:
         """ mystic unknown6 - revolved by PokemonGoDev """
         self._signature_gen = False
         self._signature_lib = None
-        
+
         if RpcApi.START_TIME == 0:
-            RpcApi.START_TIME = get_time(ms = True)
+            RpcApi.START_TIME = get_time(ms=True)
 
         if RpcApi.RPC_ID == 0:
             RpcApi.RPC_ID = int(random.random() * 10 ** 18)
@@ -79,9 +81,8 @@ class RpcApi:
 
     def activate_signature(self, lib_path):
         try:
-            ctypes.cdll.LoadLibrary(lib_path)
             self._signature_gen = True
-            self._signature_lib = lib_path
+            self._signature_lib = ctypes.cdll.LoadLibrary(lib_path)
         except:
             raise
 
@@ -129,8 +130,8 @@ class RpcApi:
 
         self.check_authentication(response_dict)
 
-        """ 
-        some response validations 
+        """
+        some response validations
         """
         if isinstance(response_dict, dict):
             status_code = response_dict.get('status_code', None)
@@ -144,7 +145,7 @@ class RpcApi:
                     exception = ServerApiEndpointRedirectException()
                     exception.set_redirected_endpoint(api_url)
                     raise exception
-                else: 
+                else:
                     raise UnexpectedResponseException()
 
         return response_dict
@@ -160,7 +161,7 @@ class RpcApi:
             self._auth_provider.set_ticket(
                 [auth_ticket['expire_timestamp_ms'], base64.standard_b64decode(auth_ticket['start']), base64.standard_b64decode(auth_ticket['end'])])
 
-            now_ms = get_time(ms = True)
+            now_ms = get_time(ms=True)
             h, m, s = get_format_time_diff(now_ms, auth_ticket['expire_timestamp_ms'], True)
 
             if had_ticket:
@@ -168,7 +169,7 @@ class RpcApi:
             else:
                 self.log.debug('Received Session Ticket valid for %02d:%02d:%02d hours (%s < %s)', h, m, s, now_ms, auth_ticket['expire_timestamp_ms'])
 
-    def _build_main_request(self, subrequests, player_position = None):
+    def _build_main_request(self, subrequests, player_position=None):
         self.log.debug('Generating main RPC request...')
 
         request = RequestEnvelope()
@@ -177,8 +178,8 @@ class RpcApi:
 
         if player_position is not None:
             request.latitude, request.longitude, request.altitude = player_position
-        
-        request.altitude = 0.63
+
+        request.altitude = 8  # not as suspicious as 0
 
         """ generate sub requests before signature generation """
         request = self._build_sub_requests(request, subrequests)
@@ -190,15 +191,15 @@ class RpcApi:
 
             if self._signature_gen:
                 ticket_serialized = request.auth_ticket.SerializeToString()
-                
+
                 sig = Signature_pb2.Signature()
-                
+
                 sig.location_hash1 = generateLocation1(ticket_serialized, request.latitude, request.longitude, request.altitude)
                 sig.location_hash2 = generateLocation2(request.latitude, request.longitude, request.altitude)
 
                 for req in request.requests:
                     hash = generateRequestHash(ticket_serialized, req.SerializeToString())
-                    sig.request_hash.append( hash )
+                    sig.request_hash.append(hash)
 
                 sig.unk22 = os.urandom(32)
                 sig.timestamp = get_time(ms=True)
@@ -208,7 +209,7 @@ class RpcApi:
 
                 u6 = request.unknown6.add()
                 u6.request_type = 6
-                u6.unknown2.unknown1 = self._generate_signature(signature_proto, self._signature_lib)
+                u6.unknown2.unknown1 = self._generate_signature(signature_proto)
         else:
             self.log.debug('No Session Ticket found - using OAUTH Access Token')
             request.auth_info.provider = self._auth_provider.get_name()
@@ -218,27 +219,27 @@ class RpcApi:
         # unknown stuff
         request.unknown12 = 989
 
-        self.log.debug('Generated protobuf request: \n\r%s', request )
+        self.log.debug('Generated protobuf request: \n\r%s', request)
 
         return request
 
-    def _generate_signature(self, signature_plain, lib_path = "encrypt.so"):
-        lib = ctypes.cdll.LoadLibrary(lib_path)
-        lib.argtypes = [ctypes.c_char_p, ctypes.c_size_t, ctypes.c_char_p, ctypes.c_size_t, ctypes.POINTER(ctypes.c_ubyte), ctypes.POINTER(ctypes.c_size_t)] 
-        lib.restype  = ctypes.c_int
+    def _generate_signature(self, signature_plain, lib_path="encrypt.so"):
+        if self._signature_lib is None:
+            self.activate_signature(lib_path)
+        self._signature_lib.argtypes = [ctypes.c_char_p, ctypes.c_size_t, ctypes.c_char_p, ctypes.c_size_t, ctypes.POINTER(ctypes.c_ubyte), ctypes.POINTER(ctypes.c_size_t)]
+        self._signature_lib.restype = ctypes.c_int
 
         iv = os.urandom(32)
 
         output_size = ctypes.c_size_t()
 
-        ret = lib.encrypt(signature_plain, len(signature_plain), iv, 32, None, ctypes.byref(output_size))
+        self._signature_lib.encrypt(signature_plain, len(signature_plain), iv, 32, None, ctypes.byref(output_size))
         output = (ctypes.c_ubyte * output_size.value)()
-        ret = lib.encrypt(signature_plain, len(signature_plain), iv, 32, ctypes.byref(output), ctypes.byref(output_size))
-
-        signature = b''.join(map(chr, output))
+        self._signature_lib.encrypt(signature_plain, len(signature_plain), iv, 32, ctypes.byref(output), ctypes.byref(output_size))
+        signature = b''.join(list(map(lambda x: six.int2byte(x), output)))
         return signature
 
-    def _build_main_request_orig(self, subrequests, player_position = None):
+    def _build_main_request_orig(self, subrequests, player_position=None):
         self.log.debug('Generating main RPC request...')
 
         request = RequestEnvelope()
@@ -263,7 +264,7 @@ class RpcApi:
         # unknown stuff
         request.unknown12 = 3352
 
-        self.log.debug('Generated protobuf request: \n\r%s', request )
+        self.log.debug('Generated protobuf request: \n\r%s', request)
 
         return request
 
@@ -324,7 +325,6 @@ class RpcApi:
 
         return mainrequest
 
-
     def _parse_main_response(self, response_raw, subrequests):
         self.log.debug('Parsing main RPC response...')
 
@@ -367,7 +367,7 @@ class RpcApi:
         if 'returns' in response_proto_dict:
             del response_proto_dict['returns']
 
-        list_len = len(subrequests_list) -1
+        list_len = len(subrequests_list)-1
         i = 0
         for subresponse in response_proto.returns:
             if i > list_len:
@@ -377,7 +377,7 @@ class RpcApi:
             if isinstance(request_entry, int):
                 entry_id = request_entry
             else:
-                entry_id =  list(request_entry.items())[0][0]
+                entry_id = list(request_entry.items())[0][0]
 
             entry_name = RequestType.Name(entry_id)
             proto_name = to_camel_case(entry_name.lower()) + 'Response'
@@ -387,7 +387,7 @@ class RpcApi:
 
             subresponse_return = None
             try:
-                subresponse_extension = self.get_class(proto_classname)()         
+                subresponse_extension = self.get_class(proto_classname)()
             except Exception as e:
                 subresponse_extension = None
                 error = 'Protobuf definition for {} not found'.format(proto_classname)
@@ -395,7 +395,7 @@ class RpcApi:
                 self.log.debug(error)
 
             if subresponse_extension:
-                try: 
+                try:
                     subresponse_extension.ParseFromString(subresponse)
                     subresponse_return = protobuf_to_dict(subresponse_extension)
                 except:
