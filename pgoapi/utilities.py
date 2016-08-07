@@ -41,10 +41,10 @@ from s2sphere import LatLng, Angle, Cap, RegionCoverer, math
 log = logging.getLogger(__name__)
 
 def f2i(f):
-  return struct.unpack('<Q', struct.pack('<d', float))[0]
+  return struct.unpack('<Q', struct.pack('<d', f))[0]
 
 def f2h(f):
-  return hex(struct.unpack('<Q', struct.pack('<d', float))[0])
+  return hex(struct.unpack('<Q', struct.pack('<d', f))[0])
 
 def h2f(hex):
   return struct.unpack('<d', struct.pack('<Q', int(hex,16)))[0]

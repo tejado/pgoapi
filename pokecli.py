@@ -60,9 +60,9 @@ def init_config():
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
     parser.add_argument("-p", "--password", help="Password")
     parser.add_argument("-l", "--location", help="Location", required=required("location"))
+    parser.add_argument("-e", "--encrypt", help="Encryption Library Path")
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-t", "--test", help="Only parse the specified location", action='store_true')
-    parser.add_argument("-e", "--encrypt", help="Encryption Library Path", action='store_true', required=required("encrypt"))
     parser.set_defaults(DEBUG=False, TEST=False, ENCRYPT="encrypt.dll")
     config = parser.parse_args()
 
