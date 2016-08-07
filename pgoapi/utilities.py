@@ -40,10 +40,10 @@ from s2sphere import LatLng, Angle, Cap, RegionCoverer, math
 
 log = logging.getLogger(__name__)
 
-def f2i(float):
+def f2i(f):
   return struct.unpack('<Q', struct.pack('<d', float))[0]
 
-def f2h(float):
+def f2h(f):
   return hex(struct.unpack('<Q', struct.pack('<d', float))[0])
 
 def h2f(hex):
@@ -179,5 +179,8 @@ def generateRequestHash(authticket, request):
     return xxhash.xxh64(request, seed=firstHash).intdigest()
 
 
+
 def d2h(f):
-    return hex(struct.unpack('<Q', struct.pack('<d', f))[0])[2:-1].decode("hex")
+   hex = f2h(f)[2:].replace('L','')
+   hex = ("0" * (len(hex) % 2)) + hex
+   return  hex.decode("hex")

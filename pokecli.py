@@ -62,7 +62,8 @@ def init_config():
     parser.add_argument("-l", "--location", help="Location", required=required("location"))
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-t", "--test", help="Only parse the specified location", action='store_true')
-    parser.set_defaults(DEBUG=False, TEST=False)
+    parser.add_argument("-e", "--encrypt", help="Encryption Library Path", action='store_true', required=required("encrypt"))
+    parser.set_defaults(DEBUG=False, TEST=False, ENCRYPT="encrypt.dll")
     config = parser.parse_args()
 
     # Passed in arguments shoud trump
@@ -120,7 +121,9 @@ def main():
     api.set_authentication(provider = config.auth_service, username = config.username, password =  config.password)
 
     # provide the path for your encrypt dll
-    api.activate_signature("encrypt.dll")
+    # Use libencrypt.so for *nix
+
+    api.activate_signature(config.encrypt)
 
     # print get maps object
     cell_ids = util.get_cell_ids(position[0], position[1])
