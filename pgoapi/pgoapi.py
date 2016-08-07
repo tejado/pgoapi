@@ -42,11 +42,12 @@ from POGOProtos.Networking.Requests_pb2 import RequestType
 
 logger = logging.getLogger(__name__)
 
+
 class PGoApi:
 
-    def __init__(self, provider = None, oauth2_refresh_token = None, username = None, password = None, position_lat = None, position_lng = None, position_alt = None):
+    def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None):
         self.set_logger()
-        self.log.info('%s v%s - %s', __title__, __version__, __copyright__ )
+        self.log.info('%s v%s - %s', __title__, __version__, __copyright__)
 
         self._auth_provider = None
         if provider is not None and ((username is not None and password is not None) or (oauth2_refresh_token is not None)):
@@ -60,10 +61,10 @@ class PGoApi:
 
         self._signature_lib = None
 
-    def set_logger(self, logger = None):
+    def set_logger(self, logger=None):
         self.log = logger or logging.getLogger(__name__)
 
-    def set_authentication(self, provider = None, oauth2_refresh_token = None, username = None, password = None):
+    def set_authentication(self, provider=None, oauth2_refresh_token=None, username=None, password=None):
         if provider == 'ptc':
             self._auth_provider = AuthPtc()
         elif provider == 'google':
@@ -104,23 +105,23 @@ class PGoApi:
     def get_auth_provider(self):
         return self._auth_provider
 
-    def create_request(self):    
+    def create_request(self):
         request = PGoApiRequest(self, self._position_lat, self._position_lng, self._position_alt)
         return request
 
-    def activate_signature(self, lib_path):    
+    def activate_signature(self, lib_path):
         self._signature_lib = lib_path
 
-    def get_signature_lib(self):    
+    def get_signature_lib(self):
         return self._signature_lib
 
     def __getattr__(self, func):
         def function(**kwargs):
             request = self.create_request()
-            getattr(request, func)( _call_direct = True, **kwargs )
+            getattr(request, func)(_call_direct=True, **kwargs )
             return request.call()
 
-        if func.upper() in  RequestType.keys():
+        if func.upper() in RequestType.keys():
             return function
         else:
             raise AttributeError
@@ -142,11 +143,11 @@ class PGoApi:
         self.log.info('Finished RPC login sequence (app simulation)')
 
         return response
-    
+
     """
     The login function is not needed anymore but still in the code for backward compatibility"
     """
-    def login(self, provider, username, password, lat = None, lng = None, alt = None, app_simulation = True):
+    def login(self, provider, username, password, lat=None, lng=None, alt=None, app_simulation=True):
 
         if lat is not None and lng is not None and alt is not None:
             self._position_lat = lat
@@ -154,7 +155,7 @@ class PGoApi:
             self._position_alt = alt
 
         try:
-            self.set_authentication(provider, username = username, password = password)
+            self.set_authentication(provider, username=username, password=password)
         except AuthException as e:
             self.log.error('Login process failed: %s', e)
             return False
@@ -173,7 +174,7 @@ class PGoApi:
         self.log.info('Login process completed')
 
         return True
-        
+
 
 class PGoApiRequest:
     def __init__(self, parent, position_lat, position_lng, position_alt):
@@ -194,7 +195,7 @@ class PGoApiRequest:
     def call(self):
         if not self._req_method_list:
             raise EmptySubrequestChainException()
-            
+
         if (self._position_lat is None) or (self._position_lng is None) or (self._position_alt is None):
             raise NoPlayerPositionSetException()
 
@@ -203,14 +204,14 @@ class PGoApiRequest:
             return NotLoggedInException()
 
         request = RpcApi(self._auth_provider)
-    
+
         lib_path = self.__parent__.get_signature_lib()
         if lib_path is not None:
             request.activate_signature(lib_path)
 
         self.log.info('Execution of RPC')
         response = None
-        
+
         execute = True
         while execute:
             execute = False
@@ -224,7 +225,7 @@ class PGoApiRequest:
                 """
                 try:
                     self.log.info('Access Token rejected! Requesting new one...')
-                    self._auth_provider.get_access_token(force_refresh = True)
+                    self._auth_provider.get_access_token(force_refresh=True)
                 except:
                     error = 'Request for new Access Token failed! Logged out...'
                     self.log.error(error)
@@ -289,7 +290,7 @@ class PGoApiRequest:
 
             return self
 
-        if func.upper() in  RequestType.keys():
+        if func.upper() in RequestType.keys():
             return function
         else:
             raise AttributeError
