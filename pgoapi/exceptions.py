@@ -35,9 +35,6 @@ class ServerBusyOrOfflineException(Exception):
 class PleaseInstallProtobufVersion3(Exception):
     pass
 
-class NoPlayerPositionSetException(Exception):
-    pass
-    
 class EmptySubrequestChainException(Exception):
     pass
     
