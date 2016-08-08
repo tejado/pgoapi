@@ -34,7 +34,7 @@ from . import __title__, __version__, __copyright__
 from pgoapi.rpc_api import RpcApi
 from pgoapi.auth_ptc import AuthPtc
 from pgoapi.auth_google import AuthGoogle
-from pgoapi.exceptions import AuthException, NotLoggedInException, ServerBusyOrOfflineException, NoPlayerPositionSetException, EmptySubrequestChainException
+from pgoapi.exceptions import AuthException, NotLoggedInException, ServerBusyOrOfflineException, EmptySubrequestChainException
 
 from . import protos
 from POGOProtos.Networking.Requests_pb2 import RequestType
