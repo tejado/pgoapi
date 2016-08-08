@@ -270,6 +270,7 @@ class RpcApi:
         for subresponse in response_proto.returns:
             if i > list_len:
                 self.log.info("Error - something strange happend...")
+                return response_proto_dict
 
             request_entry = subrequests_list[i]
             if isinstance(request_entry, int):
