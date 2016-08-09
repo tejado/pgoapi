@@ -5,3 +5,4 @@ s2sphere==0.2.4
 gpsoauth==0.3.0
 six
 xxhash
+requests[socks]
