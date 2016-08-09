@@ -28,6 +28,7 @@ from __future__ import absolute_import
 import re
 import six
 import logging
+import requests
 
 from . import __title__, __version__, __copyright__
 from pgoapi.rpc_api import RpcApi
