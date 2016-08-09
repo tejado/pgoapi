@@ -41,7 +41,7 @@ class AuthGoogle(Auth):
 
     def __init__(self):
         Auth.__init__(self)
-        
+
         self._auth_provider = 'google'
 
         self._refresh_token = None
@@ -53,7 +53,7 @@ class AuthGoogle(Auth):
             raise AuthException("Username/password not correctly specified")
 
         user_login = perform_master_login(username, password, self.GOOGLE_LOGIN_ANDROID_ID)
-        
+
         refresh_token = user_login.get('Token', None)
         if refresh_token is not None:
             self._refresh_token = refresh_token
@@ -91,6 +91,7 @@ class AuthGoogle(Auth):
 
                 self.log.info('Google Access Token successfully received.')
                 self.log.debug('Google Access Token: %s...', self._access_token[:25])
+                return self._access_token
             else:
                 self._access_token = None
                 self._login = False
