@@ -364,6 +364,11 @@ class RpcApi:
         self.log.debug('Parsing sub RPC responses...')
         response_proto_dict['responses'] = {}
 
+        if response_proto_dict.get('status_code', 1) == 53:
+            exception = ServerApiEndpointRedirectException()
+            exception.set_redirected_endpoint(response_proto_dict['api_url'])
+            raise exception
+
         if 'returns' in response_proto_dict:
             del response_proto_dict['returns']
 
