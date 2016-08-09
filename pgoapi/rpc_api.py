@@ -187,33 +187,34 @@ class RpcApi:
         if ticket:
             self.log.debug('Found Session Ticket - using this instead of oauth token')
             request.auth_ticket.expire_timestamp_ms, request.auth_ticket.start, request.auth_ticket.end = ticket
+            ticket_serialized = request.auth_ticket.SerializeToString()
 
-            if self._signature_gen:
-                ticket_serialized = request.auth_ticket.SerializeToString()
-
-                sig = Signature_pb2.Signature()
-
-                sig.location_hash1 = generateLocation1(ticket_serialized, request.latitude, request.longitude, request.altitude)
-                sig.location_hash2 = generateLocation2(request.latitude, request.longitude, request.altitude)
-
-                for req in request.requests:
-                    hash = generateRequestHash(ticket_serialized, req.SerializeToString())
-                    sig.request_hash.append(hash)
-
-                sig.unk22 = os.urandom(32)
-                sig.timestamp = get_time(ms=True)
-                sig.timestamp_since_start = get_time(ms=True) - RpcApi.START_TIME
-
-                signature_proto = sig.SerializeToString()
-
-                u6 = request.unknown6.add()
-                u6.request_type = 6
-                u6.unknown2.unknown1 = self._generate_signature(signature_proto)
         else:
             self.log.debug('No Session Ticket found - using OAUTH Access Token')
             request.auth_info.provider = self._auth_provider.get_name()
             request.auth_info.token.contents = self._auth_provider.get_access_token()
             request.auth_info.token.unknown2 = 59
+            ticket_serialized = request.auth_info.SerializeToString() #Sig uses this when no auth_ticket available
+
+        if self._signature_gen:
+            sig = Signature_pb2.Signature()
+
+            sig.location_hash1 = generateLocation1(ticket_serialized, request.latitude, request.longitude, request.altitude)
+            sig.location_hash2 = generateLocation2(request.latitude, request.longitude, request.altitude)
+
+            for req in request.requests:
+                hash = generateRequestHash(ticket_serialized, req.SerializeToString())
+                sig.request_hash.append(hash)
+
+            sig.unk22 = os.urandom(32)
+            sig.timestamp = get_time(ms=True)
+            sig.timestamp_since_start = get_time(ms=True) - RpcApi.START_TIME
+
+            signature_proto = sig.SerializeToString()
+
+            u6 = request.unknown6.add()
+            u6.request_type = 6
+            u6.unknown2.unknown1 = self._generate_signature(signature_proto)
 
         # unknown stuff
         request.unknown12 = 989
