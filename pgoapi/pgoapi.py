@@ -61,6 +61,10 @@ class PGoApi:
 
         self._signature_lib = None
 
+        self._session = requests.session()
+        self._session.headers.update({'User-Agent': 'Niantic App'})
+        self._session.verify = True
+
     def set_logger(self, logger=None):
         self.log = logger or logging.getLogger(__name__)
 
@@ -210,6 +214,7 @@ class PGoApiRequest:
             return NotLoggedInException()
 
         request = RpcApi(self._auth_provider, self._proxy)
+        request._session = self.__parent__._session
 
         lib_path = self.__parent__.get_signature_lib()
         if lib_path is not None:

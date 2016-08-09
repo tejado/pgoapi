@@ -62,13 +62,8 @@ class RpcApi:
 
         self.log = logging.getLogger(__name__)
 
-        self._session = requests.session()
-
         if proxy_config is not None:
             self._session.proxies = proxy_config
-
-        self._session.headers.update({'User-Agent': 'Niantic App'})
-        self._session.verify = True
 
         self._auth_provider = auth_provider
 
