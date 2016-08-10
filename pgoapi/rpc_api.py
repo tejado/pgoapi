@@ -58,12 +58,9 @@ class RpcApi:
     RPC_ID = 0
     START_TIME = 0
 
-    def __init__(self, auth_provider, proxy_config=None):
+    def __init__(self, auth_provider):
 
         self.log = logging.getLogger(__name__)
-
-        if proxy_config is not None:
-            self._session.proxies = proxy_config
 
         self._auth_provider = auth_provider
 
