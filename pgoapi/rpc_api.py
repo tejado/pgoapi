@@ -62,10 +62,6 @@ class RpcApi:
 
         self.log = logging.getLogger(__name__)
 
-        self._session = requests.session()
-        self._session.headers.update({'User-Agent': 'Niantic App'})
-        self._session.verify = True
-
         self._auth_provider = auth_provider
 
         """ mystic unknown6 - revolved by PokemonGoDev """
@@ -112,8 +108,8 @@ class RpcApi:
 
         request_proto_serialized = request_proto_plain.SerializeToString()
         try:
-            http_response = self._session.post(endpoint, data=request_proto_serialized)
-        except requests.exceptions.ConnectionError as e:
+            http_response = self._session.post(endpoint, data=request_proto_serialized, timeout=30)
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
             raise ServerBusyOrOfflineException(e)
 
         return http_response
@@ -188,33 +184,34 @@ class RpcApi:
         if ticket:
             self.log.debug('Found Session Ticket - using this instead of oauth token')
             request.auth_ticket.expire_timestamp_ms, request.auth_ticket.start, request.auth_ticket.end = ticket
+            ticket_serialized = request.auth_ticket.SerializeToString()
 
-            if self._signature_gen:
-                ticket_serialized = request.auth_ticket.SerializeToString()
-
-                sig = Signature_pb2.Signature()
-
-                sig.location_hash1 = generateLocation1(ticket_serialized, request.latitude, request.longitude, request.altitude)
-                sig.location_hash2 = generateLocation2(request.latitude, request.longitude, request.altitude)
-
-                for req in request.requests:
-                    hash = generateRequestHash(ticket_serialized, req.SerializeToString())
-                    sig.request_hash.append(hash)
-
-                sig.unk22 = os.urandom(32)
-                sig.timestamp = get_time(ms=True)
-                sig.timestamp_since_start = get_time(ms=True) - RpcApi.START_TIME
-
-                signature_proto = sig.SerializeToString()
-
-                u6 = request.unknown6.add()
-                u6.request_type = 6
-                u6.unknown2.unknown1 = self._generate_signature(signature_proto)
         else:
             self.log.debug('No Session Ticket found - using OAUTH Access Token')
             request.auth_info.provider = self._auth_provider.get_name()
             request.auth_info.token.contents = self._auth_provider.get_access_token()
             request.auth_info.token.unknown2 = 59
+            ticket_serialized = request.auth_info.SerializeToString() #Sig uses this when no auth_ticket available
+
+        if self._signature_gen:
+            sig = Signature_pb2.Signature()
+
+            sig.location_hash1 = generateLocation1(ticket_serialized, request.latitude, request.longitude, request.altitude)
+            sig.location_hash2 = generateLocation2(request.latitude, request.longitude, request.altitude)
+
+            for req in request.requests:
+                hash = generateRequestHash(ticket_serialized, req.SerializeToString())
+                sig.request_hash.append(hash)
+
+            sig.unk22 = os.urandom(32)
+            sig.timestamp = get_time(ms=True)
+            sig.timestamp_since_start = get_time(ms=True) - RpcApi.START_TIME
+
+            signature_proto = sig.SerializeToString()
+
+            u6 = request.unknown6.add()
+            u6.request_type = 6
+            u6.unknown2.unknown1 = self._generate_signature(signature_proto)
 
         # unknown stuff
         request.unknown12 = 989
@@ -363,6 +360,11 @@ class RpcApi:
     def _parse_sub_responses(self, response_proto, subrequests_list, response_proto_dict):
         self.log.debug('Parsing sub RPC responses...')
         response_proto_dict['responses'] = {}
+
+        if response_proto_dict.get('status_code', 1) == 53:
+            exception = ServerApiEndpointRedirectException()
+            exception.set_redirected_endpoint(response_proto_dict['api_url'])
+            raise exception
 
         if 'returns' in response_proto_dict:
             del response_proto_dict['returns']

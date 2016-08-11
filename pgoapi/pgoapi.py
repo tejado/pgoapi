@@ -45,7 +45,7 @@ logger = logging.getLogger(__name__)
 
 class PGoApi:
 
-    def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None):
+    def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None, proxy_config=None):
         self.set_logger()
         self.log.info('%s v%s - %s', __title__, __version__, __copyright__)
 
@@ -60,6 +60,13 @@ class PGoApi:
         self._position_alt = position_alt
 
         self._signature_lib = None
+
+        self._session = requests.session()
+        self._session.headers.update({'User-Agent': 'Niantic App'})
+        self._session.verify = True
+
+        if proxy_config is not None:
+            self._session.proxies = proxy_config
 
     def set_logger(self, logger=None):
         self.log = logger or logging.getLogger(__name__)
@@ -93,6 +100,9 @@ class PGoApi:
         self._position_lng = lng
         self._position_alt = alt
 
+    def set_proxy(self, proxy_config):
+        self._session.proxies = proxy_config
+
     def get_api_endpoint(self):
         return self._api_endpoint
 
@@ -106,7 +116,8 @@ class PGoApi:
         return self._auth_provider
 
     def create_request(self):
-        request = PGoApiRequest(self, self._position_lat, self._position_lng, self._position_alt)
+        request = PGoApiRequest(self, self._position_lat, self._position_lng,
+                                self._position_alt)
         return request
 
     def activate_signature(self, lib_path):
@@ -204,6 +215,7 @@ class PGoApiRequest:
             return NotLoggedInException()
 
         request = RpcApi(self._auth_provider)
+        request._session = self.__parent__._session
 
         lib_path = self.__parent__.get_signature_lib()
         if lib_path is not None:
