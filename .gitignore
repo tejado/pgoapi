@@ -90,3 +90,7 @@ ENV/
 
 # Personal load details
 config.json
+
+# Encrpytion libs
+encrypt.dll
+libencrypt.so

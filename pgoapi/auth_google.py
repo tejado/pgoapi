@@ -25,9 +25,11 @@ Author: tjado <https://github.com/tejado>
 
 from __future__ import absolute_import
 
+import six
 import logging
 
 from pgoapi.auth import Auth
+from pgoapi.exceptions import AuthException
 from gpsoauth import perform_master_login, perform_oauth
 
 class AuthGoogle(Auth):
@@ -39,24 +41,58 @@ class AuthGoogle(Auth):
 
     def __init__(self):
         Auth.__init__(self)
-        
+
         self._auth_provider = 'google'
 
-    def login(self, username, password):
-        self.log.info('Google login for: {}'.format(username))
-        login = perform_master_login(username, password, self.GOOGLE_LOGIN_ANDROID_ID)
-        login = perform_oauth(username, login.get('Token', ''), self.GOOGLE_LOGIN_ANDROID_ID, self.GOOGLE_LOGIN_SERVICE, self.GOOGLE_LOGIN_APP,
-            self.GOOGLE_LOGIN_CLIENT_SIG)
-            
-        self._auth_token = login.get('Auth')
-        
-        if self._auth_token is None:
-            self.log.info('Google Login failed.')
-            return False
-        
-        self._login = True
-            
-        self.log.info('Google Login successful.')
-        self.log.debug('Google Session Token: %s', self._auth_token[:25])
+        self._refresh_token = None
 
-        return True
+    def user_login(self, username, password):
+        self.log.info('Google User Login for: {}'.format(username))
+
+        if not isinstance(username, six.string_types) or not isinstance(password, six.string_types):
+            raise AuthException("Username/password not correctly specified")
+
+        user_login = perform_master_login(username, password, self.GOOGLE_LOGIN_ANDROID_ID)
+
+        refresh_token = user_login.get('Token', None)
+        if refresh_token is not None:
+            self._refresh_token = refresh_token
+            self.log.info('Google User Login successful.')
+        else:
+            self._refresh_token = None
+            raise AuthException("Invalid Google Username/password")
+
+        self.get_access_token()
+
+    def set_refresh_token(self, refresh_token):
+        self.log.info('Google Refresh Token provided by user')
+        self._refresh_token = refresh_token
+
+    def get_access_token(self, force_refresh = False):
+        token_validity = self.check_access_token()
+
+        if token_validity is True and force_refresh is False:
+            self.log.debug('Using cached Google Access Token')
+            return self._access_token
+        else:
+            if force_refresh:
+                self.log.info('Forced request of Google Access Token!')
+            else:
+                self.log.info('Request Google Access Token...')
+
+            token_data = perform_oauth(None, self._refresh_token, self.GOOGLE_LOGIN_ANDROID_ID, self.GOOGLE_LOGIN_SERVICE, self.GOOGLE_LOGIN_APP,
+                self.GOOGLE_LOGIN_CLIENT_SIG)
+
+            access_token = token_data.get('Auth', None)
+            if access_token is not None:
+                self._access_token = access_token
+                self._access_token_expiry = int(token_data.get('Expiry', 0))
+                self._login = True
+
+                self.log.info('Google Access Token successfully received.')
+                self.log.debug('Google Access Token: %s...', self._access_token[:25])
+                return self._access_token
+            else:
+                self._access_token = None
+                self._login = False
+                raise AuthException("Could not receive a Google Access Token")

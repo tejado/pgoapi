@@ -1,0 +1,100 @@
+syntax = "proto3";
+
+message Signature {
+
+    message LocationFix {
+        string provider = 1; // "network", "gps", "fused", possibly others
+        uint64 timestamp_since_start = 2; // in ms
+        float latitude = 13;
+        float longitude = 14;
+
+        // ??? shows up in struct, dunno where these go
+        // float device_speed;
+        // float device_course;
+        float horizontal_accuracy = 20; // iOS only? (range seems to be -1 to +1)
+        float altitude = 21;
+        float vertical_accuracy = 22; // iOS only? (range seems to be ~10-12)
+        uint64 provider_status = 26; // Usually 3 (possibly GPS status: 1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired)
+                           // On iOS there are some LocationFixes with unk26=1 and everything else empty
+        uint32 floor = 27; // No idea what this is, seems to be optional
+        uint64 location_type = 28; // Always 1 (if there is data at all)
+    }
+
+    // don't really care about this since we're not using it
+    message AndroidGpsInfo {
+        uint64 time_to_fix = 1;
+        repeated int32 satellites_prn = 2;
+        repeated float snr = 3;
+        repeated float azimuth = 4;
+        repeated float elevation = 5; 
+        repeated bool has_almanac = 6;
+        repeated bool has_ephemeris = 7;
+        repeated bool used_in_fix = 8;
+    }
+
+    message SensorInfo {
+        uint64 timestamp_snapshot = 1; // in ms
+        double magnetometer_x = 3;
+        double magnetometer_y = 4;
+        double magnetometer_z = 5;
+        double angle_normalized_x = 6;
+        double angle_normalized_y = 7;
+        double angle_normalized_z = 8;
+        double accel_raw_x = 10;
+        double accel_raw_y = 11;
+        double accel_raw_z = 12;
+        double gyroscope_raw_x = 13;
+        double gyroscope_raw_y = 14;
+        double gyroscope_raw_z = 15;
+        double accel_normalized_x = 16;
+        double accel_normalized_y = 17;
+        double accel_normalized_z = 18;
+        uint64 accelerometer_axes = 19; // Always 3
+    }
+
+    message DeviceInfo {
+        string device_id = 1; // Hex string
+        string android_board_name = 2;
+        string android_bootloader = 3;
+        string device_brand = 4; // On Android: product.brand
+        string device_model = 5; // On Android: product.device
+        string device_model_identifier = 6; // Android only, build.display.id
+        string device_model_boot = 7;  // On Android: boot.hardware
+        string hardware_manufacturer = 8; // On Android: product.manufacturer
+        string hardware_model = 9;  // On Android: product.model
+        string firmware_brand = 10; // On Android: product.name, on iOS: "iPhone OS"
+        string firmware_tags = 12; // Android only, build.tags
+        string firmware_type = 13; // On Android: build.type, on iOS instead: iOS version
+        string firmware_fingerprint = 14; // Android only, build.fingerprint
+    }
+
+    message ActivityStatus {
+        // all of these had 1 as their value
+        uint64 start_time_ms = 1;
+        bool unknown_status = 2;
+        bool walking = 3;
+        bool running = 4;
+        bool stationary = 5;
+        bool automotive = 6;
+        bool tilting = 7;
+        bool cycling = 8;
+        bytes status = 9;
+    }
+
+    uint64 timestamp_since_start = 2; // in ms
+    repeated LocationFix location_fix = 4;
+    AndroidGpsInfo gps_info = 5;
+    SensorInfo sensor_info = 7;
+    DeviceInfo device_info = 8;
+    ActivityStatus activity_status = 9;
+    uint32 location_hash1 = 10; // Location1 hashed based on the auth_token - xxHash32
+    uint32 location_hash2 = 20; // Location2 hashed based on the auth_token - xxHash32
+    bytes unk22 = 22; // possibly replay check. Generation unknown but pointed to by 0001B8614
+    uint64 timestamp = 23; // epoch timestamp in ms
+    repeated uint64 request_hash = 24; // hashes of each request message in a hashArray - xxhash64
+
+    // Addresses for the corresponding hash functions:
+    //    xxHash32              00054D28
+    //    xxhash64              000546C8 - Feeds into 00053D40
+
+}

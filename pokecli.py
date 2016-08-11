@@ -60,9 +60,10 @@ def init_config():
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
     parser.add_argument("-p", "--password", help="Password")
     parser.add_argument("-l", "--location", help="Location", required=required("location"))
+    parser.add_argument("-e", "--encrypt", help="Encryption Library Path")
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-t", "--test", help="Only parse the specified location", action='store_true')
-    parser.set_defaults(DEBUG=False, TEST=False)
+    parser.set_defaults(DEBUG=False, TEST=False, ENCRYPT="encrypt.dll")
     config = parser.parse_args()
 
     # Passed in arguments shoud trump
@@ -116,24 +117,20 @@ def main():
     # set player position on the earth
     api.set_position(*position)
 
-    if not api.login(config.auth_service, config.username, config.password, app_simulation = True):
-        return
+    # new authentication initialitation
+    api.set_authentication(provider = config.auth_service, username = config.username, password =  config.password)
 
-    # get player profile call (single command example)
-    # ----------------------
-    response_dict = api.get_player()
+    # provide the path for your encrypt dll
+    # Use libencrypt.so for *nix
+
+    api.activate_signature(config.encrypt)
+
+    # print get maps object
+    cell_ids = util.get_cell_ids(position[0], position[1])
+    timestamps = [0,] * len(cell_ids)
+    response_dict = api.get_map_objects(latitude =position[0], longitude = position[1], since_timestamp_ms = timestamps, cell_id = cell_ids)
     print('Response dictionary (get_player): \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
 
-    # sleep due to server-side throttling
-    time.sleep(0.2)
-
-    # get player profile + inventory call (thread-safe/chaining example)
-    # ----------------------
-    req = api.create_request()
-    req.get_player()
-    req.get_inventory()
-    response_dict = req.call()
-    print('Response dictionary (get_player + get_inventory): \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
 
 if __name__ == '__main__':
     main()
