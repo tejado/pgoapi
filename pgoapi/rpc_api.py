@@ -167,6 +167,26 @@ class RpcApi:
 
         return request
 
+    def _parse_list(self, values, message):
+        if isinstance(values[0], dict): # values need to be further parsed
+            for v in values:
+                sub = message.add()
+                self._parse_dict(v, sub)
+        else:
+            message.extend(values)
+
+    def _parse_dict(self, values, message):
+        for k,v in values.iteritems():
+            if isinstance(v, dict): # needs further breakdown
+                self._parse_dict(v, getattr(message, k))
+            elif isinstance(v, list):
+                self._parse_list(v, getattr(message, k))
+            else:
+                try:
+                    setattr(message, k, v)
+                except AttributeError:
+                    self.log.error('Accessing Invalid Attribute %r.%r = %r', message, k, v)
+
     def _build_sub_requests(self, mainrequest, subrequest_list):
         self.log.debug('Generating sub RPC requests...')
 
@@ -184,34 +204,8 @@ class RpcApi:
 
                 self.log.debug("Subrequest class: %s", proto_classname)
 
-                for (key, value) in entry_content.items():
-                    if isinstance(value, list):
-                        self.log.debug("Found list: %s - trying as repeated", key)
-                        for i in value:
-                            try:
-                                self.log.debug("%s -> %s", key, i)
-                                r = getattr(subrequest_extension, key)
-                                r.append(i)
-                            except Exception as e:
-                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, i, proto_name, str(e))
-                    elif isinstance(value, dict):
-                        for k in value.keys():
-                            try:
-                                r = getattr(subrequest_extension, key)
-                                setattr(r, k, value[k])
-                            except Exception as e:
-                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, str(value), proto_name, str(e))
-                    else:
-                        try:
-                            setattr(subrequest_extension, key, value)
-                        except Exception as e:
-                            try:
-                                self.log.debug("%s -> %s", key, value)
-                                r = getattr(subrequest_extension, key)
-                                r.append(value)
-                            except Exception as e:
-                                self.log.warning('Argument %s with value %s unknown inside %s (Exception: %s)', key, value, proto_name, str(e))
-
+                self._parse_dict(entry_content, subrequest_extension)
+                
                 subrequest = mainrequest.requests.add()
                 subrequest.request_type = entry_id
                 subrequest.request_message = subrequest_extension.SerializeToString()
