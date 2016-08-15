@@ -27,6 +27,7 @@ import re
 import time
 import struct
 import logging
+import requests
 
 from json import JSONEncoder
 
@@ -98,3 +99,23 @@ def get_format_time_diff(low, high, ms = True):
     h, m = divmod(m, 60)
     
     return (h, m, s)
+
+# An object containing the API data from pokesnipers.com
+class Snipes(object):
+	def __init__(self, requestJson):
+		self.snipes = []
+		
+		for pokemon in requestJson["results"]:
+			pokedict = {}
+			pokedict["name"] = pokemon["name"]
+			pokedict["coordinates"] = pokemon["coords"]
+			pokedict["until"] = pokemon["until"]
+			pokedict["icon"] = pokemon["icon"]
+			# Didn't put in IVs ... it usually returns 0 when not known (which is a majority of the time)
+			self.snipes.append(pokedict)
+		
+# Get the most recent snipes
+def getSnipes():
+	requestJson  = requests.get("http://www.pokesnipers.com/api/v1/pokemon.json").json()
+	snipesObj = Snipes(requestJson)
+	return snipesObj
