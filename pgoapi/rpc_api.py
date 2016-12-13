@@ -104,6 +104,8 @@ class RpcApi:
         response = self._make_rpc(endpoint, request_proto)
 
         response_dict = self._parse_main_response(response, subrequests)
+        if not response_dict:
+            raise ServerBusyOrOfflineException()
 
         self.check_authentication(response_dict)
 
