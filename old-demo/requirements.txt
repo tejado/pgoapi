@@ -2,4 +2,4 @@ geopy==1.11.0
 gpsoauth==0.3.0
 protobuf==2.6.1
 pycryptodomex==3.4.2
-requests==2.10.0
+requests==2.20.0
